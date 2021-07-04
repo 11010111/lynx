@@ -112,7 +112,7 @@ table th, table td {
 }
 table th {
   background-color: #eeeeee;
-  color: #354f5d;
+  color: #3D4851;
 }
 
 label {
@@ -140,7 +140,7 @@ input, textarea, select, datalist {
   border-radius: 0;
   border: 0;
   border-top: 1px solid transparent;
-  border-bottom: 1px solid #354f5d;
+  border-bottom: 1px solid #3D4851;
 }
 input:hover, textarea:hover, select:hover, datalist:hover {
   border-bottom: 1px solid #040e52;
@@ -150,8 +150,8 @@ input:focus, textarea:focus, select:focus, datalist:focus {
 }
 input:disabled, textarea:disabled, select:disabled, datalist:disabled {
   background-color: #eeeeee;
-  color: #354f5d;
-  border-bottom: 1px solid #354f5d;
+  color: #3D4851;
+  border-bottom: 1px solid #3D4851;
 }
 input:invalid, textarea:invalid, select:invalid, datalist:invalid {
   border-bottom: 1px solid #d42525;

@@ -46,15 +46,6 @@ nav.desktop .desktop-container {
   border-bottom: 0.5rem solid #eeeeee;
   z-index: 1001;
 }
-nav.desktop .desktop-container a {
-  transition: 0.5s;
-}
-nav.desktop .desktop-container .active {
-  color: #354f5d !important;
-}
-nav.desktop .desktop-container .active:hover {
-  color: #354f5d !important;
-}
 nav.desktop .desktop-container .desktop-menu {
   display: flex;
   flex-direction: row;
@@ -67,12 +58,13 @@ nav.desktop .desktop-container .desktop-menu .parent {
   position: relative;
   top: 0;
   right: 0;
-  font-weight: bold;
+  font-weight: 400;
   padding: 1rem;
   margin-right: 1rem;
 }
 nav.desktop .desktop-container .desktop-menu .parent a {
   text-decoration: none;
+  color: #3D4851;
 }
 nav.desktop .desktop-container .desktop-menu .parent a:hover {
   color: #040e52;
@@ -101,7 +93,7 @@ nav.desktop .desktop-container .desktop-menu .parent:first-child {
   padding-left: 0;
 }
 nav.desktop .desktop-container .desktop-menu .has-children::after {
-  content: "+";
+  content: url("../Icons/dropdown.svg");
   position: absolute;
   top: 50%;
   right: -0.5rem;
@@ -122,30 +114,31 @@ nav.desktop .language-menu {
   font-weight: bold;
   padding: 1rem 1rem 1rem 0;
   margin-right: 1rem;
+  cursor: pointer;
 }
 nav.desktop .language-menu ul {
   list-style: none;
 }
 nav.desktop .language-menu a {
   text-decoration: none;
+  color: #3D4851;
 }
 nav.desktop .language-menu a:hover {
   color: #040e52;
 }
 nav.desktop .language-menu::after {
-  content: "+";
+  content: url("../Icons/dropdown.svg");
   position: absolute;
   top: 50%;
   right: -0.5rem;
   transform: translateY(-50%);
-  transition: 0.5s;
 }
 nav.desktop .language-menu:hover .language {
   display: block;
 }
 nav.desktop .language-menu:hover::after {
-  transform: translateY(-50%) rotate(90deg);
   color: #eeeeee;
+  animation: fadeInOut 2s infinite;
 }
 nav.desktop .language-menu .language {
   display: none;
@@ -155,7 +148,7 @@ nav.desktop .language-menu .language {
   min-width: 5rem;
   background-color: #ffffff;
   text-align: right;
-  border: 2px solid #eeeeee;
+  border: 1px solid #eeeeee;
   border-top: 0;
   padding: 0.5rem 0;
 }
@@ -274,10 +267,10 @@ nav.mobile .mobile-container {
   transition: 0.5s;
 }
 nav.mobile .mobile-container .active {
-  color: #354f5d !important;
+  color: #3D4851 !important;
 }
 nav.mobile .mobile-container .active:hover {
-  color: #354f5d !important;
+  color: #3D4851 !important;
 }
 nav.mobile .mobile-container .mobile-menu {
   display: flex;
@@ -325,7 +318,7 @@ nav.mobile .language-container .language-menu li:last-child {
   padding-right: 0;
 }
 nav.mobile .language-container .language-menu .active a {
-  color: #354f5d;
+  color: #3D4851;
 }
 
 footer {
@@ -333,7 +326,7 @@ footer {
   top: 0;
   left: 0;
   right: 0;
-  min-height: 5rem;
+  min-height: 10rem;
   color: #ffffff;
   background-color: #14161b;
   margin: 0 -1rem;
@@ -389,6 +382,17 @@ footer {
 
 @keyframes fadeIn {
   0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
     opacity: 0;
   }
   100% {
