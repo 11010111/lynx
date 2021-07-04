@@ -9,7 +9,7 @@
 
             <!-- Backend Module -->
             <trans-unit id="extension.title">
-                <source>Site Package</source>
+                <source>Lynx</source>
             </trans-unit>
 
             <!-- Backend Layout -->

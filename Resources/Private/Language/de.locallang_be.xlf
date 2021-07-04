@@ -9,8 +9,8 @@
 
             <!-- Backend Module -->
             <trans-unit id="extension.title">
-                <source>Site Package</source>
-                <target state="translated">Site Package</target>
+                <source>Lynx</source>
+                <target state="translated">Lynx</target>
             </trans-unit>
 
             <!-- Backend Layout -->
