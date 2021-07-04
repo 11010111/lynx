@@ -1,0 +1,352 @@
+// Imports
+@import 'variables';
+@import 'functions';
+
+// import your modules here
+.frame {
+    //
+}
+
+.frame-default {
+    //
+}
+
+.frame-top-center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.frame-top-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.frame-top-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.frame-top-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.frame-top-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.frame-top-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.frame-middle-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.frame-middle-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.frame-middle-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.frame-middle-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.frame-middle-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.frame-middle-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.frame-bottom-center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.frame-bottom-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.frame-bottom-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.frame-bottom-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.frame-bottom-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.frame-bottom-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.frame-baseline-center {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 100%;
+}
+
+.frame-baseline-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    height: 100%;
+}
+
+.frame-baseline-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    height: 100%;
+}
+
+.frame-baseline-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 100%;
+}
+
+.frame-baseline-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    height: 100%;
+}
+
+.frame-baseline-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    height: 100%;
+}
+
+.frame-stretch-center {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
+}
+
+.frame-stretch-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    height: 100%;
+}
+
+.frame-stretch-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100%;
+}
+
+.frame-stretch-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+}
+
+.frame-stretch-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 100%;
+}
+
+.frame-stretch-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    height: 100%;
+}
+
+.frame-content-center {
+    display: flex;
+    align-content: center;
+    height: 100%;
+}
+
+.frame-content-right {
+    display: flex;
+    align-content: flex-end;
+    height: 100%;
+}
+
+.frame-content-left {
+    display: flex;
+    align-content: flex-start;
+    height: 100%;
+}
+
+.frame-content-between {
+    display: flex;
+    align-content: space-between;
+    height: 100%;
+}
+
+.frame-content-around {
+    display: flex;
+    align-content: space-around;
+    height: 100%;
+}
+
+.frame-content-evenly {
+    display: flex;
+    align-content: space-evenly;
+    height: 100%;
+}
+
+.frame-self-auto {
+    display: flex;
+    align-self: auto;
+    height: 100%;
+}
+
+.frame-self-center {
+    display: flex;
+    align-self: center;
+    height: 100%;
+}
+
+.frame-self-right {
+    display: flex;
+    align-self: flex-end;
+    height: 100%;
+}
+
+.frame-self-left {
+    display: flex;
+    align-self: flex-start;
+    height: 100%;
+}
+
+.frame-self-baseline {
+    display: flex;
+    align-self: baseline;
+    height: 100%;
+}
+
+.frame-self-stretch {
+    display: flex;
+    align-self: stretch;
+    height: 100%;
+}
+
+// CE Styles
+.ce-center {
+    .ce-outer, .ce-inner {
+        position: unset;
+        float: unset;
+        right: unset;
+    }
+}
+
+.ce-row {
+    display: flex;
+}
+
+.ce-column {
+    width: 100%;
+}
+
+.ce-gallery {
+    width: 100%;
+
+    figure {
+        display: flex;
+    }
+}
+
+.ce-right {
+    figure {
+        justify-content: flex-end;
+    }
+}
+
+.ce-center {
+    figure {
+        justify-content: center;
+    }
+}
+
+.ce-left {
+    figure {
+        justify-content: flex-start;
+    }
+}
+
+.ce-image-full {
+    width: 100%;
+    height: auto;
+}
+
+.ce-uploads {
+    li {
+        div {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}

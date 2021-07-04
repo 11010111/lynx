@@ -1,0 +1,6 @@
+services:
+  Swe\Lynx\EventListener\CreateFolder:
+    tags:
+      - name: event.listener
+        identifier: 'sitePackageListener'
+        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionStaticDatabaseContentHasBeenImportedEvent

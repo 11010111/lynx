@@ -1,0 +1,379 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/setup.typoscript">
+
+
+################
+#### HELPER ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+
+
+############################
+### MODULE CONFIGURATION ###
+############################
+module.tx_lynx {
+  settings {
+      # Ajax page type number
+      typeNum = {$module.tx_lynx.settings.typeNum}
+      # SetupIncludes
+      setupIncluded = 1
+    }
+    persistence {
+      storagePid = {$module.tx_lynx.persistence.storagePid}
+    }
+  view {
+    templateRootPaths.10 = {$module.tx_lynx.view.templateRootPath}
+    partialRootPaths.10 = {$module.tx_lynx.view.partialRootPath}
+    layoutRootPaths.10 = {$module.tx_lynx.view.layoutRootPath}
+  }
+}
+
+module.tx_lynx.settings.view < module.tx_lynx.view
+module.tx_lynx.settings.persistence < module.tx_lynx.persistence
+
+
+##############
+#### PAGE ####
+##############
+page = PAGE
+page {
+    typeNum = 0
+    shortcutIcon = EXT:lynx/Resources/Public/Icons/favicon.ico
+
+    10 = FLUIDTEMPLATE
+    10 {
+        # Template names will be generated automatically by converting the applied
+        # backend_layout, there is no explicit mapping necessary anymore.
+        #
+        # BackendLayout Key
+        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        #
+        # Backend Record
+        # uid: 1 -> 1.html
+        #
+        # Database Entry
+        # value: -1 -> None.html
+        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Default
+        }
+        templateRootPaths {
+            0 = EXT:lynx/Resources/Private/Templates/Page/
+            10 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:lynx/Resources/Private/Partials/Page/
+            10 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:lynx/Resources/Private/Layouts/Page/
+            10 = {$page.fluidtemplate.layoutRootPath}
+        }
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = media
+            }
+
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                levels = 2
+                includeSpacer = 1
+                as = navigation
+            }
+
+            30 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+            30 {
+                as = languageNavigation
+            }
+
+            40 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            40 {
+                collections = 1
+                collections.recursive = 1
+                as = fonts
+            }
+        }
+    }
+
+    meta {
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+        description = {$page.meta.description}
+        description {
+            override.field = description
+        }
+        author = {$page.meta.author}
+        author {
+            override.field = author
+        }
+        keywords = {$page.meta.keywords}
+        keywords {
+            override.field = keywords
+        }
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+
+        # OpenGraph Tags
+        og:title {
+            attribute = property
+            field = title
+        }
+        og:site_name {
+            attribute = property
+            data = TSFE:tmpl|setup|sitetitle
+        }
+        og:description = {$page.meta.description}
+        og:description {
+            attribute = property
+            field = description
+        }
+        og:image {
+            attribute = property
+            stdWrap.cObject = FILES
+            stdWrap.cObject {
+                references {
+                    data = levelfield:-1, media, slide
+                }
+                maxItems = 1
+                renderObj = COA
+                renderObj {
+                    10 = IMG_RESOURCE
+                    10 {
+                        file {
+                            import.data = file:current:uid
+                            treatIdAsReference = 1
+                            width = 1280c
+                            height = 720c
+                        }
+                        stdWrap {
+                            typolink {
+                                parameter.data = TSFE:lastImgResourceInfo|3
+                                returnLast = url
+                                forceAbsoluteUrl = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    # Add body class and id tags
+    bodyTag >
+    bodyTagCObject = COA
+    bodyTagCObject {
+        10 = TEXT
+        10 {
+            field = uid
+            wrap = <body id="site_|">
+        }
+        20 = TEXT
+        20 {
+            field = title
+            case = lower
+            stdWrap.replacement {
+                10 {
+                    search = #( )#i
+                    replace = _
+                    useRegExp = 1
+                }
+            }
+            wrap = <body class="site_|">
+        }
+    }
+
+    includeCSSLibs {
+
+    }
+
+    includeCSS {
+        container = EXT:lynx/Resources/Public/Css/container.css
+        base = EXT:lynx/Resources/Public/Css/base.css
+        rte = EXT:lynx/Resources/Public/Css/rte.css
+        flex = EXT:lynx/Resources/Public/Css/flex.css
+        frame = EXT:lynx/Resources/Public/Css/frame.css
+        gap = EXT:lynx/Resources/Public/Css/gap.css
+
+        lynx_layout = EXT:lynx/Resources/Public/Css/layout.css
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterLibs {
+
+    }
+
+    includeJSFooter {
+        lynx_main = EXT:lynx/Resources/Public/JavaScript/main.js
+    }
+}
+
+#############################
+#### GRIDELEMENTS CONFIG ####
+#############################
+tt_content.gridelements_pi1.20.10.setup {
+    1 < lib.gridelements.defaultGridSetup
+    1 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:lynx/Resources/Private/Templates/GridElements/C100.html
+        }
+        outerWrap = |
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup {
+    2 < lib.gridelements.defaultGridSetup
+    2 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:lynx/Resources/Private/Templates/GridElements/C50-50.html
+        }
+        outerWrap = |
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup {
+    3 < lib.gridelements.defaultGridSetup
+    3 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:lynx/Resources/Private/Templates/GridElements/C20-80.html
+        }
+        outerWrap = |
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup {
+    4 < lib.gridelements.defaultGridSetup
+    4 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:lynx/Resources/Private/Templates/GridElements/C80-20.html
+        }
+        outerWrap = |
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup {
+    5 < lib.gridelements.defaultGridSetup
+    5 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:lynx/Resources/Private/Templates/GridElements/C30-70.html
+        }
+        outerWrap = |
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup {
+    6 < lib.gridelements.defaultGridSetup
+    6 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:lynx/Resources/Private/Templates/GridElements/C70-30.html
+        }
+        outerWrap = |
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup {
+    7 < lib.gridelements.defaultGridSetup
+    7 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:lynx/Resources/Private/Templates/GridElements/C40-60.html
+        }
+        outerWrap = |
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup {
+    8 < lib.gridelements.defaultGridSetup
+    8 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:lynx/Resources/Private/Templates/GridElements/C60-40.html
+        }
+        outerWrap = |
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup {
+    9 < lib.gridelements.defaultGridSetup
+    9 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:lynx/Resources/Private/Templates/GridElements/C33-33-33.html
+        }
+        outerWrap = |
+    }
+}
+
+########################
+#### WRAP NO MOBILE ####
+########################
+tt_content.stdWrap.outerWrap = <div class="no-mobile">|</div>
+tt_content.stdWrap.outerWrap.if.isTrue.field = no_mobile
+
+################
+#### CONFIG ####
+################
+config {
+    absRefPrefix = auto
+    no_cache = {$config.no_cache}
+    uniqueLinkVars = 1
+    pageTitleFirst = 1
+    linkVars = L
+    prefixLocalAnchors = {$config.prefixLocalAnchors}
+    renderCharset = utf-8
+    metaCharset = utf-8
+    doctype = html5
+    removeDefaultJS = {$config.removeDefaultJS}
+    inlineStyle2TempFile = 1
+    admPanel = {$config.admPanel}
+    debug = 0
+    cache_period = 86400
+    sendCacheHeaders = {$config.sendCacheHeaders}
+    intTarget =
+    extTarget =
+    disablePrefixComment = 1
+    index_enable = 1
+    index_externals = 1
+    index_metatags = 1
+    headerComment = {$config.headerComment}
+
+    // Disable Image Upscaling
+    noScaleUp = 1
+
+    // Compression and Concatenation of CSS and JS Files
+    compressJs = 0
+    compressCss = 0
+    concatenateJs = 0
+    concatenateCss = 0
+}

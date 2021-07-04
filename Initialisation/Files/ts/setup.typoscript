@@ -1,0 +1,50 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/config.typoscript">
+
+############################
+#### INCLUDE EXTENSIONS ####
+############################
+<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/news/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/search/setup.typoscript">
+
+page {
+  	# CSS
+    includeCSS {
+        #flickity = fileadmin/lynx/css/flickity.css
+        #flatpickr = fileadmin/lynx/css/flatpickr.min.css
+        #jarallax = fileadmin/lynx/css/jarallax.css
+        #tobii = fileadmin/lynx/css/tobii.min.css
+        #offside = fileadmin/lynx/css/offside.css
+        #tippy = fileadmin/lynx/css/tippy.css
+
+        gap = fileadmin/lynx/scss/compiled/gap.css
+        flex = fileadmin/lynx/scss/compiled/flex.css
+        rte = fileadmin/lynx/scss/compiled/rte.css
+        base = fileadmin/lynx/scss/compiled/base.css
+        main_css = fileadmin/lynx/scss/compiled/main.css
+    }
+
+  	# Header JS
+    includeJS {
+        #jquery = fileadmin/lynx/js/plugins/jquery-3.6.0.min.js
+        #flickity = fileadmin/lynx/js/plugins/flickity.pkgd.min.js
+        #flatpickr = fileadmin/lynx/js/plugins/flatpickr.js
+        #tobii = fileadmin/lynx/js/plugins/tobii.min.js
+        #in_view = fileadmin/lynx/js/plugins/in-view.min.js
+        #client_detection = fileadmin/lynx/js/plugins/client-detection.js
+        #count_up = fileadmin/lynx/js/plugins/countup.min.js
+        #emergence = fileadmin/lynx/js/plugins/emergence.min.js
+        #jarallax = fileadmin/lynx/js/plugins/jarallax.min.js
+        #jarallax_video = fileadmin/lynx/js/plugins/jarallax-video.min.js
+        #jarallax_element = fileadmin/lynx/js/plugins/jarallax-element.min.js
+        #offside = fileadmin/lynx/js/plugins/offside.min.js
+        #reframe = fileadmin/lynx/js/plugins/reframe.min.js
+        #popper = fileadmin/lynx/js/plugins/popper.min.js
+        # tippy: require "popper"
+        #tippy = fileadmin/lynx/js/plugins/tippy-bundle.umd.min.js
+    }
+
+  	# Footer JS
+    includeJSFooter {
+        main_js = fileadmin/lynx/js/main.js
+    }
+}

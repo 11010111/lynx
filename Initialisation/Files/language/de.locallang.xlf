@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-11-14UTC00:10:570">
+        <header>
+            <authorName>Smart Web Elements</authorName>
+            <authorEmail>team@s-w-e.com</authorEmail>
+        </header>
+        <body>
+
+            <trans-unit id="back">
+                <source>Back</source>
+                <target state="translated">Zurück</target>
+            </trans-unit>
+            <trans-unit id="next">
+                <source>Next</source>
+                <target state="translated">Vor</target>
+            </trans-unit>
+            <trans-unit id="previous">
+                <source>Previous</source>
+                <target state="translated">Zurück</target>
+            </trans-unit>
+            <trans-unit id="show_more">
+                <source>Show more</source>
+                <target state="translated">Mehr anzeigen</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

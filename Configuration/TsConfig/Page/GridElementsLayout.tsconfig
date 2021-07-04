@@ -1,0 +1,626 @@
+tx_gridelements.setup {
+	# ID of Element
+	1 {
+        title = 100%
+        iconIdentifier = grid-icon
+        config {
+            colCount = 1
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = normal 100%
+                            colPos = 401
+                        }
+                    }
+                }
+            }
+        }
+        flexformDS (
+            <T3DataStructure>
+                <ROOT type="array">
+                    <type>array</type>
+                    <el type="array">
+                    <breakpoint type="array">
+                        <TCEforms type="array">
+                        <label>Container Breakpoint</label>
+                        <config type="array">
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>md</default>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="0">XS</numIndex>
+                                    <numIndex index="1">xs</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="0">SM</numIndex>
+                                    <numIndex index="1">sm</numIndex>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <numIndex index="0">MD</numIndex>
+                                    <numIndex index="1">md</numIndex>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <numIndex index="0">LG</numIndex>
+                                    <numIndex index="1">lg</numIndex>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <numIndex index="0">XL</numIndex>
+                                    <numIndex index="1">xl</numIndex>
+                                </numIndex>
+                                <numIndex index="5">
+                                    <numIndex index="0">XXL</numIndex>
+                                    <numIndex index="1">xxl</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                        </TCEforms>
+                    </breakpoint>
+                    </el>
+                </ROOT>
+            </T3DataStructure>
+        )
+    }
+    # ID of Element
+    2 {
+        title = 50% - 50%
+        iconIdentifier = grid-icon
+        config {
+            colCount = 2
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Left 50%
+                            colPos = 401
+                        }
+                        2 {
+                            name = Right 50%
+                            colPos = 402
+                        }
+                    }
+                }
+            }
+        }
+        flexformDS (
+            <T3DataStructure>
+                <ROOT type="array">
+                    <type>array</type>
+                    <el type="array">
+                    <breakpoint type="array">
+                        <TCEforms type="array">
+                        <label>Container Breakpoint</label>
+                        <config type="array">
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>md</default>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="0">XS</numIndex>
+                                    <numIndex index="1">xs</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="0">SM</numIndex>
+                                    <numIndex index="1">sm</numIndex>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <numIndex index="0">MD</numIndex>
+                                    <numIndex index="1">md</numIndex>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <numIndex index="0">LG</numIndex>
+                                    <numIndex index="1">lg</numIndex>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <numIndex index="0">XL</numIndex>
+                                    <numIndex index="1">xl</numIndex>
+                                </numIndex>
+                                <numIndex index="5">
+                                    <numIndex index="0">XXL</numIndex>
+                                    <numIndex index="1">xxl</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                        </TCEforms>
+                    </breakpoint>
+                    </el>
+                </ROOT>
+            </T3DataStructure>
+        )
+    }
+    # ID of Element
+    3 {
+        title = 20% - 80%
+        iconIdentifier = grid-icon
+        config {
+            colCount = 4
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Left 20%
+                            colspan = 1
+                            colPos = 401
+                        }
+                        2 {
+                            name = Right 80%
+                            colspan = 3
+                            colPos = 402
+                        }
+                    }
+                }
+            }
+        }
+        flexformDS (
+            <T3DataStructure>
+                <ROOT type="array">
+                    <type>array</type>
+                    <el type="array">
+                    <breakpoint type="array">
+                        <TCEforms type="array">
+                        <label>Container Breakpoint</label>
+                        <config type="array">
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>md</default>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="0">XS</numIndex>
+                                    <numIndex index="1">xs</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="0">SM</numIndex>
+                                    <numIndex index="1">sm</numIndex>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <numIndex index="0">MD</numIndex>
+                                    <numIndex index="1">md</numIndex>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <numIndex index="0">LG</numIndex>
+                                    <numIndex index="1">lg</numIndex>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <numIndex index="0">XL</numIndex>
+                                    <numIndex index="1">xl</numIndex>
+                                </numIndex>
+                                <numIndex index="5">
+                                    <numIndex index="0">XXL</numIndex>
+                                    <numIndex index="1">xxl</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                        </TCEforms>
+                    </breakpoint>
+                    </el>
+                </ROOT>
+            </T3DataStructure>
+        )
+    }
+    # ID of Element
+    4 {
+        title = 80% - 20%
+        iconIdentifier = grid-icon
+        config {
+            colCount = 4
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Left 80%
+                            colspan = 3
+                            colPos = 401
+                        }
+                        2 {
+                            name = Right 20%
+                            colspan = 1
+                            colPos = 402
+                        }
+                    }
+                }
+            }
+        }
+        flexformDS (
+            <T3DataStructure>
+                <ROOT type="array">
+                    <type>array</type>
+                    <el type="array">
+                    <breakpoint type="array">
+                        <TCEforms type="array">
+                        <label>Container Breakpoint</label>
+                        <config type="array">
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>md</default>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="0">XS</numIndex>
+                                    <numIndex index="1">xs</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="0">SM</numIndex>
+                                    <numIndex index="1">sm</numIndex>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <numIndex index="0">MD</numIndex>
+                                    <numIndex index="1">md</numIndex>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <numIndex index="0">LG</numIndex>
+                                    <numIndex index="1">lg</numIndex>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <numIndex index="0">XL</numIndex>
+                                    <numIndex index="1">xl</numIndex>
+                                </numIndex>
+                                <numIndex index="5">
+                                    <numIndex index="0">XXL</numIndex>
+                                    <numIndex index="1">xxl</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                        </TCEforms>
+                    </breakpoint>
+                    </el>
+                </ROOT>
+            </T3DataStructure>
+        )
+    }
+    # ID of Element
+    5 {
+        title = 30% - 70%
+        iconIdentifier = grid-icon
+        config {
+            colCount = 3
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Left 30%
+                            colspan = 1
+                            colPos = 401
+                        }
+                        2 {
+                            name = Right 70%
+                            colspan = 2
+                            colPos = 402
+                        }
+                    }
+                }
+            }
+        }
+        flexformDS (
+            <T3DataStructure>
+                <ROOT type="array">
+                    <type>array</type>
+                    <el type="array">
+                    <breakpoint type="array">
+                        <TCEforms type="array">
+                        <label>Container Breakpoint</label>
+                        <config type="array">
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>md</default>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="0">XS</numIndex>
+                                    <numIndex index="1">xs</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="0">SM</numIndex>
+                                    <numIndex index="1">sm</numIndex>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <numIndex index="0">MD</numIndex>
+                                    <numIndex index="1">md</numIndex>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <numIndex index="0">LG</numIndex>
+                                    <numIndex index="1">lg</numIndex>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <numIndex index="0">XL</numIndex>
+                                    <numIndex index="1">xl</numIndex>
+                                </numIndex>
+                                <numIndex index="5">
+                                    <numIndex index="0">XXL</numIndex>
+                                    <numIndex index="1">xxl</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                        </TCEforms>
+                    </breakpoint>
+                    </el>
+                </ROOT>
+            </T3DataStructure>
+        )
+    }
+    # ID of Element
+    6 {
+        title = 70% - 30%
+        iconIdentifier = grid-icon
+        config {
+            colCount = 3
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Left 70%
+                            colspan = 2
+                            colPos = 401
+                        }
+                        2 {
+                            name = Right 30%
+                            colspan = 1
+                            colPos = 402
+                        }
+                    }
+                }
+            }
+        }
+        flexformDS (
+            <T3DataStructure>
+                <ROOT type="array">
+                    <type>array</type>
+                    <el type="array">
+                    <breakpoint type="array">
+                        <TCEforms type="array">
+                        <label>Container Breakpoint</label>
+                        <config type="array">
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>md</default>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="0">XS</numIndex>
+                                    <numIndex index="1">xs</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="0">SM</numIndex>
+                                    <numIndex index="1">sm</numIndex>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <numIndex index="0">MD</numIndex>
+                                    <numIndex index="1">md</numIndex>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <numIndex index="0">LG</numIndex>
+                                    <numIndex index="1">lg</numIndex>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <numIndex index="0">XL</numIndex>
+                                    <numIndex index="1">xl</numIndex>
+                                </numIndex>
+                                <numIndex index="5">
+                                    <numIndex index="0">XXL</numIndex>
+                                    <numIndex index="1">xxl</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                        </TCEforms>
+                    </breakpoint>
+                    </el>
+                </ROOT>
+            </T3DataStructure>
+        )
+    }
+    # ID of Element
+    7 {
+        title = 40% - 60%
+        iconIdentifier = grid-icon
+        config {
+            colCount = 3
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Left 40%
+                            colspan = 1
+                            colPos = 401
+                        }
+                        2 {
+                            name = Right 60%
+                            colspan = 2
+                            colPos = 402
+                        }
+                    }
+                }
+            }
+        }
+        flexformDS (
+            <T3DataStructure>
+                <ROOT type="array">
+                    <type>array</type>
+                    <el type="array">
+                    <breakpoint type="array">
+                        <TCEforms type="array">
+                        <label>Container Breakpoint</label>
+                        <config type="array">
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>md</default>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="0">XS</numIndex>
+                                    <numIndex index="1">xs</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="0">SM</numIndex>
+                                    <numIndex index="1">sm</numIndex>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <numIndex index="0">MD</numIndex>
+                                    <numIndex index="1">md</numIndex>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <numIndex index="0">LG</numIndex>
+                                    <numIndex index="1">lg</numIndex>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <numIndex index="0">XL</numIndex>
+                                    <numIndex index="1">xl</numIndex>
+                                </numIndex>
+                                <numIndex index="5">
+                                    <numIndex index="0">XXL</numIndex>
+                                    <numIndex index="1">xxl</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                        </TCEforms>
+                    </breakpoint>
+                    </el>
+                </ROOT>
+            </T3DataStructure>
+        )
+    }
+    # ID of Element
+    8 {
+        title = 60% - 40%
+        iconIdentifier = grid-icon
+        config {
+            colCount = 3
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Left 60%
+                            colspan = 2
+                            colPos = 401
+                        }
+                        2 {
+                            name = Right 40%
+                            colspan = 1
+                            colPos = 402
+                        }
+                    }
+                }
+            }
+        }
+        flexformDS (
+            <T3DataStructure>
+                <ROOT type="array">
+                    <type>array</type>
+                    <el type="array">
+                    <breakpoint type="array">
+                        <TCEforms type="array">
+                        <label>Container Breakpoint</label>
+                        <config type="array">
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>md</default>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="0">XS</numIndex>
+                                    <numIndex index="1">xs</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="0">SM</numIndex>
+                                    <numIndex index="1">sm</numIndex>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <numIndex index="0">MD</numIndex>
+                                    <numIndex index="1">md</numIndex>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <numIndex index="0">LG</numIndex>
+                                    <numIndex index="1">lg</numIndex>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <numIndex index="0">XL</numIndex>
+                                    <numIndex index="1">xl</numIndex>
+                                </numIndex>
+                                <numIndex index="5">
+                                    <numIndex index="0">XXL</numIndex>
+                                    <numIndex index="1">xxl</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                        </TCEforms>
+                    </breakpoint>
+                    </el>
+                </ROOT>
+            </T3DataStructure>
+        )
+    }
+    # ID of Element
+    9 {
+        title = 33% - 33% - 33%
+        iconIdentifier = grid-icon
+        config {
+            colCount = 3
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Left 33%
+                            colPos = 401
+                        }
+                        2 {
+                            name = Middle 33%
+                            colPos = 402
+                        }
+                        3 {
+                            name = Right 33%
+                            colPos = 403
+                        }
+                    }
+                }
+            }
+        }
+        flexformDS (
+            <T3DataStructure>
+                <ROOT type="array">
+                    <type>array</type>
+                    <el type="array">
+                    <breakpoint type="array">
+                        <TCEforms type="array">
+                        <label>Container Breakpoint</label>
+                        <config type="array">
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>md</default>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="0">XS</numIndex>
+                                    <numIndex index="1">xs</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="0">SM</numIndex>
+                                    <numIndex index="1">sm</numIndex>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <numIndex index="0">MD</numIndex>
+                                    <numIndex index="1">md</numIndex>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <numIndex index="0">LG</numIndex>
+                                    <numIndex index="1">lg</numIndex>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <numIndex index="0">XL</numIndex>
+                                    <numIndex index="1">xl</numIndex>
+                                </numIndex>
+                                <numIndex index="5">
+                                    <numIndex index="0">XXL</numIndex>
+                                    <numIndex index="1">xxl</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                        </TCEforms>
+                    </breakpoint>
+                    </el>
+                </ROOT>
+            </T3DataStructure>
+        )
+    }
+}

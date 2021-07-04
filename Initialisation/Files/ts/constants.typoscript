@@ -1,0 +1,17 @@
+############################
+#### INCLUDE EXTENSIONS ####
+############################
+<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/news/constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/powermail/constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/search/constants.typoscript">
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:lynx/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:lynx/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:lynx/Resources/Private/Templates/ContentElements/
+    }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-11-14UTC00:10:570">
+        <header>
+            <authorName>Konstantin Schneider</authorName>
+            <authorEmail>k.schneider@s-w-e.com</authorEmail>
+        </header>
+        <body>
+
+            <trans-unit id="empty">
+                <source>Empty</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

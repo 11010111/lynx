@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-11-14UTC00:10:570">
+        <header>
+            <authorName>Konstantin Schneider</authorName>
+            <authorEmail>k.schneider@s-w-e.com</authorEmail>
+        </header>
+        <body>
+
+            <!-- Backend Module -->
+            <trans-unit id="extension.title">
+                <source>Site Package</source>
+            </trans-unit>
+
+            <!-- Backend Layout -->
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal">
+                <source>Normal</source>
+            </trans-unit>
+
+            <!-- Frame Extend -->
+            <trans-unit id="frame.extra">
+                <source>Frame Extra</source>
+            </trans-unit>
+            <trans-unit id="frame.left">
+                <source>Frame Left</source>
+            </trans-unit>
+            <trans-unit id="frame.right">
+                <source>Frame Right</source>
+            </trans-unit>
+            <trans-unit id="frame.no_mobile">
+                <source>Mobile</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

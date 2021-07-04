@@ -1,0 +1,47 @@
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+    config:
+        contentsCss: ["EXT:lynx/Resources/Public/Css/rte.css", "/fileadmin/lynx/scss/compiled/rte.css"]
+
+        stylesSet:
+            - { name: "Big", element: "p", attributes: { 'class': 'big' } }
+            - { name: "Smaller content", element: "p", attributes: { 'class': 'smaller-content' } }
+            - { name: "Small", element: "p", attributes: { 'class': 'small' } }
+            - { name: "Red", element: "p", attributes: { 'class': 'red' } }
+            - { name: "Orange", element: "p", attributes: { 'class': 'orange' } }
+            - { name: "Green", element: "p", attributes: { 'class': 'green' } }
+
+        toolbarGroups:
+            - { name: styles, groups: [ format, styles ] }
+            - { name: basicstyles, groups: [ basicstyles ] }
+            - { name: paragraph, groups: [ list, indent, blocks, align ] }
+            - "/"
+            - { name: links, groups: [ links ] }
+            - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+            - { name: editing, groups: [ spellchecker ] }
+            - { name: insert, groups: [ insert ] }
+            - { name: tools, groups: [ table, specialchar ] }
+            - { name: document, groups: [ mode ] }
+
+        format_tags: "p;h1;h2;h3;h4;h5;pre"
+
+        justifyClasses:
+            - text-left
+            - text-center
+            - text-right
+            - text-justify
+
+        extraPlugins:
+            - justify
+
+        removePlugins:
+            - image
+
+        removeButtons:
+            - Anchor
+            - Underline
+            - Strike

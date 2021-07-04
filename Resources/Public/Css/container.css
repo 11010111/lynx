@@ -1,0 +1,40 @@
+.container--0 {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+.container--0 .container--1 {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 67.5em) {
+  .container--0 {
+    max-width: 50rem;
+  }
+}
+@media screen and (max-width: 48em) {
+  .container--0 {
+    max-width: 38rem;
+  }
+}
+
+.container--1 {
+  width: calc(100% + 2rem);
+  max-width: calc(100% + 2rem);
+  margin: 0 -1rem;
+  padding: 0 1rem;
+}
+.container--1 .container--1 {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 48em) {
+  .no-mobile {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=container.css.map */

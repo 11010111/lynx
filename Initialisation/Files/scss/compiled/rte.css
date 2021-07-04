@@ -1,0 +1,35 @@
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.big {
+  font-size: 5em;
+}
+
+.small {
+  font-size: 0.5em;
+}
+
+.smaller-content {
+  width: 70%;
+}
+
+.red {
+  color: #F44336;
+}
+
+.green {
+  color: #4CAF50;
+}
+
+.orange {
+  color: #FFA500;
+}

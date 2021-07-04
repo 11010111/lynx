@@ -1,0 +1,12 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{imageWidth} == 0">
+    <f:then>
+        <f:media class="image-embed-item ce-image-full" file="{file}"  alt="{file.alternative}" title="{file.title}" loading="{settings.media.lazyLoading}" additionalAttributes="{srcset: '{f:uri.image(image: file, maxWidth: 540)} 540w,{f:uri.image(image: file, maxWidth: 768)} 768w,{f:uri.image(image: file, maxWidth: 990)} 990w,{f:uri.image(image: file, maxWidth: 1200)} 1200w,{f:uri.image(image: file, maxWidth: 1440)} 1440w,{f:uri.image(image: file, maxWidth: 1900)} 1900w',sizes: '(min-width: 1200px) 50vw, 100vw'}" />
+    </f:then>
+    <f:else>
+        <f:media class="image-embed-item" width="{dimensions.width}" height="{dimensions.height}" file="{file}"  alt="{file.alternative}" title="{file.title}" loading="{settings.media.lazyLoading}" />
+    </f:else>
+</f:if>
+
+</html>

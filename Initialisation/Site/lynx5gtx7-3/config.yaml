@@ -1,0 +1,53 @@
+base: '/'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:lynx/Resources/Private/Templates/Sites/Error404.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+  -
+    errorCode: 500
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:lynx/Resources/Private/Templates/Sites/Error500.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+  -
+    errorCode: 403
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:lynx/Resources/Private/Templates/Sites/Error403.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+  -
+    errorCode: 503
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:lynx/Resources/Private/Templates/Sites/Error503.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+  -
+    errorCode: 0
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:lynx/Resources/Private/Templates/Sites/AnyError.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    base: /
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    websiteTitle: ''
+    navigationTitle: Deutsch
+    hreflang: de-DE
+    direction: ltr
+    flag: de
+    languageId: 0
+rootPageId: 1
+websiteTitle: ''

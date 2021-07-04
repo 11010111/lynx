@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-11-14UTC00:10:570">
+        <header>
+            <authorName>Konstantin Schneider</authorName>
+            <authorEmail>k.schneider@s-w-e.com</authorEmail>
+        </header>
+        <body>
+
+            <trans-unit id="top">
+                <source>To Top</source>
+                <target state="translated">Nach Oben</target>
+            </trans-unit>
+
+            <!-- Module -->
+            <trans-unit id="created_resources.title">
+                <source>Resources folder</source>
+                <target state="translated">Resources Ordner</target>
+            </trans-unit>
+            <trans-unit id="created_resources">
+                <source>The "resources" folder was created successfully.</source>
+                <target state="translated">Der "resources" Ordner wurde erfolgreich erstellt.</target>
+            </trans-unit>
+            <trans-unit id="not_created_resources.title">
+                <source>Resources folder</source>
+                <target state="translated">Resources Ordner</target>
+            </trans-unit>
+            <trans-unit id="not_created_resources">
+                <source>The "resources" folder is already exists.</source>
+                <target state="translated">Der "resources" Ordner existiert bereits.</target>
+            </trans-unit>
+            <trans-unit id="created_sites.title">
+                <source>Sites Configuration folder</source>
+                <target state="translated">Seiten Konfigurationsordner</target>
+            </trans-unit>
+            <trans-unit id="created_sites">
+                <source>The Sites folder was created successfully.</source>
+                <target state="translated">Der "Seiten Konfigurationsordner" wurde erfolgreich erstellt.</target>
+            </trans-unit>
+            <trans-unit id="not_created_sites.title">
+                <source>Sites Configuration folder</source>
+                <target state="translated">Seiten Konfigurationsordner</target>
+            </trans-unit>
+            <trans-unit id="not_created_sites">
+                <source>The sites configuration folder is already exists.</source>
+                <target state="translated">Der "Seiten Konfigurationsordner" existiert bereits.</target>
+            </trans-unit>
+            <trans-unit id="first_install.title">
+                <source>Site Package - First Install Tools</source>
+                <target state="translated">Site Package - Erst Installationstools</target>
+            </trans-unit>
+            <trans-unit id="sites_configuration.title">
+                <source>Sites Configuration</source>
+                <target state="translated">Seiten Konfiguration</target>
+            </trans-unit>
+            <trans-unit id="sites_configuration.label">
+                <source>If it does not exist, a "sites" folder is created under the path "/typo3conf/sites".</source>
+                <target state="translated">Wenn nicht vorhanden wird ein "sites" Ordner unter dem Pfad "/typo3conf/sites" erstellt.</target>
+            </trans-unit>
+            <trans-unit id="sites_configuration.button">
+                <source>Create Configuration</source>
+                <target state="translated">Konfiguration erstellen</target>
+            </trans-unit>
+            <trans-unit id="resources_folder.title">
+                <source>Resources Folder</source>
+                <target state="translated">Resources Ordner</target>
+            </trans-unit>
+            <trans-unit id="resources_folder.label">
+                <source>If it does not exist, a "resources" folder is created under the path "/fileadmin".</source>
+                <target state="translated">Wenn nicht vorhanden wird ein "resources" Ordner unter dem Pfad "/fileadmin" erstellt.</target>
+            </trans-unit>
+            <trans-unit id="resources_folder.button">
+                <source>Create Resources</source>
+                <target state="translated">Resources Ordner erstellen</target>
+            </trans-unit>
+            <trans-unit id="typo_tables.title">
+                <source>Database Table Entries</source>
+                <target state="translated">Datenbank Tabelleneinträge</target>
+            </trans-unit>
+            <trans-unit id="typo_tables.label">
+                <source>Write tables to the database.</source>
+                <target state="translated">Tabellen in die Datenbank schreiben.</target>
+            </trans-unit>
+            <trans-unit id="typo_tables.button">
+                <source>Write tables</source>
+                <target state="translated">Tabellen beschreiben</target>
+            </trans-unit>
+            <trans-unit id="created_tables.title">
+                <source>Database Table Entries</source>
+                <target state="translated">Datenbank Tabelleneinträge</target>
+            </trans-unit>
+            <trans-unit id="created_tables">
+                <source>Table entries were successfully written to the database.</source>
+                <target state="translated">Tabelleneinträge wurden erfolgreich in die Datenbank geschrieben.</target>
+            </trans-unit>
+            <trans-unit id="not_created_tables.title">
+                <source>Database Tables</source>
+                <target state="translated">Datenbank Tabellen</target>
+            </trans-unit>
+            <trans-unit id="not_created_tables">
+                <source>The table entries already exist.</source>
+                <target state="translated">Die Tabelleneinträge existieren bereits.</target>
+            </trans-unit>
+            <trans-unit id="access.title">
+                <source>Create System Maintainers</source>
+                <target state="translated">System Administratoren erstellen</target>
+            </trans-unit>
+            <trans-unit id="access.label">
+                <source>Create backend administrators with access to the Admin Tools module and Install Tool.</source>
+                <target state="translated">Erstellt Backend Administratoren mit einen Zugang zu den Admin Tools Module und dem Install Tool.</target>
+            </trans-unit>
+            <trans-unit id="access.button">
+                <source>Create System Maintainers</source>
+                <target state="translated">System Administratoren erstellen</target>
+            </trans-unit>
+            <trans-unit id="created_users.title">
+                <source>System Maintainers</source>
+                <target state="translated">System Administratoren</target>
+            </trans-unit>
+            <trans-unit id="created_users">
+                <source>All System Maintainers was created successfully.</source>
+                <target state="translated">Alle System Administratoren wurden erfolgreich erstellt.</target>
+            </trans-unit>
+            <trans-unit id="not_created_users">
+                <source>System Maintainers are already exists.</source>
+                <target state="translated">System Administratoren existieren bereits.</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,64 @@
+<nav class="desktop">
+
+  <div class="desktop-container">
+    <div class="flex flex--space-between container--{data.layout}">
+
+      <div class="content-logo">
+        <div class="logo">
+          <f:cObject typoscriptObjectPath="lib.logo" />
+        </div>
+      </div>
+
+      <div class="content-menu">
+        <ul class="desktop-menu">
+          <f:for each="{navigation}" as="navigationItem">
+            <li class="parent{f:if(condition:'{navigationItem.children}',then:' has-children')}">
+              <a class="{f:if(condition: navigationItem.active, then:'active')}" href="{navigationItem.link}" target="{navigationItem.target}" title="{navigationItem.title}">
+                {navigationItem.title}
+              </a>
+              <f:if condition="{navigationItem.children}">
+                <ul class="desktop-dropdown">
+                  <f:for each="{navigationItem.children}" as="child">
+                    <li class="child">
+                      <a class="{f:if(condition: child.active, then:'active')}" href="{child.link}" target="{child.target}" title="{child.title}">
+                        {child.title}
+                      </a>
+                    </li>
+                  </f:for>
+                </ul>
+              </f:if>
+            </li>
+          </f:for>
+        </ul>
+      </div>
+
+      <f:if condition="{languageNavigation}">
+        <div class="content-lang-menu">
+          <ul class="language-menu">
+            <f:for each="{languageNavigation}" as="item">
+              <f:if condition="{item.active}">
+                <li class="active">{item.title} / <f:format.case>{item.twoLetterIsoCode}</f:format.case></li>
+                <ul class="language" id="language">
+                  <f:for each="{languageNavigation}" as="item">
+                    <f:if condition="{item.available}">
+                      <f:if condition="{item.active}">
+                        <f:then>
+                          <li class="hreflang active" data-hreflang="{item.hreflang}" data-link="{item.link}">{item.title} / <f:format.case>{item.twoLetterIsoCode}</f:format.case></li>
+                        </f:then>
+                        <f:else>
+                          <li class="hreflang" data-hreflang="{item.hreflang}" data-link="{item.link}"><a href="{item.link}">{item.title} / <f:format.case>{item.twoLetterIsoCode}</f:format.case></a></li>
+                        </f:else>
+                      </f:if>
+                    </f:if>
+                  </f:for>
+                </ul>
+              </f:if>
+            </f:for>
+          </ul>
+        </div>
+      </f:if>
+
+    </div>
+  </div>
+
+</nav>

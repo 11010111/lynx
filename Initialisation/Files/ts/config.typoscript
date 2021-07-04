@@ -1,0 +1,33 @@
+############################
+### OVERRIDE - SITE LOGO ###
+############################
+#lib.logo.file = EXT:lynx/Resources/Public/Images/logo.svg
+
+############################################
+### OVERRIDE - DESKTOP MENU PARTIAL NAME ###
+############################################
+#lib.desktopMenuPartialName.value = Desktop
+
+###########################################
+### OVERRIDE - MOBILE MENU PARTIAL NAME ###
+###########################################
+#lib.mobileMenuPartialName.value = Mobile
+
+################################################
+### OVERRIDE - FOOTER GRIDELEMENTS/RECORD ID ###
+################################################
+#lib.footer.source = 1
+
+###########################################
+#### File Collection for Mask Elements ####
+###########################################
+tt_content.mask_html_form_elements {
+  dataProcessing {
+    50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    50 {
+      collections = 1
+      collections.recursive = 1
+      as = downloads
+    }
+  }
+}

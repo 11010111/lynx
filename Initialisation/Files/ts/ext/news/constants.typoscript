@@ -1,0 +1,12 @@
+##############
+#### NEWS ####
+##############
+plugin.tx_news {
+    view {
+        layoutRootPath = fileadmin/lynx/ext/news/Layouts/
+        partialRootPath = fileadmin/lynx/ext/news/Partials/
+        templateRootPath = fileadmin/lynx/ext/news/Templates/
+    }
+}
+
+plugin.tx_news.settings.cssFile =

@@ -1,0 +1,156 @@
+##########################################################################################################
+// flickity.pkgd.min.js - Touch, responsive, flickable carousels
+// Options: https://flickity.metafizzy.co/options.html
+##########################################################################################################
+
+var flkty = new Flickity('#myElement', {
+  // options
+  cellAlign: 'left',
+  contain: true
+});
+
+##########################################################################################################
+##########################################################################################################
+// client-detection.js
+// Examples usage
+##########################################################################################################
+
+MobileDetection.isMobile()
+MobileDetection.isAndroid()
+MobileDetection.isBlackBerry()
+MobileDetection.isIOS()
+MobileDetection.isOpera()
+MobileDetection.isWindows()
+
+BrowserDetection.getBrowser()
+BrowserDetection.getOS()
+BrowserDetection.getVersion()
+
+##########################################################################################################
+##########################################################################################################
+// countup.min.js - CountUp.js is a dependency-free, lightweight JavaScript class that can be used to
+// quickly create animations that display numerical data in a more interesting way.
+// Options - https://inorganik.github.io/countUp.js/
+##########################################################################################################
+
+let demo = new CountUp('myTargetElement', 6781);
+
+if (!demo.error) {
+    demo.start();
+} else {
+    console.error(demo.error);
+}
+
+##########################################################################################################
+##########################################################################################################
+// emergency.min.js - Lightweight, high-performance JS plugin for detecting and manipulating elements in the browser.
+// Options - https://github.com/xtianmiller/emergence.js
+##########################################################################################################
+
+<div class="element" data-emergence="hidden"></div>
+
+<script>
+  var customContainer = document.querySelector('.wrapper');
+
+  emergence.init({
+    container: customContainer
+  });
+</script>
+
+<stylesheet>
+.element[data-emergence=hidden] {
+  /* Hidden state */
+}
+.element[data-emergence=visible] {
+  /* Visible state */
+}
+</stylesheet>
+
+##########################################################################################################
+##########################################################################################################
+// flatpickr.js - flatpickr is a lightweight and powerful datetime picker.
+// Options: https://flatpickr.js.org/options/
+##########################################################################################################
+
+flatpickr("#myID", {
+    inline: true,
+    enableTime: true,
+    minTime: "09:00"
+});
+
+##########################################################################################################
+##########################################################################################################
+// in-view.min.js - Get notified when a DOM element enters or exits the viewport.
+// Basic Usage: https://github.com/camwiegert/in-view
+##########################################################################################################
+
+inView.is(document.querySelector('.someSelector'));
+// => true
+
+inView('.someSelector').on('enter', doSomething);
+
+inView.offset(100);
+inView.offset(-50);
+
+##########################################################################################################
+##########################################################################################################
+// jarallax.min.js - Smooth parallax scrolling effect for background images, videos. Code in pure
+// JavaScript with NO dependencies + jQuery supported. YouTube, Vimeo and Self-Hosted Videos parallax supported.
+// Usage: https://github.com/nk-o/jarallax
+##########################################################################################################
+
+jarallax(document.querySelectorAll('.jarallax'), {
+    speed: 0.2
+});
+
+##########################################################################################################
+##########################################################################################################
+// offside.min.js - Offside.js is a minimal JavaScript kit without library dependencies to push things
+// off-canvas using just class manipulation. It's goal is to provide a super-lightweight, efficient
+// and customizable way of handling off-canvas menus/elements on modern website and web applications.
+// Usage: https://github.com/toomuchdesign/offside
+##########################################################################################################
+
+var myOffside = offside( '#my-menu', {
+    slidingElementsSelector:'#my-content-container',
+    buttonsSelector: '#my-button, .another-button',
+});
+
+##########################################################################################################
+##########################################################################################################
+// reframe.min.js - Reframe.js is a javascript plugin that makes unresponsive elements responsive.
+// Usage - https://dollarshaveclub.github.io/reframe.js/
+##########################################################################################################
+
+reframe('selector');
+
+##########################################################################################################
+##########################################################################################################
+// tippy-bundle.umd.min.js & popper.min.js - is the complete tooltip, popover, dropdown, and menu solution
+// for the web, powered by Popper.
+// Options: https://atomiks.github.io/tippyjs/v6/all-props/
+##########################################################################################################
+
+tippy('#myButton', {
+  content: "I'm a Tippy tooltip!",
+});
+
+##########################################################################################################
+##########################################################################################################
+// tobii.min.js - An accessible, open-source lightbox with no dependencies.
+// Options: https://github.com/midzer/tobii
+##########################################################################################################
+
+const tobii = new Tobii({
+  captions: false
+});
+
+<a href="#" data-type="youtube" data-id="KU2sSZ_90PY" class="lightbox">
+  Open YouTube video
+</a>
+
+<button type="button" data-type="iframe" data-target="https://www.wikipedia.org" class="lightbox">
+  Open Wikipedia
+</button>
+
+##########################################################################################################

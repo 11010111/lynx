@@ -1,0 +1,35 @@
+// Imports
+@import "functions";
+@import "variables";
+
+// Gaps - TOP / BOTTOM
+@each $gap, $options in $gaps {
+  @media screen and (min-width: breakpoint($gap)) {
+    @each $size, $value in $options {
+      // Top
+      .frame-space-before-#{$size} {
+        margin-top: $value;
+      }
+      // Bottom
+      .frame-space-after-#{$size} {
+        margin-bottom: $value;
+      }
+    }
+  }
+}
+
+// Gaps - LEFT / RIGHT
+@each $gap, $options in $side-gaps {
+  @media screen and (min-width: breakpoint($gap)) {
+    @each $size, $value in $options {
+      // Left
+      .frame-space-left-#{$size} {
+        margin-left: $value;
+      }
+      // Right
+      .frame-space-right-#{$size} {
+        margin-right: $value;
+      }
+    }
+  }
+}

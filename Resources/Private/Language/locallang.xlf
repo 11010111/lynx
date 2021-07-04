@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-11-14UTC00:10:570">
+        <header>
+            <authorName>Konstantin Schneider</authorName>
+            <authorEmail>k.schneider@s-w-e.com</authorEmail>
+        </header>
+        <body>
+
+            <trans-unit id="top">
+                <source>To Top</source>
+            </trans-unit>
+
+            <!-- Module -->
+            <trans-unit id="created_resources.title">
+                <source>Resources folder</source>
+            </trans-unit>
+            <trans-unit id="created_resources">
+                <source>The "resources" folder was created successfully.</source>
+            </trans-unit>
+            <trans-unit id="not_created_resources">
+                <source>The "resources" folder is already exists.</source>
+            </trans-unit>
+            <trans-unit id="created_sites.title">
+                <source>Sites Configuration folder</source>
+            </trans-unit>
+            <trans-unit id="created_sites">
+                <source>The Sites folder was created successfully.</source>
+            </trans-unit>
+            <trans-unit id="not_created_sites">
+                <source>The sites configuration folder is already exists.</source>
+            </trans-unit>
+            <trans-unit id="first_install.title">
+                <source>Site Package - First Install Tools</source>
+            </trans-unit>
+            <trans-unit id="sites_configuration.title">
+                <source>Sites Configuration</source>
+            </trans-unit>
+            <trans-unit id="sites_configuration.label">
+                <source>If it does not exist, a "sites" folder is created under the path "/typo3conf/sites".</source>
+            </trans-unit>
+            <trans-unit id="sites_configuration.button">
+                <source>Create Configuration</source>
+            </trans-unit>
+            <trans-unit id="resources_folder.title">
+                <source>Resources Folder</source>
+            </trans-unit>
+            <trans-unit id="resources_folder.label">
+                <source>If it does not exist, a "resources" folder is created under the path "/fileadmin".</source>
+            </trans-unit>
+            <trans-unit id="resources_folder.button">
+                <source>Create Resources</source>
+            </trans-unit>
+            <trans-unit id="typo_tables.title">
+                <source>Database Tables Entries</source>
+            </trans-unit>
+            <trans-unit id="typo_tables.label">
+                <source>Write all tables entries to the database.</source>
+            </trans-unit>
+            <trans-unit id="typo_tables.button">
+                <source>Write tables</source>
+            </trans-unit>
+            <trans-unit id="created_tables.title">
+                <source>Database Tables Entries</source>
+            </trans-unit>
+            <trans-unit id="created_tables">
+                <source>Table entries were successfully written to the database.</source>
+            </trans-unit>
+            <trans-unit id="not_created_tables">
+                <source>The table entries already exist.</source>
+            </trans-unit>
+            <trans-unit id="access.title">
+                <source>Create System Maintainers</source>
+            </trans-unit>
+            <trans-unit id="access.label">
+                <source>Create backend administrators with access to the Admin Tools module and Install Tool.</source>
+            </trans-unit>
+            <trans-unit id="access.button">
+                <source>Create System Maintainers</source>
+            </trans-unit>
+            <trans-unit id="created_users.title">
+                <source>System Maintainers</source>
+            </trans-unit>
+            <trans-unit id="created_users">
+                <source>All System Maintainers was created successfully.</source>
+            </trans-unit>
+            <trans-unit id="not_created_users">
+                <source>System Maintainers are already exists.</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

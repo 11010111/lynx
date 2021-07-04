@@ -1,0 +1,16 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                translationFiles:
+                  20: 'FILE:fileadmin/lynx/language/locallang.xlf'
+                templateRootPaths:
+                  20: 'FILE:fileadmin/lynx/ext/form/Templates/'
+                partialRootPaths:
+                  20: 'FILE:fileadmin/lynx/ext/form/Partials/'
+                layoutRootPaths:
+                  20: 'FILE:fileadmin/lynx/ext/form/Layouts/'
