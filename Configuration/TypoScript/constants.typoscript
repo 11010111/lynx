@@ -4,19 +4,6 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/constants.typoscript">
 
-
-##############################
-#### FLUID STYLED CONTENT ####
-##############################
-styles {
-    templates {
-        layoutRootPath = EXT:lynx/Resources/Private/Layouts/ContentElements/
-        partialRootPath = EXT:lynx/Resources/Private/Partials/ContentElements/
-        templateRootPath = EXT:lynx/Resources/Private/Templates/ContentElements/
-    }
-}
-
-
 ##############
 ### MODULE ###
 ##############
@@ -39,6 +26,16 @@ module.tx_lynx {
 	}
 }
 
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:lynx/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:lynx/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:lynx/Resources/Private/Templates/ContentElements/
+    }
+}
 
 ############
 ### PAGE ###
@@ -48,21 +45,6 @@ page {
         layoutRootPath = EXT:lynx/Resources/Private/Layouts/Page/
         partialRootPath = EXT:lynx/Resources/Private/Partials/Page/
         templateRootPath = EXT:lynx/Resources/Private/Templates/Page/
-    }
-    meta {
-        description =
-        author = Konstantin Schneider
-        keywords =
-        viewport = width=device-width, initial-scale=1
-        robots = index,follow
-        apple-mobile-web-app-capable = no
-        compatible = IE=edge
-    }
-    tracking {
-        google {
-            trackingID =
-            anonymizeIp = 1
-        }
     }
 }
 
@@ -75,16 +57,4 @@ plugin.tx_form {
             100 = EXT:lynx/Configuration/Form/CustomFormSetup.yaml
         }
     }
-}
-
-##############
-### CONFIG ###
-##############
-config {
-    no_cache = 0
-    removeDefaultJS = 0
-    admPanel = 1
-    prefixLocalAnchors = all
-    headerComment = build by Smart Web Elements
-    sendCacheHeaders = 1
 }

@@ -1,0 +1,15 @@
+// Imports
+@import 'variables';
+@import 'functions';
+
+// Footer code here...
+footer {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 10rem;
+  color: color('white');
+  background-color: color('secondary');
+  margin: 0 -1rem;
+}
