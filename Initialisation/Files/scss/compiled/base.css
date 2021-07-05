@@ -100,9 +100,8 @@ hr {
 a {
   color: #3c55ff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
-
 a:hover {
   color: #040e52;
 }

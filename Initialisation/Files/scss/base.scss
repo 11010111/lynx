@@ -78,11 +78,11 @@ hr {
 a {
   color: color('link');
   text-decoration: none;
-  font-weight: bold;
-}
+  font-weight: 600;
 
-a:hover {
-  color: color('link-hover');
+  &:hover {
+    color: color('link-hover');
+  }
 }
 
 img {
