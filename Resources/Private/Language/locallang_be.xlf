@@ -22,13 +22,13 @@
 
             <!-- Frame Extend -->
             <trans-unit id="frame.extra">
-                <source>Frame Extra</source>
+                <source>Frame Extra Class</source>
             </trans-unit>
             <trans-unit id="frame.left">
-                <source>Frame Left</source>
+                <source>Space Left</source>
             </trans-unit>
             <trans-unit id="frame.right">
-                <source>Frame Right</source>
+                <source>Space Right</source>
             </trans-unit>
             <trans-unit id="frame.display_on">
                 <source>Display on</source>
