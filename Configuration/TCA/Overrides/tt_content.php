@@ -42,19 +42,15 @@ call_user_func(function ()
                     ]
                 ]
             ],
-            'no_mobile' => [
+            'display_on' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:frame.no_mobile',
+                'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:frame.display_on',
                 'description' => '',
                 'config' => [
-                    'type' => 'check',
-                    'renderType' => 'checkboxToggle',
-                    'default' => 0,
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
                     'items' => [
-                        [
-                            0 => '',
-                            1 => ''
-                        ]
+                        ['Default', ''],
                     ]
                 ]
             ]
@@ -63,7 +59,7 @@ call_user_func(function ()
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'frame_class_extra, space_left_class, space_right_class, no_mobile',
+        'display_on, frame_class_extra, space_left_class, space_right_class',
         'appearance',
         'after:space_after_class'
     );
@@ -71,7 +67,7 @@ call_user_func(function ()
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        '--linebreak--, frame_class_extra, space_left_class, space_right_class, no_mobile'
+        '--linebreak--, display_on, frame_class_extra, space_left_class, space_right_class'
     );
 
 });

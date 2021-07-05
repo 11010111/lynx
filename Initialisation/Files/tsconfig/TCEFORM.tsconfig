@@ -2,36 +2,8 @@
 # TCEFORM
 #
 TCEFORM {
-    pages {
-        layout {
-            removeItems = 2,3
-
-            altLabels {
-                1 = Full Width
-            }
-
-            config {
-                default = 1
-            }
-        }
-    }
-
     tt_content {
-        layout {
-            removeItems = 2,3
-
-            altLabels {
-                1 = Full Width
-            }
-        }
-
         frame_class {
-            removeItems = ruler-before,ruler-after,indent,indent-left,indent-right
-
-            altLabels {
-                #default = Default
-            }
-
             addItems {
                 grey-box = Grey Box
             }
@@ -44,11 +16,15 @@ TCEFORM {
         }
 
         space_before_class {
-
+          	addItems {
+                #class = Name
+            }
         }
 
         space_after_class {
-
+			addItems {
+                #class = Name
+            }
         }
 
         space_left_class {
@@ -69,26 +45,6 @@ TCEFORM {
                 large = Large
                 extra-large = Extra Large
             }
-        }
-
-        header_layout {
-            config {
-                #default = 2
-            }
-
-            altLabels {
-                0 = Default
-            }
-
-            removeItems = 1,2,3,4,5
-
-            addItems {
-                #6 = h6
-            }
-        }
-
-        imageorient {
-            removeItems = 8,9,10,17,18,25,26
         }
     }
 

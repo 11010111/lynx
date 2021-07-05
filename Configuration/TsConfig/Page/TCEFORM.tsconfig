@@ -1,2 +1,66 @@
-# INCLUDE
-<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/tsconfig/TCEFORM.tsconfig">
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+        layout {
+            removeItems = 2,3
+
+            altLabels {
+                1 = Full Width
+            }
+
+            config {
+                default = 1
+            }
+        }
+    }
+
+    tt_content {
+        layout {
+            removeItems = 2,3
+
+            altLabels {
+                1 = Full Width
+            }
+        }
+
+        frame_class {
+            removeItems = ruler-before,ruler-after,indent,indent-left,indent-right
+        }
+
+        frame_class_extra {
+            addItems {
+                #class = Name
+            }
+        }
+
+        space_before_class {
+
+        }
+
+        space_after_class {
+
+        }
+
+        space_left_class {
+
+        }
+
+        space_right_class {
+
+        }
+
+        header_layout {
+            altLabels {
+                0 = Default
+            }
+
+            removeItems = 1,2,3,4,5
+        }
+
+        imageorient {
+            removeItems = 8,9,10,17,18,25,26
+        }
+    }
+}

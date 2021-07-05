@@ -30,8 +30,8 @@
             <trans-unit id="frame.right">
                 <source>Frame Right</source>
             </trans-unit>
-            <trans-unit id="frame.no_mobile">
-                <source>Mobile</source>
+            <trans-unit id="frame.display_on">
+                <source>Display on</source>
             </trans-unit>
 
         </body>

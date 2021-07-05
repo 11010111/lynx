@@ -36,9 +36,9 @@
                 <source>Frame Right</source>
                 <target state="translated">Frame Rechts</target>
             </trans-unit>
-            <trans-unit id="frame.no_mobile">
-                <source>Hide Mobile</source>
-                <target state="translated">Mobil verstecken</target>
+            <trans-unit id="frame.display_on">
+                <source>Display on</source>
+                <target state="translated">Anzeigen auf</target>
             </trans-unit>
 
         </body>
