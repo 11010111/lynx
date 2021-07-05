@@ -7,6 +7,22 @@
     //
 }
 
+.frame-desktop, .on-desktop {
+    display: none;
+
+    @media screen and (min-width: breakpoint('lg')) {
+        display: block;
+    }
+}
+
+.frame-mobile, .on-mobile {
+    display: block;
+
+    @media screen and (min-width: breakpoint('lg')) {
+        display: none;
+    }
+}
+
 .frame-default {
     //
 }

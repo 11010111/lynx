@@ -3,6 +3,13 @@
 #
 TCEFORM {
     tt_content {
+        display_on {
+          addItems {
+                desktop = Desktop
+            	mobile = Mobile
+          }
+        }
+
         frame_class {
             addItems {
                 grey-box = Grey Box

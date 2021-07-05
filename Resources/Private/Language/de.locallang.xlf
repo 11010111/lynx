@@ -12,6 +12,62 @@
                 <target state="translated">Nach Oben</target>
             </trans-unit>
 
+            <!-- PageLayoutView -->
+            <trans-unit id="extra_small">
+                <source>Extra Small</source>
+                <target state="translated">Extraklein</target>
+            </trans-unit>
+            <trans-unit id="small">
+                <source>Small</source>
+                <target state="translated">Klein</target>
+            </trans-unit>
+            <trans-unit id="medium">
+                <source>Medium</source>
+                <target state="translated">Mittel</target>
+            </trans-unit>
+            <trans-unit id="large">
+                <source>Large</source>
+                <target state="translated">Groß</target>
+            </trans-unit>
+            <trans-unit id="extra_large">
+                <source>Extra Large</source>
+                <target state="translated">Extragroß</target>
+            </trans-unit>
+
+            <trans-unit id="full_width">
+                <source>Full Width</source>
+                <target state="translated">Vollbild</target>
+            </trans-unit>
+            <trans-unit id="frame_class">
+                <source>Frame Class</source>
+                <target state="translated">Rahmen Klasse</target>
+            </trans-unit>
+            <trans-unit id="frame_class_extra">
+                <source>Frame Class Extra</source>
+                <target state="translated">Rahmen Zusatzklasse</target>
+            </trans-unit>
+            <trans-unit id="space_right">
+                <source>Space Right</source>
+                <target state="translated">Abstand Rechts</target>
+            </trans-unit>
+            <trans-unit id="space_left">
+                <source>Space Left</source>
+                <target state="translated">Abstand Links</target>
+            </trans-unit>
+
+            <trans-unit id="display_on">
+                <source>Display on</source>
+                <target state="translated">Anzeigen auf</target>
+            </trans-unit>
+            <trans-unit id="display_on.desktop">
+                <source>Desktop</source>
+                <target state="translated">Desktop</target>
+            </trans-unit>
+            <trans-unit id="display_on.mobile">
+                <source>Mobile</source>
+                <target state="translated">Mobil</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

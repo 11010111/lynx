@@ -1,3 +1,21 @@
+.frame-desktop, .on-desktop {
+  display: none;
+}
+@media screen and (min-width: 67.5em) {
+  .frame-desktop, .on-desktop {
+    display: block;
+  }
+}
+
+.frame-mobile, .on-mobile {
+  display: block;
+}
+@media screen and (min-width: 67.5em) {
+  .frame-mobile, .on-mobile {
+    display: none;
+  }
+}
+
 .frame-top-center {
   display: flex;
   justify-content: center;
