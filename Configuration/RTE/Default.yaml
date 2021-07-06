@@ -59,7 +59,7 @@ buttons:
             enabled: false
         properties:
             class:
-                allowedClasses: 'link,btn--primary,btn--next,btn--prev,btn--border,link-download,link-folder,link-external,link-external-blank,link-mail'
+                allowedClasses: 'link,btn-primary,btn-next,btn-prev,btn-border,link-download,link-folder,link-external,link-external-blank,link-mail'
         page:
             properties.:
                 class.:
@@ -87,20 +87,20 @@ classesAnchor:
         class: 'link'
         type: 'page'
         titleText: 'Normal'
-    btn--primary:
-        class: 'btn--primary'
+    btn-primary:
+        class: 'btn-primary'
         type: 'page'
         titleText: 'Button (Primär)'
-    btn--next:
-        class: 'btn--next'
+    btn-next:
+        class: 'btn-next'
         type: 'page'
         titleText: 'Button (Mehr)'
-    btn--prev:
-        class: 'btn--prev'
+    btn-prev:
+        class: 'btn-prev'
         type: 'page'
         titleText: 'Button (Zurück)'
-    btn--border:
-        class: 'btn--border'
+    btn-border:
+        class: 'btn-border'
         type: 'page'
         titleText: 'Button (Rahmen)'
     linkDownload:
@@ -123,11 +123,11 @@ classesAnchor:
 classes:
     link:
         name: 'Normal'
-    btn--primary:
+    btn-primary:
         name: 'Button (Primär)'
-    btn--next:
+    btn-next:
         name: 'Button (Mehr)'
-    btn--prev:
+    btn-prev:
         name: 'Button (Zurück)'
-    btn--border:
+    btn-border:
         name: 'Button (Rahmen)'
