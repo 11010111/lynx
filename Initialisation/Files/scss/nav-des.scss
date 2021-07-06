@@ -10,6 +10,7 @@ nav.desktop {
 
   .content-logo {
     margin-top: 2.77rem;
+    transition: margin-top 0.5s;
     
     @media screen and (max-width: breakpoint('xxl')) {
       margin-left: 1rem;
@@ -52,6 +53,7 @@ nav.desktop {
   
     .buy-now {
       margin: 3.44rem 1rem 0 2.77rem;
+      transition: margin-top 0.5s;
     }
 
     .desktop-menu {
@@ -59,6 +61,7 @@ nav.desktop {
       flex-direction: row;
       list-style: none;
       margin: 4.44rem 0 0;
+      transition: margin-top 0.5s;
 
       ul {
         list-style: none;
@@ -200,4 +203,22 @@ nav.desktop {
       }
     }
   }
+}
+
+.desktop-fixed {
+	.desktop-container {
+  		.content-logo {
+            margin-top: 0.77rem;
+        }
+
+  		.content-menu {
+    		.desktop-menu {
+                margin-top: 1.44rem;
+            }
+        }
+  		
+  		.buy-now {
+            margin-top: 0.44rem!important;
+        }
+  	}
 }

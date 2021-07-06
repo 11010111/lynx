@@ -5,6 +5,7 @@
 }
 nav.desktop .content-logo {
   margin-top: 2.77rem;
+  transition: margin-top 0.5s;
 }
 @media screen and (max-width: 103.125em) {
   nav.desktop .content-logo {
@@ -36,12 +37,14 @@ nav.desktop .desktop-container {
 }
 nav.desktop .desktop-container .buy-now {
   margin: 3.44rem 1rem 0 2.77rem;
+  transition: margin-top 0.5s;
 }
 nav.desktop .desktop-container .desktop-menu {
   display: flex;
   flex-direction: row;
   list-style: none;
   margin: 4.44rem 0 0;
+  transition: margin-top 0.5s;
 }
 nav.desktop .desktop-container .desktop-menu ul {
   list-style: none;
@@ -148,6 +151,16 @@ nav.desktop .language-menu .language li {
   font-weight: normal;
   padding: 0.5rem 2rem;
   white-space: nowrap;
+}
+
+.desktop-fixed .desktop-container .content-logo {
+  margin-top: 0.77rem;
+}
+.desktop-fixed .desktop-container .content-menu .desktop-menu {
+  margin-top: 1.44rem;
+}
+.desktop-fixed .desktop-container .buy-now {
+  margin-top: 0.44rem !important;
 }
 
 /*# sourceMappingURL=nav-des.css.map */

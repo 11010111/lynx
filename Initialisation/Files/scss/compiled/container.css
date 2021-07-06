@@ -17,7 +17,6 @@
     max-width: 38rem;
   }
 }
-
 .container--1 {
   width: calc(100% + 2rem);
   max-width: calc(100% + 2rem);
@@ -30,10 +29,7 @@
   margin: 0;
   padding: 0;
 }
-
 .container--xl {
   max-width: 95rem;
   margin: 0 auto;
 }
-
-/*# sourceMappingURL=container.css.map */

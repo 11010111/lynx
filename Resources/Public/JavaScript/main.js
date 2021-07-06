@@ -110,7 +110,7 @@ console.log("WE LOVE TYPO3");
  * Language Select / First detect
  */
 (function LanguageSelect() {
-    let language = document.querySelector('#language')
+    let language = document.querySelector('#language-disabled')
 
     if (language) {
         let hreflang = language.querySelectorAll('.hreflang')
@@ -172,4 +172,39 @@ console.log("WE LOVE TYPO3");
         resize()
         window.addEventListener('resize', resize)
     }
+})();
+
+/**
+ * Set Fixed Navigation On Scroll
+ */
+(function FixedNavigationOnScroll() {
+
+    let desktop = document.querySelector('.desktop')
+    let mobile = document.querySelector('.mobile')
+
+    if (desktop) {
+        let navigation = desktop.querySelector('.desktop-container')
+        let height = navigation.clientHeight
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > height) {
+                desktop.classList.add('desktop-fixed')
+            } else {
+                desktop.classList.remove('desktop-fixed')
+            }
+        })
+    }
+
+    if (mobile) {
+        let height = mobile.clientHeight
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > height) {
+                mobile.classList.add('mobile-fixed')
+            } else {
+                mobile.classList.remove('mobile-fixed')
+            }
+        })
+    }
+
 })();
