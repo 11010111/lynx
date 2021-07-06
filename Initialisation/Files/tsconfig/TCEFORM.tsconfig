@@ -58,7 +58,7 @@ TCEFORM {
     sys_file_reference.crop.config.cropVariants {
         default {
             title = Alle (Standard)
-            selectedRatio = 16:9
+            selectedRatio = NaN
             allowedAspectRatios {
                 NaN {
                     title = Frei

@@ -136,19 +136,19 @@ tx_gridelements.setup {
         title = 20% - 80%
         iconIdentifier = grid-icon
         config {
-            colCount = 4
+            colCount = 10
             rowCount = 1
             rows {
                 1 {
                     columns {
                         1 {
                             name = Left 20%
-                            colspan = 1
+                            colspan = 2
                             colPos = 401
                         }
                         2 {
                             name = Right 80%
-                            colspan = 3
+                            colspan = 8
                             colPos = 402
                         }
                     }
@@ -206,19 +206,19 @@ tx_gridelements.setup {
         title = 80% - 20%
         iconIdentifier = grid-icon
         config {
-            colCount = 4
+            colCount = 10
             rowCount = 1
             rows {
                 1 {
                     columns {
                         1 {
                             name = Left 80%
-                            colspan = 3
+                            colspan = 8
                             colPos = 401
                         }
                         2 {
                             name = Right 20%
-                            colspan = 1
+                            colspan = 2
                             colPos = 402
                         }
                     }
@@ -276,19 +276,19 @@ tx_gridelements.setup {
         title = 30% - 70%
         iconIdentifier = grid-icon
         config {
-            colCount = 3
+            colCount = 10
             rowCount = 1
             rows {
                 1 {
                     columns {
                         1 {
                             name = Left 30%
-                            colspan = 1
+                            colspan = 3
                             colPos = 401
                         }
                         2 {
                             name = Right 70%
-                            colspan = 2
+                            colspan = 7
                             colPos = 402
                         }
                     }
@@ -346,19 +346,19 @@ tx_gridelements.setup {
         title = 70% - 30%
         iconIdentifier = grid-icon
         config {
-            colCount = 3
+            colCount = 10
             rowCount = 1
             rows {
                 1 {
                     columns {
                         1 {
                             name = Left 70%
-                            colspan = 2
+                            colspan = 7
                             colPos = 401
                         }
                         2 {
                             name = Right 30%
-                            colspan = 1
+                            colspan = 3
                             colPos = 402
                         }
                     }
@@ -416,19 +416,19 @@ tx_gridelements.setup {
         title = 40% - 60%
         iconIdentifier = grid-icon
         config {
-            colCount = 3
+            colCount = 10
             rowCount = 1
             rows {
                 1 {
                     columns {
                         1 {
                             name = Left 40%
-                            colspan = 1
+                            colspan = 4
                             colPos = 401
                         }
                         2 {
                             name = Right 60%
-                            colspan = 2
+                            colspan = 6
                             colPos = 402
                         }
                     }
@@ -486,19 +486,19 @@ tx_gridelements.setup {
         title = 60% - 40%
         iconIdentifier = grid-icon
         config {
-            colCount = 3
+            colCount = 10
             rowCount = 1
             rows {
                 1 {
                     columns {
                         1 {
                             name = Left 60%
-                            colspan = 2
+                            colspan = 6
                             colPos = 401
                         }
                         2 {
                             name = Right 40%
-                            colspan = 1
+                            colspan = 4
                             colPos = 402
                         }
                     }
