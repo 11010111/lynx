@@ -39,7 +39,7 @@ page {
         10 = TEXT
         10 {
             field = uid
-            wrap = <body id="site_|">
+            wrap = <body id="site_95|">
         }
         20 = TEXT
         20 {
