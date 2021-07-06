@@ -71,34 +71,3 @@ lib.contentElement {
     partialRootPaths.20 = EXT:lynx/Resources/Private/Partials/ContentElements
     layoutRootPaths.20 = EXT:lynx/Resources/Private/Layout/ContentElements
 }
-
-#################
-### SITE LOGO ###
-#################
-lib.logo = IMAGE
-lib.logo {
-    file = EXT:lynx/Resources/Public/Images/logo.svg
-    stdWrap.typolink.parameter = 1
-}
-
-#################################
-### DESKTOP MENU PARTIAL NAME ###
-#################################
-lib.desktopMenuPartialName = TEXT
-lib.desktopMenuPartialName.value = Desktop
-
-################################
-### MOBILE MENU PARTIAL NAME ###
-################################
-lib.mobileMenuPartialName = TEXT
-lib.mobileMenuPartialName.value = Mobile
-
-##############
-### FOOTER ###
-##############
-lib.footer = RECORDS
-lib.footer {
-  tables = tt_content
-  source = 1
-  wrap = |
-}
