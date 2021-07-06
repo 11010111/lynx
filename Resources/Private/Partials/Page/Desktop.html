@@ -1,7 +1,7 @@
 <nav class="desktop">
 
   <div class="desktop-container">
-    <div class="flex flex--space-between container--{data.layout}">
+    <div class="flex flex--space-between container--xl">
 
       <div class="content-logo">
         <div class="logo">
@@ -9,7 +9,7 @@
         </div>
       </div>
 
-      <div class="flex">
+      <div class="wrap-menu-lang flex flex--middle">
         <div class="content-menu">
           <ul class="desktop-menu">
             <f:for each="{navigation}" as="navigationItem">
@@ -33,31 +33,37 @@
           </ul>
         </div>
 
-        <f:if condition="{languageNavigation}">
-          <div class="content-lang-menu">
-            <ul class="language-menu">
-              <f:for each="{languageNavigation}" as="item">
-                <f:if condition="{item.active}">
-                  <li class="active">{item.title} / <f:format.case>{item.twoLetterIsoCode}</f:format.case></li>
-                  <ul class="language" id="language">
-                    <f:for each="{languageNavigation}" as="item">
-                      <f:if condition="{item.available}">
-                        <f:if condition="{item.active}">
-                          <f:then>
-                            <li class="hreflang active" data-hreflang="{item.hreflang}" data-link="{item.link}">{item.title} / <f:format.case>{item.twoLetterIsoCode}</f:format.case></li>
-                          </f:then>
-                          <f:else>
-                            <li class="hreflang" data-hreflang="{item.hreflang}" data-link="{item.link}"><a href="{item.link}">{item.title} / <f:format.case>{item.twoLetterIsoCode}</f:format.case></a></li>
-                          </f:else>
+        <div class="buy-now">
+          <a class="btn-secondary" href="/">Buy now</a>
+        </div>
+
+        <f:comment>
+          <f:if condition="{languageNavigation}">
+            <div class="content-lang-menu">
+              <ul class="language-menu">
+                <f:for each="{languageNavigation}" as="item">
+                  <f:if condition="{item.active}">
+                    <li class="active">{item.title} / <f:format.case>{item.twoLetterIsoCode}</f:format.case></li>
+                    <ul class="language" id="language">
+                      <f:for each="{languageNavigation}" as="item">
+                        <f:if condition="{item.available}">
+                          <f:if condition="{item.active}">
+                            <f:then>
+                              <li class="hreflang active" data-hreflang="{item.hreflang}" data-link="{item.link}">{item.title} / <f:format.case>{item.twoLetterIsoCode}</f:format.case></li>
+                            </f:then>
+                            <f:else>
+                              <li class="hreflang" data-hreflang="{item.hreflang}" data-link="{item.link}"><a href="{item.link}">{item.title} / <f:format.case>{item.twoLetterIsoCode}</f:format.case></a></li>
+                            </f:else>
+                          </f:if>
                         </f:if>
-                      </f:if>
-                    </f:for>
-                  </ul>
-                </f:if>
-              </f:for>
-            </ul>
-          </div>
-        </f:if>
+                      </f:for>
+                    </ul>
+                  </f:if>
+                </f:for>
+              </ul>
+            </div>
+          </f:if>
+        </f:comment>
       </div>
 
     </div>

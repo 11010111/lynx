@@ -35,16 +35,17 @@ nav.desktop .desktop-container {
   background-color: #ffffff;
   z-index: 1001;
 }
-nav.desktop .desktop-container .buy-now {
-  margin: 3.44rem 1rem 0 2.77rem;
+nav.desktop .desktop-container .wrap-menu-lang {
+  margin: 1.44rem 0 0;
   transition: margin-top 0.5s;
+}
+nav.desktop .desktop-container .buy-now {
+  margin: 0 1rem 0 2.77rem;
 }
 nav.desktop .desktop-container .desktop-menu {
   display: flex;
   flex-direction: row;
   list-style: none;
-  margin: 4.44rem 0 0;
-  transition: margin-top 0.5s;
 }
 nav.desktop .desktop-container .desktop-menu ul {
   list-style: none;
@@ -54,7 +55,7 @@ nav.desktop .desktop-container .desktop-menu .parent {
   top: 0;
   right: 0;
   font-weight: 400;
-  padding: 0 1rem 1rem;
+  padding: 1rem 1rem;
   margin-right: 1rem;
 }
 nav.desktop .desktop-container .desktop-menu .parent a {
@@ -68,7 +69,7 @@ nav.desktop .desktop-container .desktop-menu .parent a:hover {
 nav.desktop .desktop-container .desktop-menu .parent .desktop-dropdown {
   display: none;
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   right: -1rem;
   min-width: 5rem;
   background-color: #ffffff;
@@ -81,7 +82,7 @@ nav.desktop .desktop-container .desktop-menu .parent:hover .desktop-dropdown {
   display: block;
 }
 nav.desktop .desktop-container .desktop-menu .parent:hover::after {
-  transform: translateY(-75%) rotate(90deg);
+  transform: translateY(-45%) rotate(90deg);
 }
 nav.desktop .desktop-container .desktop-menu .parent:first-child {
   padding-left: 0;
@@ -91,7 +92,7 @@ nav.desktop .desktop-container .desktop-menu .has-children::after {
   position: absolute;
   top: 50%;
   right: -0.5rem;
-  transform: translateY(-70%);
+  transform: translateY(-40%);
   transition: 0.5s;
 }
 nav.desktop .desktop-container .desktop-menu .child {
@@ -105,8 +106,8 @@ nav.desktop .language-menu {
   right: 0;
   list-style: none;
   font-weight: bold;
-  padding: 1rem 1rem 1rem 0;
-  margin-right: 1rem;
+  padding: 1rem 1rem;
+  margin: 0 1rem 0 0;
   cursor: pointer;
 }
 nav.desktop .language-menu ul {
@@ -125,7 +126,7 @@ nav.desktop .language-menu::after {
   position: absolute;
   top: 50%;
   right: -0.5rem;
-  transform: translateY(-70%);
+  transform: translateY(-40%);
   transition: 0.5s;
 }
 nav.desktop .language-menu:hover .language {
@@ -142,7 +143,6 @@ nav.desktop .language-menu .language {
   min-width: 5rem;
   background-color: #ffffff;
   text-align: right;
-  border: 1px solid #eeeeee;
   border-top: 0;
   padding: 0.5rem 0;
 }
@@ -156,11 +156,8 @@ nav.desktop .language-menu .language li {
 .desktop-fixed .desktop-container .content-logo {
   margin-top: 0.77rem;
 }
-.desktop-fixed .desktop-container .content-menu .desktop-menu {
-  margin-top: 1.44rem;
-}
-.desktop-fixed .desktop-container .buy-now {
-  margin-top: 0.44rem !important;
+.desktop-fixed .desktop-container .wrap-menu-lang {
+  margin: 0 0 0 !important;
 }
 
 /*# sourceMappingURL=nav-des.css.map */
