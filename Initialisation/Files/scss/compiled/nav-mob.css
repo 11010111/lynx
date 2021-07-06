@@ -24,6 +24,10 @@ nav.mobile .content-logo .logo img {
   width: auto;
   height: auto;
 }
+nav.mobile .content-logo .logo svg {
+  width: auto;
+  height: 2.88rem;
+}
 nav.mobile .menu-button {
   position: fixed;
   top: 1rem;
@@ -102,7 +106,6 @@ nav.mobile .mobile-container {
   background-color: #ffffff;
   margin: 0;
   z-index: 1001;
-  border-left: 0.5rem solid #14161b;
   transition: 0.5s;
 }
 nav.mobile .mobile-container .active {
@@ -130,7 +133,7 @@ nav.mobile .mobile-container .mobile-menu .parent a {
   text-decoration: none;
 }
 nav.mobile .mobile-container .mobile-menu .parent a:hover {
-  color: #040e52;
+  color: #0630D1;
 }
 nav.mobile .mobile-container .mobile-menu .child {
   font-size: 0.9em;
@@ -159,3 +162,5 @@ nav.mobile .language-container .language-menu li:last-child {
 nav.mobile .language-container .language-menu .active a {
   color: #354f5d;
 }
+
+/*# sourceMappingURL=nav-mob.css.map */

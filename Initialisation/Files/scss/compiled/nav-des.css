@@ -3,6 +3,14 @@
     display: none;
   }
 }
+nav.desktop .content-logo {
+  margin-top: 2.77rem;
+}
+@media screen and (max-width: 103.125em) {
+  nav.desktop .content-logo {
+    margin-left: 1rem;
+  }
+}
 nav.desktop .content-logo .logo {
   display: flex;
   align-items: center;
@@ -12,6 +20,11 @@ nav.desktop .content-logo .logo {
 nav.desktop .content-logo .logo img {
   width: auto;
   height: auto;
+  max-width: 3.88rem;
+}
+nav.desktop .content-logo .logo svg {
+  width: auto;
+  height: 3.88rem;
 }
 nav.desktop .desktop-container {
   position: fixed;
@@ -19,13 +32,16 @@ nav.desktop .desktop-container {
   left: 0;
   right: 0;
   background-color: #ffffff;
-  border-bottom: 0.5rem solid #eeeeee;
   z-index: 1001;
+}
+nav.desktop .desktop-container .buy-now {
+  margin: 3.44rem 1rem 0 2.77rem;
 }
 nav.desktop .desktop-container .desktop-menu {
   display: flex;
   flex-direction: row;
   list-style: none;
+  margin: 4.44rem 0 0;
 }
 nav.desktop .desktop-container .desktop-menu ul {
   list-style: none;
@@ -35,35 +51,34 @@ nav.desktop .desktop-container .desktop-menu .parent {
   top: 0;
   right: 0;
   font-weight: 400;
-  padding: 1rem;
+  padding: 0 1rem 1rem;
   margin-right: 1rem;
 }
 nav.desktop .desktop-container .desktop-menu .parent a {
+  font-size: 1.11em;
   text-decoration: none;
   color: #354f5d;
 }
 nav.desktop .desktop-container .desktop-menu .parent a:hover {
-  color: #040e52;
+  color: #0630D1;
 }
 nav.desktop .desktop-container .desktop-menu .parent .desktop-dropdown {
   display: none;
   position: absolute;
-  top: 3rem;
+  top: 2rem;
   right: -1rem;
-  width: calc(100% + 1rem);
   min-width: 5rem;
   background-color: #ffffff;
   text-align: right;
-  border: 2px solid #eeeeee;
   border-top: 0;
   padding: 0.5rem 0;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.05);
 }
 nav.desktop .desktop-container .desktop-menu .parent:hover .desktop-dropdown {
   display: block;
 }
 nav.desktop .desktop-container .desktop-menu .parent:hover::after {
-  color: #eeeeee;
-  transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-75%) rotate(90deg);
 }
 nav.desktop .desktop-container .desktop-menu .parent:first-child {
   padding-left: 0;
@@ -73,8 +88,7 @@ nav.desktop .desktop-container .desktop-menu .has-children::after {
   position: absolute;
   top: 50%;
   right: -0.5rem;
-  height: 1rem;
-  transform: translateY(-50%);
+  transform: translateY(-70%);
   transition: 0.5s;
 }
 nav.desktop .desktop-container .desktop-menu .child {
@@ -96,24 +110,25 @@ nav.desktop .language-menu ul {
   list-style: none;
 }
 nav.desktop .language-menu a {
+  font-size: 1.11em;
   text-decoration: none;
   color: #354f5d;
 }
 nav.desktop .language-menu a:hover {
-  color: #040e52;
+  color: #0630D1;
 }
 nav.desktop .language-menu::after {
   content: url("../../icons/dropdown.svg");
   position: absolute;
   top: 50%;
   right: -0.5rem;
-  transform: translateY(-50%);
+  transform: translateY(-70%);
+  transition: 0.5s;
 }
 nav.desktop .language-menu:hover .language {
   display: block;
 }
 nav.desktop .language-menu:hover::after {
-  color: #eeeeee;
   animation: fadeInOut 2s infinite;
 }
 nav.desktop .language-menu .language {
@@ -134,3 +149,5 @@ nav.desktop .language-menu .language li {
   padding: 0.5rem 2rem;
   white-space: nowrap;
 }
+
+/*# sourceMappingURL=nav-des.css.map */

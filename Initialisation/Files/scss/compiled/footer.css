@@ -1,6 +1,6 @@
 footer {
   position: relative;
-  top: 0;
+  top: 6rem;
   left: 0;
   right: 0;
   min-height: 10rem;
@@ -8,3 +8,5 @@ footer {
   background-color: #14161b;
   margin: 0 -1rem;
 }
+
+/*# sourceMappingURL=footer.css.map */

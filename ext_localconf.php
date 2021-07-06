@@ -1,6 +1,10 @@
 <?php
 
 use Swe\Lynx\Hooks\BackendContentHook;
+use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
+use TYPO3\CMS\Core\Imaging\IconRegistry;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 defined('TYPO3_MODE') || die();
 
@@ -9,23 +13,24 @@ call_user_func(function() {
     /***************
      * Add default RTE configuration
      */
-    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset'] = 'EXT:lynx/Configuration/RTE/Default.yaml';
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_default'] = 'EXT:lynx/Configuration/RTE/Default.yaml';
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset'] = 'fileadmin/lynx/rte/Default.yaml';
 
     /***************
      * register svg icons: identifier and filename
      */
-    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-        \TYPO3\CMS\Core\Imaging\IconRegistry::class
+    $iconRegistry = GeneralUtility::makeInstance(
+        IconRegistry::class
     )->registerIcon(
         'grid-icon',
-        \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+        BitmapIconProvider::class,
         ['source' => "EXT:lynx/Resources/Public/Icons/grid.svg"]
     );
 
     /***************
      * PageTS
      */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+    ExtensionManagementUtility::addPageTSConfig(
         '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/All.tsconfig">'
     );
 

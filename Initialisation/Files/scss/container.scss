@@ -5,7 +5,7 @@
 // Container code here...
 .container--0 {
   //width: 100%;
-  max-width: 70rem;
+  max-width: 76rem;
   margin: 0 auto;
 
   .container--1 {
@@ -36,4 +36,9 @@
     margin: 0;
     padding: 0;
   }
+}
+
+.container--xl {
+  max-width: 95rem;
+  margin: 0 auto;
 }

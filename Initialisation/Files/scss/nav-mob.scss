@@ -29,6 +29,11 @@ nav.mobile {
         width: auto;
         height: auto;
       }
+      
+      svg {
+        width: auto;
+        height: 2.88rem;
+      }
     }
   }
 
@@ -124,7 +129,6 @@ nav.mobile {
     background-color: color('white');
     margin: 0;
     z-index: 1001;
-    border-left: 0.5rem solid color('secondary');
     transition: 0.5s;
 
     .active {

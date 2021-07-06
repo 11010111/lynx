@@ -68,7 +68,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.88em;
+  line-height: 3.88rem;
 }
 
 h2 {
@@ -92,7 +93,7 @@ h6 {
 }
 
 hr {
-  border: 2px solid #0a23d1;
+  border: 2px solid #0630D1;
   margin: 0 1rem;
   border-radius: 2px;
 }
@@ -103,7 +104,7 @@ a {
   font-weight: 600;
 }
 a:hover {
-  color: #040e52;
+  color: #0630D1;
 }
 
 iframe {
@@ -176,7 +177,7 @@ input, textarea, select, datalist {
   border-bottom: 1px solid #354f5d;
 }
 input:hover, textarea:hover, select:hover, datalist:hover {
-  border-bottom: 1px solid #040e52;
+  border-bottom: 1px solid #0630D1;
 }
 input:focus, textarea:focus, select:focus, datalist:focus {
   border-bottom: 1px solid #3c55ff;
@@ -302,7 +303,7 @@ input[type=submit], input[type=button], input[type=reset] {
 
 input[type=checkbox]:hover, input[type=radio]:hover, input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover {
   transition: 0.5s;
-  background-color: #040e52;
+  background-color: #0630D1;
   box-shadow: 0 0 0.5rem rgba(60, 85, 255, 0.15);
 }
 
@@ -325,8 +326,8 @@ button {
 }
 button:hover {
   transition: 0.5s;
-  box-shadow: 0 0 0.5rem rgba(4, 14, 82, 0.15);
-  background-color: #040e52;
+  box-shadow: 0 0 0.5rem rgba(6, 48, 209, 0.15);
+  background-color: #0630D1;
 }
 
 input[type=range] {
@@ -421,3 +422,5 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #eeeeee;
 }
+
+/*# sourceMappingURL=base.css.map */
