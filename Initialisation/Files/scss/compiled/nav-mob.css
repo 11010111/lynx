@@ -132,13 +132,6 @@ nav.mobile .mobile-container .mobile-menu .parent {
   padding: 1rem 0;
   font-weight: bold;
 }
-nav.mobile .mobile-container .mobile-menu .parent::after {
-  content: url("../../icons/dropdown.svg");
-  position: absolute;
-  top: 1.5rem;
-  right: 0;
-  transition: 0.25s;
-}
 nav.mobile .mobile-container .mobile-menu .parent a {
   color: #354f5d;
   text-decoration: none;
@@ -151,6 +144,13 @@ nav.mobile .mobile-container .mobile-menu .parent .mobile-dropdown {
   margin: 0;
   overflow: hidden;
   transition: height, margin-top 0.25s;
+}
+nav.mobile .mobile-container .mobile-menu .has-children::after {
+  content: url('../../icons/dropdown.svg');
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  transition: 0.25s;
 }
 nav.mobile .mobile-container .mobile-menu .parent-open::after {
   transform: rotate(90deg);
@@ -186,5 +186,3 @@ nav.mobile .language-container .language-menu li:last-child {
 nav.mobile .language-container .language-menu .active a {
   color: #0630D1;
 }
-
-/*# sourceMappingURL=nav-mob.css.map */

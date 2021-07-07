@@ -12,7 +12,7 @@
     <div class="container--{data.layout}">
       <ul class="mobile-menu">
         <f:for each="{navigation}" as="navigationItem">
-          <li class="parent">
+          <li class="parent{f:if(condition: navigationItem.children, then:' has-children')}">
             <a class="parent-link{f:if(condition: navigationItem.active, then:' active')}" href="{navigationItem.link}" target="{navigationItem.target}" title="{navigationItem.title}">
               {navigationItem.title}
             </a>

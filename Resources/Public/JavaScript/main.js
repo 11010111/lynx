@@ -217,7 +217,7 @@ console.log("WE LOVE TYPO3");
     let mobileMenu = document.querySelector('.mobile-menu')
 
     if (mobileMenu) {
-        let parent = mobileMenu.querySelectorAll('.parent')
+        let parent = mobileMenu.querySelectorAll('.has-children')
 
         parent.forEach(function(par) {
             if (par.firstElementChild.classList.contains('active')) {

@@ -1,15 +1,12 @@
 .text-right {
   text-align: right;
 }
-
 .text-center {
   text-align: center;
 }
-
 .text-justify {
   text-align: justify;
 }
-
 .big {
   font-size: 2.88em;
   line-height: 3.88rem;
@@ -19,11 +16,9 @@
     font-size: 3.88em;
   }
 }
-
 .small {
   font-size: 0.5em;
 }
-
 .font-size-25 {
   font-size: 1.1em;
   line-height: 2.11rem;
@@ -33,10 +28,7 @@
     font-size: 1.38em;
   }
 }
-
 .smaller-content-70 {
   display: inline-block;
   width: 70%;
 }
-
-/*# sourceMappingURL=rte.css.map */

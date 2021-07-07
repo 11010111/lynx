@@ -157,14 +157,6 @@ nav.mobile {
     	left: 0;
         padding: 1rem 0;
         font-weight: bold;
-    
-    	&::after {
-          content: url('../../icons/dropdown.svg');
-          position: absolute;
-          top: 1.5rem;
-          right: 0;
-  		  transition: 0.25s;
-        }
 
         a {
       	  color: color('anthrazit');
@@ -182,6 +174,16 @@ nav.mobile {
   			transition: height, margin-top 0.25s;
     	}
       }
+
+	  .has-children {
+  		&::after {
+          content: url('../../icons/dropdown.svg');
+          position: absolute;
+          top: 1.5rem;
+          right: 0;
+  		  transition: 0.25s;
+        }
+	  }
 
 	  .parent-open {
   		&::after {
