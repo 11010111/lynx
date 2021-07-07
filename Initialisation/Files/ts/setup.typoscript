@@ -110,6 +110,8 @@ page {
         X-UA-Compatible {
             attribute = http-equiv
         }
+        keywords.field = keywords
+        keywords.ifTrue = keywords
     }
 }
 
