@@ -71,7 +71,7 @@ nav.mobile .menu-label {
   right: 1.5rem;
   width: 2rem;
   height: 0.2rem;
-  background-color: #3c55ff;
+  background-color: #354f5d;
   z-index: 1005;
 }
 nav.mobile .menu-label::before {
@@ -82,7 +82,7 @@ nav.mobile .menu-label::before {
   width: 2rem;
   height: 0.2rem;
   margin-bottom: 0.5rem;
-  background-color: #3c55ff;
+  background-color: #354f5d;
   transition: 0.5s;
 }
 nav.mobile .menu-label::after {
@@ -93,7 +93,7 @@ nav.mobile .menu-label::after {
   width: 2rem;
   height: 0.2rem;
   margin-bottom: 0.5rem;
-  background-color: #3c55ff;
+  background-color: #354f5d;
   transition: 0.5s;
 }
 nav.mobile .mobile-container {
@@ -109,10 +109,10 @@ nav.mobile .mobile-container {
   transition: 0.5s;
 }
 nav.mobile .mobile-container .active {
-  color: #354f5d !important;
+  color: #0630D1 !important;
 }
 nav.mobile .mobile-container .active:hover {
-  color: #354f5d !important;
+  color: #0630D1 !important;
 }
 nav.mobile .mobile-container .mobile-menu {
   display: flex;
@@ -126,17 +126,41 @@ nav.mobile .mobile-container .mobile-menu ul {
   margin: 1rem 0 0 0;
 }
 nav.mobile .mobile-container .mobile-menu .parent {
+  position: relative;
+  top: 0;
+  left: 0;
   padding: 1rem 0;
   font-weight: bold;
 }
+nav.mobile .mobile-container .mobile-menu .parent::after {
+  content: url("../../icons/dropdown.svg");
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  transition: 0.25s;
+}
 nav.mobile .mobile-container .mobile-menu .parent a {
+  color: #354f5d;
   text-decoration: none;
 }
-nav.mobile .mobile-container .mobile-menu .parent a:hover {
-  color: #0630D1;
+nav.mobile .mobile-container .mobile-menu .parent .parent-link {
+  font-size: 1.94em;
 }
-nav.mobile .mobile-container .mobile-menu .child {
-  font-size: 0.9em;
+nav.mobile .mobile-container .mobile-menu .parent .mobile-dropdown {
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: height, margin-top 0.25s;
+}
+nav.mobile .mobile-container .mobile-menu .parent-open::after {
+  transform: rotate(90deg);
+}
+nav.mobile .mobile-container .mobile-menu .parent-open .mobile-dropdown {
+  height: 100%;
+  margin: 1rem 0 0 0;
+}
+nav.mobile .mobile-container .mobile-menu .child .child-link {
+  font-size: 1.38em;
   font-weight: normal;
 }
 nav.mobile .language-container {
@@ -160,5 +184,7 @@ nav.mobile .language-container .language-menu li:last-child {
   padding-right: 0;
 }
 nav.mobile .language-container .language-menu .active a {
-  color: #354f5d;
+  color: #0630D1;
 }
+
+/*# sourceMappingURL=nav-mob.css.map */

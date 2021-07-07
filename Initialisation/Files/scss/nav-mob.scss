@@ -91,7 +91,7 @@ nav.mobile {
     right: 1.5rem;
     width: 2rem;
     height: 0.2rem;
-    background-color: color('link');
+    background-color: color('anthrazit');
     z-index: 1005;
 
     &::before {
@@ -102,7 +102,7 @@ nav.mobile {
       width: 2rem;
       height: 0.2rem;
       margin-bottom: 0.5rem;
-      background-color: color('link');
+      background-color: color('anthrazit');
       transition: 0.5s;
     }
 
@@ -114,7 +114,7 @@ nav.mobile {
       width: 2rem;
       height: 0.2rem;
       margin-bottom: 0.5rem;
-      background-color: color('link');
+      background-color: color('anthrazit');
       transition: 0.5s;
     }
   }
@@ -132,10 +132,10 @@ nav.mobile {
     transition: 0.5s;
 
     .active {
-      color: color('anthrazit')!important;
+      color: color('primary')!important;
 
       &:hover {
-        color: color('anthrazit')!important;
+        color: color('primary')!important;
       }
     }
 
@@ -152,21 +152,53 @@ nav.mobile {
       }
 
       .parent {
+    	position: relative;
+    	top: 0;
+    	left: 0;
         padding: 1rem 0;
         font-weight: bold;
+    
+    	&::after {
+          content: url('../../icons/dropdown.svg');
+          position: absolute;
+          top: 1.5rem;
+          right: 0;
+  		  transition: 0.25s;
+        }
 
         a {
+      	  color: color('anthrazit');
           text-decoration: none;
-
-          &:hover {
-            color: color('link-hover');
-          }
         }
+  
+  		.parent-link {
+    	  font-size: 1.94em;
+    	}
+  
+  		.mobile-dropdown {
+    		height: 0;
+  			margin: 0;
+  			overflow: hidden;
+  			transition: height, margin-top 0.25s;
+    	}
       }
 
+	  .parent-open {
+  		&::after {
+          transform: rotate(90deg);
+        }
+
+  		.mobile-dropdown {
+    	  height: 100%;
+  		  margin: 1rem 0 0 0;
+    	}
+  	  }
+
       .child {
-        font-size: 0.9em;
-        font-weight: normal;
+  		.child-link {
+    	  font-size: 1.38em;
+    	  font-weight: normal;
+    	}
       }
     }
   }
@@ -197,7 +229,7 @@ nav.mobile {
 
       .active {
         a {
-          color: color('anthrazit');
+          color: color('primary');
         }
       }
     }

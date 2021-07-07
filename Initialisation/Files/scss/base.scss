@@ -11,7 +11,7 @@ $font-name: 'Basier Circle';
 html {
   scroll-behavior: smooth;
 
-  font: normal normal 300 18px $font-name, 'Helvetica Neue', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font: normal normal 400 18px $font-name, 'Helvetica Neue', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 body {
@@ -43,31 +43,47 @@ body::-webkit-scrollbar-thumb {
 h1, h2, h3, h4, h5, h6 {
   color: color('back-blue');
   line-height: 1.25;
+  margin: 0;
 }
 
 h1 {
-  font-size: 3.88em;
+  font-size: 2.88em;
   line-height: 3.88rem;
+  margin-bottom: 2.33rem;
+  
+  @media screen and (min-width: breakpoint('md')) {
+    font-size: 3.88em;
+  }
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 1.77em;
+  line-height: 2.77rem;
+  
+  @media screen and (min-width: breakpoint('md')) {
+    font-size: 2.77em;
+  }
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.38em;
+  line-height: 1.94rem;
+  
+  @media screen and (min-width: breakpoint('md')) {
+    font-size: 1.94em;
+  }
 }
 
 h4 {
-  font-size: 1.75em;
+  font-size: 1.25em;
 }
 
 h5 {
-  font-size: 1.5em;
+  font-size: 1.15em;
 }
 
 h6 {
-  font-size: 1.25em;
+  font-size: 1.1em;
 }
 
 hr {
