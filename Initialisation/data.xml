@@ -106,7 +106,20 @@
 					<uid>1</uid>
 					<pid>0</pid>
 					<title>fileadmin/ (auto-created)</title>
-					<relationLevel>2</relationLevel>
+					<relations index="rels" type="array"></relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+				<rec index="2" type="array">
+					<uid>2</uid>
+					<pid>0</pid>
+					<title>Lynx Basis</title>
+					<relations index="rels" type="array"></relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+				<rec index="3" type="array">
+					<uid>3</uid>
+					<pid>0</pid>
+					<title>Mask Projekte</title>
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array"></softrefs>
 				</rec>
@@ -253,6 +266,8 @@
 			<page_contents index="6" type="array">
 				<table index="sys_file_storage" type="array">
 					<item index="1">1</item>
+					<item index="2">1</item>
+					<item index="3">1</item>
 				</table>
 				<table index="be_groups" type="array">
 					<item index="2">1</item>
@@ -812,13 +827,13 @@
 		</tablerow>
 		<tablerow index="sys_file_storage:1" type="array">
 			<fieldlist index="data" type="array">
-				<field index="uid">1</field>
-				<field index="pid">0</field>
-				<field index="tstamp">1625248460</field>
-				<field index="crdate">112507</field>
-				<field index="cruser_id">0</field>
-				<field index="deleted">0</field>
-				<field index="description" type="NULL"></field>
+				<field index="uid" type="integer">1</field>
+				<field index="pid" type="integer">0</field>
+				<field index="tstamp" type="integer">1625400345</field>
+				<field index="crdate" type="integer">1625400345</field>
+				<field index="cruser_id" type="integer">0</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="description">This is the local fileadmin/ directory. This storage mount has been created automatically by TYPO3.</field>
 				<field index="name">fileadmin/ (auto-created)</field>
 				<field index="driver">Local</field>
 				<field index="configuration">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -835,22 +850,127 @@
 					&lt;field index=&quot;caseSensitive&quot;&gt;
 					&lt;value index=&quot;vDEF&quot;&gt;1&lt;/value&gt;
 					&lt;/field&gt;
+					&lt;/language&gt;
+					&lt;/sheet&gt;
+					&lt;/data&gt;
+					&lt;/T3FlexForms&gt;</field>
+				<field index="is_default" type="integer">1</field>
+				<field index="is_browsable" type="integer">1</field>
+				<field index="is_public" type="integer">1</field>
+				<field index="is_writable" type="integer">1</field>
+				<field index="is_online" type="integer">1</field>
+				<field index="auto_extract_metadata" type="integer">1</field>
+				<field index="processingfolder" type="NULL"></field>
+			</fieldlist>
+			<related index="rels" type="array">
+				<field index="configuration" type="array">
+					<type>flex</type>
+					<flexform index="flexFormRels" type="array">
+						<db_relations index="db" type="array"></db_relations>
+						<softref_relations index="softrefs" type="array"></softref_relations>
+					</flexform>
+				</field>
+			</related>
+		</tablerow>
+		<tablerow index="sys_file_storage:2" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">2</field>
+				<field index="pid" type="integer">0</field>
+				<field index="tstamp" type="integer">1625557359</field>
+				<field index="crdate" type="integer">1625557359</field>
+				<field index="cruser_id" type="integer">6</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="description"></field>
+				<field index="name">Lynx Basis</field>
+				<field index="driver">Local</field>
+				<field index="configuration">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
+					&lt;T3FlexForms&gt;
+					&lt;data&gt;
+					&lt;sheet index=&quot;sDEF&quot;&gt;
+					&lt;language index=&quot;lDEF&quot;&gt;
+					&lt;field index=&quot;basePath&quot;&gt;
+					&lt;value index=&quot;vDEF&quot;&gt;/typo3conf/ext/lynx&lt;/value&gt;
+					&lt;/field&gt;
+					&lt;field index=&quot;pathType&quot;&gt;
+					&lt;value index=&quot;vDEF&quot;&gt;relative&lt;/value&gt;
+					&lt;/field&gt;
 					&lt;field index=&quot;baseUri&quot;&gt;
 					&lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+					&lt;/field&gt;
+					&lt;field index=&quot;caseSensitive&quot;&gt;
+					&lt;value index=&quot;vDEF&quot;&gt;1&lt;/value&gt;
 					&lt;/field&gt;
 					&lt;/language&gt;
 					&lt;/sheet&gt;
 					&lt;/data&gt;
 					&lt;/T3FlexForms&gt;</field>
-				<field index="is_default">1</field>
-				<field index="is_browsable">1</field>
-				<field index="is_public">1</field>
-				<field index="is_writable">1</field>
-				<field index="is_online">1</field>
-				<field index="auto_extract_metadata">1</field>
-				<field index="processingfolder" type="NULL"></field>
+				<field index="is_default" type="integer">0</field>
+				<field index="is_browsable" type="integer">1</field>
+				<field index="is_public" type="integer">1</field>
+				<field index="is_writable" type="integer">1</field>
+				<field index="is_online" type="integer">1</field>
+				<field index="auto_extract_metadata" type="integer">0</field>
+				<field index="processingfolder"></field>
 			</fieldlist>
-			<related index="rels" type="array"></related>
+			<related index="rels" type="array">
+				<field index="configuration" type="array">
+					<type>flex</type>
+					<flexform index="flexFormRels" type="array">
+						<db_relations index="db" type="array"></db_relations>
+						<softref_relations index="softrefs" type="array"></softref_relations>
+					</flexform>
+				</field>
+			</related>
+		</tablerow>
+		<tablerow index="sys_file_storage:3" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">3</field>
+				<field index="pid" type="integer">0</field>
+				<field index="tstamp" type="integer">1625639086</field>
+				<field index="crdate" type="integer">1625639052</field>
+				<field index="cruser_id" type="integer">6</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="description"></field>
+				<field index="name">Mask Projekte</field>
+				<field index="driver">Local</field>
+				<field index="configuration">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
+					&lt;T3FlexForms&gt;
+					&lt;data&gt;
+					&lt;sheet index=&quot;sDEF&quot;&gt;
+					&lt;language index=&quot;lDEF&quot;&gt;
+					&lt;field index=&quot;basePath&quot;&gt;
+					&lt;value index=&quot;vDEF&quot;&gt;/typo3conf/ext/mask_project&lt;/value&gt;
+					&lt;/field&gt;
+					&lt;field index=&quot;pathType&quot;&gt;
+					&lt;value index=&quot;vDEF&quot;&gt;relative&lt;/value&gt;
+					&lt;/field&gt;
+					&lt;field index=&quot;baseUri&quot;&gt;
+					&lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+					&lt;/field&gt;
+					&lt;field index=&quot;caseSensitive&quot;&gt;
+					&lt;value index=&quot;vDEF&quot;&gt;1&lt;/value&gt;
+					&lt;/field&gt;
+					&lt;/language&gt;
+					&lt;/sheet&gt;
+					&lt;/data&gt;
+					&lt;/T3FlexForms&gt;</field>
+				<field index="is_default" type="integer">0</field>
+				<field index="is_browsable" type="integer">1</field>
+				<field index="is_public" type="integer">1</field>
+				<field index="is_writable" type="integer">1</field>
+				<field index="is_online" type="integer">1</field>
+				<field index="auto_extract_metadata" type="integer">0</field>
+				<field index="processingfolder"></field>
+			</fieldlist>
+			<related index="rels" type="array">
+				<field index="configuration" type="array">
+					<type>flex</type>
+					<flexform index="flexFormRels" type="array">
+						<db_relations index="db" type="array"></db_relations>
+						<softref_relations index="softrefs" type="array"></softref_relations>
+					</flexform>
+				</field>
+			</related>
 		</tablerow>
 		<tablerow index="sys_filemounts:2" type="array">
 			<fieldlist index="data" type="array">
