@@ -6,6 +6,7 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
  * Class ModuleController
+ *
  * @package Swe\Lynx\Controller
  */
 class ModuleController extends ActionController
@@ -13,7 +14,7 @@ class ModuleController extends ActionController
     /**
      * Default Action
      */
-    public function defaultAction()
+    public function defaultAction(): void
     {
         // doSomething()
     }
