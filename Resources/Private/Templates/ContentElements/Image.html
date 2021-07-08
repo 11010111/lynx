@@ -2,7 +2,7 @@
 <f:layout name="Default" />
 <f:section name="Main">
 
-    <div class="ce-image ce-{gallery.position.horizontal} ce-{gallery.position.vertical}">
+    <div class="ce-image{f:if(condition: data.imageborder, then: ' ce-border')} ce-{gallery.position.horizontal} ce-{gallery.position.vertical}">
         <f:render partial="Media/Gallery" arguments="{_all}" />
     </div>
 
