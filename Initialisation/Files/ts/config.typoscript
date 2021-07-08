@@ -3,9 +3,9 @@
 #################
 lib.logo = IMAGE
 lib.logo {
-    file = EXT:lynx/Resources/Public/Images/logo.svg
+    file = EXT:lynx/Resources/Public/Images/logo.png
     stdWrap.typolink.parameter = 1
-    params = class="svg"
+    #params = class="svg"
 }
 
 #################################
