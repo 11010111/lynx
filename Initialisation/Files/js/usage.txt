@@ -154,3 +154,22 @@ const tobii = new Tobii({
 </button>
 
 ##########################################################################################################
+##########################################################################################################
+// Parallax - Insert one or multiple class names to the element
+// The element must have a Style-Attribute - "position: relative;" or "position: absolute;"
+// ###############
+// parallax-top
+// parallax-bottom
+// parallax-left
+// parallax-right
+##########################################################################################################
+
+<div class="my-element parallax-top parallax-left">
+  ...
+</div>
+
+OR
+
+<img class="image parallax-top parallax-left" alt="..." />
+
+##########################################################################################################

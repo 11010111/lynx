@@ -6,18 +6,17 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/news/setup.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/search/setup.typoscript">
 
-########################
-#### WRAP NO MOBILE ####
-########################
-tt_content.stdWrap.outerWrap = <div class="no-mobile">|</div>
-tt_content.stdWrap.outerWrap.if.isTrue.field = no_mobile
-
 ##############
 #### PAGE ####
 ##############
 page {
     # Favicon
     #shortcutIcon = EXT:lynx/Resources/Public/Icons/favicon.ico
+
+    headerData {
+      10 = TEXT
+      10.wrap = <link rel="preload" href="/fileadmin/lynx/fonts/BasierCircle/basiercircle-regular-webfont.woff2" as="font" crossorigin>
+    }
 
     # FLUIDTEMPLATE
     10 {
@@ -102,6 +101,7 @@ page {
 
   	# Footer JS
     includeJSFooter {
+        parallax = fileadmin/lynx/js/parallax.js
         main_js = fileadmin/lynx/js/main.js
     }
 
