@@ -43,7 +43,7 @@
 				<rec index="1" type="array">
 					<uid>1</uid>
 					<pid>0</pid>
-					<title>Hauptseite</title>
+					<title>Lynx</title>
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array"></softrefs>
 				</rec>
@@ -333,7 +333,7 @@
 				<field index="perms_user" type="integer">31</field>
 				<field index="perms_group" type="integer">27</field>
 				<field index="perms_everybody" type="integer">0</field>
-				<field index="title">Hauptseite</field>
+				<field index="title">Lynx</field>
 				<field index="slug">/</field>
 				<field index="doktype" type="integer">1</field>
 				<field index="TSconfig"></field>
