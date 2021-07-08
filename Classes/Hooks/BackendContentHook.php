@@ -19,9 +19,7 @@ class BackendContentHook implements PageLayoutViewDrawFooterHookInterface
     private string $extensionKey = 'lynx';
 
     /**
-     * @param PageLayoutView $parentObject
-     * @param array $info
-     * @param array $row
+     * @inheritDoc
      */
     public function preProcess(PageLayoutView &$parentObject, &$info, array &$row)
     {
