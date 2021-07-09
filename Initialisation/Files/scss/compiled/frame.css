@@ -255,6 +255,7 @@
   height: 100%;
 }
 .ce-image img, .ce-textpic img {
+  height: auto;
   max-width: 100%;
 }
 .ce-center .image {

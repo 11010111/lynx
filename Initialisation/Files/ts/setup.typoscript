@@ -68,6 +68,10 @@ page {
         # NEW CSS CLASSES
         #example = fileadmin/lynx/scss/compiled/example.css
 
+        header = fileadmin/lynx/scss/compiled/header.css
+        icon_text = fileadmin/lynx/scss/compiled/icon-text.css
+        text_image_overlay = fileadmin/lynx/scss/compiled/text-image-overlay.css
+
         container = fileadmin/lynx/scss/compiled/container.css
         frame = fileadmin/lynx/scss/compiled/frame.css
         gap = fileadmin/lynx/scss/compiled/gap.css
