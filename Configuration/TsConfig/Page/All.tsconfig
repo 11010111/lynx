@@ -1,13 +1,13 @@
 #
-# PageTS for Lynx
+# PageTS for Lynx EXT:
 #
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/RTE.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/News.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/TCAdefaults.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/TCEFORM.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/GridElementsLayout.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
 
-# FILE
+# PageTS for Lynx FILE:
+<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/tsconfig/RTE.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/tsconfig/TCEFORM.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/tsconfig/GridElementsLayout.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/tsconfig/TCAdefaults.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/tsconfig/News.tsconfig">

@@ -413,7 +413,7 @@ tx_gridelements.setup {
     }
     # ID of Element
     7 {
-        title = 40% - 60%
+        title = 33% - 66%
         iconIdentifier = grid-icon
         config {
             colCount = 10
@@ -422,12 +422,12 @@ tx_gridelements.setup {
                 1 {
                     columns {
                         1 {
-                            name = Left 40%
+                            name = Left 33%
                             colspan = 4
                             colPos = 401
                         }
                         2 {
-                            name = Right 60%
+                            name = Right 66%
                             colspan = 6
                             colPos = 402
                         }
@@ -483,7 +483,7 @@ tx_gridelements.setup {
     }
     # ID of Element
     8 {
-        title = 60% - 40%
+        title = 66% - 33%
         iconIdentifier = grid-icon
         config {
             colCount = 10
@@ -492,12 +492,12 @@ tx_gridelements.setup {
                 1 {
                     columns {
                         1 {
-                            name = Left 60%
+                            name = Left 66%
                             colspan = 6
                             colPos = 401
                         }
                         2 {
-                            name = Right 40%
+                            name = Right 33%
                             colspan = 4
                             colPos = 402
                         }

@@ -1,9 +1,12 @@
 <?php
+
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 defined('TYPO3_MODE') || die();
 
 call_user_func(function ()
 {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
+    ExtensionManagementUtility::addTCAcolumns(
         'tt_content',
         [
             'frame_class_extra' => [

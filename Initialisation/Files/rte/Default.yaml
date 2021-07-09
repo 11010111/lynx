@@ -8,12 +8,10 @@ editor:
         contentsCss: ["/fileadmin/lynx/scss/compiled/rte.css"]
 
         stylesSet:
-            - { name: "Big", element: "p", attributes: { 'class': 'big' } }
-            - { name: "Smaller content", element: "p", attributes: { 'class': 'smaller-content' } }
-            - { name: "Small", element: "p", attributes: { 'class': 'small' } }
-            - { name: "Red", element: "p", attributes: { 'class': 'red' } }
-            - { name: "Orange", element: "p", attributes: { 'class': 'orange' } }
-            - { name: "Green", element: "p", attributes: { 'class': 'green' } }
+            - { name: "Big", element: "span", attributes: { 'class': 'big' } }
+            - { name: "Small", element: "span", attributes: { 'class': 'small' } }
+            - { name: "Schriftgröße 25", element: "span", attributes: { 'class': 'font-size-25' } }
+            - { name: "Content 70%", element: "span", attributes: { 'class': 'smaller-content-70' } }
 
         toolbarGroups:
             - { name: styles, groups: [ format, styles ] }

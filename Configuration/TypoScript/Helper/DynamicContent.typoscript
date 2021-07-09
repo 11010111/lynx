@@ -62,12 +62,3 @@ lib.dynamicContent {
     }
     90 = RESTORE_REGISTER
 }
-
-##############################
-### Content Template Paths ###
-##############################
-lib.contentElement {
-    templateRootPaths.20 = EXT:lynx/Resources/Private/Templates/ContentElements
-    partialRootPaths.20 = EXT:lynx/Resources/Private/Partials/ContentElements
-    layoutRootPaths.20 = EXT:lynx/Resources/Private/Layout/ContentElements
-}

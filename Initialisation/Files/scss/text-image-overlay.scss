@@ -1,0 +1,45 @@
+// Imports
+@import 'functions';
+@import 'variables';
+
+
+// Text - Image Overlay
+.text-image-overlay-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 2.66rem 2rem 1.61rem;
+  background-color: color('lightgrey');
+  max-width: 68.61rem;
+  
+  @media screen and (min-width: breakpoint('xxl')) {
+      padding: 4.66rem 5rem 3.61rem;
+  }
+  
+  .text {
+    max-width: 34.44rem;
+  }
+  
+  .image-overlay {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4.44rem;
+    
+    @media screen and (min-width: breakpoint('lg')) {
+      position: absolute;
+      bottom: -5rem;
+      right: 0;
+    }
+    
+    @media screen and (min-width: breakpoint('xxl')) {
+      bottom: -5rem;
+      right: -11rem;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 29rem;
+    }
+  }
+}

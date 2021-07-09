@@ -5,6 +5,7 @@
 ############################
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/news/setup.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/search/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/gridelements/setup.typoscript">
 
 ##############
 #### PAGE ####

@@ -11,12 +11,10 @@ module.tx_lynx {
     settings {
          # cat=plugin/a; type=int+; label=Ajax page type:If the default typenum conflicts with your setup, you can override this setting here
         typeNum = 82622527
-        # cat=module/preset; type=string; label=Preset Paths
-        presetPaths = fileadmin/lynx/rte/Default.yaml
     }
     persistence {
          # cat=plugin/a; type=int+; label=Default storage PID
-        storagePid =
+        storagePid = 4
     }
 	view {
 		 # cat=module/file; type=string; label=Path to template root (BE)
@@ -28,25 +26,14 @@ module.tx_lynx {
 	}
 }
 
-##############################
-#### FLUID STYLED CONTENT ####
-##############################
-styles {
-    templates {
-        layoutRootPath = EXT:lynx/Resources/Private/Layouts/ContentElements/
-        partialRootPath = EXT:lynx/Resources/Private/Partials/ContentElements/
-        templateRootPath = EXT:lynx/Resources/Private/Templates/ContentElements/
-    }
-}
-
 ############
 ### PAGE ###
 ############
 page {
      fluidtemplate {
-        layoutRootPath = EXT:lynx/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:lynx/Resources/Private/Partials/Page/
-        templateRootPath = EXT:lynx/Resources/Private/Templates/Page/
+        layoutRootPath = fileadmin/lynx/ext/lynx/Layouts/Page/
+        partialRootPath = fileadmin/lynx/ext/lynx/Partials/Page/
+        templateRootPath = fileadmin/lynx/ext/lynx/Templates/Page/
     }
 }
 

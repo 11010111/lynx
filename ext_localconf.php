@@ -1,7 +1,6 @@
 <?php
 
 use Swe\Lynx\Hooks\BackendContentHook;
-use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
 use TYPO3\CMS\Core\Imaging\IconRegistry;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
@@ -14,13 +13,8 @@ call_user_func(function() {
     /***************
      * Add default RTE configuration
      */
-    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_default'] = 'EXT:lynx/Configuration/RTE/Default.yaml';
-
-    $configuration = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('lynx');
-    $temporaryPaths = explode(',', $configuration['module']['tx_lynx']['settings']['presetPaths']);
-
-    foreach ($temporaryPaths as $key => $temporaryPath) {
-        $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key] = trim($temporaryPath);
+    if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset'])) {
+        $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset'] = 'fileadmin/lynx/rte/Default.yaml';
     }
 
     /***************
@@ -49,7 +43,7 @@ call_user_func(function() {
     /***************
      * FluidMail - Overrides
      */
-    $GLOBALS['TYPO3_CONF_VARS']['MAIL']['templateRootPaths'][700] = 'EXT:lynx/Resources/Private/Templates/Email';
-    $GLOBALS['TYPO3_CONF_VARS']['MAIL']['partialRootPaths'][700] = 'EXT:lynx/Resources/Private/Partials/Email';
-    $GLOBALS['TYPO3_CONF_VARS']['MAIL']['layoutRootPaths'][700] = 'EXT:lynx/Resources/Private/Layouts/Email';
+    $GLOBALS['TYPO3_CONF_VARS']['MAIL']['templateRootPaths'][700] = 'fileadmin/lynx/ext/lynx/Templates/Email';
+    $GLOBALS['TYPO3_CONF_VARS']['MAIL']['partialRootPaths'][700] = 'fileadmin/lynx/ext/lynx/Partials/Email';
+    $GLOBALS['TYPO3_CONF_VARS']['MAIL']['layoutRootPaths'][700] = 'fileadmin/lynx/ext/lynx/Layouts/Email';
 });
