@@ -310,24 +310,34 @@
 }
 
 // CE Styles
-.ce-image {
-  display: flex;
-  
+.ce-image, .ce-textpic {
   img {
     max-width: 100%;
   }
 }
 
 .ce-center {
-  	justify-content: center;
+  	.image {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
 }
 
 .ce-left {
-  	justify-content: flex-start;
+  	.image {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+    }
 }
 
 .ce-right {
-  	justify-content: flex-end;
+  	.image {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
 }
 
 .ce-uploads {

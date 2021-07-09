@@ -15,3 +15,9 @@ styles {
         templateRootPath = EXT:lynx/Resources/Private/Templates/ContentElements/
     }
 }
+
+############################
+#### MAX RENDERING SIZE ####
+############################
+styles.content.textmedia.maxW = 1920
+styles.content.textmedia.maxWInText = 960
