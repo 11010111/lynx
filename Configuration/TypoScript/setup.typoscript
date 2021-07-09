@@ -20,6 +20,8 @@ module.tx_lynx {
       typeNum = {$module.tx_lynx.settings.typeNum}
       # SetupIncludes
       setupIncluded = 1
+      # cat=module/preset; type=string; label=Preset Paths
+      presetPaths = {$module.tx_lynx.settings.presetPaths}
     }
     persistence {
       storagePid = {$module.tx_lynx.persistence.storagePid}

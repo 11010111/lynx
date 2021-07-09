@@ -2,7 +2,6 @@
 
 namespace Swe\Lynx\Hooks;
 
-use phpDocumentor\Reflection\Types\Integer;
 use TYPO3\CMS\Backend\View\PageLayoutView;
 use TYPO3\CMS\Backend\View\PageLayoutViewDrawFooterHookInterface;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;

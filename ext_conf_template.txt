@@ -9,6 +9,8 @@ module.tx_lynx {
     settings {
          # cat=module/a; type=int+; label=Ajax page type:If the default typeNum conflicts with your setup, you can override this setting here
         typeNum = 82622527
+        # cat=module/preset; type=string; label=Preset Paths
+        presetPaths = fileadmin/lynx/rte/Default.yaml
     }
     persistence {
          # cat=module/a; type=int+; label=Default storage PID
