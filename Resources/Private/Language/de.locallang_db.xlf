@@ -7,9 +7,22 @@
         </header>
         <body>
 
-            <trans-unit id="empty">
-                <source>Empty</source>
-                <target state="translated">Leer</target>
+            <!-- ROOT -->
+            <trans-unit id="extension.title">
+                <source>Lynx</source>
+                <target state="translated">Lynx</target>
+            </trans-unit>
+            <trans-unit id="root">
+                <source>Root</source>
+                <target state="translated">Root</target>
+            </trans-unit>
+            <trans-unit id="root.title">
+                <source>Title</source>
+                <target state="translated">Titel</target>
+            </trans-unit>
+            <trans-unit id="root.preset">
+                <source>Preset</source>
+                <target state="translated">Preset</target>
             </trans-unit>
 
         </body>

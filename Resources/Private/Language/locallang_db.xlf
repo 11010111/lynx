@@ -7,8 +7,18 @@
         </header>
         <body>
 
-            <trans-unit id="empty">
-                <source>Empty</source>
+            <!-- ROOT -->
+            <trans-unit id="extension.title">
+                <source>Lynx</source>
+            </trans-unit>
+            <trans-unit id="root">
+                <source>Root</source>
+            </trans-unit>
+            <trans-unit id="root.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="root.preset">
+                <source>Preset</source>
             </trans-unit>
 
         </body>

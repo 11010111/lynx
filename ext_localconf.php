@@ -1,6 +1,7 @@
 <?php
 
 use Swe\Lynx\Hooks\BackendContentHook;
+use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
 use TYPO3\CMS\Core\Imaging\IconRegistry;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
@@ -16,6 +17,39 @@ call_user_func(function() {
     if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset'])) {
         $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset'] = 'fileadmin/lynx/rte/Default.yaml';
     }
+
+    /**
+     * Add RTE configuration by Domain Model Data
+     */
+    $registryQueryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+        ->getQueryBuilderForTable('sys_registry');
+    $registry = $registryQueryBuilder
+        ->select('*')
+        ->from('sys_registry')
+        ->execute()
+        ->fetchAll();
+
+    foreach ($registry as $value) {
+        if ($value['entry_key'] == 'typo3conf/ext/lynx/Initialisation/dataImported') {
+            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+                ->getQueryBuilderForTable('tx_lynx_domain_model_root');
+
+            $roots = $queryBuilder
+                ->select('preset')
+                ->from('tx_lynx_domain_model_root')
+                ->execute()
+                ->fetchAll();
+            foreach ($roots as $key => $root) {
+                if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key])) {
+                    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key] = $root['preset'];
+                }
+            }
+        }
+    }
+
+    /***************
+     * Add Mask configuration
+     */
 
     $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['mask'] = [
         'backend' => 'fileadmin/lynx/ext/mask_project/Resources/Private/Mask/Backend/Templates/',

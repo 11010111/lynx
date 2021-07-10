@@ -12,7 +12,7 @@ module.tx_lynx {
     }
     persistence {
          # cat=module/a; type=int+; label=Default storage PID
-        storagePid = 4
+        storagePid = 2
     }
 	view {
 		 # cat=module/file; type=string; label=Path to template root (BE)
