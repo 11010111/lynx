@@ -99,3 +99,25 @@ tt_content.gridelements_pi1.20.10.setup {
         outerWrap = |
     }
 }
+
+tt_content.gridelements_pi1.20.10.setup {
+    10 < lib.gridelements.defaultGridSetup
+    10 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = fileadmin/lynx/ext/lynx/Templates/GridElements/Slider.html
+        }
+        outerWrap = |
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup {
+    11 < lib.gridelements.defaultGridSetup
+    11 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = fileadmin/lynx/ext/lynx/Templates/GridElements/SliderCell.html
+        }
+        outerWrap = |
+    }
+}

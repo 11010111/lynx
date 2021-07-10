@@ -1,0 +1,23 @@
+<div class="icon-text-container">
+
+  <f:if condition="{data.tx_mask_icon_text_repeater}">
+    <f:for each="{data.tx_mask_icon_text_repeater}" as="data_item">
+      <div class="element">
+        <f:if condition="{data_item.tx_mask_icon_text_icon}">
+          <div class="image">
+            <f:for each="{data_item.tx_mask_icon_text_icon}" as="file">
+              <f:image image="{file}" width="75" />
+            </f:for>
+          </div>
+        </f:if>
+
+        <f:if condition="{data_item.tx_mask_icon_text_text}">
+          <div class="text">
+            {data_item.tx_mask_icon_text_text -> f:format.html()}
+          </div>
+        </f:if>
+      </div>
+    </f:for>
+  </f:if>
+
+</div>

@@ -1,0 +1,42 @@
+.slider-content .slider-cell {
+  width: 100%;
+}
+.flickity-prev-next-button {
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  background-color: #0630D1;
+}
+@media screen and (max-width: 48em) {
+  .flickity-prev-next-button {
+    display: none;
+  }
+}
+.flickity-prev-next-button:hover {
+  color: #ffffff;
+  background-color: #14161b;
+}
+.flickity-prev-next-button .flickity-button-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1rem;
+  height: 1rem;
+  transform: translate(-50%, -50%);
+}
+.flickity-prev-next-button.previous {
+  left: 0.55rem;
+  right: auto;
+}
+.flickity-prev-next-button.next {
+  right: 0.55rem;
+  left: auto;
+}
+@media screen and (min-width: 48em) {
+  .flickity-page-dots {
+    display: none;
+  }
+}

@@ -52,15 +52,15 @@ call_user_func(function() {
      */
 
     $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['mask'] = [
-        'backend' => 'fileadmin/lynx/ext/mask_project/Resources/Private/Mask/Backend/Templates/',
+        'backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Templates/',
         'backendlayout_pids' => '0,1',
-        'content' => 'fileadmin/lynx/ext/mask_project/Resources/Private/Mask/Frontend/Templates/',
-        'json' => 'fileadmin/lynx/ext/mask_project/Configuration/Mask/mask.json',
-        'layouts' => 'fileadmin/lynx/ext/mask_project/Resources/Private/Mask/Frontend/Layouts/',
-        'layouts_backend' => 'fileadmin/lynx/ext/mask_project/Resources/Private/Mask/Backend/Layouts/',
-        'partials' => 'fileadmin/lynx/ext/mask_project/Resources/Private/Mask/Frontend/Partials/',
-        'partials_backend' => 'fileadmin/lynx/ext/mask_project/Resources/Private/Mask/Backend/Partials/',
-        'preview' => 'fileadmin/lynx/ext/mask_project/Resources/Public/Mask/',
+        'content' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Templates/',
+        'json' => 'fileadmin/lynx/mask_project/Configuration/mask.json',
+        'layouts' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Layouts/',
+        'layouts_backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Layouts/',
+        'partials' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Partials/',
+        'partials_backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Partials/',
+        'preview' => 'fileadmin/lynx/mask_project/Resources/Public/',
     ];
 
     /***************

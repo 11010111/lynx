@@ -1,0 +1,17 @@
+<div class="text-image-overlay-container">
+
+  <div class="text">
+    <f:if condition="{data.tx_mask_text_image_overlay_text}">
+      {data.tx_mask_text_image_overlay_text -> f:format.html()}
+    </f:if>
+  </div>
+
+  <div class="image-overlay">
+    <f:if condition="{data.tx_mask_text_image_overlay_image}">
+      <f:for each="{data.tx_mask_text_image_overlay_image}" as="file">
+        <f:image image="{file}" />
+      </f:for>
+    </f:if>
+  </div>
+
+</div>
