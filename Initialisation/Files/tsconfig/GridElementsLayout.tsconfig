@@ -627,6 +627,7 @@ tx_gridelements.setup {
     10 {
         title = Slider
         iconIdentifier = grid-icon
+        frame = 2
         config {
             colCount = 1
             rowCount = 1
@@ -691,6 +692,7 @@ tx_gridelements.setup {
     11 {
         title = Slider Cell
         iconIdentifier = grid-icon
+        frame = 1
         config {
             colCount = 1
             rowCount = 1
