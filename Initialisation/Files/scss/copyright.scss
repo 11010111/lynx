@@ -1,0 +1,32 @@
+// Imports
+@import 'functions';
+@import 'variables';
+
+
+// Copyright
+.copyright-container {
+  @media screen and (max-width: breakpoint('md')) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .copyright-logo {
+    width: auto;
+    height: auto;
+    margin-bottom: 2.38rem;
+    
+    @media screen and (min-width: breakpoint('md')) {
+      width: 12.11rem;
+    }
+    
+    img {
+      width: auto;
+      height: 1.55rem;
+    }
+  }
+  
+  .copyright-text {
+    font-size: 0.75em;
+  }
+}

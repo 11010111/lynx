@@ -1,6 +1,11 @@
 {
     "sys_file_reference": {
         "sql": {
+            "tx_mask_copyright_image": {
+                "sys_file_reference": {
+                    "tx_mask_copyright_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
             "tx_mask_header_image": {
                 "sys_file_reference": {
                     "tx_mask_header_image": "int(11) unsigned DEFAULT '0' NOT NULL"
@@ -9,6 +14,11 @@
             "tx_mask_icon_text_icon": {
                 "sys_file_reference": {
                     "tx_mask_icon_text_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_social_icon": {
+                "sys_file_reference": {
+                    "tx_mask_social_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             },
             "tx_mask_text_image_overlay_image": {
@@ -20,6 +30,22 @@
     },
     "tt_content": {
         "elements": {
+            "copyright": {
+                "color": "#000000",
+                "columns": [
+                    "tx_mask_copyright_image",
+                    "tx_mask_copyright_text"
+                ],
+                "description": "",
+                "icon": "",
+                "key": "copyright",
+                "label": "Copyright",
+                "labels": [
+                    "Logo",
+                    "Text"
+                ],
+                "shortLabel": ""
+            },
             "header": {
                 "color": "#000000",
                 "columns": [
@@ -52,6 +78,22 @@
                 ],
                 "shortLabel": ""
             },
+            "social_privacy": {
+                "color": "#000000",
+                "columns": [
+                    "tx_mask_social_repeater",
+                    "tx_mask_privacy_repeater"
+                ],
+                "description": "",
+                "icon": "",
+                "key": "social_privacy",
+                "label": "Social & Privacy",
+                "labels": [
+                    "Social Media",
+                    "Links"
+                ],
+                "shortLabel": ""
+            },
             "text_image_overlay": {
                 "color": "#000000",
                 "columns": [
@@ -70,6 +112,16 @@
             }
         },
         "sql": {
+            "tx_mask_copyright_image": {
+                "tt_content": {
+                    "tx_mask_copyright_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_copyright_text": {
+                "tt_content": {
+                    "tx_mask_copyright_text": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
             "tx_mask_header_image": {
                 "tt_content": {
                     "tx_mask_header_image": "int(11) unsigned DEFAULT '0' NOT NULL"
@@ -90,6 +142,16 @@
                     "tx_mask_icon_text_repeater": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             },
+            "tx_mask_privacy_repeater": {
+                "tt_content": {
+                    "tx_mask_privacy_repeater": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_social_repeater": {
+                "tt_content": {
+                    "tx_mask_social_repeater": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
             "tx_mask_text_image_overlay_image": {
                 "tt_content": {
                     "tx_mask_text_image_overlay_image": "int(11) unsigned DEFAULT '0' NOT NULL"
@@ -102,6 +164,31 @@
             }
         },
         "tca": {
+            "tx_mask_copyright_image": {
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "maxitems": "1",
+                    "minitems": "0"
+                },
+                "description": "",
+                "imageoverlayPalette": 1,
+                "key": "copyright_image",
+                "l10n_mode": "",
+                "name": "file",
+                "options": "file"
+            },
+            "tx_mask_copyright_text": {
+                "config": {
+                    "eval": "",
+                    "type": "input"
+                },
+                "description": "",
+                "key": "copyright_text",
+                "l10n_mode": "",
+                "name": "string"
+            },
             "tx_mask_header_image": {
                 "config": {
                     "appearance": {
@@ -158,6 +245,50 @@
                 },
                 "description": "",
                 "key": "icon_text_repeater",
+                "l10n_mode": "",
+                "name": "inline"
+            },
+            "tx_mask_privacy_repeater": {
+                "config": {
+                    "appearance": {
+                        "collapseAll": 1,
+                        "enabledControls": {
+                            "dragdrop": 1
+                        },
+                        "levelLinksPosition": "top",
+                        "showAllLocalizationLink": 1,
+                        "showPossibleLocalizationRecords": 1
+                    },
+                    "foreign_field": "parentid",
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_table_field": "parenttable",
+                    "type": "inline"
+                },
+                "description": "",
+                "key": "privacy_repeater",
+                "l10n_mode": "",
+                "name": "inline"
+            },
+            "tx_mask_social_repeater": {
+                "config": {
+                    "appearance": {
+                        "collapseAll": 1,
+                        "enabledControls": {
+                            "dragdrop": 1
+                        },
+                        "levelLinksPosition": "top",
+                        "showAllLocalizationLink": 1,
+                        "showPossibleLocalizationRecords": 1
+                    },
+                    "foreign_field": "parentid",
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_table_field": "parenttable",
+                    "type": "inline"
+                },
+                "description": "",
+                "key": "social_repeater",
                 "l10n_mode": "",
                 "name": "inline"
             },
@@ -251,6 +382,117 @@
                 "key": "icon_text_title",
                 "l10n_mode": "",
                 "label": "Titel",
+                "name": "string",
+                "order": 1
+            }
+        }
+    },
+    "tx_mask_privacy_repeater": {
+        "sql": {
+            "tx_mask_privacy_link": {
+                "tx_mask_privacy_repeater": {
+                    "tx_mask_privacy_link": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_privacy_title": {
+                "tx_mask_privacy_repeater": {
+                    "tx_mask_privacy_title": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_privacy_link": {
+                "config": {
+                    "eval": "",
+                    "renderType": "inputLink",
+                    "softref": "typolink",
+                    "type": "input"
+                },
+                "description": "",
+                "inlineParent": "tx_mask_privacy_repeater",
+                "key": "privacy_link",
+                "l10n_mode": "",
+                "label": "Link",
+                "name": "link",
+                "order": 2
+            },
+            "tx_mask_privacy_title": {
+                "config": {
+                    "eval": "",
+                    "type": "input"
+                },
+                "description": "",
+                "inlineParent": "tx_mask_privacy_repeater",
+                "key": "privacy_title",
+                "l10n_mode": "",
+                "label": "Link Title",
+                "name": "string",
+                "order": 1
+            }
+        }
+    },
+    "tx_mask_social_repeater": {
+        "sql": {
+            "tx_mask_social_icon": {
+                "tx_mask_social_repeater": {
+                    "tx_mask_social_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_social_link": {
+                "tx_mask_social_repeater": {
+                    "tx_mask_social_link": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_social_title": {
+                "tx_mask_social_repeater": {
+                    "tx_mask_social_title": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_social_icon": {
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "maxitems": "1",
+                    "minitems": "0"
+                },
+                "description": "",
+                "imageoverlayPalette": 1,
+                "inlineParent": "tx_mask_social_repeater",
+                "key": "social_icon",
+                "l10n_mode": "",
+                "label": "Social Icon",
+                "name": "file",
+                "options": "file",
+                "order": 2
+            },
+            "tx_mask_social_link": {
+                "config": {
+                    "eval": "",
+                    "renderType": "inputLink",
+                    "softref": "typolink",
+                    "type": "input"
+                },
+                "description": "",
+                "inlineParent": "tx_mask_social_repeater",
+                "key": "social_link",
+                "l10n_mode": "",
+                "label": "Social Link",
+                "name": "link",
+                "order": 3
+            },
+            "tx_mask_social_title": {
+                "config": {
+                    "eval": "",
+                    "type": "input"
+                },
+                "description": "",
+                "inlineParent": "tx_mask_social_repeater",
+                "key": "social_title",
+                "l10n_mode": "",
+                "label": "Social Title",
                 "name": "string",
                 "order": 1
             }

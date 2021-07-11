@@ -1,6 +1,9 @@
 .slider-content .slider-cell {
   width: 100%;
 }
+.flickity-viewport {
+  width: 100%;
+}
 .flickity-prev-next-button {
   top: 50%;
   width: 3rem;
