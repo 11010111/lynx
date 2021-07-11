@@ -3,19 +3,16 @@
 	<header type="array">
 		<XMLversion>1.0</XMLversion>
 		<meta type="array">
-			<title></title>
-			<description></description>
-			<notes></notes>
+			<title>Lynx</title>
+			<description>Lynx Site Package</description>
+			<notes>...</notes>
 			<packager_username>admin</packager_username>
 			<packager_name></packager_name>
 			<packager_email></packager_email>
-			<TYPO3_version>10.4.17</TYPO3_version>
-			<created>Sunday  4. July 2021</created>
+			<TYPO3_version></TYPO3_version>
+			<created>2021</created>
 		</meta>
-		<static_tables index="relStaticTables" type="array">
-			<tablename index="0">sys_file_storage</tablename>
-			<tablename index="1">sys_filemounts</tablename>
-		</static_tables>
+		<static_tables index="relStaticTables" type="array"></static_tables>
 		<excludeMap type="array"></excludeMap>
 		<softrefCfg type="array"></softrefCfg>
 		<extensionDependencies type="array">
@@ -93,7 +90,7 @@
 				<rec index="1" type="array">
 					<uid>1</uid>
 					<pid>1</pid>
-					<title>DEFAULT TEMPLATE</title>
+					<title>LYNX TEMPLATE</title>
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array"></softrefs>
 				</rec>
@@ -303,9 +300,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">1</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1625329383</field>
-				<field index="crdate" type="integer">112507</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -352,7 +349,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">1625329383</field>
+				<field index="SYS_LASTCHANGED" type="integer">0</field>
 				<field index="abstract" type="NULL"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -403,9 +400,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">4</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1623449166</field>
-				<field index="crdate" type="integer">112507</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -491,9 +488,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">3</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1623449166</field>
-				<field index="crdate" type="integer">112507</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -540,7 +537,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description" type="NULL"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">1624697898</field>
+				<field index="SYS_LASTCHANGED" type="integer">0</field>
 				<field index="abstract" type="NULL"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -578,24 +575,24 @@
 		<tablerow index="tt_content:1" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">1</field>
-				<field index="rowDescription" type="NULL"></field>
+				<field index="rowDescription"></field>
 				<field index="pid" type="integer">3</field>
-				<field index="tstamp" type="integer">1624763739</field>
-				<field index="crdate" type="integer">112507</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
 				<field index="endtime" type="integer">0</field>
 				<field index="fe_group"></field>
-				<field index="sorting" type="integer">256</field>
+				<field index="sorting" type="integer">0</field>
 				<field index="editlock" type="integer">0</field>
 				<field index="sys_language_uid" type="integer">0</field>
 				<field index="l18n_parent" type="integer">0</field>
 				<field index="l10n_source" type="integer">0</field>
 				<field index="l10n_state" type="NULL"></field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="l18n_diffsource">a:31:{s:5:&quot;CType&quot;;N;s:6:&quot;colPos&quot;;N;s:6:&quot;header&quot;;N;s:13:&quot;header_layout&quot;;N;s:15:&quot;header_position&quot;;N;s:4:&quot;date&quot;;N;s:11:&quot;header_link&quot;;N;s:9:&quot;subheader&quot;;N;s:30:&quot;tx_gridelements_backend_layout&quot;;N;s:11:&quot;pi_flexform&quot;;N;s:24:&quot;tx_gridelements_children&quot;;N;s:6:&quot;layout&quot;;N;s:11:&quot;frame_class&quot;;N;s:18:&quot;space_before_class&quot;;N;s:17:&quot;space_after_class&quot;;N;s:17:&quot;frame_class_extra&quot;;N;s:16:&quot;space_left_class&quot;;N;s:17:&quot;space_right_class&quot;;N;s:9:&quot;no_mobile&quot;;N;s:12:&quot;sectionIndex&quot;;N;s:9:&quot;linkToTop&quot;;N;s:5:&quot;media&quot;;N;s:16:&quot;sys_language_uid&quot;;N;s:6:&quot;hidden&quot;;N;s:9:&quot;starttime&quot;;N;s:7:&quot;endtime&quot;;N;s:8:&quot;fe_group&quot;;N;s:8:&quot;editlock&quot;;N;s:10:&quot;categories&quot;;N;s:14:&quot;rowDescription&quot;;N;s:25:&quot;tx_gridelements_container&quot;;N;}</field>
+				<field index="l18n_diffsource"></field>
 				<field index="t3ver_oid" type="integer">0</field>
 				<field index="t3ver_wsid" type="integer">0</field>
 				<field index="t3ver_state" type="integer">0</field>
@@ -604,7 +601,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="CType">gridelements_pi1</field>
-				<field index="header">Footer</field>
+				<field index="header"></field>
 				<field index="header_position"></field>
 				<field index="bodytext" type="NULL"></field>
 				<field index="bullets_type" type="integer">0</field>
@@ -645,12 +642,6 @@
 					&lt;data&gt;
 					&lt;sheet index=&quot;sDEF&quot;&gt;
 					&lt;language index=&quot;lDEF&quot;&gt;
-					&lt;field index=&quot;columnType&quot;&gt;
-					&lt;value index=&quot;vDEF&quot;&gt;1&lt;/value&gt;
-					&lt;/field&gt;
-					&lt;field index=&quot;backgroundColor&quot;&gt;
-					&lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-					&lt;/field&gt;
 					&lt;field index=&quot;breakpoint&quot;&gt;
 					&lt;value index=&quot;vDEF&quot;&gt;md&lt;/value&gt;
 					&lt;/field&gt;
@@ -673,28 +664,32 @@
 				<field index="categories" type="integer">0</field>
 				<field index="backupColPos" type="integer">-2</field>
 				<field index="tx_gridelements_backend_layout">1</field>
-				<field index="tx_gridelements_children" type="integer">1</field>
+				<field index="tx_gridelements_children" type="integer">0</field>
 				<field index="tx_gridelements_container" type="integer">0</field>
 				<field index="tx_gridelements_columns" type="integer">0</field>
 				<field index="gridelements_shortcut_page_order_by" type="integer">0</field>
 				<field index="frame_class_extra"></field>
-				<field index="tx_mask_html_form_input"></field>
-				<field index="no_mobile" type="integer">0</field>
 				<field index="space_left_class"></field>
 				<field index="space_right_class"></field>
-				<field index="tx_mask_beforeafterimage_image_after" type="integer">0</field>
-				<field index="tx_mask_beforeafterimage_image_before" type="integer">0</field>
-				<field index="tx_news_related_news" type="integer">0</field>
+				<field index="display_on"></field>
 			</fieldlist>
-			<related index="rels" type="array"></related>
+			<related index="rels" type="array">
+				<field index="pi_flexform" type="array">
+					<type>flex</type>
+					<flexform index="flexFormRels" type="array">
+						<db_relations index="db" type="array"></db_relations>
+						<softref_relations index="softrefs" type="array"></softref_relations>
+					</flexform>
+				</field>
+			</related>
 		</tablerow>
 		<tablerow index="pages:2" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">2</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1625365464</field>
-				<field index="crdate" type="integer">112507</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -798,11 +793,11 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1625315452</field>
+				<field index="tstamp" type="integer">0</field>
 				<field index="sorting" type="integer">256</field>
-				<field index="crdate" type="integer">112506</field>
-				<field index="cruser_id" type="integer">1</field>
-				<field index="title">DEFAULT TEMPLATE</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
+				<field index="title">LYNX TEMPLATE</field>
 				<field index="sitetitle"></field>
 				<field index="hidden" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -827,7 +822,7 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">1</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1625343897</field>
+				<field index="tstamp" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="sorting" type="integer">256</field>
 				<field index="title">English</field>
@@ -840,8 +835,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">1</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1625400345</field>
-				<field index="crdate" type="integer">1625400345</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
 				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="description">This is the local fileadmin/ directory. This storage mount has been created automatically by TYPO3.</field>
@@ -887,9 +882,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">2</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1625557359</field>
-				<field index="crdate" type="integer">1625557359</field>
-				<field index="cruser_id" type="integer">6</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="description"></field>
 				<field index="name">Lynx Basis</field>
@@ -937,7 +932,7 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">2</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1623441913</field>
+				<field index="tstamp" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="sorting" type="integer">128</field>
@@ -963,7 +958,7 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">1</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1623448919</field>
+				<field index="tstamp" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="sorting" type="integer">256</field>
@@ -989,9 +984,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">2</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1623441601</field>
-				<field index="crdate" type="integer">1623441601</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="description"></field>
@@ -1020,9 +1015,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">1</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1623876706</field>
-				<field index="crdate" type="integer">1623072940</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="description"></field>
@@ -1083,9 +1078,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">4</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1621425022</field>
-				<field index="crdate" type="integer">1621423205</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="disable" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -1110,7 +1105,7 @@
 				<field index="lockToDomain"></field>
 				<field index="disableIPlock" type="integer">0</field>
 				<field index="TSconfig"></field>
-				<field index="lastlogin" type="integer">1624269368</field>
+				<field index="lastlogin" type="integer">0</field>
 				<field index="createdByAction" type="integer">0</field>
 				<field index="usergroup_cached_list" type="NULL"></field>
 				<field index="workspace_id" type="integer">0</field>
@@ -1124,9 +1119,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">5</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1625346801</field>
-				<field index="crdate" type="integer">1622099588</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="disable" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -1165,9 +1160,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">8</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1623440848</field>
-				<field index="crdate" type="integer">1621350932</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="disable" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -1192,7 +1187,7 @@
 				<field index="lockToDomain"></field>
 				<field index="disableIPlock" type="integer">0</field>
 				<field index="TSconfig">options.pageTree.backgroundColor.2 = lightgrey</field>
-				<field index="lastlogin" type="integer">1625363251</field>
+				<field index="lastlogin" type="integer">0</field>
 				<field index="createdByAction" type="integer">0</field>
 				<field index="usergroup_cached_list" type="NULL"></field>
 				<field index="workspace_id" type="integer">0</field>
@@ -1206,9 +1201,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">3</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1621407186</field>
-				<field index="crdate" type="integer">1621405228</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="disable" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -1233,7 +1228,7 @@
 				<field index="lockToDomain"></field>
 				<field index="disableIPlock" type="integer">0</field>
 				<field index="TSconfig"></field>
-				<field index="lastlogin" type="integer">1621407194</field>
+				<field index="lastlogin" type="integer">0</field>
 				<field index="createdByAction" type="integer">0</field>
 				<field index="usergroup_cached_list" type="NULL"></field>
 				<field index="workspace_id" type="integer">0</field>
@@ -1247,9 +1242,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">2</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1621367209</field>
-				<field index="crdate" type="integer">1621366647</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="disable" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -1274,7 +1269,7 @@
 				<field index="lockToDomain"></field>
 				<field index="disableIPlock" type="integer">0</field>
 				<field index="TSconfig"></field>
-				<field index="lastlogin" type="integer">1621368800</field>
+				<field index="lastlogin" type="integer">0</field>
 				<field index="createdByAction" type="integer">0</field>
 				<field index="usergroup_cached_list" type="NULL"></field>
 				<field index="workspace_id" type="integer">0</field>
@@ -1288,9 +1283,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">7</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1625346777</field>
-				<field index="crdate" type="integer">1623071734</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="disable" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -1329,9 +1324,9 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">6</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1625346758</field>
-				<field index="crdate" type="integer">1623071734</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="disable" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
