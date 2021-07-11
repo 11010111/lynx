@@ -3,7 +3,7 @@
 // Options: https://flickity.metafizzy.co/options.html
 ##########################################################################################################
 
-var flkty = new Flickity('#myElement', {
+let flkty = new Flickity('#myElement', {
   // options
   cellAlign: 'left',
   contain: true
@@ -50,7 +50,7 @@ if (!demo.error) {
 <div class="element" data-emergence="hidden"></div>
 
 <script>
-  var customContainer = document.querySelector('.wrapper');
+  let customContainer = document.querySelector('.wrapper');
 
   emergence.init({
     container: customContainer
@@ -111,7 +111,7 @@ jarallax(document.querySelectorAll('.jarallax'), {
 // Usage: https://github.com/toomuchdesign/offside
 ##########################################################################################################
 
-var myOffside = offside( '#my-menu', {
+let myOffside = offside( '#my-menu', {
     slidingElementsSelector:'#my-content-container',
     buttonsSelector: '#my-button, .another-button',
 });
