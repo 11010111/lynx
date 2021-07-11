@@ -14,9 +14,18 @@
       <ul class="mobile-menu">
         <f:for each="{navigation}" as="navigationItem">
           <li class="parent{f:if(condition: navigationItem.children, then:' has-children')}">
-            <a class="parent-link{f:if(condition: navigationItem.active, then:' active')}" href="{navigationItem.link}" target="{navigationItem.target}" title="{navigationItem.title}">
-              {navigationItem.title}
-            </a>
+            <f:if condition="{navigationItem.children} && {linkNonClickable} == 1">
+              <f:then>
+                <span class="parent-link{f:if(condition: navigationItem.active, then:' active')}" title="{navigationItem.title}">
+                  {navigationItem.title}
+                </span>
+              </f:then>
+              <f:else>
+                <a class="parent-link{f:if(condition: navigationItem.active, then:' active')}" href="{navigationItem.link}" target="{navigationItem.target}" title="{navigationItem.title}">
+                  {navigationItem.title}
+                </a>
+              </f:else>
+            </f:if>
             <f:if condition="{navigationItem.children}">
               <ul class="mobile-dropdown">
                 <f:for each="{navigationItem.children}" as="child">

@@ -51,10 +51,8 @@ nav.mobile {
 
     &:hover {
       &::before {
-        top: -10rem;
-        right: -10rem;
-        width: 18rem;
-        height: 18rem;
+        top: 0;
+        right: 0;
       }
     }
 

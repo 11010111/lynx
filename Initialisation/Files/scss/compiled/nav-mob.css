@@ -41,10 +41,8 @@ nav.mobile .menu-button {
   z-index: 1010;
 }
 nav.mobile .menu-button:hover::before {
-  top: -10rem;
-  right: -10rem;
-  width: 18rem;
-  height: 18rem;
+  top: 0;
+  right: 0;
 }
 nav.mobile .menu-button:checked::before {
   opacity: 0;

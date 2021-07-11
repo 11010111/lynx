@@ -21,6 +21,12 @@ page {
 
     # FLUIDTEMPLATE
     10 {
+        variables {
+            # Mobile Menu Dropdown Parent - Non-Clickable
+            linkNonClickable = TEXT
+            #linkNonClickable.value = 1
+        }
+
         dataProcessing {
             # Greater then 30
             40 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
