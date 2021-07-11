@@ -65,11 +65,20 @@ page {
   	# CSS
     includeCSS {
         flickity = fileadmin/lynx/css/flickity.css
-        #flatpickr = fileadmin/lynx/css/flatpickr.min.css
         #jarallax = fileadmin/lynx/css/jarallax.css
-        #tobii = fileadmin/lynx/css/tobii.min.css
         #offside = fileadmin/lynx/css/offside.css
+
+        #flatpickr = fileadmin/lynx/css/flatpickr.min.css
+        flatpickr.disableCompression = 1
+        #flatpickr.excludeFromConcatenation = 1
+
+        #tobii = fileadmin/lynx/css/tobii.min.css
+        tobii.disableCompression = 1
+        #tobii.excludeFromConcatenation = 1
+
         #tippy = fileadmin/lynx/css/tippy.css
+        tippy.disableCompression = 1
+        #tippy.excludeFromConcatenation = 1
 
         # NEW CSS CLASSES
         #example = fileadmin/lynx/scss/compiled/example.css
@@ -78,6 +87,8 @@ page {
         header = fileadmin/lynx/scss/compiled/header.css
         icon_text = fileadmin/lynx/scss/compiled/icon-text.css
         text_image_overlay = fileadmin/lynx/scss/compiled/text-image-overlay.css
+        copyright = fileadmin/lynx/scss/compiled/copyright.css
+        social_privacy = fileadmin/lynx/scss/compiled/social-privacy.css
 
         container = fileadmin/lynx/scss/compiled/container.css
         frame = fileadmin/lynx/scss/compiled/frame.css
@@ -94,21 +105,63 @@ page {
   	# Header JS
     includeJS {
         #jquery = fileadmin/lynx/js/plugins/jquery-3.6.0.min.js
+        jquery.disableCompression = 1
+        jquery.excludeFromConcatenation = 1
+
         flickity = fileadmin/lynx/js/plugins/flickity.pkgd.min.js
+        flickity.disableCompression = 1
+        flickity.excludeFromConcatenation = 1
+
         #flatpickr = fileadmin/lynx/js/plugins/flatpickr.js
+        flatpickr.disableCompression = 1
+        flatpickr.excludeFromConcatenation = 1
+
         #tobii = fileadmin/lynx/js/plugins/tobii.min.js
+        tobii.disableCompression = 1
+        tobii.excludeFromConcatenation = 1
+
         #in_view = fileadmin/lynx/js/plugins/in-view.min.js
-        #client_detection = fileadmin/lynx/js/plugins/client-detection.js
+        in_view.disableCompression = 1
+        in_view.excludeFromConcatenation = 1
+
         #count_up = fileadmin/lynx/js/plugins/countup.min.js
+        count_up.disableCompression = 1
+        count_up.excludeFromConcatenation = 1
+
         #emergence = fileadmin/lynx/js/plugins/emergence.min.js
+        emergence.disableCompression = 1
+        emergence.excludeFromConcatenation = 1
+
         #jarallax = fileadmin/lynx/js/plugins/jarallax.min.js
+        jarallax.disableCompression = 1
+        jarallax.excludeFromConcatenation = 1
+
         #jarallax_video = fileadmin/lynx/js/plugins/jarallax-video.min.js
+        jarallax_video.disableCompression = 1
+        jarallax_video.excludeFromConcatenation = 1
+
         #jarallax_element = fileadmin/lynx/js/plugins/jarallax-element.min.js
+        jarallax_element.disableCompression = 1
+        jarallax_element.excludeFromConcatenation = 1
+
         #offside = fileadmin/lynx/js/plugins/offside.min.js
+        offside.disableCompression = 1
+        offside.excludeFromConcatenation = 1
+
         #reframe = fileadmin/lynx/js/plugins/reframe.min.js
+        reframe.disableCompression = 1
+        reframe.excludeFromConcatenation = 1
+
         #popper = fileadmin/lynx/js/plugins/popper.min.js
+        popper.disableCompression = 1
+        popper.excludeFromConcatenation = 1
+
         # tippy: require "popper"
         #tippy = fileadmin/lynx/js/plugins/tippy-bundle.umd.min.js
+        tippy.disableCompression = 1
+        tippy.excludeFromConcatenation = 1
+
+        #client_detection = fileadmin/lynx/js/plugins/client-detection.js
     }
 
   	# Footer JS
