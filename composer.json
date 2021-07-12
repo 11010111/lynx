@@ -32,8 +32,7 @@
     "typo3/cms-rte-ckeditor": "^10.4",
     "typo3/cms-fluid-styled-content": "^10.4",
     "typo3/cms-impexp": "^10.4",
-    "gridelementsteam/gridelements": "^10.1",
-    "swe/mgcookies": "dev-master"
+    "gridelementsteam/gridelements": "^10.1"
   },
   "autoload": {
     "psr-4": {
