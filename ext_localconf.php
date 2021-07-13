@@ -19,9 +19,9 @@ call_user_func(
             $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset'] = 'fileadmin/lynx/rte/Default.yaml';
         }
 
-        /**
-         * Add RTE configuration by Domain Model Data
-         */
+        /**********************************************
+         * Add RTE configuration by Domain Model Data *
+         **********************************************/
         $registryQueryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
             ->getQueryBuilderForTable('sys_registry');
         $registry = $registryQueryBuilder
@@ -33,16 +33,16 @@ call_user_func(
         foreach ($registry as $value) {
             if ($value['entry_key'] === 'typo3conf/ext/lynx/Initialisation/dataImported') {
                 $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
-                    ->getQueryBuilderForTable('tx_lynx_domain_model_root');
+                    ->getQueryBuilderForTable('tx_lynx_domain_model_preset');
 
-                $roots = $queryBuilder
+                $presets = $queryBuilder
                     ->select('preset')
-                    ->from('tx_lynx_domain_model_root')
+                    ->from('tx_lynx_domain_model_preset')
                     ->execute()
                     ->fetchAll();
-                foreach ($roots as $key => $root) {
+                foreach ($presets as $key => $preset) {
                     if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key])) {
-                        $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key] = $root['preset'];
+                        $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key] = $preset['preset'];
                     }
                 }
             }
@@ -51,7 +51,6 @@ call_user_func(
         /**************************
          * Add Mask configuration *
          **************************/
-
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['mask'] = [
             'backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Templates/',
             'backendlayout_pids' => '0,1',
@@ -82,9 +81,9 @@ call_user_func(
             '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/All.tsconfig">'
         );
 
-        /******************
-         * CE INFO - HOOK *
-         ******************/
+        /*******************************
+         * Content Element Info - HOOK *
+         *******************************/
         $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawFooter'][] = SweLynxBackendContentHook::class;
 
         /*************************

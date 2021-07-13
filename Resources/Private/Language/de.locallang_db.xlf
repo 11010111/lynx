@@ -7,20 +7,20 @@
         </header>
         <body>
 
-            <!-- ROOT -->
+            <!-- PRESET -->
             <trans-unit id="extension.title">
                 <source>Lynx</source>
                 <target state="translated">Lynx</target>
             </trans-unit>
-            <trans-unit id="root">
-                <source>Root</source>
-                <target state="translated">Root</target>
+            <trans-unit id="preset">
+                <source>Preset</source>
+                <target state="translated">Preset</target>
             </trans-unit>
-            <trans-unit id="root.title">
+            <trans-unit id="preset.title">
                 <source>Title</source>
                 <target state="translated">Titel</target>
             </trans-unit>
-            <trans-unit id="root.preset">
+            <trans-unit id="preset.preset">
                 <source>Preset</source>
                 <target state="translated">Preset</target>
             </trans-unit>

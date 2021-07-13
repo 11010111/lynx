@@ -5,11 +5,11 @@ namespace Swe\Lynx\Domain\Model;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /**
- * Class Root
+ * Class Preset
  *
  * @package Swe\Lynx\Domain\Model
  */
-class Root extends AbstractEntity
+class Preset extends AbstractEntity
 {
     /**
      * @var string

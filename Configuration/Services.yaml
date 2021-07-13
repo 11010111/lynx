@@ -1,6 +1,6 @@
 services:
-  Swe\Lynx\EventListener\CreateFolder:
+  Swe\Lynx\EventListener\LynxInitialisation:
     tags:
       - name: event.listener
-        identifier: 'sitePackageListener'
-        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionStaticDatabaseContentHasBeenImportedEvent
+        identifier: 'lynxInitialisationListener'
+        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent

@@ -2,7 +2,7 @@
 
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_db.xlf:root',
+        'title' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_db.xlf:preset',
         'label' => 'title',
         'iconfile' => 'EXT:lynx/Resources/Public/Icons/Extension.svg',
         'searchFields' => 'title, preset, tsconfig',
@@ -50,8 +50,8 @@ return [
                 'items' => [
                     ['', 0],
                 ],
-                'foreign_table' => 'tx_lynx_domain_model_root',
-                'foreign_table_where' => 'AND tx_lynx_domain_model_root.uid=###REC_FIELD_l18n_parent### AND tx_lynx_domain_model_root.sys_language_uid IN (-1,0)',
+                'foreign_table' => 'tx_lynx_domain_model_preset',
+                'foreign_table_where' => 'AND tx_lynx_domain_model_preset.uid=###REC_FIELD_l18n_parent### AND tx_lynx_domain_model_preset.sys_language_uid IN (-1,0)',
             ],
         ],
         'l18n_diffsource' => [
@@ -88,7 +88,7 @@ return [
             ],
         ],
         'title' => [
-            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_db.xlf:root.title',
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_db.xlf:preset.title',
             'description' => '',
             'config' => [
                 'type' => 'input',
@@ -98,7 +98,7 @@ return [
             ],
         ],
         'preset' => [
-            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_db.xlf:root.preset',
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_db.xlf:preset.preset',
             'description' => '',
             'config' => [
                 'type' => 'input',

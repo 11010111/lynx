@@ -5,11 +5,11 @@ namespace Swe\Lynx\Domain\Repository;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 /**
- * Class RootRepository
+ * Class PresetRepository
  *
  * @package Swe\Lynx\Domain\Repository
  */
-class RootRepository extends Repository
+class PresetRepository extends Repository
 {
 
 }

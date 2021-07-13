@@ -7,17 +7,17 @@
         </header>
         <body>
 
-            <!-- ROOT -->
+            <!-- PRESET -->
             <trans-unit id="extension.title">
                 <source>Lynx</source>
             </trans-unit>
-            <trans-unit id="root">
-                <source>Root</source>
+            <trans-unit id="preset">
+                <source>Preset</source>
             </trans-unit>
-            <trans-unit id="root.title">
+            <trans-unit id="preset.title">
                 <source>Title</source>
             </trans-unit>
-            <trans-unit id="root.preset">
+            <trans-unit id="preset.preset">
                 <source>Preset</source>
             </trans-unit>
 
