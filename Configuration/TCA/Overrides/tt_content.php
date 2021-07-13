@@ -56,7 +56,8 @@ call_user_func(
                             ['Default', ''],
                         ],
                     ],
-                ]
+                ],
+            ]
         );
 
         ExtensionManagementUtility::addToAllTCAtypes(
