@@ -104,32 +104,6 @@
 					<softrefs type="array"></softrefs>
 				</rec>
 			</table>
-			<table index="sys_filemounts" type="array">
-				<rec index="2" type="array">
-					<uid>2</uid>
-					<pid>0</pid>
-					<title>Bilder</title>
-					<relations index="rels" type="array">
-						<element index="sys_file_storage:1" type="array">
-							<id>1</id>
-							<table>sys_file_storage</table>
-						</element>
-					</relations>
-					<softrefs type="array"></softrefs>
-				</rec>
-				<rec index="1" type="array">
-					<uid>1</uid>
-					<pid>0</pid>
-					<title>Dokumente</title>
-					<relations index="rels" type="array">
-						<element index="sys_file_storage:1" type="array">
-							<id>1</id>
-							<table>sys_file_storage</table>
-						</element>
-					</relations>
-					<softrefs type="array"></softrefs>
-				</rec>
-			</table>
 			<table index="sys_file_storage" type="array">
 				<rec index="1" type="array">
 					<uid>1</uid>
@@ -261,25 +235,19 @@
 				</table>
 			</page_contents>
 			<page_contents index="6" type="array">
-				<table index="sys_filemounts" type="array">
-					<item index="2">1</item>
-					<item index="1">1</item>
-				</table>
-			</page_contents>
-			<page_contents index="7" type="array">
 				<table index="sys_file_storage" type="array">
 					<item index="1">1</item>
 					<item index="2">1</item>
 					<item index="3">1</item>
 				</table>
 			</page_contents>
-			<page_contents index="8" type="array">
+			<page_contents index="7" type="array">
 				<table index="be_groups" type="array">
 					<item index="2">1</item>
 					<item index="1">1</item>
 				</table>
 			</page_contents>
-			<page_contents index="9" type="array">
+			<page_contents index="8" type="array">
 				<table index="be_users" type="array">
 					<item index="4">1</item>
 					<item index="5">1</item>
@@ -827,58 +795,6 @@
 				<field index="language_isocode">en</field>
 			</fieldlist>
 			<related index="rels" type="array"></related>
-		</tablerow>
-		<tablerow index="sys_filemounts:2" type="array">
-			<fieldlist index="data" type="array">
-				<field index="uid" type="integer">2</field>
-				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">0</field>
-				<field index="deleted" type="integer">0</field>
-				<field index="hidden" type="integer">0</field>
-				<field index="sorting" type="integer">128</field>
-				<field index="description"></field>
-				<field index="title">Bilder</field>
-				<field index="path">/Uploads/Images/</field>
-				<field index="base" type="integer">1</field>
-				<field index="read_only" type="integer">0</field>
-			</fieldlist>
-			<related index="rels" type="array">
-				<field index="base" type="array">
-					<type>db</type>
-					<relations index="itemArray" type="array">
-						<element index="0" type="array">
-							<id>1</id>
-							<table>sys_file_storage</table>
-						</element>
-					</relations>
-				</field>
-			</related>
-		</tablerow>
-		<tablerow index="sys_filemounts:1" type="array">
-			<fieldlist index="data" type="array">
-				<field index="uid" type="integer">1</field>
-				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">0</field>
-				<field index="deleted" type="integer">0</field>
-				<field index="hidden" type="integer">0</field>
-				<field index="sorting" type="integer">256</field>
-				<field index="description"></field>
-				<field index="title">Dokumente</field>
-				<field index="path">/Dokumente/</field>
-				<field index="base" type="integer">1</field>
-				<field index="read_only" type="integer">0</field>
-			</fieldlist>
-			<related index="rels" type="array">
-				<field index="base" type="array">
-					<type>db</type>
-					<relations index="itemArray" type="array">
-						<element index="0" type="array">
-							<id>1</id>
-							<table>sys_file_storage</table>
-						</element>
-					</relations>
-				</field>
-			</related>
 		</tablerow>
 		<tablerow index="sys_file_storage:1" type="array">
 			<fieldlist index="data" type="array">
