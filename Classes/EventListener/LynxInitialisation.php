@@ -50,14 +50,14 @@ class LynxInitialisation
     public function writeFileMount($title, $mountPath) {
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
             ->getQueryBuilderForTable('sys_filemounts');
-        $count = $queryBuilder
-            ->count('uid')
+        $statement = $queryBuilder
+            ->select('*')
             ->from('sys_filemounts')
             ->where(
                 $queryBuilder->expr()->eq('title', $queryBuilder->createNamedParameter($title))
             )->execute()->fetchAll();
 
-        if ($count < 1) {
+        if (count($statement) < 1) {
             $queryBuilder->insert('sys_filemounts')->values(
                 [
                     'title' => $title,
