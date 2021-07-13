@@ -6,6 +6,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /**
  * Class Root
+ *
  * @package Swe\Lynx\Domain\Model
  */
 class Root extends AbstractEntity
@@ -13,12 +14,12 @@ class Root extends AbstractEntity
     /**
      * @var string
      */
-    protected $title;
+    protected string $title;
 
     /**
      * @var string
      */
-    protected $preset;
+    protected string $preset;
 
     /**
      * @return string

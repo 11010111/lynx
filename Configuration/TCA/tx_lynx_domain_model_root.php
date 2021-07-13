@@ -12,7 +12,7 @@ return [
         'cruser_id' => 'cruser_id',
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l18n_parent',
-        'transOrigDiffSourceField'  => 'l18n_diffsource',
+        'transOrigDiffSourceField' => 'l18n_diffsource',
         'prependAtCopy' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.prependAtCopy',
         'copyAfterDuplFields' => 'sys_language_uid',
         'useColumnsForDefaultValues' => 'sys_language_uid',
@@ -20,7 +20,7 @@ return [
         'enablecolumns' => [
             'disabled' => 'hidden',
             'starttime' => 'starttime',
-            'endtime' => 'endtime'
+            'endtime' => 'endtime',
         ],
     ],
     'columns' => [
@@ -35,37 +35,37 @@ return [
                     [
                         'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
                         -1,
-                        'flags-multiple'
-                    ]
+                        'flags-multiple',
+                    ],
                 ],
-                'default' => 0
-            ]
+                'default' => 0,
+            ],
         ],
-        'l18n_parent' =>[
+        'l18n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['', 0]
+                    ['', 0],
                 ],
                 'foreign_table' => 'tx_lynx_domain_model_root',
                 'foreign_table_where' => 'AND tx_lynx_domain_model_root.uid=###REC_FIELD_l18n_parent### AND tx_lynx_domain_model_root.sys_language_uid IN (-1,0)',
-            ]
+            ],
         ],
         'l18n_diffsource' => [
             'config' => [
                 'type' => 'passthrough',
-                'default' => ''
-            ]
+                'default' => '',
+            ],
         ],
         'hidden' => [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
             'config' => [
-                'type' => 'check'
-            ]
+                'type' => 'check',
+            ],
         ],
         'starttime' => [
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
@@ -74,8 +74,8 @@ return [
                 'renderType' => 'inputDateTime',
                 'size' => 50,
                 'eval' => 'datetime',
-                'default' => 0
-            ]
+                'default' => 0,
+            ],
         ],
         'endtime' => [
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
@@ -84,8 +84,8 @@ return [
                 'renderType' => 'inputDateTime',
                 'size' => 50,
                 'eval' => 'datetime',
-                'default' => 0
-            ]
+                'default' => 0,
+            ],
         ],
         'title' => [
             'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_db.xlf:root.title',
@@ -113,13 +113,13 @@ return [
             'showitem' => '
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general, title, --linebreak--, preset, --linebreak--, tsconfig,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, sys_language_uid,
-            --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, --palette--;;1'
-        ]
+            --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, --palette--;;1',
+        ],
     ],
     'palettes' => [
         '1' => [
             'label' => '',
-            'showitem' => 'starttime, endtime'
+            'showitem' => 'starttime, endtime',
         ],
     ],
     'interface' => [

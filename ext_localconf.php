@@ -31,7 +31,7 @@ call_user_func(
             ->fetchAll();
 
         foreach ($registry as $value) {
-            if ($value['entry_key'] == 'typo3conf/ext/lynx/Initialisation/dataImported') {
+            if ($value['entry_key'] === 'typo3conf/ext/lynx/Initialisation/dataImported') {
                 $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
                     ->getQueryBuilderForTable('tx_lynx_domain_model_root');
 
