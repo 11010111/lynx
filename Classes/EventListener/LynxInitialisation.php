@@ -3,12 +3,9 @@
 namespace Swe\Lynx\EventListener;
 
 use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Core\Resource\Exception\ExistingTargetFolderException;
-use TYPO3\CMS\Core\Resource\Exception\InsufficientFolderAccessPermissionsException;
-use TYPO3\CMS\Core\Resource\Exception\InsufficientFolderWritePermissionsException;
 use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extensionmanager\Event\AfterExtensionStaticDatabaseContentHasBeenImportedEvent;
+use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
 
 /**
  * Class LynxInitialisation
@@ -18,12 +15,12 @@ use TYPO3\CMS\Extensionmanager\Event\AfterExtensionStaticDatabaseContentHasBeenI
 class LynxInitialisation
 {
     /**
-     * @param AfterExtensionStaticDatabaseContentHasBeenImportedEvent $event
-     * @throws ExistingTargetFolderException
-     * @throws InsufficientFolderAccessPermissionsException
-     * @throws InsufficientFolderWritePermissionsException
+     * @param AfterExtensionFilesHaveBeenImportedEvent $event
+     * @throws \TYPO3\CMS\Core\Resource\Exception\ExistingTargetFolderException
+     * @throws \TYPO3\CMS\Core\Resource\Exception\InsufficientFolderAccessPermissionsException
+     * @throws \TYPO3\CMS\Core\Resource\Exception\InsufficientFolderWritePermissionsException
      */
-    public function __invoke(AfterExtensionStaticDatabaseContentHasBeenImportedEvent $event)
+    public function __invoke(AfterExtensionFilesHaveBeenImportedEvent $event)
     {
         if ($event->getPackageKey() == 'lynx') {
             /** @var ResourceFactory $resourceFactory */
