@@ -9,7 +9,7 @@ CREATE TABLE tt_content
     display_on        VARCHAR(30) DEFAULT '' NOT NULL
 );
 
-CREATE TABLE tx_lynx_domain_model_root
+CREATE TABLE tx_lynx_domain_model_preset
 (
     uid              INT(11)                         NOT NULL AUTO_INCREMENT,
     pid              INT(11)             DEFAULT '0' NOT NULL,
