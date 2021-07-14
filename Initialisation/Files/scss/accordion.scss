@@ -1,0 +1,67 @@
+// Imports
+@import 'functions';
+@import 'variables';
+
+
+// Accordion
+.accordion {
+  position: relative;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid color('primary');
+  padding: 1rem 0 1rem 3rem;
+  
+  header {
+    cursor: pointer;
+    
+    h2 {
+      font-size: 1.77em;
+      font-weight: 500;
+    }
+    
+    h3 {
+      font-size: 1.38em;
+      font-weight: 400;
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2rem;
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+      background-color: color('primary');
+      z-index: 0;
+    }
+
+    &::after {
+      content: '-';
+      position: absolute;
+      top: 1.8rem;
+      left: 0.25rem;
+      transform-origin: center;
+  	  color: color('white');
+      z-index: 1;
+  	  transition: 0.5s;
+    }
+  }
+  
+  .accordion-content {
+    overflow: hidden;
+    transition: height 0.5s;
+  }
+}
+
+.accordion-close {
+  header {
+    &::after {
+    	content: '+';
+    	transform: rotate(90deg);
+    }
+  }
+  
+  .accordion-content {
+    height: 0!important;
+  }
+}

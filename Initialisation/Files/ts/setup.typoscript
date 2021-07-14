@@ -80,9 +80,7 @@ page {
         tippy.disableCompression = 1
         #tippy.excludeFromConcatenation = 1
 
-        # NEW CSS CLASSES
-        #example = fileadmin/lynx/scss/compiled/example.css
-
+        accordion = fileadmin/lynx/scss/compiled/accordion.css
         flickity_controls = fileadmin/lynx/scss/compiled/flickity-controls.css
         header = fileadmin/lynx/scss/compiled/header.css
         icon_text = fileadmin/lynx/scss/compiled/icon-text.css

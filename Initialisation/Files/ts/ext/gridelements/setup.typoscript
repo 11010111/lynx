@@ -121,3 +121,14 @@ tt_content.gridelements_pi1.20.10.setup {
         outerWrap = |
     }
 }
+
+tt_content.gridelements_pi1.20.10.setup {
+    12 < lib.gridelements.defaultGridSetup
+    12 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = fileadmin/lynx/ext/lynx/Templates/GridElements/Accordion.html
+        }
+        outerWrap = |
+    }
+}
