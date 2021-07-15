@@ -164,6 +164,7 @@ page {
 
   	# Footer JS
     includeJSFooter {
+        accordion = fileadmin/lynx/js/accordion.js
         fixed_navigation = fileadmin/lynx/js/fixed-navigation.js
         img_to_svg = fileadmin/lynx/js/img-to-svg.js
         mobile_menu = fileadmin/lynx/js/mobile-menu.js

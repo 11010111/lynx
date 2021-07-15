@@ -8,9 +8,11 @@
   min-height: 100vh;
   margin-top: 7rem;
 }
+
 .scroll-hidden .content-main {
   filter: blur(2px);
 }
+
 .btn-primary {
   display: inline-block;
   color: #ffffff;
@@ -25,6 +27,7 @@
   color: #ffffff;
   box-shadow: 0 0 1rem rgba(6, 48, 209, 0.25);
 }
+
 .btn-secondary {
   display: inline-block;
   color: #0630D1;
@@ -38,10 +41,12 @@
   color: #0630D1;
   box-shadow: 0 0 1rem rgba(6, 48, 209, 0.25);
 }
+
 .grey-box, .frame-grey-box {
   padding: 0.25rem;
   background-color: #f5f5f5;
 }
+
 .scroll-top {
   display: flex;
   justify-content: center;
@@ -66,12 +71,14 @@
   width: 3rem;
   height: 3rem;
 }
+
 .scroll-top-active {
   right: 1rem;
 }
 .scroll-top-active:hover {
   background-color: #0630D1;
 }
+
 .site_error {
   display: flex;
   justify-content: center;
@@ -83,9 +90,11 @@
   font-size: 3em;
   margin-right: 1rem;
 }
+
 .fade-in {
   animation: fadeIn 1.5s;
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
