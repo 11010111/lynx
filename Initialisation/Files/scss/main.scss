@@ -63,15 +63,21 @@
   position: fixed;
   right: -100%;
   bottom: 4rem;
+  width: 2.2rem;
+  height: 2.2rem;
   background-color: color('primary');
   box-shadow: 0 0 0.25rem rgb(0 0 0 / 25%);
-  border-radius: 50%;
+  border-radius: 5px;
   cursor: pointer;
   z-index: 999;
 
   svg {
-    width: 2.25rem;
-    height: 2.25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.75rem;
+    height: 1.75rem;
 
     path {
       fill: color('white');
