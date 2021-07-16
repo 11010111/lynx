@@ -22,6 +22,7 @@
     transform: translateY(-50%);
     color: color('white');
     background-color: color('primary');
+    padding: 0;
   
   	@media screen and (max-width: breakpoint('md')) {
     	display: none;
