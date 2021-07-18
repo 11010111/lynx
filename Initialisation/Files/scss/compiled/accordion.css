@@ -11,13 +11,15 @@
 .accordion header h2 {
   font-size: 1.77em;
   font-weight: 500;
+  margin: 0;
 }
 .accordion header h3 {
   font-size: 1.38em;
   font-weight: 400;
+  margin: 0;
 }
 .accordion header::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 2rem;
   left: 0;
@@ -27,7 +29,7 @@
   z-index: 0;
 }
 .accordion header::after {
-  content: '-';
+  content: "-";
   position: absolute;
   top: 1.8rem;
   left: 0.25rem;
@@ -40,8 +42,9 @@
   overflow: hidden;
   transition: height 0.5s;
 }
+
 .accordion-close header::after {
-  content: '+';
+  content: "+";
   transform: rotate(90deg);
 }
 .accordion-close .accordion-content {

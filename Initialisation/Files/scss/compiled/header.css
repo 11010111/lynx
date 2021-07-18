@@ -37,6 +37,9 @@
     margin-right: 4rem;
   }
 }
+.header-container .top .left .text h1 {
+  margin-top: 0;
+}
 .header-container .top .left .text p {
   line-height: 1.66rem;
 }
@@ -84,7 +87,7 @@
   }
 }
 .header-container .scrolldown::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -1.11rem;
@@ -93,6 +96,7 @@
   background-color: #000000;
   animation: elasticus 3s infinite;
 }
+
 @keyframes elasticus {
   0% {
     -webkit-transform-origin: 0% 0%;

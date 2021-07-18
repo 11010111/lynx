@@ -39,6 +39,10 @@
         @media screen and (min-width: breakpoint('lg')) and (max-width: breakpoint('xl')) {
           margin-right: 4rem;
         }
+
+        h1 {
+          margin-top: 0;
+        }
         
         p {
           line-height: 1.66rem;
