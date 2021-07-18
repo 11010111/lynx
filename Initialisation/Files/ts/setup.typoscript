@@ -19,16 +19,27 @@ page {
         10 {
             if.isInList.field = uid
             if.value = 1
-            wrap = <title>{$pageTitle}</title>
+            stdWrap {
+                field = subtitle
+                ifEmpty {
+                    wrap = {$siteTitle}
+                }
+                wrap = <title>|</title>
+            }
         }
         20 = TEXT
         20 {
             if.field = uid
             if.value.isFalse = 1
-            wrap {
-                field = title
-                wrap = <title>|&nbsp;- {$pageTitle}</title>
+            stdWrap {
+                field = subtitle
+                ifEmpty {
+                    wrap = {$siteTitle}
+                }
+                wrap = {page:title}&nbsp;-&nbsp;|
             }
+            stdWrap.insertData = 1
+            wrap = <title>|</title>
         }
         110 = TEXT
         110.wrap = <link rel="preload" href="/fileadmin/lynx/fonts/BasierCircle/basiercircle-regular-webfont.woff2" as="font" crossorigin>

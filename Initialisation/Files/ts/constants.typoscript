@@ -8,7 +8,7 @@
 ####################
 #### PAGE TITLE ####
 ####################
-pageTitle = Lynx
+siteTitle = Lynx
 
 ##############################
 #### FLUID STYLED CONTENT ####
