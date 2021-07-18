@@ -5,6 +5,11 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/powermail/constants.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/search/constants.typoscript">
 
+####################
+#### PAGE TITLE ####
+####################
+pageTitle = Lynx
+
 ##############################
 #### FLUID STYLED CONTENT ####
 ##############################

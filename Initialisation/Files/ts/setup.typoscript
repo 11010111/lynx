@@ -15,15 +15,20 @@ page {
     #shortcutIcon = EXT:lynx/Resources/Public/Icons/favicon.ico
 
     headerData {
-        100 = TEXT
-        100 {
-            field = subtitle
-            ifEmpty {
+        10 = TEXT
+        10 {
+            if.isInList.field = uid
+            if.value = 1
+            wrap = <title>{$pageTitle}</title>
+        }
+        20 = TEXT
+        20 {
+            if.field = uid
+            if.value.isFalse = 1
+            wrap {
                 field = title
-                required = 1
-                wrap = |&nbsp;- Lynx
+                wrap = <title>|&nbsp;- {$pageTitle}</title>
             }
-            wrap = <title>|</title>
         }
         110 = TEXT
         110.wrap = <link rel="preload" href="/fileadmin/lynx/fonts/BasierCircle/basiercircle-regular-webfont.woff2" as="font" crossorigin>
