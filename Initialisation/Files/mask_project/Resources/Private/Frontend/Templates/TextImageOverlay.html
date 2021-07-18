@@ -9,7 +9,7 @@
   <div class="image-overlay">
     <f:if condition="{data.tx_mask_text_image_overlay_image}">
       <f:for each="{data.tx_mask_text_image_overlay_image}" as="file">
-        <f:image image="{file}" />
+        <f:image image="{file}" additionalAttributes="{srcset: '{f:uri.image(image: file, maxWidth: 768)} 768w,{f:uri.image(image: file, maxWidth: 990)} 990w,{f:uri.image(image: file, maxWidth: 1200)} 1200w,{f:uri.image(image: file, maxWidth: 1440)} 1440w,{f:uri.image(image: file, maxWidth: 1900)} 1900w',sizes: '(min-width: 1200px) 100vw, 100vw'}" />
       </f:for>
     </f:if>
   </div>
