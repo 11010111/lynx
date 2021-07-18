@@ -15,8 +15,18 @@ page {
     #shortcutIcon = EXT:lynx/Resources/Public/Icons/favicon.ico
 
     headerData {
-      10 = TEXT
-      10.wrap = <link rel="preload" href="/fileadmin/lynx/fonts/BasierCircle/basiercircle-regular-webfont.woff2" as="font" crossorigin>
+        100 = TEXT
+        100 {
+            field = subtitle
+            ifEmpty {
+                field = title
+                required = 1
+                wrap = |&nbsp;- Lynx
+            }
+            wrap = <title>|</title>
+        }
+        110 = TEXT
+        110.wrap = <link rel="preload" href="/fileadmin/lynx/fonts/BasierCircle/basiercircle-regular-webfont.woff2" as="font" crossorigin>
     }
 
     # FLUIDTEMPLATE
@@ -195,6 +205,7 @@ page {
 #### CONFIG ####
 ################
 config {
+    noPageTitle = 1
     absRefPrefix = auto
     no_cache = 0
     uniqueLinkVars = 1
