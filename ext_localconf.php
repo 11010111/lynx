@@ -51,17 +51,17 @@ call_user_func(
         /**************************
          * Add Mask configuration *
          **************************/
-        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['mask'] = [
-            'backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Templates/',
-            'backendlayout_pids' => '0,1',
-            'content' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Templates/',
-            'json' => 'fileadmin/lynx/mask_project/Configuration/mask.json',
-            'layouts' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Layouts/',
-            'layouts_backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Layouts/',
-            'partials' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Partials/',
-            'partials_backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Partials/',
-            'preview' => 'fileadmin/lynx/mask_project/Resources/Public/',
-        ];
+//        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['mask'] = [
+//            'backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Templates/',
+//            'backendlayout_pids' => '0,1',
+//            'content' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Templates/',
+//            'json' => 'fileadmin/lynx/mask_project/Configuration/mask.json',
+//            'layouts' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Layouts/',
+//            'layouts_backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Layouts/',
+//            'partials' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Partials/',
+//            'partials_backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Partials/',
+//            'preview' => 'fileadmin/lynx/mask_project/Resources/Public/',
+//        ];
 
         /***********************************************
          * register svg icons: identifier and filename *
