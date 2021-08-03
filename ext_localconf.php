@@ -49,7 +49,7 @@ call_user_func(
                 }
             }
         } catch (Exception $exception) {
-            echo $exception->getMessage();
+            //
         }
 
         /**************************
