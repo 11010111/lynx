@@ -22,35 +22,35 @@ call_user_func(
         /**********************************************
          * Add RTE configuration by Domain Model Data *
          **********************************************/
-        try {
-            $registryQueryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
-                ->getQueryBuilderForTable('sys_registry');
-            $registry = $registryQueryBuilder
-                ->select('*')
-                ->from('sys_registry')
-                ->execute()
-                ->fetchAll();
-
-            foreach ($registry as $value) {
-                if ($value['entry_key'] === 'typo3conf/ext/lynx/Initialisation/dataImported') {
-                    $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
-                        ->getQueryBuilderForTable('tx_lynx_domain_model_preset');
-
-                    $presets = $queryBuilder
-                        ->select('preset')
-                        ->from('tx_lynx_domain_model_preset')
-                        ->execute()
-                        ->fetchAll();
-                    foreach ($presets as $key => $preset) {
-                        if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key])) {
-                            $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key] = $preset['preset'];
-                        }
-                    }
-                }
-            }
-        } catch (Exception $exception) {
-            //
-        }
+//        try {
+//            $registryQueryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+//                ->getQueryBuilderForTable('sys_registry');
+//            $registry = $registryQueryBuilder
+//                ->select('*')
+//                ->from('sys_registry')
+//                ->execute()
+//                ->fetchAll();
+//
+//            foreach ($registry as $value) {
+//                if ($value['entry_key'] === 'typo3conf/ext/lynx/Initialisation/dataImported') {
+//                    $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+//                        ->getQueryBuilderForTable('tx_lynx_domain_model_preset');
+//
+//                    $presets = $queryBuilder
+//                        ->select('preset')
+//                        ->from('tx_lynx_domain_model_preset')
+//                        ->execute()
+//                        ->fetchAll();
+//                    foreach ($presets as $key => $preset) {
+//                        if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key])) {
+//                            $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key] = $preset['preset'];
+//                        }
+//                    }
+//                }
+//            }
+//        } catch (Exception $exception) {
+//            //
+//        }
 
         /**************************
          * Add Mask configuration *
