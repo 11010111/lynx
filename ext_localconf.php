@@ -22,46 +22,50 @@ call_user_func(
         /**********************************************
          * Add RTE configuration by Domain Model Data *
          **********************************************/
-//        $registryQueryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
-//            ->getQueryBuilderForTable('sys_registry');
-//        $registry = $registryQueryBuilder
-//            ->select('*')
-//            ->from('sys_registry')
-//            ->execute()
-//            ->fetchAll();
-//
-//        foreach ($registry as $value) {
-//            if ($value['entry_key'] === 'typo3conf/ext/lynx/Initialisation/dataImported') {
-//                $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
-//                    ->getQueryBuilderForTable('tx_lynx_domain_model_preset');
-//
-//                $presets = $queryBuilder
-//                    ->select('preset')
-//                    ->from('tx_lynx_domain_model_preset')
-//                    ->execute()
-//                    ->fetchAll();
-//                foreach ($presets as $key => $preset) {
-//                    if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key])) {
-//                        $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key] = $preset['preset'];
-//                    }
-//                }
-//            }
-//        }
+        try {
+            $registryQueryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+                ->getQueryBuilderForTable('sys_registry');
+            $registry = $registryQueryBuilder
+                ->select('*')
+                ->from('sys_registry')
+                ->execute()
+                ->fetchAll();
+
+            foreach ($registry as $value) {
+                if ($value['entry_key'] === 'typo3conf/ext/lynx/Initialisation/dataImported') {
+                    $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+                        ->getQueryBuilderForTable('tx_lynx_domain_model_preset');
+
+                    $presets = $queryBuilder
+                        ->select('preset')
+                        ->from('tx_lynx_domain_model_preset')
+                        ->execute()
+                        ->fetchAll();
+                    foreach ($presets as $key => $preset) {
+                        if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key])) {
+                            $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key] = $preset['preset'];
+                        }
+                    }
+                }
+            }
+        } catch (Exception $exception) {
+            echo $exception->getMessage();
+        }
 
         /**************************
          * Add Mask configuration *
          **************************/
-//        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['mask'] = [
-//            'backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Templates/',
-//            'backendlayout_pids' => '0,1',
-//            'content' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Templates/',
-//            'json' => 'fileadmin/lynx/mask_project/Configuration/mask.json',
-//            'layouts' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Layouts/',
-//            'layouts_backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Layouts/',
-//            'partials' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Partials/',
-//            'partials_backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Partials/',
-//            'preview' => 'fileadmin/lynx/mask_project/Resources/Public/',
-//        ];
+        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['mask'] = [
+            'backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Templates/',
+            'backendlayout_pids' => '0,1',
+            'content' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Templates/',
+            'json' => 'fileadmin/lynx/mask_project/Configuration/mask.json',
+            'layouts' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Layouts/',
+            'layouts_backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Layouts/',
+            'partials' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Partials/',
+            'partials_backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Partials/',
+            'preview' => 'fileadmin/lynx/mask_project/Resources/Public/',
+        ];
 
         /***********************************************
          * register svg icons: identifier and filename *
