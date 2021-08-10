@@ -461,7 +461,7 @@
 				<field index="starttime" type="integer">0</field>
 				<field index="endtime" type="integer">0</field>
 				<field index="fe_group">0</field>
-				<field index="sorting" type="integer">768</field>
+				<field index="sorting" type="integer">128</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="editlock" type="integer">0</field>
 				<field index="sys_language_uid" type="integer">0</field>
@@ -484,7 +484,7 @@
 				<field index="perms_everybody" type="integer">0</field>
 				<field index="title">Footer</field>
 				<field index="slug">/footer</field>
-				<field index="doktype" type="integer">1</field>
+				<field index="doktype" type="integer">6</field>
 				<field index="TSconfig" type="NULL"></field>
 				<field index="is_siteroot" type="integer">0</field>
 				<field index="php_tree_stop" type="integer">0</field>
