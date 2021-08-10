@@ -1042,7 +1042,7 @@
 				<field index="description"></field>
 				<field index="username">js-swe</field>
 				<field index="avatar" type="integer">0</field>
-				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$ekREWnljRk5RV3BnWlRWUw$le6au6i7QYSlF5RR5ltdKRjHE2lTPLEDq67h6CPIjkk</field>
+				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$ZWkyWTIzemxJZEdxL1A2cA$LSx6Tb3Fe6GC3jGKxEdLGWCiDJmbYeUpL4Blqasf4sI</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
 				<field index="lang"></field>
@@ -1165,7 +1165,7 @@
 				<field index="description"></field>
 				<field index="username">md-swe</field>
 				<field index="avatar" type="integer">0</field>
-				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$M3lXZUxPa0pqbVp6eUZTbA$i1Mrt/C34GbUaMBpSwBF1nQUQPPLSnblPZEoxFICY74</field>
+				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$d28uR0FLWWVkcm1oV0NLdw$xmFdIEDPxAzyeapLrpP4voGtDcq+M4NbRyyQqsoWTAU</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
 				<field index="lang"></field>
@@ -1206,7 +1206,7 @@
 				<field index="description" type="NULL"></field>
 				<field index="username">mk-swe</field>
 				<field index="avatar" type="integer">0</field>
-				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$TS5JbTIuQ0pJODFPeFN3ag$y6Zl0TlRmbrkgId4uTPmLsojkECRwUcjfr7qV7X0xE8</field>
+				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$ZFoyUzhmZ0piS29jeGhjOQ$5+s0CrNNqBhcRnrC1PU8f5p3hK2GnC0A4EL8A47jYAM</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
 				<field index="lang"></field>
@@ -1247,7 +1247,7 @@
 				<field index="description" type="NULL"></field>
 				<field index="username">yh-swe</field>
 				<field index="avatar" type="integer">0</field>
-				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$bnU1SFNwRHYxOXVDSjNERw$zwPRW9dRzld7UYX47ABHN1JE9IE6jJNI/vYzCp+v9YA</field>
+				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$cWI1NW9SdnVZNHRRdkw5UA$dByMwgkvVDJQaUF2Opb2EBTCgBaUxgr+C9vWp9RC0TM</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
 				<field index="lang"></field>
