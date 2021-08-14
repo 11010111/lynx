@@ -85,6 +85,10 @@ call_user_func(
             '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/All.tsconfig">'
         );
 
+        ExtensionManagementUtility::addPageTSConfig(
+            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/Mod/Wizards/TextMedia.tsconfig">'
+        );
+
         /*******************************
          * Content Element Info - HOOK *
          *******************************/

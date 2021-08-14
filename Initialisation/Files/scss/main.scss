@@ -3,6 +3,10 @@
 @import 'functions';
 
 // Content code here
+.blogcontainer {
+  margin-top: 12rem;
+}
+
 .content-main {
   display: inline-block;
   position: relative;
@@ -53,9 +57,9 @@
 
 .tobii__btn--close {
   left: auto;
-
+  
   &:hover {
-    background-color: transparent;
+  	background-color: transparent;
   }
 }
 
@@ -74,7 +78,14 @@
     display: flex;
     justify-content: flex-end;
   }
-
+  
+  .image {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
   .video {
     width: 100%;
   }

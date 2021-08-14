@@ -34,6 +34,14 @@
                 <source>Display on</source>
             </trans-unit>
 
+            <!-- Text Media -->
+            <trans-unit id="textmedia.title">
+                <source>Media</source>
+            </trans-unit>
+            <trans-unit id="textmedia.description">
+                <source>Text, Image, Video, Audio</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

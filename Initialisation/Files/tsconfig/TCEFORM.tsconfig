@@ -6,20 +6,20 @@ TCEFORM {
         CType {
             removeItems = image,textpic
         }
-
+        
         imagewidth {
-            disabled = 1
+          disabled = 1
         }
-
+        
         imageheight {
-            disabled = 1
+          disabled = 1
         }
-
+        
         display_on {
-            addItems {
+          addItems {
                 desktop = Desktop
-                mobile = Mobile
-            }
+            	mobile = Mobile
+          }
         }
 
         frame_class {

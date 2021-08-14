@@ -1,12 +1,12 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<figure class="video{f:if(condition: data.imageborder, then: ' ce-border')}">
+  <figure class="video{f:if(condition: data.imageborder, then: ' ce-border')}">
     <div class="video-embed">
-        <f:render partial="Media/Rendering/Video" arguments="{file: file, dimensions: dimensions, settings: settings}" />
+      <f:render partial="Media/Rendering/Video" arguments="{file: file, dimensions: dimensions, settings: settings}" />
     </div>
     <f:if condition="{file.description}">
-        <figcaption class="video-caption">
-            {file.description -> f:format.nl2br()}
-        </figcaption>
+      <figcaption class="video-caption">
+        {file.description -> f:format.nl2br()}
+      </figcaption>
     </f:if>
-</figure>
+  </figure>
 </html>

@@ -1,3 +1,7 @@
+.blogcontainer {
+  margin-top: 12rem;
+}
+
 .content-main {
   display: inline-block;
   position: relative;
@@ -60,6 +64,10 @@
 .ce-media .ce-right {
   display: flex;
   justify-content: flex-end;
+}
+.ce-media .image img {
+  max-width: 100%;
+  height: auto;
 }
 .ce-media .video {
   width: 100%;

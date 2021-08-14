@@ -15,44 +15,44 @@ page {
     #shortcutIcon = fileadmin/lynx/icons/favicon.ico
 
     headerData {
-        10 = TEXT
-        10 {
-            if.isInList.field = uid
-            if.value = 1
-            stdWrap {
-                field = subtitle
-                ifEmpty {
-                    wrap = {$siteTitle}
-                }
-                wrap = <title>|</title>
-            }
+      10 = TEXT
+      10 {
+        if.isInList.field = uid
+        if.value = 1
+        stdWrap {
+          field = subtitle
+          ifEmpty {
+            wrap = {$siteTitle}
+          }
+          wrap = <title>|</title>
         }
-        20 = TEXT
-        20 {
-            if.field = uid
-            if.value.isFalse = 1
-            stdWrap {
-                field = subtitle
-                ifEmpty {
-                    wrap = {$siteTitle}
-                }
-                wrap = {page:title}&nbsp;-&nbsp;|
+      }
+      20 = TEXT
+      20 {
+        if.field = uid
+        if.value.isFalse = 1
+        stdWrap {
+          	field = subtitle
+            ifEmpty {
+              wrap = {$siteTitle}
             }
-            stdWrap.insertData = 1
-            wrap = <title>|</title>
+            wrap = {page:title}&nbsp;-&nbsp;|
         }
-        110 = TEXT
-        110.wrap = <link rel="preload" href="/fileadmin/lynx/fonts/BasierCircle/basiercircle-regular-webfont.woff2" as="font" crossorigin>
+        stdWrap.insertData = 1
+        wrap = <title>|</title>
+      }
+      110 = TEXT
+      110.wrap = <link rel="preload" href="/fileadmin/lynx/fonts/BasierCircle/basiercircle-regular-webfont.woff2" as="font" crossorigin>
     }
 
     # FLUIDTEMPLATE
     10 {
         variables {
-            # Mobile Menu Dropdown Parent - Non-Clickable
-            linkNonClickable = TEXT
-            #linkNonClickable.value = 1
+          # Mobile Menu Dropdown Parent - Non-Clickable
+          linkNonClickable = TEXT
+          #linkNonClickable.value = 1
         }
-
+      
         dataProcessing {
             # Greater then 30
             40 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
@@ -98,7 +98,7 @@ page {
         flatpickr.disableCompression = 1
         #flatpickr.excludeFromConcatenation = 1
 
-        #tobii = fileadmin/lynx/css/tobii.min.css
+        tobii = fileadmin/lynx/css/tobii.min.css
         tobii.disableCompression = 1
         #tobii.excludeFromConcatenation = 1
 
@@ -129,68 +129,68 @@ page {
   	# Header JS
     includeJS {
         #jquery = fileadmin/lynx/js/plugins/jquery-3.6.0.min.js
-        jquery.disableCompression = 1
-        #jquery.excludeFromConcatenation = 1
-
+      	jquery.disableCompression = 1
+    	#jquery.excludeFromConcatenation = 1
+      
         flickity = fileadmin/lynx/js/plugins/flickity.pkgd.min.js
-        flickity.disableCompression = 1
-        #flickity.excludeFromConcatenation = 1
-
-        #flatpickr = fileadmin/lynx/js/plugins/flatpickr.js
-        flatpickr.disableCompression = 1
-        #flatpickr.excludeFromConcatenation = 1
-
-        #tobii = fileadmin/lynx/js/plugins/tobii.min.js
-        tobii.disableCompression = 1
-        #tobii.excludeFromConcatenation = 1
-
+      	flickity.disableCompression = 1
+    	#flickity.excludeFromConcatenation = 1
+      
+      	#flatpickr = fileadmin/lynx/js/plugins/flatpickr.js
+      	flatpickr.disableCompression = 1
+    	#flatpickr.excludeFromConcatenation = 1
+      
+        tobii = fileadmin/lynx/js/plugins/tobii.min.js
+      	tobii.disableCompression = 1
+    	#tobii.excludeFromConcatenation = 1
+      
         #in_view = fileadmin/lynx/js/plugins/in-view.min.js
-        in_view.disableCompression = 1
-        #in_view.excludeFromConcatenation = 1
-
+      	in_view.disableCompression = 1
+    	#in_view.excludeFromConcatenation = 1
+      
         #count_up = fileadmin/lynx/js/plugins/countup.min.js
-        count_up.disableCompression = 1
-        #count_up.excludeFromConcatenation = 1
-
+      	count_up.disableCompression = 1
+    	#count_up.excludeFromConcatenation = 1
+      
         #emergence = fileadmin/lynx/js/plugins/emergence.min.js
-        emergence.disableCompression = 1
-        #emergence.excludeFromConcatenation = 1
-
+      	emergence.disableCompression = 1
+    	#emergence.excludeFromConcatenation = 1
+      
         #jarallax = fileadmin/lynx/js/plugins/jarallax.min.js
-        jarallax.disableCompression = 1
-        #jarallax.excludeFromConcatenation = 1
-
+      	jarallax.disableCompression = 1
+    	#jarallax.excludeFromConcatenation = 1
+      
         #jarallax_video = fileadmin/lynx/js/plugins/jarallax-video.min.js
-        jarallax_video.disableCompression = 1
-        #jarallax_video.excludeFromConcatenation = 1
-
+      	jarallax_video.disableCompression = 1
+    	#jarallax_video.excludeFromConcatenation = 1
+      
         #jarallax_element = fileadmin/lynx/js/plugins/jarallax-element.min.js
-        jarallax_element.disableCompression = 1
-        #jarallax_element.excludeFromConcatenation = 1
-
+      	jarallax_element.disableCompression = 1
+    	#jarallax_element.excludeFromConcatenation = 1
+      
         #offside = fileadmin/lynx/js/plugins/offside.min.js
-        offside.disableCompression = 1
-        #offside.excludeFromConcatenation = 1
-
+      	offside.disableCompression = 1
+    	#offside.excludeFromConcatenation = 1
+      
         #reframe = fileadmin/lynx/js/plugins/reframe.min.js
-        reframe.disableCompression = 1
-        #reframe.excludeFromConcatenation = 1
-
+      	reframe.disableCompression = 1
+    	#reframe.excludeFromConcatenation = 1
+      
         #popper = fileadmin/lynx/js/plugins/popper.min.js
-        popper.disableCompression = 1
-        #popper.excludeFromConcatenation = 1
-
+      	popper.disableCompression = 1
+    	#popper.excludeFromConcatenation = 1
+      
         # tippy: require "popper"
         #tippy = fileadmin/lynx/js/plugins/tippy-bundle.umd.min.js
-        tippy.disableCompression = 1
-        #tippy.excludeFromConcatenation = 1
-
-        #client_detection = fileadmin/lynx/js/plugins/client-detection.js
+      	tippy.disableCompression = 1
+    	#tippy.excludeFromConcatenation = 1
+      
+      	#client_detection = fileadmin/lynx/js/plugins/client-detection.js
     }
 
   	# Footer JS
     includeJSFooter {
-        accordion = fileadmin/lynx/js/accordion.js
+      	accordion = fileadmin/lynx/js/accordion.js
         fixed_navigation = fileadmin/lynx/js/fixed-navigation.js
         img_to_svg = fileadmin/lynx/js/img-to-svg.js
         mobile_menu = fileadmin/lynx/js/mobile-menu.js
@@ -208,10 +208,6 @@ page {
         viewport = width=device-width, initial-scale=1
         robots = index,follow
         apple-mobile-web-app-capable = no
-        X-UA-Compatible = IE=edge
-        X-UA-Compatible {
-            attribute = http-equiv
-        }
         keywords.field = keywords
         keywords.ifTrue = keywords
     }
@@ -221,7 +217,7 @@ page {
 #### CONFIG ####
 ################
 config {
-    noPageTitle = 1
+  	noPageTitle = 1
     absRefPrefix = auto
     no_cache = 0
     uniqueLinkVars = 1
@@ -231,10 +227,12 @@ config {
     renderCharset = utf-8
     metaCharset = utf-8
     doctype = html5
+  	removePageCss = 1
     removeDefaultJS = 0
     inlineStyle2TempFile = 1
     admPanel = 1
-    debug = 0
+    debug = 1
+    contentObjectExceptionHandler = 0
     cache_period = 86400
     sendCacheHeaders = 1
     intTarget =

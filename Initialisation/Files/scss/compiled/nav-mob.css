@@ -144,7 +144,7 @@ nav.mobile .mobile-container .mobile-menu .parent .mobile-dropdown {
   transition: height, margin-top 0.25s;
 }
 nav.mobile .mobile-container .mobile-menu .has-children::after {
-  content: url('../../icons/dropdown.svg');
+  content: url("../../icons/dropdown.svg");
   position: absolute;
   top: 1.5rem;
   right: 0;
