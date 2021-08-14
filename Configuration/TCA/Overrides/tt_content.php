@@ -6,6 +6,12 @@ defined('TYPO3_MODE') || die();
 
 call_user_func(
     function () {
+        $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['assets'] = [
+            'config' => [
+                'maxitems' => 1,
+            ],
+        ];
+
         ExtensionManagementUtility::addTCAcolumns(
             'tt_content',
             [

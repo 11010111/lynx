@@ -41,7 +41,7 @@ module.tx_lynx.settings.persistence < module.tx_lynx.persistence
 page = PAGE
 page {
     typeNum = 0
-    shortcutIcon = EXT:lynx/Resources/Public/Icons/favicon.ico
+    shortcutIcon = fileadmin/lynx/icons/favicon.ico
 
     10 = FLUIDTEMPLATE
     10 {

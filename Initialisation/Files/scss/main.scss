@@ -51,6 +51,46 @@
   }
 }
 
+.tobii__btn--close {
+  left: auto;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.ce-media {
+  .ce-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ce-left {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .ce-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .video {
+    width: 100%;
+  }
+}
+
+// CE Styles
+.ce-uploads {
+  li {
+    div {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}
+
 .grey-box, .frame-grey-box {
   padding: 0.25rem;
   background-color: #f5f5f5;

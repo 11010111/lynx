@@ -42,6 +42,35 @@
   box-shadow: 0 0 1rem rgba(6, 48, 209, 0.25);
 }
 
+.tobii__btn--close {
+  left: auto;
+}
+.tobii__btn--close:hover {
+  background-color: transparent;
+}
+
+.ce-media .ce-center {
+  display: flex;
+  justify-content: center;
+}
+.ce-media .ce-left {
+  display: flex;
+  justify-content: flex-start;
+}
+.ce-media .ce-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.ce-media .video {
+  width: 100%;
+}
+
+.ce-uploads li div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .grey-box, .frame-grey-box {
   padding: 0.25rem;
   background-color: #f5f5f5;
