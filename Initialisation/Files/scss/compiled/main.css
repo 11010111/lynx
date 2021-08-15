@@ -46,10 +46,24 @@
   box-shadow: 0 0 1rem rgba(6, 48, 209, 0.25);
 }
 
+:root {
+  --zoom-icon-background: rgba(0,0,0,0.94);
+  --lightbox-background: rgba(0,0,0,0.94);
+  --caption-color: #000000;
+}
+
 .tobii__btn--close {
   left: auto;
 }
 .tobii__btn--close:hover {
+  background-color: transparent;
+}
+
+.tobii__btn--next {
+  left: auto;
+}
+
+.tobii__btn:active, .tobii__btn:focus, .tobii__btn:hover {
   background-color: transparent;
 }
 

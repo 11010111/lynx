@@ -55,14 +55,31 @@
   }
 }
 
+// Tobii Lightbox
+:root {
+  --zoom-icon-background: rgba(0,0,0,0.94);
+  --lightbox-background: rgba(0,0,0,0.94);
+  --caption-color: #000000;
+}
+
 .tobii__btn--close {
   left: auto;
-  
+
   &:hover {
-  	background-color: transparent;
+    background-color: transparent;
   }
 }
 
+.tobii__btn--next {
+  left: auto;
+}
+
+.tobii__btn:active, .tobii__btn:focus, .tobii__btn:hover {
+  background-color: transparent;
+}
+// Tobii END
+
+// CE Styles
 .ce-media {
   .ce-center {
     display: flex;
@@ -78,20 +95,19 @@
     display: flex;
     justify-content: flex-end;
   }
-  
+
   .image {
     img {
       max-width: 100%;
       height: auto;
     }
   }
-  
+
   .video {
     width: 100%;
   }
 }
 
-// CE Styles
 .ce-uploads {
   li {
     div {
@@ -101,6 +117,7 @@
     }
   }
 }
+// CE END
 
 .grey-box, .frame-grey-box {
   padding: 0.25rem;
