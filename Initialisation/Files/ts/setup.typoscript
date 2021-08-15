@@ -12,7 +12,7 @@
 ##############
 page {
     # Favicon
-    #shortcutIcon = fileadmin/lynx/icons/favicon.ico
+    shortcutIcon = fileadmin/lynx/icons/favicon.ico
 
     headerData {
       10 = TEXT
@@ -59,7 +59,7 @@ page {
             40 {
                 collections = 1
                 collections.recursive = 1
-                as = mycollection
+                as = myCollection
             }
         }
     }
