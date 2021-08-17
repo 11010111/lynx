@@ -24,20 +24,14 @@
                 let firstDiv = el.querySelector('div')
                 let rect = container.getClientRects()[0]
 
-                el.style.position = 'relative'
-
-                firstDiv.style.maxWidth = 'unset'
-                firstDiv.style.position = 'absolute'
                 firstDiv.style.width = 'unset'
-                firstDiv.style.left = '0px'
+				firstDiv.style.maxWidth = 'unset'
 
                 if (window.innerWidth > rect.width + 2 * rem) {
-                    firstDiv.style.right = -rect.left + 'px'
+                    firstDiv.style.width = firstDiv.clientWidth + rect.left + 'px'
                 } else {
                     firstDiv.style.right = -rem + 'px'
                 }
-
-                el.style.height = firstDiv.clientHeight + rect.left + 'px'
             });
         }
 

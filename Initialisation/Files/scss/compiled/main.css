@@ -93,6 +93,10 @@
   flex-wrap: wrap;
 }
 
+.ce-gallery {
+  overflow: unset;
+}
+
 .grey-box, .frame-grey-box {
   padding: 0.25rem;
   background-color: #f5f5f5;
