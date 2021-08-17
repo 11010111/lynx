@@ -2,7 +2,12 @@
 
 namespace Swe\Lynx\EventListener;
 
+use Doctrine\DBAL\Driver\Exception;
 use TYPO3\CMS\Core\Database\ConnectionPool;
+use TYPO3\CMS\Core\Database\Query\QueryBuilder;
+use TYPO3\CMS\Core\Resource\Exception\ExistingTargetFolderException;
+use TYPO3\CMS\Core\Resource\Exception\InsufficientFolderAccessPermissionsException;
+use TYPO3\CMS\Core\Resource\Exception\InsufficientFolderWritePermissionsException;
 use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
@@ -16,13 +21,13 @@ class LynxInitialisation
 {
     /**
      * @param AfterExtensionFilesHaveBeenImportedEvent $event
-     * @throws \TYPO3\CMS\Core\Resource\Exception\ExistingTargetFolderException
-     * @throws \TYPO3\CMS\Core\Resource\Exception\InsufficientFolderAccessPermissionsException
-     * @throws \TYPO3\CMS\Core\Resource\Exception\InsufficientFolderWritePermissionsException
+     * @throws ExistingTargetFolderException
+     * @throws InsufficientFolderAccessPermissionsException
+     * @throws InsufficientFolderWritePermissionsException
      */
     public function __invoke(AfterExtensionFilesHaveBeenImportedEvent $event)
     {
-        if ($event->getPackageKey() == 'lynx') {
+        if ($event->getPackageKey() === 'lynx') {
             /** @var ResourceFactory $resourceFactory */
             $resourceFactory = GeneralUtility::makeInstance(ResourceFactory::class);
             $storage = $resourceFactory->getStorageObject(1);
@@ -40,30 +45,44 @@ class LynxInitialisation
     }
 
     /**
-     * Search and write filemount if not exists
-     * @param $title
-     * @param $mountPath
+     * Search and write file mount if not exists.
+     *
+     * @param string $title
+     * @param string $mountPath
      */
-    public function writeFileMount($title, $mountPath) {
+    public function writeFileMount(string $title, string $mountPath): void
+    {
+        /** @var QueryBuilder $queryBuilder */
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
             ->getQueryBuilderForTable('sys_filemounts');
-        $statement = $queryBuilder
-            ->select('*')
-            ->from('sys_filemounts')
-            ->where(
-                $queryBuilder->expr()->eq('title', $queryBuilder->createNamedParameter($title))
-            )->execute()->fetchAll();
 
-        if (count($statement) < 1) {
-            $queryBuilder->insert('sys_filemounts')->values(
+        try {
+            $statement = $queryBuilder
+                ->count('uid')
+                ->from('sys_filemounts')
+                ->where(
+                    $queryBuilder->expr()->eq('title', $queryBuilder->createNamedParameter($title))
+                )
+                ->execute()
+                ->fetchFirstColumn();
+        } catch (Exception $e) {
+            $statement = 0;
+        }
+
+        if ($statement > 0) {
+            return;
+        }
+
+        $queryBuilder->insert('sys_filemounts')
+            ->values(
                 [
                     'title' => $title,
                     'path' => $mountPath,
                     'base' => 1,
-                    'read_only' => 0
+                    'read_only' => 0,
                 ]
-            )->execute();
-        }
+            )
+            ->execute();
     }
 
 }

@@ -1,8 +1,10 @@
 <?php
 
 // Using an alias of custom classes to prevent errors.
+use Doctrine\DBAL\Driver\Exception as DBALException;
 use Swe\Lynx\Hooks\BackendContentHook as SweLynxBackendContentHook;
 use TYPO3\CMS\Core\Database\ConnectionPool;
+use TYPO3\CMS\Core\Database\Query\QueryBuilder as Typo3QueryBuilder;
 use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
 use TYPO3\CMS\Core\Imaging\IconRegistry;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
@@ -23,16 +25,19 @@ call_user_func(
          * Add RTE configuration by Domain Model Data *
          **********************************************/
         try {
+            /** @var Typo3QueryBuilder $registryQueryBuilder */
             $registryQueryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
                 ->getQueryBuilderForTable('sys_registry');
+
             $registry = $registryQueryBuilder
                 ->select('*')
                 ->from('sys_registry')
                 ->execute()
-                ->fetchAll();
+                ->fetchAllAssociative();
 
             foreach ($registry as $value) {
                 if ($value['entry_key'] === 'typo3conf/ext/lynx/Initialisation/dataImported') {
+                    /** @var Typo3QueryBuilder $queryBuilder */
                     $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
                         ->getQueryBuilderForTable('tx_lynx_domain_model_preset');
 
@@ -40,7 +45,8 @@ call_user_func(
                         ->select('preset')
                         ->from('tx_lynx_domain_model_preset')
                         ->execute()
-                        ->fetchAll();
+                        ->fetchAllAssociative();
+
                     foreach ($presets as $key => $preset) {
                         if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key])) {
                             $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key] = $preset['preset'];
@@ -48,7 +54,7 @@ call_user_func(
                     }
                 }
             }
-        } catch (Exception $exception) {
+        } catch (DBALException | Exception $exception) {
             //
         }
 
