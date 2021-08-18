@@ -1,7 +1,6 @@
 <?php
 
 // Using an alias of custom classes to prevent errors.
-use Doctrine\DBAL\Driver\Exception as DBALException;
 use Swe\Lynx\Hooks\BackendContentHook as SweLynxBackendContentHook;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder as Typo3QueryBuilder;
@@ -33,7 +32,7 @@ call_user_func(
                 ->select('*')
                 ->from('sys_registry')
                 ->execute()
-                ->fetchAllAssociative();
+                ->fetchAll();
 
             foreach ($registry as $value) {
                 if ($value['entry_key'] === 'typo3conf/ext/lynx/Initialisation/dataImported') {
@@ -45,7 +44,7 @@ call_user_func(
                         ->select('preset')
                         ->from('tx_lynx_domain_model_preset')
                         ->execute()
-                        ->fetchAllAssociative();
+                        ->fetchAll();
 
                     foreach ($presets as $key => $preset) {
                         if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset_' . $key])) {
@@ -54,7 +53,7 @@ call_user_func(
                     }
                 }
             }
-        } catch (DBALException | Exception $exception) {
+        } catch (Exception $exception) {
             //
         }
 

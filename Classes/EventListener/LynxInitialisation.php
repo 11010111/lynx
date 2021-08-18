@@ -2,7 +2,6 @@
 
 namespace Swe\Lynx\EventListener;
 
-use Doctrine\DBAL\Driver\Exception;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Resource\Exception\ExistingTargetFolderException;
@@ -56,18 +55,14 @@ class LynxInitialisation
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
             ->getQueryBuilderForTable('sys_filemounts');
 
-        try {
-            $statement = $queryBuilder
-                ->count('uid')
-                ->from('sys_filemounts')
-                ->where(
-                    $queryBuilder->expr()->eq('title', $queryBuilder->createNamedParameter($title))
-                )
-                ->execute()
-                ->fetchFirstColumn();
-        } catch (Exception $e) {
-            $statement = 0;
-        }
+        $statement = $queryBuilder
+            ->count('uid')
+            ->from('sys_filemounts')
+            ->where(
+                $queryBuilder->expr()->eq('title', $queryBuilder->createNamedParameter($title))
+            )
+            ->execute()
+            ->fetchColumn(0);
 
         if ($statement > 0) {
             return;
