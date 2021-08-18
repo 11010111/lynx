@@ -985,7 +985,7 @@
 				<field index="description"></field>
 				<field index="username">js-swe</field>
 				<field index="avatar" type="integer">0</field>
-				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$ZWkyWTIzemxJZEdxL1A2cA$LSx6Tb3Fe6GC3jGKxEdLGWCiDJmbYeUpL4Blqasf4sI</field>
+				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$Z0cubWNRYWZINmZzVjh2Lg$AJ/g999BI2N7tMuKsqnOjZv+VypYy7OyRZTAlPrvmwc</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
 				<field index="lang"></field>
