@@ -70,21 +70,16 @@ page {
     bodyTagCObject {
         10 = TEXT
         10 {
-            field = uid
-            wrap = <body id="site_95|">
+            if.isInList.field = uid
+            if.value = 1
+            wrap = <body id="site_95|" class="home">
         }
         20 = TEXT
         20 {
             if.isInList.field = uid
-            if.value = 1
-            wrap = <body class="home">
-        }
-        30 = TEXT
-        30 {
-            if.isInList.field = uid
             if.value = 20.value
             if.negate = 1
-            wrap = <body class="sequel">
+            wrap = <body id="site_95|" class="sequel">
         }
     }
 
