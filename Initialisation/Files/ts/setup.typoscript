@@ -29,8 +29,9 @@ page {
       }
       20 = TEXT
       20 {
-        if.field = uid
-        if.value.isFalse = 1
+        if.isInList.field = uid
+        if.value = 1
+        if.negate = 1
         stdWrap {
           	field = subtitle
             ifEmpty {
