@@ -198,7 +198,7 @@ page {
         video_width = fileadmin/lynx/js/video-width.js
         main_js = fileadmin/lynx/js/main.js
         sliders = fileadmin/lynx/js/sliders.js
-        equal_height = fileadmin/lynx/js/equal_height.js
+        equal_height = fileadmin/lynx/js/equal-height.js
 
         #language_select = fileadmin/lynx/js/language-select.js
     }

@@ -12,10 +12,6 @@ nav.desktop {
     margin-top: 2.77rem;
     transition: margin-top 0.5s;
     
-    @media screen and (max-width: breakpoint('xxl')) {
-      margin-left: 1rem;
-    }
-    
     .logo {
       display: flex;
       align-items: center;
@@ -56,7 +52,7 @@ nav.desktop {
     }
   
     .buy-now {
-      margin: 0 1rem 0 2.77rem;
+      margin: 0 0 0 2.77rem;
     }
 
     .desktop-menu {

@@ -63,7 +63,6 @@
 .social-privacy-container .privacy-links .privacy-link:last-child {
   margin-right: 0;
 }
-
 @keyframes fadeInOut {
   0% {
     opacity: 1;

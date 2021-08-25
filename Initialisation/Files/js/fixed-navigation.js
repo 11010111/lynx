@@ -11,7 +11,7 @@
     }
 
     let navigation = desktop.querySelector('.desktop-container')
-    let desktopHeight = navigation.clientHeight
+    let desktopHeight = navigation.clientHeight * 0.75
 
     window.addEventListener('scroll', function() {
         if (window.scrollY > desktopHeight) {

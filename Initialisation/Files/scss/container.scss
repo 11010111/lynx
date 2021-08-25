@@ -4,12 +4,12 @@
 
 // Container code here...
 .container--0 {
-  //width: 100%;
+  width: 100%;
   max-width: 76rem;
   margin: 0 auto;
 
   .container--1 {
-    //width: 100%;
+    width: 100%;
     max-width: 100%;
     margin: 0;
     padding: 0!important;
@@ -40,6 +40,7 @@
 .container--xl {
   max-width: 95rem;
   margin: 0 auto;
+  padding: 0 1rem
 }
 
 .no-padding {

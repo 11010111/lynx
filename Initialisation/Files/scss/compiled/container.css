@@ -1,8 +1,10 @@
 .container--0 {
+  width: 100%;
   max-width: 76rem;
   margin: 0 auto;
 }
 .container--0 .container--1 {
+  width: 100%;
   max-width: 100%;
   margin: 0;
   padding: 0 !important;
@@ -17,7 +19,6 @@
     max-width: 38rem;
   }
 }
-
 .container--1 {
   width: calc(100% + 2rem);
   max-width: calc(100% + 2rem);
@@ -29,12 +30,11 @@
   margin: 0;
   padding: 0 1rem;
 }
-
 .container--xl {
   max-width: 95rem;
   margin: 0 auto;
+  padding: 0 1rem;
 }
-
 .no-padding {
   padding: 0;
 }

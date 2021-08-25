@@ -1,2 +1,3 @@
-const tobii = new Tobii()
+console.log('WE LOVE TYPO3')
 
+const tobii = new Tobii()

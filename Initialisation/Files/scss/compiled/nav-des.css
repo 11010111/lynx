@@ -7,11 +7,6 @@ nav.desktop .content-logo {
   margin-top: 2.77rem;
   transition: margin-top 0.5s;
 }
-@media screen and (max-width: 103.125em) {
-  nav.desktop .content-logo {
-    margin-left: 1rem;
-  }
-}
 nav.desktop .content-logo .logo {
   display: flex;
   align-items: center;
@@ -39,7 +34,7 @@ nav.desktop .desktop-container .wrap-menu-lang {
   transition: margin-top 0.5s;
 }
 nav.desktop .desktop-container .buy-now {
-  margin: 0 1rem 0 2.77rem;
+  margin: 0 0 0 2.77rem;
 }
 nav.desktop .desktop-container .desktop-menu {
   display: flex;
@@ -87,7 +82,7 @@ nav.desktop .desktop-container .desktop-menu .parent:first-child {
   padding-left: 0;
 }
 nav.desktop .desktop-container .desktop-menu .has-children::after {
-  content: url("../../icons/dropdown.svg");
+  content: url('../../icons/dropdown.svg');
   position: absolute;
   top: 50%;
   right: -0.5rem;
@@ -121,7 +116,7 @@ nav.desktop .language-menu a:hover {
   color: #0630D1;
 }
 nav.desktop .language-menu::after {
-  content: url("../../icons/dropdown.svg");
+  content: url('../../icons/dropdown.svg');
   position: absolute;
   top: 50%;
   right: -0.5rem;
@@ -151,7 +146,6 @@ nav.desktop .language-menu .language li {
   padding: 0.5rem 2rem;
   white-space: nowrap;
 }
-
 .desktop-fixed .desktop-container .content-logo {
   margin-top: 0.77rem;
 }
