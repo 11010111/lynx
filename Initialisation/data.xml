@@ -944,11 +944,13 @@
 				<field index="description"></field>
 				<field index="username">jk-swe</field>
 				<field index="avatar" type="integer">0</field>
-				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$OUxjMHBaUW5RS3JCMGhEQw$ReUCn8F0m5i2+VQmwbL5zpGSQcE1ujUyvSl9tlWd13I</field>
+				<field index="password">
+					$argon2i$v=19$m=65536,t=16,p=1$OUxjMHBaUW5RS3JCMGhEQw$ReUCn8F0m5i2+VQmwbL5zpGSQcE1ujUyvSl9tlWd13I
+				</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
-				<field index="lang"></field>
-				<field index="email"></field>
+				<field index="lang">de</field>
+				<field index="email">j.kaeseberg@s-w-e.com</field>
 				<field index="db_mountpoints"></field>
 				<field index="options" type="integer">3</field>
 				<field index="realName">Jörg Käseberg</field>
@@ -956,7 +958,9 @@
 				<field index="allowed_languages"></field>
 				<field index="uc" type="NULL"></field>
 				<field index="file_mountpoints"></field>
-				<field index="file_permissions">readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile</field>
+				<field index="file_permissions">
+					readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile
+				</field>
 				<field index="workspace_perms" type="integer">1</field>
 				<field index="lockToDomain"></field>
 				<field index="disableIPlock" type="integer">0</field>
@@ -985,11 +989,13 @@
 				<field index="description"></field>
 				<field index="username">js-swe</field>
 				<field index="avatar" type="integer">0</field>
-				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$Z0cubWNRYWZINmZzVjh2Lg$AJ/g999BI2N7tMuKsqnOjZv+VypYy7OyRZTAlPrvmwc</field>
+				<field index="password">
+					$argon2i$v=19$m=65536,t=16,p=1$Z0cubWNRYWZINmZzVjh2Lg$AJ/g999BI2N7tMuKsqnOjZv+VypYy7OyRZTAlPrvmwc
+				</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
-				<field index="lang"></field>
-				<field index="email"></field>
+				<field index="lang">de</field>
+				<field index="email">j.stockhausen@s-w-e.com</field>
 				<field index="db_mountpoints"></field>
 				<field index="options" type="integer">3</field>
 				<field index="realName">Jan Stockhausen</field>
@@ -997,7 +1003,9 @@
 				<field index="allowed_languages"></field>
 				<field index="uc" type="NULL"></field>
 				<field index="file_mountpoints"></field>
-				<field index="file_permissions">readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile</field>
+				<field index="file_permissions">
+					readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile
+				</field>
 				<field index="workspace_perms" type="integer">1</field>
 				<field index="lockToDomain"></field>
 				<field index="disableIPlock" type="integer">0</field>
@@ -1071,7 +1079,7 @@
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
 				<field index="lang"></field>
-				<field index="email"></field>
+				<field index="email">l.braun@s-w-e.com</field>
 				<field index="db_mountpoints"></field>
 				<field index="options" type="integer">3</field>
 				<field index="realName">Luca Braun</field>
@@ -1108,11 +1116,13 @@
 				<field index="description"></field>
 				<field index="username">md-swe</field>
 				<field index="avatar" type="integer">0</field>
-				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$d28uR0FLWWVkcm1oV0NLdw$xmFdIEDPxAzyeapLrpP4voGtDcq+M4NbRyyQqsoWTAU</field>
+				<field index="password">
+					$argon2i$v=19$m=65536,t=16,p=1$d28uR0FLWWVkcm1oV0NLdw$xmFdIEDPxAzyeapLrpP4voGtDcq+M4NbRyyQqsoWTAU
+				</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
-				<field index="lang"></field>
-				<field index="email"></field>
+				<field index="lang">de</field>
+				<field index="email">md@s-w-e.com</field>
 				<field index="db_mountpoints"></field>
 				<field index="options" type="integer">3</field>
 				<field index="realName">Milan Dombrowski</field>
@@ -1120,7 +1130,9 @@
 				<field index="allowed_languages"></field>
 				<field index="uc" type="NULL"></field>
 				<field index="file_mountpoints"></field>
-				<field index="file_permissions">readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile</field>
+				<field index="file_permissions">
+					readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile
+				</field>
 				<field index="workspace_perms" type="integer">1</field>
 				<field index="lockToDomain"></field>
 				<field index="disableIPlock" type="integer">0</field>
@@ -1152,7 +1164,7 @@
 				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$ZFoyUzhmZ0piS29jeGhjOQ$5+s0CrNNqBhcRnrC1PU8f5p3hK2GnC0A4EL8A47jYAM</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
-				<field index="lang"></field>
+				<field index="lang">de</field>
 				<field index="email">m.kurzrock@s-w-e.com</field>
 				<field index="db_mountpoints" type="NULL"></field>
 				<field index="options" type="integer">3</field>
@@ -1193,7 +1205,7 @@
 				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$cWI1NW9SdnVZNHRRdkw5UA$dByMwgkvVDJQaUF2Opb2EBTCgBaUxgr+C9vWp9RC0TM</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
-				<field index="lang"></field>
+				<field index="lang">de</field>
 				<field index="email">yh@s-w-e.com</field>
 				<field index="db_mountpoints" type="NULL"></field>
 				<field index="options" type="integer">3</field>
