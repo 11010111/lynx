@@ -55,12 +55,12 @@ page {
       
         dataProcessing {
             # Greater then 30
-            40 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-            40 {
-                collections = 1
-                collections.recursive = 1
-                as = myCollection
-            }
+            #40 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            #40 {
+            #    collections = 1
+            #    collections.recursive = 1
+            #    as = myCollection
+            #}
         }
     }
 
