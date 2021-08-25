@@ -79,7 +79,7 @@ page {
         20 {
             field = uid
             if.isInList.field = uid
-            if.value = 10.value
+            if.value = 1
             if.negate = 1
             wrap = <body id="site_95|" class="sequel">
         }
