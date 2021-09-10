@@ -944,9 +944,7 @@
 				<field index="description"></field>
 				<field index="username">jk-swe</field>
 				<field index="avatar" type="integer">0</field>
-				<field index="password">
-					$argon2i$v=19$m=65536,t=16,p=1$OUxjMHBaUW5RS3JCMGhEQw$ReUCn8F0m5i2+VQmwbL5zpGSQcE1ujUyvSl9tlWd13I
-				</field>
+				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$cThEN1k4V25BSjVhMVB5UA$0udK7SNp1RTKKJqGgo+qR2iI2maDBfuag/oNco3+viI</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
 				<field index="lang">de</field>
@@ -989,9 +987,7 @@
 				<field index="description"></field>
 				<field index="username">js-swe</field>
 				<field index="avatar" type="integer">0</field>
-				<field index="password">
-					$argon2i$v=19$m=65536,t=16,p=1$Z0cubWNRYWZINmZzVjh2Lg$AJ/g999BI2N7tMuKsqnOjZv+VypYy7OyRZTAlPrvmwc
-				</field>
+				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$Z0cubWNRYWZINmZzVjh2Lg$AJ/g999BI2N7tMuKsqnOjZv+VypYy7OyRZTAlPrvmwc</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
 				<field index="lang">de</field>
@@ -1116,9 +1112,7 @@
 				<field index="description"></field>
 				<field index="username">md-swe</field>
 				<field index="avatar" type="integer">0</field>
-				<field index="password">
-					$argon2i$v=19$m=65536,t=16,p=1$d28uR0FLWWVkcm1oV0NLdw$xmFdIEDPxAzyeapLrpP4voGtDcq+M4NbRyyQqsoWTAU
-				</field>
+				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$d28uR0FLWWVkcm1oV0NLdw$xmFdIEDPxAzyeapLrpP4voGtDcq+M4NbRyyQqsoWTAU</field>
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
 				<field index="lang">de</field>
