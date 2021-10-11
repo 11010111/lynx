@@ -97,7 +97,7 @@ call_user_func(
         /*******************************
          * Content Element Info - HOOK *
          *******************************/
-        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawFooter'][] = SweLynxBackendContentHook::class;
+        #$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawFooter'][] = SweLynxBackendContentHook::class;
 
         /*************************
          * FluidMail - Overrides *
