@@ -20,18 +20,24 @@
                 <source>Normal</source>
             </trans-unit>
 
-            <!-- Frame Extend -->
-            <trans-unit id="frame.extra">
-                <source>Frame Extra Class</source>
+            <!-- tt_content fields -->
+            <trans-unit id="container">
+                <source>Container</source>
             </trans-unit>
-            <trans-unit id="frame.left">
-                <source>Space Left</source>
+            <trans-unit id="breakpoint">
+                <source>Breakpoint</source>
             </trans-unit>
-            <trans-unit id="frame.right">
-                <source>Space Right</source>
+            <trans-unit id="background_color">
+                <source>Background Color</source>
             </trans-unit>
-            <trans-unit id="frame.display_on">
-                <source>Display on</source>
+            <trans-unit id="foreground_color">
+                <source>Foreground Color</source>
+            </trans-unit>
+            <trans-unit id="padding_top">
+                <source>Space Inline Before</source>
+            </trans-unit>
+            <trans-unit id="padding_bottom">
+                <source>Space Inline After</source>
             </trans-unit>
 
             <!-- Text Media -->

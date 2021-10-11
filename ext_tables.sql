@@ -3,10 +3,12 @@
 #
 CREATE TABLE tt_content
 (
-    frame_class_extra VARCHAR(30) DEFAULT '' NOT NULL,
-    space_left_class  VARCHAR(30) DEFAULT '' NOT NULL,
-    space_right_class VARCHAR(30) DEFAULT '' NOT NULL,
-    display_on        VARCHAR(30) DEFAULT '' NOT NULL
+    container        VARCHAR(30) DEFAULT '' NOT NULL,
+    breakpoint       VARCHAR(30) DEFAULT '' NOT NULL,
+    padding_top      VARCHAR(30) DEFAULT '' NOT NULL,
+    padding_bottom   VARCHAR(30) DEFAULT '' NOT NULL,
+    background_color VARCHAR(30) DEFAULT '' NOT NULL,
+    foreground_color VARCHAR(30) DEFAULT '' NOT NULL
 );
 
 CREATE TABLE tx_lynx_domain_model_preset

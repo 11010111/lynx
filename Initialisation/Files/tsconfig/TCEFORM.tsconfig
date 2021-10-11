@@ -15,22 +15,32 @@ TCEFORM {
           disabled = 1
         }
         
-        display_on {
-          addItems {
-                desktop = Desktop
-            	mobile = Mobile
-          }
+        layout {
+            disabled = 1
+        }
+
+        container {
+            addItems {
+                #class = Name
+            }
         }
 
         frame_class {
+            removeItems = ruler-before,ruler-after,indent,indent-left,indent-right
+
             addItems {
                 grey-box = Grey Box
             }
         }
 
-        frame_class_extra {
+        breakpoint {
             addItems {
-                #class = Name
+                xs = XS
+                sm = SM
+                md = MD
+                lg = LG
+                xl = XL
+                xxl = XXL
             }
         }
 
@@ -86,7 +96,7 @@ TCEFORM {
             }
         }
 
-        space_left_class {
+        padding_top {
             addItems {
                 10 = 10
                 20 = 20
@@ -112,7 +122,7 @@ TCEFORM {
             }
         }
 
-        space_right_class {
+        padding_bottom {
             addItems {
                 10 = 10
                 20 = 20

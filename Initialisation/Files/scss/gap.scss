@@ -6,29 +6,20 @@
 @each $gap, $options in $gaps {
   @media screen and (min-width: breakpoint($gap)) {
     @each $size, $value in $options {
-      // Top
       .frame-space-before-#{$size} {
         margin-top: $value;
       }
-      // Bottom
+
       .frame-space-after-#{$size} {
         margin-bottom: $value;
       }
-    }
-  }
-}
 
-// Gaps - LEFT / RIGHT
-@each $gap, $options in $side-gaps {
-  @media screen and (min-width: breakpoint($gap)) {
-    @each $size, $value in $options {
-      // Left
-      .frame-space-left-#{$size} {
-        margin-left: $value;
+      .frame-space-inline-before-#{$size} {
+        padding-top: $value;
       }
-      // Right
-      .frame-space-right-#{$size} {
-        margin-right: $value;
+
+      .frame-space-inline-after-#{$size} {
+        padding-bottom: $value;
       }
     }
   }

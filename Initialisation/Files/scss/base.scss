@@ -5,13 +5,35 @@
 // Fonts
 @import "fonts";
 
-// Your code here...
-$font-name: 'Basier Circle';
+:root {
+  --font-family: 'Basier Circle';
+  --font-size: 1.125em;
+  --font-color: #000000;
+  --background-color: #eeeeee;
+  --headline-color: #299d9f;
+  --paragraph-line-height: 1.5;
+  --link-color: #6b8ec8;
+  --link-hover-color: #9c644f;
+  --error: #d42525;
+  --warning: #e3ad40;
+  --success: #88c433;
+  --container-margin: 2rem;
+  --flex-between: 0.5rem;
+  --content-max-width: 76.66rem;
+
+  @media screen and (min-width: breakpoint('md')) {
+    --flex-between: 1rem;
+  }
+}
 
 html {
-  scroll-behavior: smooth;
+  font-family: var(--font-family), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: var(--font-size);
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
 
-  font: normal normal 400 18px $font-name, 'Helvetica Neue', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -166,7 +188,7 @@ input, textarea, select, datalist {
   position: relative;
   top: 0;
   left: 0;
-  font-family: $font-name;
+  font-family: var(--font-family);
   font-size: 1em;
   width: 100%;
   background-color: transparent;
@@ -336,7 +358,7 @@ button {
   position: relative;
   top: 0;
   left: 0;
-  font-family: $font-name;
+  font-family: var(--font-family);
   font-size: 1.11em;
   color: color('white');
   background-color: color('link');

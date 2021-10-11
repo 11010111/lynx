@@ -13,7 +13,7 @@ $EM_CONF[$_EXTKEY] = [
             'typo3' => '9.5.0-11.9.99',
             'fluid_styled_content' => '9.5.0-11.9.99',
             'rte_ckeditor' => '9.5.0-11.9.99',
-            'gridelements' => '9.5.0-10.9.99',
+            'container' => '1.3.1',
         ],
         'conflicts' => [
         ],
@@ -30,5 +30,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Konstantin Schneider',
     'author_email' => 'k.schneider@s-w-e.com',
     'author_company' => 'Smart Web Elements',
-    'version' => '10.4.21',
+    'version' => '11.5.0',
 ];

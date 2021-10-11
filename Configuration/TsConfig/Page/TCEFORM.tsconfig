@@ -2,37 +2,9 @@
 # TCEFORM
 #
 TCEFORM {
-    pages {
-        layout {
-            removeItems = 2,3
-
-            altLabels {
-                1 = Full Width
-            }
-
-            config {
-                default = 1
-            }
-        }
-    }
-
     tt_content {
-        layout {
-            removeItems = 2,3
-
-            altLabels {
-                1 = Full Width
-            }
-        }
-
         frame_class {
             removeItems = ruler-before,ruler-after,indent,indent-left,indent-right
-        }
-
-        frame_class_extra {
-            addItems {
-                #class = Name
-            }
         }
 
         space_before_class {
@@ -41,14 +13,6 @@ TCEFORM {
 
         space_after_class {
             removeItems = extra-small,small,medium,large,extra-large
-        }
-
-        space_left_class {
-
-        }
-
-        space_right_class {
-
         }
 
         header_layout {

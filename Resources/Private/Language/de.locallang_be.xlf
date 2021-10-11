@@ -23,22 +23,30 @@
                 <target state="translated">Normal</target>
             </trans-unit>
 
-            <!-- Frame Extend -->
-            <trans-unit id="frame.extra">
-                <source>Frame Extra Class</source>
-                <target state="translated">Rahmen Zusatzklasse</target>
+            <!-- tt_content fields -->
+            <trans-unit id="container">
+                <source>Container</source>
+                <target state="translated">Container</target>
             </trans-unit>
-            <trans-unit id="frame.left">
-                <source>Space Left</source>
-                <target state="translated">Abstand Links</target>
+            <trans-unit id="breakpoint">
+                <source>Breakpoint</source>
+                <target state="translated">Umbruch</target>
             </trans-unit>
-            <trans-unit id="frame.right">
-                <source>Space Right</source>
-                <target state="translated">Abstand Rechts</target>
+            <trans-unit id="background_color">
+                <source>Background Color</source>
+                <target state="translated">Hintergrundfarbe</target>
             </trans-unit>
-            <trans-unit id="frame.display_on">
-                <source>Display on</source>
-                <target state="translated">Anzeigen auf</target>
+            <trans-unit id="foreground_color">
+                <source>Foreground Color</source>
+                <target state="translated">Schriftfarbe</target>
+            </trans-unit>
+            <trans-unit id="padding_top">
+                <source>Space Inline Before</source>
+                <target state="translated">Abstand davor - Innen</target>
+            </trans-unit>
+            <trans-unit id="padding_bottom">
+                <source>Space Inline After</source>
+                <target state="translated">Abstand danach - Innen</target>
             </trans-unit>
 
             <!-- Text Media -->

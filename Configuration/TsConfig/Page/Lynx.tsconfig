@@ -3,6 +3,5 @@
 #
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/tsconfig/RTE.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/tsconfig/TCEFORM.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/tsconfig/GridElementsLayout.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/tsconfig/TCAdefaults.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/tsconfig/News.tsconfig">
