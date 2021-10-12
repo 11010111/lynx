@@ -70,6 +70,6 @@ tt_content.slider {
 
 tt_content.slider-cell =< lib.contentElement
 tt_content.slider-cell {
-  templateName = SlideCell
+  templateName = SliderCell
   dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
 }

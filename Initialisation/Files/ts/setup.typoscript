@@ -199,7 +199,7 @@ page {
         main_js = fileadmin/lynx/js/main.js
         sliders = fileadmin/lynx/js/sliders.js
         equal_height = fileadmin/lynx/js/equal-height.js
-        container_color = fileadmin/lynx/js/container-color.js
+        container_colors = fileadmin/lynx/js/container-colors.js
 
         #language_select = fileadmin/lynx/js/language-select.js
     }
