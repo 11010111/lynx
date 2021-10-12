@@ -2,16 +2,16 @@
  * Resize FullWidth Container
  */
 (function ResizeFullWidthLeftMargin(self) {
-    let container0 = document.querySelectorAll('.container--0')
+    let content = document.querySelectorAll('.content')
 
-    if (!container0) {
+    if (!content) {
         return
     }
 
-    container0.forEach(function(container) {
-        let container1 = container.querySelectorAll('.container--1')
+    content.forEach(function(container) {
+        let full = container.querySelectorAll('.full')
 
-        if (!container1) {
+        if (!full) {
             return
         }
 
@@ -20,7 +20,7 @@
         let rem = mainRect.left
 
         self.resize = function() {
-            container1.forEach(function(el) {
+            full.forEach(function(el) {
                 let firstDiv = el.querySelector('div')
                 let rect = container.getClientRects()[0]
 

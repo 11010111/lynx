@@ -60,4 +60,8 @@
 
 .content--xl {
   max-width: 98rem;
+
+  @media screen and (max-width: 114rem) {
+    padding: 0 var(--container-margin);
+  }
 }

@@ -53,12 +53,10 @@ nav.mobile .menu-button:checked ~ .menu-label {
 nav.mobile .menu-button:checked ~ .menu-label::before {
   transform-origin: right;
   transform: rotate(-45deg);
-  background-color: #d42525;
 }
 nav.mobile .menu-button:checked ~ .menu-label::after {
   transform-origin: right;
   transform: rotate(45deg);
-  background-color: #d42525;
 }
 nav.mobile .menu-button:checked ~ .mobile-container {
   right: 0;
@@ -68,7 +66,7 @@ nav.mobile .menu-label {
   top: 2.5rem;
   right: 1.5rem;
   width: 2rem;
-  height: 0.2rem;
+  height: 3px;
   background-color: #354f5d;
   z-index: 1005;
 }
@@ -78,7 +76,7 @@ nav.mobile .menu-label::before {
   top: -0.7rem;
   left: 0;
   width: 2rem;
-  height: 0.2rem;
+  height: 3px;
   margin-bottom: 0.5rem;
   background-color: #354f5d;
   transition: 0.5s;
@@ -89,7 +87,7 @@ nav.mobile .menu-label::after {
   top: 0.7rem;
   left: 0;
   width: 2rem;
-  height: 0.2rem;
+  height: 3px;
   margin-bottom: 0.5rem;
   background-color: #354f5d;
   transition: 0.5s;
@@ -144,7 +142,7 @@ nav.mobile .mobile-container .mobile-menu .parent .mobile-dropdown {
   transition: height, margin-top 0.25s;
 }
 nav.mobile .mobile-container .mobile-menu .has-children::after {
-  content: url('../../icons/dropdown.svg');
+  content: url("../../icons/dropdown.svg");
   position: absolute;
   top: 1.5rem;
   right: 0;
