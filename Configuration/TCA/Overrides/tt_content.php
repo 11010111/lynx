@@ -141,12 +141,6 @@ call_user_func(
             )
         );
 
-        $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['assets'] = [
-            'config' => [
-                'maxitems' => 1,
-            ],
-        ];
-
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
             'tt_content',
             [
@@ -266,5 +260,11 @@ call_user_func(
             'frames',
             'container, --linebreak--, breakpoint, padding_top, padding_bottom, --linebreak--, background_color, foreground_color'
         );
+
+        $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['assets'] = [
+            'config' => [
+                'maxitems' => 1,
+            ],
+        ];
     }
 );

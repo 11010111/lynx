@@ -1,7 +1,5 @@
 <?php
 
-// Using an alias of custom classes to prevent errors.
-use Swe\Lynx\Hooks\BackendContentHook as SweLynxBackendContentHook;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder as Typo3QueryBuilder;
 use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
@@ -93,11 +91,6 @@ call_user_func(
         ExtensionManagementUtility::addPageTSConfig(
             '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/Mod/Wizards/TextMedia.tsconfig">'
         );
-
-        /*******************************
-         * Content Element Info - HOOK *
-         *******************************/
-        #$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawFooter'][] = SweLynxBackendContentHook::class;
 
         /*************************
          * FluidMail - Overrides *
