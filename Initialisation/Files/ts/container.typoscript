@@ -55,3 +55,21 @@ tt_content.80-20 {
   templateName = 80-20
   dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
 }
+
+tt_content.accordion =< lib.contentElement
+tt_content.accordion {
+  templateName = Accordion
+  dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
+}
+
+tt_content.slider =< lib.contentElement
+tt_content.slider {
+  templateName = Slider
+  dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
+}
+
+tt_content.slider-cell =< lib.contentElement
+tt_content.slider-cell {
+  templateName = SlideCell
+  dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
+}

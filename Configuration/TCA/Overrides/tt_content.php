@@ -141,6 +141,48 @@ call_user_func(
             )
         );
 
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+            \B13\Container\Tca\Registry::class)->configureContainer(
+            new \B13\Container\Tca\ContainerConfiguration(
+                'accordion',
+                'Accordion',
+                '1 Column Accordion Container',
+                [
+                    [
+                        ['name' => '100%', 'colspan' => 1, 'colPos' => 201]
+                    ]
+                ]
+            )
+        );
+
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+            \B13\Container\Tca\Registry::class)->configureContainer(
+            new \B13\Container\Tca\ContainerConfiguration(
+                'slider',
+                'Slider',
+                '1 Column Slider Container',
+                [
+                    [
+                        ['name' => '100%', 'colspan' => 1, 'colPos' => 201]
+                    ]
+                ]
+            )
+        );
+
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+            \B13\Container\Tca\Registry::class)->configureContainer(
+            new \B13\Container\Tca\ContainerConfiguration(
+                'slider-cell',
+                'Slider-Cell',
+                '1 Column Slider-Cell Container',
+                [
+                    [
+                        ['name' => '100%', 'colspan' => 1, 'colPos' => 201]
+                    ]
+                ]
+            )
+        );
+
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
             'tt_content',
             [
