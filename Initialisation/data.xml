@@ -16,7 +16,7 @@
 		<excludeMap type="array"></excludeMap>
 		<softrefCfg type="array"></softrefCfg>
 		<extensionDependencies type="array">
-			<extkey index="0">gridelements</extkey>
+			<extkey index="0">container</extkey>
 		</extensionDependencies>
 		<charset>utf-8</charset>
 		<pagetree type="array">
@@ -522,8 +522,8 @@
 				<field index="legacy_overlay_uid" type="integer">0</field>
 				<field index="tx_impexp_origuid" type="integer">0</field>
 				<field index="seo_title"></field>
-				<field index="no_index" type="integer">0</field>
-				<field index="no_follow" type="integer">0</field>
+				<field index="no_index" type="integer">1</field>
+				<field index="no_follow" type="integer">1</field>
 				<field index="og_title"></field>
 				<field index="og_description" type="NULL"></field>
 				<field index="og_image" type="integer">0</field>
@@ -541,33 +541,30 @@
 		<tablerow index="tt_content:1" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">1</field>
-				<field index="rowDescription"></field>
+				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">3</field>
 				<field index="tstamp" type="integer">0</field>
 				<field index="crdate" type="integer">0</field>
-				<field index="cruser_id" type="integer">0</field>
+				<field index="cruser_id" type="integer">1</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
 				<field index="endtime" type="integer">0</field>
 				<field index="fe_group"></field>
-				<field index="sorting" type="integer">0</field>
+				<field index="sorting" type="integer">256</field>
 				<field index="editlock" type="integer">0</field>
 				<field index="sys_language_uid" type="integer">0</field>
 				<field index="l18n_parent" type="integer">0</field>
 				<field index="l10n_source" type="integer">0</field>
 				<field index="l10n_state" type="NULL"></field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="l18n_diffsource"></field>
+				<field index="l18n_diffsource">{&quot;CType&quot;:&quot;&quot;,&quot;colPos&quot;:&quot;&quot;,&quot;tx_container_parent&quot;:&quot;&quot;,&quot;header&quot;:&quot;&quot;,&quot;frame_class&quot;:&quot;&quot;,&quot;space_before_class&quot;:&quot;&quot;,&quot;space_after_class&quot;:&quot;&quot;,&quot;container&quot;:&quot;&quot;,&quot;padding_top&quot;:&quot;&quot;,&quot;padding_bottom&quot;:&quot;&quot;,&quot;background_color&quot;:&quot;&quot;,&quot;foreground_color&quot;:&quot;&quot;,&quot;sectionIndex&quot;:&quot;&quot;,&quot;linkToTop&quot;:&quot;&quot;,&quot;sys_language_uid&quot;:&quot;&quot;,&quot;hidden&quot;:&quot;&quot;,&quot;starttime&quot;:&quot;&quot;,&quot;endtime&quot;:&quot;&quot;,&quot;fe_group&quot;:&quot;&quot;,&quot;editlock&quot;:&quot;&quot;,&quot;categories&quot;:&quot;&quot;,&quot;rowDescription&quot;:&quot;&quot;}</field>
 				<field index="t3ver_oid" type="integer">0</field>
 				<field index="t3ver_wsid" type="integer">0</field>
 				<field index="t3ver_state" type="integer">0</field>
 				<field index="t3ver_stage" type="integer">0</field>
-				<field index="t3ver_count" type="integer">0</field>
-				<field index="t3ver_tstamp" type="integer">0</field>
-				<field index="t3ver_move_id" type="integer">0</field>
-				<field index="CType">gridelements_pi1</field>
-				<field index="header"></field>
+				<field index="CType">100</field>
+				<field index="header">## Footer</field>
 				<field index="header_position"></field>
 				<field index="bodytext" type="NULL"></field>
 				<field index="bullets_type" type="integer">0</field>
@@ -580,7 +577,7 @@
 				<field index="imagecols" type="integer">2</field>
 				<field index="imageborder" type="integer">0</field>
 				<field index="media" type="integer">0</field>
-				<field index="layout">0</field>
+				<field index="layout" type="integer">0</field>
 				<field index="frame_class">default</field>
 				<field index="cols" type="integer">0</field>
 				<field index="space_before_class"></field>
@@ -603,22 +600,10 @@
 				<field index="date" type="integer">0</field>
 				<field index="recursive" type="integer">0</field>
 				<field index="imageheight" type="integer">0</field>
-				<field index="pi_flexform">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
-					&lt;T3FlexForms&gt;
-					&lt;data&gt;
-					&lt;sheet index=&quot;sDEF&quot;&gt;
-					&lt;language index=&quot;lDEF&quot;&gt;
-					&lt;field index=&quot;breakpoint&quot;&gt;
-					&lt;value index=&quot;vDEF&quot;&gt;md&lt;/value&gt;
-					&lt;/field&gt;
-					&lt;/language&gt;
-					&lt;/sheet&gt;
-					&lt;/data&gt;
-					&lt;/T3FlexForms&gt;</field>
+				<field index="pi_flexform" type="NULL"></field>
 				<field index="accessibility_title"></field>
 				<field index="accessibility_bypass" type="integer">0</field>
 				<field index="accessibility_bypass_text"></field>
-				<field index="selected_categories" type="NULL"></field>
 				<field index="category_field"></field>
 				<field index="table_class"></field>
 				<field index="table_caption" type="NULL"></field>
@@ -626,28 +611,18 @@
 				<field index="table_enclosure" type="integer">0</field>
 				<field index="table_header_position" type="integer">0</field>
 				<field index="table_tfoot" type="integer">0</field>
-				<field index="tx_impexp_origuid" type="integer">0</field>
 				<field index="categories" type="integer">0</field>
-				<field index="backupColPos" type="integer">-2</field>
-				<field index="tx_gridelements_backend_layout">1</field>
-				<field index="tx_gridelements_children" type="integer">0</field>
-				<field index="tx_gridelements_container" type="integer">0</field>
-				<field index="tx_gridelements_columns" type="integer">0</field>
-				<field index="gridelements_shortcut_page_order_by" type="integer">0</field>
-				<field index="frame_class_extra"></field>
-				<field index="space_left_class"></field>
-				<field index="space_right_class"></field>
-				<field index="display_on"></field>
+				<field index="selected_categories" type="NULL"></field>
+				<field index="tx_impexp_origuid" type="integer">0</field>
+				<field index="tx_container_parent" type="integer">0</field>
+				<field index="container">full</field>
+				<field index="breakpoint">md</field>
+				<field index="padding_top">50</field>
+				<field index="padding_bottom">50</field>
+				<field index="background_color">#000000</field>
+				<field index="foreground_color">#ffffff</field>
 			</fieldlist>
-			<related index="rels" type="array">
-				<field index="pi_flexform" type="array">
-					<type>flex</type>
-					<flexform index="flexFormRels" type="array">
-						<db_relations index="db" type="array"></db_relations>
-						<softref_relations index="softrefs" type="array"></softref_relations>
-					</flexform>
-				</field>
-			</related>
+			<related index="rels" type="array"></related>
 		</tablerow>
 		<tablerow index="pages:2" type="array">
 			<fieldlist index="data" type="array">
@@ -886,14 +861,14 @@
 				<field index="hidden" type="integer">0</field>
 				<field index="description"></field>
 				<field index="title">Redakteur (Allgemein)</field>
-				<field index="non_exclude_fields">tx_mgcookies_domain_model_cookie:hidden,tx_mgcookies_domain_model_cookie:sys_language_uid,sys_file_metadata:title,sys_file_reference:alternative,sys_file_reference:description,sys_file_reference:crop,sys_file_reference:link,sys_file_reference:title,pages:backend_layout_next_level,pages:backend_layout,pages:description,pages:keywords,pages:layout,pages:nav_title,pages:nav_hide,pages:hidden,pages:shortcut_mode,pages:starttime,pages:endtime,pages:subtitle,pages:target,pages:doktype,pages:slug,tt_content:image_zoom,tt_content:colPos,tt_content:tx_gridelements_children,tt_content:frame_class,tt_content:frame_class_extra,tt_content:space_left_class,tt_content:space_right_class,tt_content:tx_gridelements_container,tt_content:tx_gridelements_columns,tt_content:tx_gridelements_backend_layout,tt_content:imageheight,tt_content:layout,tt_content:no_mobile,tt_content:imageorient,tt_content:space_after_class,tt_content:space_before_class,tt_content:starttime,tt_content:endtime,tt_content:subheader,tt_content:header_layout,tt_content:hidden,tt_content:imagewidth</field>
-				<field index="explicit_allowdeny">tt_content:CType:header:ALLOW,tt_content:CType:text:ALLOW,tt_content:CType:textpic:ALLOW,tt_content:CType:image:ALLOW,tt_content:CType:textmedia:ALLOW,tt_content:CType:bullets:ALLOW,tt_content:CType:table:ALLOW,tt_content:CType:uploads:ALLOW,tt_content:CType:shortcut:ALLOW,tt_content:CType:div:ALLOW,tt_content:CType:html:ALLOW,tt_content:CType:gridelements_pi1:ALLOW</field>
+				<field index="non_exclude_fields">tx_mgcookies_domain_model_cookie:hidden,tx_mgcookies_domain_model_cookie:sys_language_uid,sys_file_metadata:title,sys_file_reference:alternative,sys_file_reference:description,sys_file_reference:crop,sys_file_reference:link,sys_file_reference:title,pages:backend_layout_next_level,pages:backend_layout,pages:description,pages:keywords,pages:layout,pages:nav_title,pages:nav_hide,pages:hidden,pages:shortcut_mode,pages:starttime,pages:endtime,pages:subtitle,pages:target,pages:doktype,pages:slug,tt_content:image_zoom,tt_content:colPos,tt_content:frame_class,tt_content:frame_class_extra,tt_content:space_left_class,tt_content:space_right_class,tt_content:imageheight,tt_content:layout,tt_content:no_mobile,tt_content:imageorient,tt_content:space_after_class,tt_content:space_before_class,tt_content:starttime,tt_content:endtime,tt_content:subheader,tt_content:header_layout,tt_content:hidden,tt_content:imagewidth</field>
+				<field index="explicit_allowdeny">tt_content:CType:header:ALLOW,tt_content:CType:text:ALLOW,tt_content:CType:textpic:ALLOW,tt_content:CType:image:ALLOW,tt_content:CType:textmedia:ALLOW,tt_content:CType:bullets:ALLOW,tt_content:CType:table:ALLOW,tt_content:CType:uploads:ALLOW,tt_content:CType:shortcut:ALLOW,tt_content:CType:div:ALLOW,tt_content:CType:html:ALLOW</field>
 				<field index="allowed_languages"></field>
 				<field index="custom_options" type="NULL"></field>
 				<field index="db_mountpoints">1</field>
 				<field index="pagetypes_select">1,6,4,3,254</field>
-				<field index="tables_select">pages,sys_file,sys_file_metadata,sys_file_reference,tt_content,tx_gridelements_backend_layout</field>
-				<field index="tables_modify">pages,sys_file_metadata,sys_file_reference,tt_content,tx_gridelements_backend_layout</field>
+				<field index="tables_select">pages,sys_file,sys_file_metadata,sys_file_reference,tt_content</field>
+				<field index="tables_modify">pages,sys_file_metadata,sys_file_reference,tt_content</field>
 				<field index="groupMods">web_layout,web_list,file_FilelistList,user_setup</field>
 				<field index="availableWidgets"></field>
 				<field index="file_mountpoints">2,1</field>
