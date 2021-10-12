@@ -8,12 +8,7 @@
 :root {
   --font-family: 'Basier Circle';
   --font-size: 1.125em;
-  --font-color: #000000;
-  --background-color: #eeeeee;
-  --headline-color: #299d9f;
   --paragraph-line-height: 1.5;
-  --link-color: #6b8ec8;
-  --link-hover-color: #9c644f;
   --error: #d42525;
   --warning: #e3ad40;
   --success: #88c433;
@@ -37,9 +32,13 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0 1rem;
   width: 100%;
+  margin: 0;
+  padding: 0 calc(var(--container-margin) / 2);
+
+  @media screen and (min-width: breakpoint('md')) {
+    padding: 0 var(--container-margin);
+  }
 }
 
 body::-webkit-scrollbar {
