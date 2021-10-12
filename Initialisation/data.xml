@@ -121,14 +121,6 @@
 							<id>1</id>
 							<table>pages</table>
 						</element>
-						<element index="sys_filemounts:2" type="array">
-							<id>2</id>
-							<table>sys_filemounts</table>
-						</element>
-						<element index="sys_filemounts:1" type="array">
-							<id>1</id>
-							<table>sys_filemounts</table>
-						</element>
 						<element index="be_groups:2" type="array">
 							<id>2</id>
 							<table>be_groups</table>
@@ -807,7 +799,7 @@
 				<field index="tables_modify">pages,sys_file_metadata,sys_file_reference,tt_content</field>
 				<field index="groupMods">web_layout,web_list,file_FilelistList,user_setup</field>
 				<field index="availableWidgets"></field>
-				<field index="file_mountpoints">2,1</field>
+				<field index="file_mountpoints"></field>
 				<field index="file_permissions">readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile</field>
 				<field index="lockToDomain"></field>
 				<field index="TSconfig"></field>
@@ -822,19 +814,6 @@
 						<element index="0" type="array">
 							<id>1</id>
 							<table>pages</table>
-						</element>
-					</relations>
-				</field>
-				<field index="file_mountpoints" type="array">
-					<type>db</type>
-					<relations index="itemArray" type="array">
-						<element index="0" type="array">
-							<id>2</id>
-							<table>sys_filemounts</table>
-						</element>
-						<element index="1" type="array">
-							<id>1</id>
-							<table>sys_filemounts</table>
 						</element>
 					</relations>
 				</field>

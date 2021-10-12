@@ -1,6 +1,0 @@
-#services:
-#  Swe\Lynx\EventListener\LynxInitialisation:
-#    tags:
-#      - name: event.listener
-#        identifier: 'lynxInitialisationListener'
-#        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent
