@@ -196,12 +196,10 @@ page {
         resize_fullwidth_leftmargin = fileadmin/lynx/js/resize-fullwidth-leftmargin.js
         scroll_top = fileadmin/lynx/js/scroll-top.js
         video_width = fileadmin/lynx/js/video-width.js
-        main_js = fileadmin/lynx/js/main.js
         sliders = fileadmin/lynx/js/sliders.js
         equal_height = fileadmin/lynx/js/equal-height.js
         container_colors = fileadmin/lynx/js/container-colors.js
-
-        #language_select = fileadmin/lynx/js/language-select.js
+        main_js = fileadmin/lynx/js/main.js
     }
 
     meta {

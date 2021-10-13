@@ -20,6 +20,9 @@
 		</extensionDependencies>
 		<charset>utf-8</charset>
 		<pagetree type="array">
+			<node index="0" type="array">
+				<uid>0</uid>
+			</node>
 			<node index="1" type="array">
 				<uid>1</uid>
 				<node index="subrow" type="array">
@@ -121,9 +124,43 @@
 							<id>1</id>
 							<table>pages</table>
 						</element>
+						<element index="sys_filemounts:1" type="array">
+							<id>1</id>
+							<table>sys_filemounts</table>
+						</element>
+						<element index="sys_filemounts:2" type="array">
+							<id>2</id>
+							<table>sys_filemounts</table>
+						</element>
 						<element index="be_groups:2" type="array">
 							<id>2</id>
 							<table>be_groups</table>
+						</element>
+					</relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+			</table>
+			<table index="sys_filemounts" type="array">
+				<rec index="2" type="array">
+					<uid>2</uid>
+					<pid>0</pid>
+					<title>Images</title>
+					<relations index="rels" type="array">
+						<element index="sys_file_storage:1" type="array">
+							<id>1</id>
+							<table>sys_file_storage</table>
+						</element>
+					</relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+				<rec index="1" type="array">
+					<uid>1</uid>
+					<pid>0</pid>
+					<title>Dokumente</title>
+					<relations index="rels" type="array">
+						<element index="sys_file_storage:1" type="array">
+							<id>1</id>
+							<table>sys_file_storage</table>
 						</element>
 					</relations>
 					<softrefs type="array"></softrefs>
@@ -218,6 +255,10 @@
 			</page_contents>
 			<page_contents index="7" type="array">
 				<table index="be_groups" type="array">
+					<item index="2">1</item>
+					<item index="1">1</item>
+				</table>
+				<table index="sys_filemounts" type="array">
 					<item index="2">1</item>
 					<item index="1">1</item>
 				</table>
@@ -721,10 +762,8 @@
 				<field index="root" type="integer">1</field>
 				<field index="clear" type="integer">3</field>
 				<field index="include_static_file">EXT:fluid_styled_content/Configuration/TypoScript/,EXT:fluid_styled_content/Configuration/TypoScript/Styling/,EXT:lynx/Configuration/TypoScript,EXT:mask/Configuration/TypoScript,EXT:mgcookies/Configuration/TypoScript,EXT:swe_core/Configuration/TypoScript,EXT:news/Configuration/TypoScript,EXT:form/Configuration/TypoScript/</field>
-				<field index="constants">&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/lynx/ts/constants.typoscript&quot;&gt;
-				</field>
-				<field index="config">&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/lynx/ts/setup.typoscript&quot;&gt;
-				</field>
+				<field index="constants">&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/lynx/ts/constants.typoscript&quot;&gt;</field>
+				<field index="config">&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/lynx/ts/setup.typoscript&quot;&gt;</field>
 				<field index="description" type="NULL"></field>
 				<field index="basedOn" type="NULL"></field>
 				<field index="deleted" type="integer">0</field>
@@ -753,7 +792,7 @@
 				<field index="pid" type="integer">0</field>
 				<field index="tstamp" type="integer">0</field>
 				<field index="crdate" type="integer">0</field>
-				<field index="cruser_id" type="integer">0</field>
+				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="description"></field>
@@ -761,20 +800,20 @@
 				<field index="non_exclude_fields"></field>
 				<field index="explicit_allowdeny"></field>
 				<field index="allowed_languages"></field>
-				<field index="custom_options" type="NULL"></field>
+				<field index="custom_options"></field>
 				<field index="db_mountpoints"></field>
 				<field index="pagetypes_select"></field>
 				<field index="tables_select"></field>
 				<field index="tables_modify"></field>
 				<field index="groupMods"></field>
 				<field index="availableWidgets"></field>
+				<field index="mfa_providers" type="NULL"></field>
 				<field index="file_mountpoints"></field>
 				<field index="file_permissions">readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile</field>
-				<field index="lockToDomain"></field>
 				<field index="TSconfig"></field>
 				<field index="subgroup"></field>
 				<field index="workspace_perms" type="integer">0</field>
-				<field index="category_perms"></field>
+				<field index="category_perms">0</field>
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
@@ -784,28 +823,28 @@
 				<field index="pid" type="integer">0</field>
 				<field index="tstamp" type="integer">0</field>
 				<field index="crdate" type="integer">0</field>
-				<field index="cruser_id" type="integer">0</field>
+				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="description"></field>
 				<field index="title">Redakteur (Allgemein)</field>
-				<field index="non_exclude_fields">tx_mgcookies_domain_model_cookie:hidden,tx_mgcookies_domain_model_cookie:sys_language_uid,sys_file_metadata:title,sys_file_reference:alternative,sys_file_reference:description,sys_file_reference:crop,sys_file_reference:link,sys_file_reference:title,pages:backend_layout_next_level,pages:backend_layout,pages:description,pages:keywords,pages:layout,pages:nav_title,pages:nav_hide,pages:hidden,pages:shortcut_mode,pages:starttime,pages:endtime,pages:subtitle,pages:target,pages:doktype,pages:slug,tt_content:image_zoom,tt_content:colPos,tt_content:frame_class,tt_content:frame_class_extra,tt_content:space_left_class,tt_content:space_right_class,tt_content:imageheight,tt_content:layout,tt_content:no_mobile,tt_content:imageorient,tt_content:space_after_class,tt_content:space_before_class,tt_content:starttime,tt_content:endtime,tt_content:subheader,tt_content:header_layout,tt_content:hidden,tt_content:imagewidth</field>
-				<field index="explicit_allowdeny">tt_content:CType:header:ALLOW,tt_content:CType:text:ALLOW,tt_content:CType:textpic:ALLOW,tt_content:CType:image:ALLOW,tt_content:CType:textmedia:ALLOW,tt_content:CType:bullets:ALLOW,tt_content:CType:table:ALLOW,tt_content:CType:uploads:ALLOW,tt_content:CType:shortcut:ALLOW,tt_content:CType:div:ALLOW,tt_content:CType:html:ALLOW</field>
+				<field index="non_exclude_fields">sys_file_metadata:title,sys_file_reference:alternative,sys_file_reference:description,sys_file_reference:crop,sys_file_reference:link,sys_file_reference:title,pages:backend_layout_next_level,pages:backend_layout,pages:description,pages:layout,pages:keywords,pages:nav_title,pages:nav_hide,pages:hidden,pages:shortcut_mode,pages:starttime,pages:endtime,pages:subtitle,pages:target,pages:doktype,tt_content:background_color,tt_content:breakpoint,tt_content:image_zoom,tt_content:container,tt_content:foreground_color,tt_content:frame_class,tt_content:layout,tt_content:imageheight,tt_content:imageorient,tt_content:space_after_class,tt_content:space_before_class,tt_content:padding_bottom,tt_content:padding_top,tt_content:starttime,tt_content:endtime,tt_content:subheader,tt_content:header_layout,tt_content:hidden,tt_content:imagewidth</field>
+				<field index="explicit_allowdeny">tt_content:CType:header:ALLOW,tt_content:CType:text:ALLOW,tt_content:CType:textpic:ALLOW,tt_content:CType:image:ALLOW,tt_content:CType:textmedia:ALLOW,tt_content:CType:bullets:ALLOW,tt_content:CType:table:ALLOW,tt_content:CType:uploads:ALLOW,tt_content:CType:shortcut:ALLOW,tt_content:CType:div:ALLOW,tt_content:CType:100:ALLOW,tt_content:CType:50-50:ALLOW,tt_content:CType:25-75:ALLOW,tt_content:CType:75-25:ALLOW,tt_content:CType:33-66:ALLOW,tt_content:CType:66-33:ALLOW,tt_content:CType:33-33-33:ALLOW,tt_content:CType:20-80:ALLOW,tt_content:CType:80-20:ALLOW,tt_content:CType:accordion:ALLOW,tt_content:CType:slider:ALLOW,tt_content:CType:slider-cell:ALLOW</field>
 				<field index="allowed_languages"></field>
-				<field index="custom_options" type="NULL"></field>
+				<field index="custom_options"></field>
 				<field index="db_mountpoints">1</field>
 				<field index="pagetypes_select">1,6,4,3,254</field>
 				<field index="tables_select">pages,sys_file,sys_file_metadata,sys_file_reference,tt_content</field>
 				<field index="tables_modify">pages,sys_file_metadata,sys_file_reference,tt_content</field>
 				<field index="groupMods">web_layout,web_list,file_FilelistList,user_setup</field>
 				<field index="availableWidgets"></field>
-				<field index="file_mountpoints"></field>
+				<field index="mfa_providers" type="NULL"></field>
+				<field index="file_mountpoints">1,2</field>
 				<field index="file_permissions">readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile</field>
-				<field index="lockToDomain"></field>
 				<field index="TSconfig"></field>
 				<field index="subgroup">2</field>
 				<field index="workspace_perms" type="integer">0</field>
-				<field index="category_perms"></field>
+				<field index="category_perms">0</field>
 			</fieldlist>
 			<related index="rels" type="array">
 				<field index="db_mountpoints" type="array">
@@ -817,12 +856,77 @@
 						</element>
 					</relations>
 				</field>
+				<field index="file_mountpoints" type="array">
+					<type>db</type>
+					<relations index="itemArray" type="array">
+						<element index="0" type="array">
+							<id>1</id>
+							<table>sys_filemounts</table>
+						</element>
+						<element index="1" type="array">
+							<id>2</id>
+							<table>sys_filemounts</table>
+						</element>
+					</relations>
+				</field>
 				<field index="subgroup" type="array">
 					<type>db</type>
 					<relations index="itemArray" type="array">
 						<element index="0" type="array">
 							<id>2</id>
 							<table>be_groups</table>
+						</element>
+					</relations>
+				</field>
+			</related>
+		</tablerow>
+		<tablerow index="sys_filemounts:2" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">2</field>
+				<field index="pid" type="integer">0</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="hidden" type="integer">0</field>
+				<field index="sorting" type="integer">128</field>
+				<field index="description"></field>
+				<field index="title">Images</field>
+				<field index="path">/Redakteur/Images/</field>
+				<field index="base" type="integer">1</field>
+				<field index="read_only" type="integer">0</field>
+			</fieldlist>
+			<related index="rels" type="array">
+				<field index="base" type="array">
+					<type>db</type>
+					<relations index="itemArray" type="array">
+						<element index="0" type="array">
+							<id>1</id>
+							<table>sys_file_storage</table>
+						</element>
+					</relations>
+				</field>
+			</related>
+		</tablerow>
+		<tablerow index="sys_filemounts:1" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">1</field>
+				<field index="pid" type="integer">0</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="hidden" type="integer">0</field>
+				<field index="sorting" type="integer">256</field>
+				<field index="description"></field>
+				<field index="title">Dokumente</field>
+				<field index="path">/Redakteur/Dokumente/</field>
+				<field index="base" type="integer">1</field>
+				<field index="read_only" type="integer">0</field>
+			</fieldlist>
+			<related index="rels" type="array">
+				<field index="base" type="array">
+					<type>db</type>
+					<relations index="itemArray" type="array">
+						<element index="0" type="array">
+							<id>1</id>
+							<table>sys_file_storage</table>
 						</element>
 					</relations>
 				</field>
@@ -854,9 +958,7 @@
 				<field index="allowed_languages"></field>
 				<field index="uc" type="NULL"></field>
 				<field index="file_mountpoints"></field>
-				<field index="file_permissions">
-					readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile
-				</field>
+				<field index="file_permissions">readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile</field>
 				<field index="workspace_perms" type="integer">1</field>
 				<field index="lockToDomain"></field>
 				<field index="disableIPlock" type="integer">0</field>
@@ -897,9 +999,7 @@
 				<field index="allowed_languages"></field>
 				<field index="uc" type="NULL"></field>
 				<field index="file_mountpoints"></field>
-				<field index="file_permissions">
-					readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile
-				</field>
+				<field index="file_permissions">readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile</field>
 				<field index="workspace_perms" type="integer">1</field>
 				<field index="lockToDomain"></field>
 				<field index="disableIPlock" type="integer">0</field>
@@ -1063,9 +1163,7 @@
 				<field index="allowed_languages"></field>
 				<field index="uc" type="NULL"></field>
 				<field index="file_mountpoints"></field>
-				<field index="file_permissions">
-					readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile
-				</field>
+				<field index="file_permissions">readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile</field>
 				<field index="workspace_perms" type="integer">1</field>
 				<field index="lockToDomain"></field>
 				<field index="disableIPlock" type="integer">0</field>
