@@ -3,7 +3,7 @@
 #################
 lib.logo = IMAGE
 lib.logo {
-    file = EXT:lynx/Resources/Public/Images/logo.png
+    file = fileadmin/lynx/images/logo.png
     stdWrap.typolink.parameter = 1
     #params = class="svg"
 }
@@ -33,7 +33,7 @@ lib.footer {
 ###########################################
 #### File Collection for Mask Elements ####
 ###########################################
-tt_content.mask_html_form_elements {
+tt_content.mask_element_name {
   dataProcessing {
     50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
     50 {
