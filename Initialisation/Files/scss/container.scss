@@ -51,7 +51,8 @@
       padding-right: var(--container-margin);
     }
 
-    @media screen and (min-width: 81.375em) {
+    // Based on root em (16px)
+    @media screen and (min-width: 91.25em) {
       padding-left: 0;
       padding-right: 0;
     }

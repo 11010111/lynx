@@ -45,7 +45,7 @@
     padding-right: var(--container-margin);
   }
 }
-@media screen and (min-width: 81.375em) {
+@media screen and (min-width: 91.25em) {
   .full .content {
     padding-left: 0;
     padding-right: 0;
