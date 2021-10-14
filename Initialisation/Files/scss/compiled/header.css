@@ -87,7 +87,7 @@
   }
 }
 .header-container .scrolldown::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -1.11rem;
@@ -96,6 +96,7 @@
   background-color: #000000;
   animation: elasticus 3s infinite;
 }
+
 @keyframes elasticus {
   0% {
     -webkit-transform-origin: 0% 0%;
