@@ -26,8 +26,8 @@ nav.desktop .desktop-container {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #ffffff;
   z-index: 1001;
+  transition: background-color 0.25s;
 }
 nav.desktop .desktop-container .wrap-menu-lang {
   margin: 1.44rem 0 0;
@@ -147,6 +147,9 @@ nav.desktop .language-menu .language li {
   white-space: nowrap;
 }
 
+.desktop-fixed .desktop-container {
+  background-color: #ffffff;
+}
 .desktop-fixed .desktop-container .content-logo {
   margin-top: 0.77rem;
 }

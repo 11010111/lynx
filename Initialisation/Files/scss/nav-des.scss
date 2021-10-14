@@ -35,8 +35,8 @@ nav.desktop {
     top: 0;
     left: 0;
     right: 0;
-    background-color: color('white');
     z-index: 1001;
+    transition: background-color 0.25s;
 
     .active {
       //color: color('primary');
@@ -203,6 +203,8 @@ nav.desktop {
 
 .desktop-fixed {
 	.desktop-container {
+      background-color: color('white');
+
   		.content-logo {
             margin-top: 0.77rem;
         }
