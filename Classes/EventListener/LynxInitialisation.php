@@ -36,9 +36,9 @@ class LynxInitialisation
                 $this->writeFileMount('Dokumente', '/Redakteur/Dokumente/');
             }
 
-            if (!$storage->hasFolder('/Redakteur/Images/')) {
-                $storage->createFolder('/Redakteur/Images/');
-                $this->writeFileMount('Bilder', '/Redakteur/Images/');
+            if (!$storage->hasFolder('/Redakteur/Bilder/')) {
+                $storage->createFolder('/Redakteur/Bilder/');
+                $this->writeFileMount('Bilder', '/Redakteur/Bilder/');
             }
         }
     }

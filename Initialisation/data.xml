@@ -144,7 +144,7 @@
 				<rec index="2" type="array">
 					<uid>2</uid>
 					<pid>0</pid>
-					<title>Images</title>
+					<title>Bilder</title>
 					<relations index="rels" type="array">
 						<element index="sys_file_storage:1" type="array">
 							<id>1</id>
@@ -889,8 +889,8 @@
 				<field index="hidden" type="integer">0</field>
 				<field index="sorting" type="integer">128</field>
 				<field index="description"></field>
-				<field index="title">Images</field>
-				<field index="path">/Redakteur/Images/</field>
+				<field index="title">Bilder</field>
+				<field index="path">/Redakteur/Bilder/</field>
 				<field index="base" type="integer">1</field>
 				<field index="read_only" type="integer">0</field>
 			</fieldlist>
