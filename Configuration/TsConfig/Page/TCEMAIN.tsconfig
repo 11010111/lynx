@@ -1,6 +1,12 @@
 #
 # TCEMAIN
 #
-TCEMAIN {
 
+# Setzen der Seitenbaumrechte per TypoScript
+TCEMAIN {
+  # Besitzergruppe festlegen (ID der Gruppe „Seitenbaumrechte“):
+  permissions.groupid = 2
+  permissions.user = show, editcontent, edit, delete, new
+  permissions.group = show, editcontent, edit, delete, new
+  permissions.everybody =
 }
