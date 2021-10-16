@@ -188,6 +188,7 @@ call_user_func(
             [
                 'container' => [
                     'exclude' => 1,
+                    'onChange' => 'reload',
                     'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:container',
                     'description' => '',
                     'config' => [
