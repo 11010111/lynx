@@ -10,30 +10,6 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/Helper/DynamicContent.typoscript">
 
 
-############################
-### MODULE CONFIGURATION ###
-############################
-module.tx_lynx {
-  settings {
-      # Ajax page type number
-      typeNum = {$module.tx_lynx.settings.typeNum}
-      # SetupIncludes
-      setupIncluded = 1
-    }
-    persistence {
-      storagePid = {$module.tx_lynx.persistence.storagePid}
-    }
-  view {
-    templateRootPaths.10 = {$module.tx_lynx.view.templateRootPath}
-    partialRootPaths.10 = {$module.tx_lynx.view.partialRootPath}
-    layoutRootPaths.10 = {$module.tx_lynx.view.layoutRootPath}
-  }
-}
-
-module.tx_lynx.settings.view < module.tx_lynx.view
-module.tx_lynx.settings.persistence < module.tx_lynx.persistence
-
-
 ##############
 #### PAGE ####
 ##############

@@ -9,29 +9,3 @@
 #### PAGE TITLE ####
 ####################
 siteTitle = Lynx
-
-############################
-#### MAX RENDERING SIZE ####
-############################
-styles.content.textmedia.maxW = 1200
-styles.content.textmedia.maxWInText = 600
-
-##############################
-#### FLUID STYLED CONTENT ####
-##############################
-styles {
-    templates {
-        layoutRootPath = fileadmin/lynx/ext/lynx/Layouts/ContentElements/
-        partialRootPath = fileadmin/lynx/ext/lynx/Partials/ContentElements/
-        templateRootPath = fileadmin/lynx/ext/lynx/Templates/ContentElements/
-    }
-}
-
-##############################
-### CONTENT TEMPLATE PATHS ###
-##############################
-lib.contentElement {
-    templateRootPaths.20 = fileadmin/lynx/ext/lynx/Templates/ContentElements
-    partialRootPaths.20 = fileadmin/lynx/ext/lynx/Partials/ContentElements
-    layoutRootPaths.20 = fileadmin/lynx/ext/lynx/Layout/ContentElements
-}
