@@ -1,0 +1,10 @@
+###################
+### LOGINSCREEN ###
+###################
+loginLogo = fileadmin/lynx/images/logo.png
+loginLogoAlt = Logo
+loginHighlightColor = #0630D1
+loginFootnote = Smart Web Elements
+loginBackgroundImage = fileadmin/lynx/images/bg_backend.jpg
+backendLogo = fileadmin/lynx/images/logo_backend.png
+backendFavicon = fileadmin/lynx/icons/favicon.ico
