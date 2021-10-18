@@ -37,11 +37,9 @@ call_user_func(
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['backend'] = [
             'backendFavicon' => 'fileadmin/lynx/icons/favicon.ico',
             'backendLogo' => 'fileadmin/lynx/images/logo_backend.png',
-            'loginBackgroundImage' => '',
-            'loginFootnote' => '',
-            'loginHighlightColor' => '#0630D1',
+            'loginFootnote' => 'Smart Web Elements',
             'loginLogo' => 'fileadmin/lynx/images/logo.png',
-            'loginLogoAlt' => 'Smart Web Elements'
+            'loginLogoAlt' => 'Logo'
 
         ];
 
