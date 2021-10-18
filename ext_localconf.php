@@ -31,6 +31,20 @@ call_user_func(
             'preview' => 'fileadmin/lynx/mask_project/Resources/Public/'
         ];
 
+        /*****************************
+         * Add Backend configuration *
+         ****************************/
+        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['backend'] = [
+            'backendFavicon' => 'fileadmin/lynx/icons/favicon.ico',
+            'backendLogo' => 'fileadmin/lynx/images/logo_backend.png',
+            'loginBackgroundImage' => '',
+            'loginFootnote' => '',
+            'loginHighlightColor' => '#0630D1',
+            'loginLogo' => 'fileadmin/lynx/images/logo.png',
+            'loginLogoAlt' => 'Smart Web Elements'
+
+        ];
+
         /***********************************************
          * register svg icons: identifier and filename *
          ***********************************************/
