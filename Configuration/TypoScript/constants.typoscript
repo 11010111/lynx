@@ -2,7 +2,6 @@
 #### DEPENDENCIES ####
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/constants.typoscript">
 
 
 ##############################
@@ -39,16 +38,5 @@ page {
         layoutRootPath = fileadmin/lynx/ext/lynx/Layouts/Page/
         partialRootPath = fileadmin/lynx/ext/lynx/Partials/Page/
         templateRootPath = fileadmin/lynx/ext/lynx/Templates/Page/
-    }
-}
-
-##############
-#### FORM ####
-##############
-plugin.tx_form {
-    settings {
-        yamlConfigurations {
-            100 = EXT:lynx/Configuration/Form/CustomFormSetup.yaml
-        }
     }
 }
