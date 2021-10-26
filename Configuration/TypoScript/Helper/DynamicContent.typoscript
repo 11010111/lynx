@@ -59,6 +59,11 @@ lib.dynamicContent {
             dataWrap = {register:wrap}
             required = 1
         }
+        dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+        dataProcessing.10 {
+            fieldName = pi_flexform
+            as = flexFields
+        }
     }
     90 = RESTORE_REGISTER
 }
