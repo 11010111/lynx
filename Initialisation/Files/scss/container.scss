@@ -25,14 +25,14 @@
 .full {
   width: calc(100% + var(--container-margin));
   max-width: calc(100% + var(--container-margin));
-  margin-left: calc(100% - 100% - var(--container-margin) / 2);
-  margin-right: calc(100% - 100% - var(--container-margin) / 2);
+  margin-left: calc(0% - var(--container-margin) / 2);
+  margin-right: calc(0% - var(--container-margin) / 2);
 
   @media screen and (min-width: breakpoint('md')) {
     width: calc(100% + var(--container-margin) * 2);
     max-width: calc(100% + var(--container-margin) * 2);
-    margin-left: calc(100% - 100% - var(--container-margin));
-    margin-right: calc(100% - 100% - var(--container-margin));
+    margin-left: calc(0% - var(--container-margin));
+    margin-right: calc(0% - var(--container-margin));
   }
 
   .full {
