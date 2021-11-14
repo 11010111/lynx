@@ -1,44 +1,61 @@
 /**
  * Container Alignment
  */
-(function Alignment(self) {
-    let contentMain = document.querySelector('.content-main')
+(function Alignment() {
     let alignment = document.querySelectorAll('[data-alignment]')
 
-    if (!alignment && !contentMain) {
+    if (!alignment) {
         return
     }
 
-    let mainRect = contentMain.getClientRects()[0]
+    let isTouchDevice = function() {
+        return window.matchMedia("(pointer: coarse)").matches
+    }
 
-    self.resize = function() {
+    let resize = function() {
+        let contentMain = document.querySelector('.content-main')
+
+        if (!contentMain) {
+            return;
+        }
+
+        let mainRect = contentMain.getClientRects()[0]
+
         alignment.forEach(function (container) {
             let align = container.getAttribute('data-alignment')
             let maxWidth = container.getAttribute('data-maxwidth')
 
-            if (!align) {
-                return
-            }
+            if (align) {
+                if (maxWidth == null) {
+                    let style = getComputedStyle(container)
+                    let maxW = style['max-width']
+                    maxWidth = Math.floor(maxW.replace('px', ''))
+                    container.setAttribute('data-maxwidth', maxWidth)
+                }
 
-            if (!maxWidth) {
-                container.setAttribute('data-maxwidth', container.style.maxWidth)
-                maxWidth = container.style.maxWidth
-            }
+                let rem = mainRect.left
 
-            let rem = mainRect[align]
+                if (window.innerWidth - maxWidth > 0) {
+                    if (isTouchDevice()) {
+                        container.style.maxWidth = Number(maxWidth) + Math.floor(Number(window.innerWidth - maxWidth) / 2) + 'px'
+                    } else {
+                        container.style.maxWidth = Number(maxWidth) + Math.floor(Number(window.innerWidth - maxWidth - 4) / 2) + 'px'
+                    }
 
-            if (window.innerWidth - maxWidth >= 0) {
-                container.style.maxWidth = maxWidth + (window.innerWidth - maxWidth) + rem + 'px'
-            }
+                    container.style.width = 'calc(100% + ' + rem + 'px)'
+                } else {
+                    container.style.width = 'calc(100% + ' + rem + 'px)'
+                }
 
-            if (align === 'left') {
-                container.style.marginLeft = -rem + 'px'
-            } else {
-                container.style.marginRight = -rem + 'px'
+                if (align === 'left') {
+                    container.style.marginLeft = -rem + 'px'
+                } else {
+                    container.style.marginRight = -rem + 'px'
+                }
             }
         })
     }
 
-    self.resize()
-    window.addEventListener('resize', self.resize)
-})(window.alignment = self);
+    resize()
+    window.addEventListener('resize', resize)
+})();
