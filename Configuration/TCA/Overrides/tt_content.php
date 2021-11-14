@@ -263,12 +263,14 @@ call_user_func(
                         'renderType' => 'selectSingle',
                         'items' => [
                             ['Default', ''],
-                            ['Left', 'left-alignment'],
-                            ['Right', 'right-alignment']
+                            ['Left', 'left'],
+                            ['Right', 'right']
                         ]
                     ],
                     'displayCond' => [
                         'OR' => [
+                            'FIELD:CType:=:Slider',
+                            'FIELD:CType:=:Accordion',
                             'FIELD:CType:=:100',
                             'FIELD:CType:=:50-50',
                             'FIELD:CType:=:25-75',
