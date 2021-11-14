@@ -263,8 +263,8 @@ call_user_func(
                         'renderType' => 'selectSingle',
                         'items' => [
                             ['Default', ''],
-                            ['Left', 'left'],
-                            ['Right', 'right']
+                            ['Left', 'left-alignment'],
+                            ['Right', 'right-alignment']
                         ]
                     ],
                     'displayCond' => [

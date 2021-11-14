@@ -193,7 +193,7 @@ page {
         img_to_svg = fileadmin/lynx/js/img-to-svg.js
         mobile_menu = fileadmin/lynx/js/mobile-menu.js
         parallax = fileadmin/lynx/js/parallax.js
-        resize_fullwidth_leftmargin = fileadmin/lynx/js/resize-fullwidth-leftmargin.js
+        alignment = fileadmin/lynx/js/alignment.js
         scroll_top = fileadmin/lynx/js/scroll-top.js
         video_width = fileadmin/lynx/js/video-width.js
         sliders = fileadmin/lynx/js/sliders.js
