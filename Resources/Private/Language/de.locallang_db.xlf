@@ -7,22 +7,10 @@
         </header>
         <body>
 
-            <!-- PRESET -->
+            <!-- EXAMPLE -->
             <trans-unit id="extension.title">
                 <source>Lynx</source>
                 <target state="translated">Lynx</target>
-            </trans-unit>
-            <trans-unit id="preset">
-                <source>Preset</source>
-                <target state="translated">Preset</target>
-            </trans-unit>
-            <trans-unit id="preset.title">
-                <source>Title</source>
-                <target state="translated">Titel</target>
-            </trans-unit>
-            <trans-unit id="preset.preset">
-                <source>Preset</source>
-                <target state="translated">Preset</target>
             </trans-unit>
 
         </body>

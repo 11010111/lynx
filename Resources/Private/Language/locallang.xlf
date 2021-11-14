@@ -44,16 +44,6 @@
                 <source>Space Left</source>
             </trans-unit>
 
-            <trans-unit id="display_on">
-                <source>Display on</source>
-            </trans-unit>
-            <trans-unit id="display_on.desktop">
-                <source>Desktop</source>
-            </trans-unit>
-            <trans-unit id="display_on.mobile">
-                <source>Mobile</source>
-            </trans-unit>
-
         </body>
     </file>
 </xliff>

@@ -114,6 +114,23 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
+                '25-25-25-25',
+                '25% - 25% - 25% -25%',
+                '4 Columns Container',
+                [
+                    [
+                        ['name' => '25%', 'colspan' => 1, 'colPos' => 201],
+                        ['name' => '25%', 'colspan' => 1, 'colPos' => 202],
+                        ['name' => '25%', 'colspan' => 1, 'colPos' => 203],
+                        ['name' => '25%', 'colspan' => 1, 'colPos' => 204]
+                    ]
+                ]
+            )
+        );
+
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+            \B13\Container\Tca\Registry::class)->configureContainer(
+            new \B13\Container\Tca\ContainerConfiguration(
                 '20-80',
                 '20% - 80%',
                 '2 Columns Container',
@@ -208,6 +225,7 @@ call_user_func(
                             'FIELD:CType:=:33-66',
                             'FIELD:CType:=:66-33',
                             'FIELD:CType:=:33-33-33',
+                            'FIELD:CType:=:25-25-25-25',
                             'FIELD:CType:=:20-80',
                             'FIELD:CType:=:80-20'
                         ]
@@ -229,6 +247,36 @@ call_user_func(
                             'FIELD:CType:=:33-66',
                             'FIELD:CType:=:66-33',
                             'FIELD:CType:=:33-33-33',
+                            'FIELD:CType:=:25-25-25-25',
+                            'FIELD:CType:=:20-80',
+                            'FIELD:CType:=:80-20'
+                        ]
+                    ]
+                ],
+                'alignment' => [
+                    'exclude' => 1,
+                    'onChange' => 'reload',
+                    'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:alignment',
+                    'description' => '',
+                    'config' => [
+                        'type' => 'select',
+                        'renderType' => 'selectSingle',
+                        'items' => [
+                            ['Default', ''],
+                            ['Left', 'left'],
+                            ['Right', 'right']
+                        ]
+                    ],
+                    'displayCond' => [
+                        'OR' => [
+                            'FIELD:CType:=:100',
+                            'FIELD:CType:=:50-50',
+                            'FIELD:CType:=:25-75',
+                            'FIELD:CType:=:75-25',
+                            'FIELD:CType:=:33-66',
+                            'FIELD:CType:=:66-33',
+                            'FIELD:CType:=:33-33-33',
+                            'FIELD:CType:=:25-25-25-25',
                             'FIELD:CType:=:20-80',
                             'FIELD:CType:=:80-20'
                         ]
@@ -293,7 +341,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
             'tt_content',
-            'breakpoint, container, padding_top, padding_bottom, background_color, foreground_color',
+            'container, breakpoint, alignment, padding_top, padding_bottom, background_color, foreground_color',
             'appearance',
             'after:space_after_class'
         );
@@ -301,7 +349,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
             'tt_content',
             'frames',
-            'container, --linebreak--, breakpoint, padding_top, padding_bottom, --linebreak--, background_color, foreground_color'
+            'container, --linebreak--, breakpoint, alignment, --linebreak--, padding_top, padding_bottom, --linebreak--, background_color, foreground_color'
         );
 
         $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['assets'] = [

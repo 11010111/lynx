@@ -44,6 +44,12 @@ tt_content.33-33-33 {
   dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
 }
 
+tt_content.25-25-25-25 =< lib.contentElement
+tt_content.25-25-25-25 {
+  templateName = 25-25-25-25
+  dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
+}
+
 tt_content.20-80 =< lib.contentElement
 tt_content.20-80 {
   templateName = 20-80

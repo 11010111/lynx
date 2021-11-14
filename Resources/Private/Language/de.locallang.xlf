@@ -55,19 +55,6 @@
                 <target state="translated">Abstand Links</target>
             </trans-unit>
 
-            <trans-unit id="display_on">
-                <source>Display on</source>
-                <target state="translated">Anzeigen auf</target>
-            </trans-unit>
-            <trans-unit id="display_on.desktop">
-                <source>Desktop</source>
-                <target state="translated">Desktop</target>
-            </trans-unit>
-            <trans-unit id="display_on.mobile">
-                <source>Mobile</source>
-                <target state="translated">Mobil</target>
-            </trans-unit>
-
         </body>
     </file>
 </xliff>

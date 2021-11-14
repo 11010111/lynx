@@ -7,18 +7,9 @@
         </header>
         <body>
 
-            <!-- PRESET -->
+            <!-- EXAMPLE -->
             <trans-unit id="extension.title">
                 <source>Lynx</source>
-            </trans-unit>
-            <trans-unit id="preset">
-                <source>Preset</source>
-            </trans-unit>
-            <trans-unit id="preset.title">
-                <source>Title</source>
-            </trans-unit>
-            <trans-unit id="preset.preset">
-                <source>Preset</source>
             </trans-unit>
 
         </body>

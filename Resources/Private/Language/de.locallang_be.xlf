@@ -32,6 +32,10 @@
                 <source>Breakpoint</source>
                 <target state="translated">Umbruch</target>
             </trans-unit>
+            <trans-unit id="alignment">
+                <source>Alignment</source>
+                <target state="translated">Ausrichtung</target>
+            </trans-unit>
             <trans-unit id="background_color">
                 <source>Background Color</source>
                 <target state="translated">Hintergrundfarbe</target>
