@@ -29,9 +29,12 @@
 
             if (window.innerWidth - maxWidth >= 0) {
                 container.style.maxWidth = maxWidth + (window.innerWidth - maxWidth) + rem + 'px'
+            }
+
+            if (align === 'left') {
                 container.style.marginLeft = -rem + 'px'
             } else {
-                container.style.marginLeft = -rem + 'px'
+                container.style.marginRight = -rem + 'px'
             }
         })
     }
