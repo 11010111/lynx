@@ -3,10 +3,6 @@
 @import 'functions';
 
 // Content code here
-.blogcontainer {
-  margin-top: 12rem;
-}
-
 .content-main {
   display: inline-block;
   position: relative;
@@ -20,6 +16,12 @@
 .scroll-hidden {
   .content-main {
     filter: blur(2px);
+  }
+}
+
+.slider-content {
+  .slider-cell {
+    max-width: 100%;
   }
 }
 
