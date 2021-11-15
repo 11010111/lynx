@@ -269,8 +269,8 @@ call_user_func(
                     ],
                     'displayCond' => [
                         'OR' => [
-                            'FIELD:CType:=:Slider',
-                            'FIELD:CType:=:Accordion',
+                            'FIELD:CType:=:slider',
+                            'FIELD:CType:=:accordion',
                             'FIELD:CType:=:100',
                             'FIELD:CType:=:50-50',
                             'FIELD:CType:=:25-75',
