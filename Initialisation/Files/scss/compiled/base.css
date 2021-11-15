@@ -57,6 +57,7 @@ html {
   font-variant: normal;
   font-weight: normal;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 body {
@@ -71,8 +72,8 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 body::-webkit-scrollbar-thumb {

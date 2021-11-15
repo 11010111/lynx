@@ -39,7 +39,7 @@
                     if (isTouchDevice()) {
                         container.style.maxWidth = Number(maxWidth) + Math.floor(Number(window.innerWidth - maxWidth) / 2) + 'px'
                     } else {
-                        container.style.maxWidth = Number(maxWidth) + Math.floor(Number(window.innerWidth - maxWidth - 4) / 2) + 'px'
+                        container.style.maxWidth = Number(maxWidth) + Math.floor(Number(window.innerWidth - maxWidth - 8) / 2) + 'px'
                     }
 
                     container.style.width = 'calc(100% + ' + rem + 'px)'
