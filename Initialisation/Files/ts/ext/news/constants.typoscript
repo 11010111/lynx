@@ -6,6 +6,18 @@ plugin.tx_news {
         layoutRootPath = fileadmin/lynx/ext/news/Layouts/
         partialRootPath = fileadmin/lynx/ext/news/Partials/
         templateRootPath = fileadmin/lynx/ext/news/Templates/
+
+        twb {
+            templateRootPath = fileadmin/lynx/ext/news/Templates/Styles/Twb/Templates/
+            partialRootPath = fileadmin/lynx/ext/news/Templates/Styles/Twb/Partials/
+            layoutRootPath = fileadmin/lynx/ext/news/Templates/Styles/Twb/Layouts/
+        }
+
+        twb5 {
+            templateRootPath = fileadmin/lynx/ext/news/Templates/Styles/Twb5/Templates/
+            partialRootPath = fileadmin/lynx/ext/news/Templates/Styles/Twb5/Partials/
+            layoutRootPath = fileadmin/lynx/ext/news/Templates/Styles/Twb5/Layouts/
+        }
     }
 }
 
