@@ -1,157 +1,46 @@
 /**
- * EqualHeight
- * @param selector
- * @param groupName
- * @param groups
+ * Equal Height
  */
-function equalHeight(selector = '.equal-height', groupName = '', groups = true) {
-    let allGroups
-    let onlyElements
+(function EqualHeight(self) {
+    let elements = document.querySelectorAll('[data-equal-height]')
 
-    if (groupName) {
-        allGroups = document.querySelectorAll(groupName)
+    if (!elements) return
 
-        if (!allGroups) return
-    } else {
-        onlyElements = document.querySelectorAll(selector)
+    let groups = []
 
-        if (!onlyElements) return
-    }
+    elements.forEach(function(el) {
+        let groupName = el.getAttribute('data-equal-height')
 
-    let equalHeight = 0
-
-    let read = function() {
-        if (allGroups) {
-            allGroups.forEach(function(grp) {
-                let elements = grp.querySelectorAll(selector)
-
-                if (!elements) return
-
-                elements.forEach(function(el) {
-                    if (groups) {
-                        let dataHeight = grp.getAttribute(
-                            'data-equal-height'
-                        )
-
-                        if (el.clientHeight > dataHeight) {
-                            grp.setAttribute(
-                                'data-equal-height',
-                                Math.floor(el.clientHeight).toString()
-                            )
-                        }
-                    } else {
-                        if (el.clientHeight > equalHeight) {
-                            equalHeight = Math.floor(el.clientHeight)
-                        }
-                    }
-                })
-            })
-        } else {
-            onlyElements.forEach(function(el) {
-                if (groups) {
-                    let parent = el.parentElement
-                    let dataHeight = parent.getAttribute(
-                        'data-equal-height'
-                    )
-
-                    if (el.clientHeight > dataHeight) {
-                        parent.setAttribute(
-                            'data-equal-height',
-                            Math.floor(el.clientHeight).toString()
-                        )
-                    }
-                } else {
-                    if (el.clientHeight > equalHeight) {
-                        equalHeight = Math.floor(el.clientHeight)
-                    }
-                }
-            })
+        if (!groups[groupName]) {
+            groups[groupName] = []
+            groups[groupName]['height'] = 0
+            groups[groupName]['elements'] = document.querySelectorAll(`[data-equal-height="${groupName}"]`)
         }
-    }
+    })
 
-    let write = function() {
-        if (allGroups) {
-            allGroups.forEach(function(grp) {
-                let elements = grp.querySelectorAll(selector)
-
-                if (!elements) return
-
-                elements.forEach(function(el) {
-                    if (groups) {
-                        let dataHeight = grp.getAttribute(
-                            'data-equal-height'
-                        )
-                        el.style.height = dataHeight + 'px'
-                    } else {
-                        el.style.height = equalHeight + 'px'
-                    }
-                })
-            })
-        } else {
-            onlyElements.forEach(function(el) {
-                if (groups) {
-                    let parent = el.parentElement
-                    let dataHeight = parent.getAttribute(
-                        'data-equal-height'
-                    )
-                    el.style.height = dataHeight + 'px'
-                } else {
-                    el.style.height = equalHeight + 'px'
-                }
-            })
-        }
-    }
-
-    let resize = function() {
-        if (allGroups) {
-            allGroups.forEach(function(grp) {
-                let elements = grp.querySelectorAll(selector)
-
-                if (!elements) return
-
-                elements.forEach(function(el) {
-                    if (groups) {
-                        grp.setAttribute(
-                            'data-equal-height',
-                            '0'
-                        )
-                    } else if (equalHeight > 0) {
-                        equalHeight = 0
-                    }
-                    el.style.height = 'auto'
-                })
-            })
-
-            read()
-            write()
-        } else {
-            onlyElements.forEach(function(el) {
-                if (groups) {
-                    let parent = el.parentElement
-                    parent.setAttribute(
-                        'data-equal-height',
-                        '0'
-                    )
-                } else if (equalHeight > 0) {
-                    equalHeight = 0
-                }
+    let reset = function() {
+        for (const groupsKey in groups) {
+            groups[groupsKey]['height'] = 0
+            groups[groupsKey]['elements'].forEach(function(el) {
                 el.style.height = 'auto'
-            })
 
-            read()
-            write()
+                if (el.clientHeight > groups[groupsKey]['height']) {
+                    groups[groupsKey]['height'] = el.clientHeight
+                }
+            })
         }
     }
 
-    resize()
-    window.addEventListener('resize', resize)
-}
+    self.resize = function() {
+        reset()
 
-// Basic init - Basic Group
-equalHeight()
+        for (const groupsKey in groups) {
+            groups[groupsKey]['elements'].forEach(function(el) {
+                el.style.height = groups[groupsKey]['height'] + 'px'
+            })
+        }
+    }
 
-// Basic init - Basic Group
-equalHeight('.equal-height', '.example-group')
-
-// Custom init example without groups
-equalHeight('.example-class', false)
+    self.resize()
+    window.addEventListener('resize', self.resize)
+})(window.equalHeight = self);
