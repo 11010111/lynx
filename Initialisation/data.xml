@@ -195,6 +195,13 @@
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array"></softrefs>
 				</rec>
+				<rec index="10" type="array">
+					<uid>10</uid>
+					<pid>0</pid>
+					<title>fm-swe</title>
+					<relations index="rels" type="array"></relations>
+					<softrefs type="array"></softrefs>
+				</rec>
 				<rec index="3" type="array">
 					<uid>3</uid>
 					<pid>0</pid>
@@ -269,6 +276,7 @@
 					<item index="5">1</item>
 					<item index="8">1</item>
 					<item index="9">1</item>
+					<item index="10">1</item>
 					<item index="3">1</item>
 					<item index="2">1</item>
 					<item index="7">1</item>
@@ -1073,10 +1081,51 @@
 				<field index="admin" type="integer">1</field>
 				<field index="usergroup"></field>
 				<field index="lang"></field>
-				<field index="email"></field>
+				<field index="email">h.al-rasbi@s-w-e.com</field>
 				<field index="db_mountpoints" type="NULL"></field>
 				<field index="options" type="integer">0</field>
 				<field index="realName">Hamdan</field>
+				<field index="userMods" type="NULL"></field>
+				<field index="allowed_languages"></field>
+				<field index="uc" type="NULL"></field>
+				<field index="file_mountpoints" type="NULL"></field>
+				<field index="file_permissions">readFolder,writeFolder,addFolder,renameFolder,moveFolder,deleteFolder,readFile,writeFile,addFile,renameFile,replaceFile,moveFile,copyFile,deleteFile</field>
+				<field index="workspace_perms" type="integer">1</field>
+				<field index="lockToDomain"></field>
+				<field index="disableIPlock" type="integer">0</field>
+				<field index="TSconfig"></field>
+				<field index="lastlogin" type="integer">0</field>
+				<field index="createdByAction" type="integer">0</field>
+				<field index="usergroup_cached_list" type="NULL"></field>
+				<field index="workspace_id" type="integer">0</field>
+				<field index="category_perms" type="NULL"></field>
+				<field index="password_reset_token"></field>
+				<field index="tx_news_categorymounts"></field>
+			</fieldlist>
+			<related index="rels" type="array"></related>
+		</tablerow>
+		<tablerow index="be_users:10" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">10</field>
+				<field index="pid" type="integer">0</field>
+				<field index="tstamp" type="integer">0</field>
+				<field index="crdate" type="integer">0</field>
+				<field index="cruser_id" type="integer">0</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="disable" type="integer">0</field>
+				<field index="starttime" type="integer">0</field>
+				<field index="endtime" type="integer">0</field>
+				<field index="description" type="NULL"></field>
+				<field index="username">fm-swe</field>
+				<field index="avatar" type="integer">0</field>
+				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$c2dNM2dRQk5aNmFyMEZyYQ$FzUB60RefGvymyi2k2sJW5nlosSA1GX6SZ1qHVI8iuU</field>
+				<field index="admin" type="integer">1</field>
+				<field index="usergroup"></field>
+				<field index="lang"></field>
+				<field index="email">f.moll@s-w-e.com</field>
+				<field index="db_mountpoints" type="NULL"></field>
+				<field index="options" type="integer">0</field>
+				<field index="realName">Frank Moll</field>
 				<field index="userMods" type="NULL"></field>
 				<field index="allowed_languages"></field>
 				<field index="uc" type="NULL"></field>
