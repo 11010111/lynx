@@ -271,21 +271,21 @@ call_user_func(
                     ],
                     'displayCond' => [
                         'AND' => [
-                            'FIELD:container:=:content'
-                        ],
-                        'OR' => [
-                            'FIELD:CType:=:slider',
-                            'FIELD:CType:=:accordion',
-                            'FIELD:CType:=:100',
-                            'FIELD:CType:=:50-50',
-                            'FIELD:CType:=:25-75',
-                            'FIELD:CType:=:75-25',
-                            'FIELD:CType:=:33-66',
-                            'FIELD:CType:=:66-33',
-                            'FIELD:CType:=:33-33-33',
-                            'FIELD:CType:=:25-25-25-25',
-                            'FIELD:CType:=:20-80',
-                            'FIELD:CType:=:80-20'
+                            'FIELD:container:=:content',
+                            'OR' => [
+                                'FIELD:CType:=:slider',
+                                'FIELD:CType:=:accordion',
+                                'FIELD:CType:=:100',
+                                'FIELD:CType:=:50-50',
+                                'FIELD:CType:=:25-75',
+                                'FIELD:CType:=:75-25',
+                                'FIELD:CType:=:33-66',
+                                'FIELD:CType:=:66-33',
+                                'FIELD:CType:=:33-33-33',
+                                'FIELD:CType:=:25-25-25-25',
+                                'FIELD:CType:=:20-80',
+                                'FIELD:CType:=:80-20'
+                            ]
                         ]
                     ]
                 ],
