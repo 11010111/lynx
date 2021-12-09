@@ -22,7 +22,7 @@
 
             header.addEventListener('click', function() {
                 acc.classList.toggle('accordion-close')
-            });
-        });
+            })
+        })
 	})
 })();

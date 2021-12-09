@@ -16,7 +16,7 @@
                 let factor = el.parentElement.parentElement.parentElement.clientWidth / el.width
                 el.style.width = el.parentElement.parentElement.parentElement.clientWidth + 'px'
                 el.style.height = el.height * factor + 'px'
-            });
+            })
     	}
     }
 

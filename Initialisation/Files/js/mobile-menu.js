@@ -20,13 +20,13 @@
             if (!par.classList.contains('parent-open')) {
                 parent.forEach(function(p) {
                     p.classList.remove('parent-open')
-                });
+                })
 
                 par.classList.add('parent-open')
             } else {
                 par.classList.toggle('parent-open')
             }
-        });
-    });
+        })
+    })
 
 })();

@@ -1,7 +1,7 @@
 /**
- * Base Initialisation for Gridelements Slider
+ * Base Initialisation for Container Slider
  */
-(function GridelementsSliders(self) {
+(function Sliders(self) {
     self.list = []
 
     let sliderContent = document.querySelectorAll('.slider-content')
@@ -16,9 +16,9 @@
             cellAlign: 'left',
             cellSelector: '.slider-cell',
             contain: true
-        });
+        })
 
         self.list.push(flickity)
-    });
+    })
 
 })(window.sliders = self);

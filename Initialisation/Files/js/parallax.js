@@ -36,16 +36,16 @@
     let scrollEvent = function() {
         elementTop.forEach(function(el) {
             move(el, 'top')
-        });
+        })
         elementBottom.forEach(function(el) {
             move(el, 'bottom')
-        });
+        })
         elementLeft.forEach(function(el) {
             move(el, 'left')
-        });
+        })
         elementRight.forEach(function(el) {
             move(el, 'right')
-        });
+        })
     }
 
     scrollEvent()
