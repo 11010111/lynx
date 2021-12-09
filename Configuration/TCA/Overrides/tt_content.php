@@ -270,6 +270,9 @@ call_user_func(
                         ]
                     ],
                     'displayCond' => [
+                        'AND' => [
+                            'FIELD:container:=:content'
+                        ],
                         'OR' => [
                             'FIELD:CType:=:slider',
                             'FIELD:CType:=:accordion',
