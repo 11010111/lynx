@@ -4,8 +4,3 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/news/constants.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/powermail/constants.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/search/constants.typoscript">
-
-####################
-#### PAGE TITLE ####
-####################
-siteTitle = Lynx
