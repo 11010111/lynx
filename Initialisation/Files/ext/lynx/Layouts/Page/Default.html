@@ -8,10 +8,12 @@
     Partial: EXT:lynx/Resources/Private/Partials/Page
 </f:comment>
 
-<section class="page-navigation">
-    <f:render partial="{f:cObject(typoscriptObjectPath:'lib.desktopMenuPartialName')}" arguments="{_all}" />
-    <f:render partial="{f:cObject(typoscriptObjectPath:'lib.mobileMenuPartialName')}" arguments="{_all}" />
-</section>
+<f:spaceless>
+    <section class="page-navigation">
+        <f:render partial="{f:cObject(typoscriptObjectPath:'lib.desktopMenuPartialName')}" arguments="{_all}" />
+        <f:render partial="{f:cObject(typoscriptObjectPath:'lib.mobileMenuPartialName')}" arguments="{_all}" />
+    </section>
 
-<f:render section="Main" arguments="{_all}" />
+    <f:render section="Main" arguments="{_all}" />
+</f:spaceless>
 </html>
