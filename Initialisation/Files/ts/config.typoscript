@@ -5,7 +5,27 @@ lib.logo = IMAGE
 lib.logo {
     file = fileadmin/lynx/images/logo.png
     stdWrap.typolink.parameter = 1
-    #params = class="svg"
+    stdWrap.typolink.title = Home
+}
+
+########################
+### SITE LOGO AS SVG ###
+########################
+lib.logoSVG = SVG
+lib.logoSVG {
+    renderMode = inline
+    src.field = src
+    stdWrap.typolink.parameter = 1
+    stdWrap.typolink.title = Home
+}
+
+#########################
+### RENDER INLINE SVG ###
+#########################
+lib.svg = SVG
+lib.svg {
+    renderMode = inline
+    src.field = src
 }
 
 #################################

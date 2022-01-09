@@ -1,13 +1,62 @@
 ##########################################################################################################
-// flickity.pkgd.min.js - Touch, responsive, flickable carousels
-// Options: https://flickity.metafizzy.co/options.html
+// Image to SVG
+// Example to render svg inline
 ##########################################################################################################
 
-let flkty = new Flickity('#myElement', {
-  // options
-  cellAlign: 'left',
-  contain: true
-});
+<f:cObject typoscriptObjectPath="lib.svg" data="{src: 'path/to/the/file.svg'}" />
+
+##########################################################################################################
+##########################################################################################################
+// Swiper Slider
+// Options: https://swiperjs.com/swiper-api
+##########################################################################################################
+
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+
+<script>
+    import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
+
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+        slideClass: '.swiper-slide',
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+</script>
 
 ##########################################################################################################
 ##########################################################################################################
@@ -152,24 +201,5 @@ const tobii = new Tobii({
 <button type="button" data-type="iframe" data-target="https://www.wikipedia.org" class="lightbox">
   Open Wikipedia
 </button>
-
-##########################################################################################################
-##########################################################################################################
-// Parallax - Insert one or multiple class names to the element
-// The element must have a Style-Attribute - "position: relative;" or "position: absolute;"
-// ###############
-// parallax-top
-// parallax-bottom
-// parallax-left
-// parallax-right
-##########################################################################################################
-
-<div class="my-element parallax-top parallax-left">
-  ...
-</div>
-
-OR
-
-<img class="image parallax-top parallax-left" alt="..." />
 
 ##########################################################################################################

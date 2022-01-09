@@ -6,64 +6,66 @@
     </div>
   </div>
 
-  <input type="checkbox" class="menu-button" id="menu-button">
-  <label for="menu-button" class="menu-label"></label>
+  <div class="button-wrapper">
+    <input type="checkbox" class="menu-button" id="menu-button" aria-label="Menu Button">
+    <label for="menu-button" class="menu-label"></label>
 
-  <div class="mobile-container">
-    <div class="content">
-      <ul class="mobile-menu">
-        <f:for each="{navigation}" as="navigationItem">
-          <li class="parent{f:if(condition: navigationItem.children, then:' has-children')}">
-            <f:if condition="{navigationItem.children} && {linkNonClickable} == 1">
-              <f:then>
-                <span class="parent-link{f:if(condition: navigationItem.active, then:' active')}" title="{navigationItem.title}">
-                  {navigationItem.title}
-                </span>
-              </f:then>
-              <f:else>
-              	<a class="parent-link{f:if(condition: navigationItem.active, then:' active')}" href="{navigationItem.link}" target="{navigationItem.target}" title="{navigationItem.title}">
-                  {navigationItem.title}
-                </a>
-              </f:else>
-            </f:if>
-            <f:if condition="{navigationItem.children}">
-              <ul class="mobile-dropdown">
-                <f:for each="{navigationItem.children}" as="child">
-                  <li class="child">
-                    <a class="child-link{f:if(condition: child.active, then:' active')}" href="{child.link}" target="{child.target}" title="{child.title}">
-                      {child.title}
-                    </a>
-                  </li>
-                </f:for>
-              </ul>
-            </f:if>
-          </li>
-        </f:for>
-      </ul>
-    </div>
-
-    <f:comment>
-      <div class="language-container">
-        <f:if condition="{languageNavigation}">
-          <ul id="language_menu" class="language-menu">
-            <f:for each="{languageNavigation}" as="item">
-              <li class="{f:if(condition: item.active, then: 'active')} {f:if(condition: item.available, else: 'text-muted')}">
-                <f:if condition="{item.available}">
-                  <f:then>
-                    <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
-                      <span>{item.navigationTitle}</span>
-                    </a>
-                  </f:then>
-                  <f:else>
-                    <span>{item.navigationTitle}</span>
-                  </f:else>
-                </f:if>
-              </li>
-            </f:for>
-          </ul>
-        </f:if>
+    <div class="mobile-container">
+      <div class="content">
+        <ul class="mobile-menu">
+          <f:for each="{navigation}" as="navigationItem">
+            <li class="parent{f:if(condition: navigationItem.children, then:' has-children')}">
+              <f:if condition="{navigationItem.children} && {linkNonClickable} == 1">
+                <f:then>
+                  <span class="parent-link{f:if(condition: navigationItem.active, then:' active')}" title="{navigationItem.title}">
+                    {navigationItem.title}
+                  </span>
+                </f:then>
+                <f:else>
+                  <a class="parent-link{f:if(condition: navigationItem.active, then:' active')}" href="{navigationItem.link}" target="{navigationItem.target}" title="{navigationItem.title}">
+                    {navigationItem.title}
+                  </a>
+                </f:else>
+              </f:if>
+              <f:if condition="{navigationItem.children}">
+                <ul class="mobile-dropdown">
+                  <f:for each="{navigationItem.children}" as="child">
+                    <li class="child">
+                      <a class="child-link{f:if(condition: child.active, then:' active')}" href="{child.link}" target="{child.target}" title="{child.title}">
+                        {child.title}
+                      </a>
+                    </li>
+                  </f:for>
+                </ul>
+              </f:if>
+            </li>
+          </f:for>
+        </ul>
       </div>
-    </f:comment>
-  </div>
+
+      <f:comment>
+        <div class="language-container">
+          <f:if condition="{languageNavigation}">
+            <ul id="language_menu" class="language-menu">
+              <f:for each="{languageNavigation}" as="item">
+                <li class="{f:if(condition: item.active, then: 'active')} {f:if(condition: item.available, else: 'text-muted')}">
+                  <f:if condition="{item.available}">
+                    <f:then>
+                      <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
+                        <span>{item.navigationTitle}</span>
+                      </a>
+                    </f:then>
+                    <f:else>
+                      <span>{item.navigationTitle}</span>
+                    </f:else>
+                  </f:if>
+                </li>
+              </f:for>
+            </ul>
+          </f:if>
+        </div>
+      </f:comment>
+    </div>
+  <div>
 </nav>
 </html>

@@ -2,7 +2,7 @@
 @import 'variables';
 @import 'functions';
 
-// Content code here
+// Content
 .content-main {
   display: inline-block;
   position: relative;
@@ -16,12 +16,6 @@
 .scroll-hidden {
   .content-main {
     filter: blur(2px);
-  }
-}
-
-.slider-content {
-  .slider-cell {
-    max-width: 100%;
   }
 }
 
@@ -55,30 +49,6 @@
     box-shadow: 0 0 1rem rgba(color('primary'), 0.25);
   }
 }
-
-// Tobii Lightbox
-:root {
-  --zoom-icon-background: rgba(0,0,0,0.94);
-  --lightbox-background: rgba(0,0,0,0.94);
-  --caption-color: #000000;
-}
-
-.tobii__btn--close {
-  left: auto;
-
-  &:hover {
-    background-color: transparent;
-  }
-}
-
-.tobii__btn--next {
-  left: auto;
-}
-
-.tobii__btn:active, .tobii__btn:focus, .tobii__btn:hover {
-  background-color: transparent;
-}
-// Tobii END
 
 // CE Styles
 .ce-media {

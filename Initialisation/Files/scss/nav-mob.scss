@@ -7,7 +7,9 @@ nav.mobile {
   display: none;
 
   @media screen and (max-width: breakpoint('lg')) {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -18,33 +20,36 @@ nav.mobile {
   .content-logo {
     .logo {
       display: flex;
-      align-items: center;
-      height: 100%;
-      padding: 1.5rem 1rem 0.5rem 1rem;
-      z-index: 1000;
+      position: relative;
+      top: 0;
+      left: 0;
+      padding: 1rem;
+      z-index: 1005;
 
-      img {
-        width: auto;
-        height: 2.88rem;
-      }
-      
-      svg {
+      svg, img {
         width: auto;
         height: 2.88rem;
       }
     }
   }
 
-  .menu-button {
-    position: fixed;
-    top: 1rem;
-    left: auto;
+  .button-wrapper {
+    position: relative;
+    top: 0;
     right: 1rem;
+  }
+
+  .menu-button {
+    position: relative;
+    top: 0;
+    left: auto;
+    right: 0;
     width: 2rem;
     height: 2rem;
     appearance: none;
     opacity: 0;
     cursor: pointer;
+    margin: 0;
     z-index: 1010;
 
     &:hover {
@@ -82,9 +87,9 @@ nav.mobile {
   }
 
   .menu-label {
-    position: fixed;
-    top: 2.5rem;
-    right: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 0;
     width: 2rem;
     height: 3px;
     background-color: color('anthrazit');
@@ -148,55 +153,55 @@ nav.mobile {
       }
 
       .parent {
-    	position: relative;
-    	top: 0;
-    	left: 0;
+        position: relative;
+        top: 0;
+        left: 0;
         padding: 1rem 0;
         font-weight: bold;
 
         a {
-      	  color: color('anthrazit');
+          color: color('anthrazit');
           text-decoration: none;
         }
-  
-  		.parent-link {
-    	  font-size: 1.94em;
-    	}
-  
-  		.mobile-dropdown {
-    		height: 0;
-  			margin: 0;
-  			overflow: hidden;
-  			transition: height, margin-top 0.25s;
-    	}
+
+        .parent-link {
+          font-size: 1.94em;
+        }
+
+        .mobile-dropdown {
+          height: 0;
+          margin: 0;
+          overflow: hidden;
+          transition: height, margin-top 0.25s;
+        }
       }
 
-	  .has-children {
-  		&::after {
+      .has-children {
+        &::after {
           content: url('../../icons/dropdown.svg');
           position: absolute;
           top: 1.5rem;
           right: 0;
-  		  transition: 0.25s;
+          transition: 0.25s;
         }
-	  }
+      }
 
-	  .parent-open {
-  		&::after {
+      .parent-open {
+        &::after {
           transform: rotate(90deg);
         }
 
-  		.mobile-dropdown {
-    	  height: 100%;
-  		  margin: 1rem 0 0 0;
-    	}
-  	  }
+        .mobile-dropdown {
+          height: 100%;
+          margin: 1rem 0 0 0;
+        }
+      }
 
       .child {
-  		.child-link {
-    	  font-size: 1.38em;
-    	  font-weight: normal;
-    	}
+        .child-link {
+          font-size: 1.38em;
+          font-weight: normal;
+        }
       }
     }
   }

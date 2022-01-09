@@ -1,0 +1,25 @@
+// Imports
+@import 'functions';
+@import 'variables';
+
+
+// Slider Container
+.slider-content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .swiper-wrapper {
+    display: -webkit-box;
+    width: 100%;
+
+    .slider-cell {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+:root {
+  --swiper-theme-color: #0630D1;
+}
