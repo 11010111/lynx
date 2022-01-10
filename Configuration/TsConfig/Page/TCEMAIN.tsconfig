@@ -9,4 +9,11 @@ TCEMAIN {
   permissions.user = show, editcontent, edit, delete, new
   permissions.group = show, editcontent, edit, delete, new
   permissions.everybody =
+
+  table {
+    tt_content {
+      disablePrependAtCopy = 1
+      disableHideAtCopy = 1
+    }
+  }
 }
