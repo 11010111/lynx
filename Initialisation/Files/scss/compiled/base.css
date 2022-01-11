@@ -152,17 +152,24 @@ a:hover {
   color: #0630D1;
 }
 
+img {
+  max-width: 100%;
+}
+
 iframe {
   display: block;
   width: 100%;
   height: auto;
   background-color: #000000;
   border: none;
+  aspect-ratio: 16/9;
 }
 
 video {
   display: block;
   width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
   margin: 0;
 }
 

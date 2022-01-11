@@ -125,9 +125,7 @@ a {
 }
 
 img {
-  //display: block;
-  //width: 100%;
-  //height: auto;
+  max-width: 100%;
 }
 
 iframe {
@@ -136,11 +134,14 @@ iframe {
   height: auto;
   background-color: color('black');
   border: none;
+  aspect-ratio: 16 / 9;
 }
 
 video {
   display: block;
   width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
   margin: 0;
 }
 

@@ -83,7 +83,6 @@ page {
         mobile_menu = fileadmin/lynx/js/mobile-menu.js
         alignment = fileadmin/lynx/js/alignment.js
         scroll_top = fileadmin/lynx/js/scroll-top.js
-        video_width = fileadmin/lynx/js/video-width.js
         equal_height = fileadmin/lynx/js/equal-height.js
         container_colors = fileadmin/lynx/js/container-colors.js
         main_js = fileadmin/lynx/js/main.js
