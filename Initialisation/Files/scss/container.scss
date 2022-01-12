@@ -1,6 +1,6 @@
 // Imports
-@import "variables";
-@import "functions";
+@import 'variables';
+@import 'functions';
 
 // Container
 .content {
@@ -12,13 +12,13 @@
   .full {
     width: 100%;
     max-width: 100%;
-    margin-left: 0!important;
-    margin-right: 0!important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .content {
-    padding-left: 0!important;
-    padding-right: 0!important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
@@ -38,8 +38,8 @@
   .full {
     width: 100%;
     max-width: 100%;
-    margin-left: 0!important;
-    margin-right: 0!important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .content {

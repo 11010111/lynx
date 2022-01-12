@@ -11,7 +11,7 @@ nav.desktop {
   .content-logo {
     margin-top: 2.77rem;
     transition: margin-top 0.5s;
-    
+
     .logo {
       display: flex;
       align-items: center;
@@ -22,7 +22,7 @@ nav.desktop {
         width: auto;
         height: auto;
       }
-      
+
       svg {
         width: auto;
         height: 3.88rem;
@@ -38,19 +38,19 @@ nav.desktop {
     z-index: 1001;
     transition: background-color 0.25s;
 
-    .active {
-      //color: color('primary');
+    //.active {
+    //  color: color('primary');
+    //
+    //  &:hover {
+    //    color: color('primary');
+    //  }
+    //}
 
-      &:hover {
-        //color: color('primary');
-      }
+    .wrap-menu-lang {
+      margin: 1.44rem 0 0;
+      transition: margin-top 0.5s;
     }
-  
-  	.wrap-menu-lang {
-    	margin: 1.44rem 0 0;
-      	transition: margin-top 0.5s;
-    }
-  
+
     .buy-now {
       margin: 0 0 0 2.77rem;
     }
@@ -69,7 +69,7 @@ nav.desktop {
         top: 0;
         right: 0;
         font-weight: 400;
-        padding: 1rem 1rem;
+        padding: 1rem;
         margin-right: 1rem;
 
         a {
@@ -92,7 +92,7 @@ nav.desktop {
           text-align: right;
           border-top: 0;
           padding: 0.5rem 0;
-      	  box-shadow: 0 0 2rem rgb(0 0 0 / 5%);
+          box-shadow: 0 0 2rem rgb(0 0 0 / 5%);
         }
 
         &:hover {
@@ -121,7 +121,7 @@ nav.desktop {
           top: 50%;
           right: -0.5rem;
           transform: translateY(-40%);
-  		  transition: 0.5s;
+          transition: 0.5s;
         }
       }
 
@@ -139,7 +139,7 @@ nav.desktop {
     right: 0;
     list-style: none;
     font-weight: bold;
-    padding: 1rem 1rem;
+    padding: 1rem;
     margin: 0 1rem 0 0;
     cursor: pointer;
 
@@ -176,9 +176,9 @@ nav.desktop {
       }
     }
 
-    .active {
-      //
-    }
+    //.active {
+    //
+    //}
 
     .language {
       display: none;
@@ -202,15 +202,15 @@ nav.desktop {
 }
 
 .desktop-fixed {
-	.desktop-container {
-      background-color: color('white');
+  .desktop-container {
+    background-color: color('white');
 
-  		.content-logo {
-            margin-top: 0.77rem;
-        }
+    .content-logo {
+      margin-top: 0.77rem;
+    }
 
-  		.wrap-menu-lang {
-            margin: 0 0 0!important;
-        }
-  	}
+    .wrap-menu-lang {
+      margin: 0 !important;
+    }
+  }
 }

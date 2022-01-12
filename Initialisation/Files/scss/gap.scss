@@ -1,6 +1,6 @@
 // Imports
-@import "functions";
-@import "variables";
+@import 'functions';
+@import 'variables';
 
 // Gaps - TOP / BOTTOM
 @each $gap, $options in $gaps {

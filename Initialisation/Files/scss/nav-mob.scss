@@ -96,7 +96,7 @@ nav.mobile {
     z-index: 1005;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: -0.7rem;
       left: 0;
@@ -108,7 +108,7 @@ nav.mobile {
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0.7rem;
       left: 0;
@@ -133,10 +133,10 @@ nav.mobile {
     transition: 0.5s;
 
     .active {
-      color: color('primary')!important;
+      color: color('primary') !important;
 
       &:hover {
-        color: color('primary')!important;
+        color: color('primary') !important;
       }
     }
 
@@ -149,7 +149,7 @@ nav.mobile {
       ul {
         list-style: none;
         padding: 0;
-        margin: 1rem 0 0 0;
+        margin: 1rem 0 0;
       }
 
       .parent {
@@ -193,7 +193,7 @@ nav.mobile {
 
         .mobile-dropdown {
           height: 100%;
-          margin: 1rem 0 0 0;
+          margin: 1rem 0 0;
         }
       }
 

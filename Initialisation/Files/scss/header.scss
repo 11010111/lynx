@@ -9,71 +9,71 @@
   top: 0;
   left: 0;
   min-height: 54rem;
-  
+
   @media screen and (min-width: breakpoint('xl')) {
     height: 90vh;
   }
-  
+
   .top {
     display: flex;
     flex-direction: column;
-    
-    
+
+
     @media screen and (min-width: breakpoint('lg')) {
       flex-direction: row;
     }
-    
+
     .left {
       width: 100%;
       margin-right: 4rem;
-      
+
       @media screen and (min-width: breakpoint('lg')) {
         width: 60%;
       }
-      
+
       @media screen and (min-width: breakpoint('lg')) and (max-width: breakpoint('xl')) {
         margin-right: 4rem;
       }
-      
+
       .text {
         @media screen and (min-width: breakpoint('lg')) and (max-width: breakpoint('xl')) {
           margin-right: 4rem;
         }
-        
+
         h1 {
           margin-top: 0;
         }
-        
+
         p {
           line-height: 1.66rem;
         }
       }
     }
-    
+
     .right {
       position: relative;
       top: 0;
       right: 0;
       width: 100%;
-      
+
       @media screen and (min-width: breakpoint('lg')) {
         width: 40%;
       }
-      
+
       @media screen and (min-width: breakpoint('lg')) and (max-width: breakpoint('xl')) {
         margin-left: 10rem;
       }
-      
+
       .image {
         @media screen and (max-width: breakpoint('lg')) {
           margin: 3.88rem;
-          
+
           img {
             width: 100%;
             height: auto;
           }
         }
-        
+
         @media screen and (min-width: breakpoint('lg')) {
           position: absolute;
           top: 0;
@@ -82,78 +82,81 @@
       }
     }
   }
-  
+
   .scrolldown {
     display: none;
     position: absolute;
     bottom: 13rem;
     left: 1.11rem;
-    
+
     @media screen and (min-width: breakpoint('lg')) {
-        display: block;
+      display: block;
     }
-    
+
     &::before {
-    	content: '';
-    	position: absolute;
-    	top: 0;
-    	left: -1.11rem;
-    	width: 2px;
-    	height: 5.55rem;
-    	background-color: color('black');
-    
-    	animation: elasticus 3s infinite;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -1.11rem;
+      width: 2px;
+      height: 5.55rem;
+      background-color: color('black');
+
+      animation: elasticus 3s infinite;
     }
   }
 }
 
 @keyframes elasticus {
-	0% {
-		-webkit-transform-origin: 0% 0%;
-		-ms-transform-origin: 0% 0%;
-		-moz-transform-origin: 0% 0%;
-		-o-transform-origin: 0% 0%;
-		transform-origin: 0% 0%;
-		-webkit-transform: scale(1, 0);
-		-ms-transform: scale(1, 0);
-		-moz-transform: scale(1, 0);
-		-o-transform: scale(1, 0);
-		transform: scale(1, 0);
-	}
-	50% {
-		-webkit-transform-origin: 0% 0%;
-		-ms-transform-origin: 0% 0%;
-		-moz-transform-origin: 0% 0%;
-		-o-transform-origin: 0% 0%;
-		transform-origin: 0% 0%;
-		-webkit-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1);
-	}
-	50.1% {
-		-webkit-transform-origin: 0% 100%;
-		-ms-transform-origin: 0% 100%;
-		-moz-transform-origin: 0% 100%;
-		-o-transform-origin: 0% 100%;
-		transform-origin: 0% 100%;
-		-webkit-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1);
-	}
-	100% {
-		-webkit-transform-origin: 0% 100%;
-		-ms-transform-origin: 0% 100%;
-		-moz-transform-origin: 0% 100%;
-		-o-transform-origin: 0% 100%;
-		transform-origin: 0% 100%;
-		-webkit-transform: scale(1, 0);
-		-ms-transform: scale(1, 0);
-		-moz-transform: scale(1, 0);
-		-o-transform: scale(1, 0);
-		transform: scale(1, 0);
-	}
+  0% {
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    -moz-transform: scale(1, 0);
+    -o-transform: scale(1, 0);
+    transform: scale(1, 0);
+  }
+
+  50% {
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  50.1% {
+    -webkit-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  100% {
+    -webkit-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    -moz-transform: scale(1, 0);
+    -o-transform: scale(1, 0);
+    transform: scale(1, 0);
+  }
 }

@@ -28,7 +28,7 @@
   border-radius: 5px;
   background-color: color('primary');
   margin-top: 4.44rem;
-  
+
   &:hover {
     color: color('white');
     box-shadow: 0 0 1rem rgba(color('primary'), 0.25);
@@ -43,7 +43,7 @@
   border: 1px solid color('primary');
   border-radius: 5px;
   background-color: color('white');
-  
+
   &:hover {
     color: color('primary');
     box-shadow: 0 0 1rem rgba(color('primary'), 0.25);
@@ -92,6 +92,7 @@
 .ce-gallery {
   overflow: unset;
 }
+
 // CE END
 
 .grey-box, .frame-grey-box {
@@ -159,12 +160,25 @@
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInOut {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

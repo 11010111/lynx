@@ -8,23 +8,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
+
   .element {
     width: 100%;
     max-width: 20rem;
     margin-top: 2.38rem;
-    
+
     @media screen and (min-width: breakpoint('md')) {
       margin-top: 7.38rem;
     }
-    
+
     .image {
       margin-bottom: 2.44rem;
     }
-    
+
     .text {
       max-width: 18.88rem;
-      
+
       p {
         line-height: 1.66rem;
       }
