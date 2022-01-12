@@ -49,7 +49,7 @@ nav.desktop .desktop-container .desktop-menu .parent {
   top: 0;
   right: 0;
   font-weight: 400;
-  padding: 1rem 1rem;
+  padding: 1rem;
   margin-right: 1rem;
 }
 nav.desktop .desktop-container .desktop-menu .parent a {
@@ -58,7 +58,7 @@ nav.desktop .desktop-container .desktop-menu .parent a {
   color: #354f5d;
 }
 nav.desktop .desktop-container .desktop-menu .parent a:hover {
-  color: #0630D1;
+  color: #0630d1;
 }
 nav.desktop .desktop-container .desktop-menu .parent .desktop-dropdown {
   display: none;
@@ -66,7 +66,7 @@ nav.desktop .desktop-container .desktop-menu .parent .desktop-dropdown {
   top: 3rem;
   right: -1rem;
   min-width: 5rem;
-  background-color: #ffffff;
+  background-color: #fff;
   text-align: right;
   border-top: 0;
   padding: 0.5rem 0;
@@ -82,7 +82,7 @@ nav.desktop .desktop-container .desktop-menu .parent:first-child {
   padding-left: 0;
 }
 nav.desktop .desktop-container .desktop-menu .has-children::after {
-  content: url("../../icons/dropdown.svg");
+  content: url('../../icons/dropdown.svg');
   position: absolute;
   top: 50%;
   right: -0.5rem;
@@ -100,7 +100,7 @@ nav.desktop .language-menu {
   right: 0;
   list-style: none;
   font-weight: bold;
-  padding: 1rem 1rem;
+  padding: 1rem;
   margin: 0 1rem 0 0;
   cursor: pointer;
 }
@@ -113,10 +113,10 @@ nav.desktop .language-menu a {
   color: #354f5d;
 }
 nav.desktop .language-menu a:hover {
-  color: #0630D1;
+  color: #0630d1;
 }
 nav.desktop .language-menu::after {
-  content: url("../../icons/dropdown.svg");
+  content: url('../../icons/dropdown.svg');
   position: absolute;
   top: 50%;
   right: -0.5rem;
@@ -135,7 +135,7 @@ nav.desktop .language-menu .language {
   top: 3rem;
   right: -1rem;
   min-width: 5rem;
-  background-color: #ffffff;
+  background-color: #fff;
   text-align: right;
   border-top: 0;
   padding: 0.5rem 0;
@@ -148,11 +148,11 @@ nav.desktop .language-menu .language li {
 }
 
 .desktop-fixed .desktop-container {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 .desktop-fixed .desktop-container .content-logo {
   margin-top: 0.77rem;
 }
 .desktop-fixed .desktop-container .wrap-menu-lang {
-  margin: 0 0 0 !important;
+  margin: 0 !important;
 }

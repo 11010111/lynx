@@ -14,30 +14,30 @@
 
 .btn-primary {
   display: inline-block;
-  color: #ffffff;
+  color: #fff;
   font-size: 1.11em;
   padding: 0.88rem 1.94rem;
-  border: 1px solid #0630D1;
+  border: 1px solid #0630d1;
   border-radius: 5px;
-  background-color: #0630D1;
+  background-color: #0630d1;
   margin-top: 4.44rem;
 }
 .btn-primary:hover {
-  color: #ffffff;
+  color: #fff;
   box-shadow: 0 0 1rem rgba(6, 48, 209, 0.25);
 }
 
 .btn-secondary {
   display: inline-block;
-  color: #0630D1;
+  color: #0630d1;
   font-size: 1.11em;
   padding: 0.88rem 1.94rem;
-  border: 1px solid #0630D1;
+  border: 1px solid #0630d1;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 .btn-secondary:hover {
-  color: #0630D1;
+  color: #0630d1;
   box-shadow: 0 0 1rem rgba(6, 48, 209, 0.25);
 }
 
@@ -85,7 +85,7 @@
   bottom: 4rem;
   width: 2.2rem;
   height: 2.2rem;
-  background-color: #0630D1;
+  background-color: #0630d1;
   box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   cursor: pointer;
@@ -100,7 +100,7 @@
   height: 1.75rem;
 }
 .scroll-top svg path {
-  fill: #ffffff;
+  fill: #fff;
 }
 .scroll-top img {
   width: 3rem;
@@ -111,7 +111,7 @@
   right: 1rem;
 }
 .scroll-top-active:hover {
-  background-color: #0630D1;
+  background-color: #0630d1;
 }
 
 .site_error {
