@@ -50,7 +50,10 @@ call_user_func(
         );
 
         ExtensionManagementUtility::addPageTSConfig(
-            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/Mod/Wizards/TextMedia.tsconfig">'
+            'mod.wizards.newContentElement.wizardItems.common.elements.textmedia {
+                title = Media
+                description = Text, Image, Video, Audio
+            }'
         );
 
         /*************************

@@ -19,7 +19,7 @@
   margin: 0;
 }
 .accordion header::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 2rem;
   right: 0;
@@ -29,7 +29,7 @@
   z-index: 0;
 }
 .accordion header::after {
-  content: '-';
+  content: "-";
   position: absolute;
   top: 1.8rem;
   right: 0.25rem;
@@ -44,7 +44,7 @@
 }
 
 .accordion-close header::after {
-  content: '+';
+  content: "+";
   transform: rotate(90deg);
 }
 .accordion-close .accordion-content {

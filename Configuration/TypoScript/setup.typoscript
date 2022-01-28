@@ -76,6 +76,13 @@ page {
             30 {
                 as = languageNavigation
             }
+
+            40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            40 {
+               special = rootline
+               special.range = 0|-1
+               as = rootline
+            }
         }
     }
 }

@@ -74,7 +74,7 @@ nav.mobile .menu-label {
   z-index: 1005;
 }
 nav.mobile .menu-label::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -0.7rem;
   left: 0;
@@ -85,7 +85,7 @@ nav.mobile .menu-label::before {
   transition: 0.5s;
 }
 nav.mobile .menu-label::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0.7rem;
   left: 0;
@@ -145,7 +145,7 @@ nav.mobile .mobile-container .mobile-menu .parent .mobile-dropdown {
   transition: height, margin-top 0.25s;
 }
 nav.mobile .mobile-container .mobile-menu .has-children::after {
-  content: url('../../icons/dropdown.svg');
+  content: url("../../icons/dropdown.svg");
   position: absolute;
   top: 1.5rem;
   right: 0;

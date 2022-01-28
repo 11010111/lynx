@@ -82,7 +82,7 @@ nav.desktop .desktop-container .desktop-menu .parent:first-child {
   padding-left: 0;
 }
 nav.desktop .desktop-container .desktop-menu .has-children::after {
-  content: url('../../icons/dropdown.svg');
+  content: url("../../icons/dropdown.svg");
   position: absolute;
   top: 50%;
   right: -0.5rem;
@@ -116,7 +116,7 @@ nav.desktop .language-menu a:hover {
   color: #0630d1;
 }
 nav.desktop .language-menu::after {
-  content: url('../../icons/dropdown.svg');
+  content: url("../../icons/dropdown.svg");
   position: absolute;
   top: 50%;
   right: -0.5rem;

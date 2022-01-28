@@ -57,7 +57,7 @@ buttons:
             enabled: false
         properties:
             class:
-                allowedClasses: 'link,btn-primary,btn-next,btn-prev,btn-border,link-download,link-folder,link-external,link-external-blank,link-mail'
+                allowedClasses: 'link,btn-primary,btn-next,btn-prev,btn-border,link-download,link-folder,link-external,link-external-blank,link-mail,link-tel'
         page:
             properties.:
                 class.:
@@ -78,6 +78,10 @@ buttons:
             properties.:
                 class:
                     default: 'link-mail'
+        telephone:
+            properties.:
+                class:
+                    default: 'link-tel'
 
 # Classes config
 classesAnchor:
@@ -117,6 +121,9 @@ classesAnchor:
     linkMail:
         class: 'link-mail'
         type: 'mail'
+    linkTel:
+        class: 'link-tel'
+        type: 'telephone'
 
 classes:
     link:
