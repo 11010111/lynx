@@ -28,9 +28,9 @@ page {
         }
       
         dataProcessing {
-            # Greater then 30
-            #40 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-            #40 {
+            # Greater then 40
+            #50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            #50 {
             #    collections = 1
             #    collections.recursive = 1
             #    as = myCollection
