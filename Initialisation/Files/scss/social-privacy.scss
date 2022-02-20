@@ -1,7 +1,5 @@
 // Imports
 @import 'functions';
-@import 'variables';
-
 
 // Social & Privacy
 .social-privacy-container {
@@ -73,7 +71,7 @@
         text-decoration: none;
 
         &:hover {
-          color: color('green');
+          color: var(--link-hover);
         }
       }
 

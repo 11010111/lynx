@@ -93,7 +93,7 @@
   left: -1.11rem;
   width: 2px;
   height: 5.55rem;
-  background-color: #000;
+  background-color: var(--black);
   animation: elasticus 3s infinite;
 }
 

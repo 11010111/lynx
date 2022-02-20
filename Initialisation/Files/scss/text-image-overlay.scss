@@ -1,7 +1,5 @@
 // Imports
 @import 'functions';
-@import 'variables';
-
 
 // Text - Image Overlay
 .text-image-overlay-container {
@@ -9,7 +7,7 @@
   top: 0;
   left: 0;
   padding: 2.66rem 2rem 1.61rem;
-  background-color: color('lightgrey');
+  background-color: var(--lightgrey);
   max-width: 68.61rem;
 
   @media screen and (min-width: breakpoint('xxl')) {

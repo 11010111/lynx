@@ -1,5 +1,4 @@
 // Imports
-@import 'variables';
 @import 'functions';
 
 // Container
@@ -23,17 +22,10 @@
 }
 
 .full {
-  width: calc(100% + var(--container-margin));
-  max-width: calc(100% + var(--container-margin));
-  margin-left: calc(0% - var(--container-margin) / 2);
-  margin-right: calc(0% - var(--container-margin) / 2);
-
-  @media screen and (min-width: breakpoint('md')) {
-    width: calc(100% + var(--container-margin) * 2);
-    max-width: calc(100% + var(--container-margin) * 2);
-    margin-left: calc(0% - var(--container-margin));
-    margin-right: calc(0% - var(--container-margin));
-  }
+  width: calc(100% + var(--container-margin) * 2);
+  max-width: calc(100% + var(--container-margin) * 2);
+  margin-left: calc(0% - var(--container-margin));
+  margin-right: calc(0% - var(--container-margin));
 
   .full {
     width: 100%;
@@ -43,13 +35,8 @@
   }
 
   .content {
-    padding-left: calc(var(--container-margin) / 2);
-    padding-right: calc(var(--container-margin) / 2);
-
-    @media screen and (min-width: breakpoint('md')) {
-      padding-left: var(--container-margin);
-      padding-right: var(--container-margin);
-    }
+    padding-left: var(--container-margin);
+    padding-right: var(--container-margin);
 
     // Based on root em (16px)
     @media screen and (min-width: 91.25em) {
@@ -62,7 +49,7 @@
 .content--xl {
   max-width: 98rem;
 
-  @media screen and (max-width: 114rem) {
+  @media screen and (max-width: 114em) {
     padding: 0 var(--container-margin);
   }
 }

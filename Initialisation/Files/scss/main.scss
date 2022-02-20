@@ -1,5 +1,4 @@
 // Imports
-@import 'variables';
 @import 'functions';
 
 // Content
@@ -21,32 +20,30 @@
 
 .btn-primary {
   display: inline-block;
-  color: color('white');
+  color: var(--white);
   font-size: 1.11em;
   padding: 0.88rem 1.94rem;
-  border: 1px solid color('primary');
+  border: 1px solid var(--primary);
   border-radius: 5px;
-  background-color: color('primary');
+  background-color: var(--primary);
   margin-top: 4.44rem;
 
   &:hover {
-    color: color('white');
-    box-shadow: 0 0 1rem rgba(color('primary'), 0.25);
+    color: var(--white);
   }
 }
 
 .btn-secondary {
   display: inline-block;
-  color: color('primary');
+  color: var(--primary);
   font-size: 1.11em;
   padding: 0.88rem 1.94rem;
-  border: 1px solid color('primary');
+  border: 1px solid var(--primary);
   border-radius: 5px;
-  background-color: color('white');
+  background-color: var(--white);
 
   &:hover {
-    color: color('primary');
-    box-shadow: 0 0 1rem rgba(color('primary'), 0.25);
+    color: var(--primary);
   }
 }
 
@@ -97,7 +94,7 @@
 
 .grey-box, .frame-grey-box {
   padding: 0.25rem;
-  background-color: #f5f5f5;
+  background-color: var(--lightgrey);
 }
 
 .scroll-top {
@@ -109,8 +106,7 @@
   bottom: 4rem;
   width: 2.2rem;
   height: 2.2rem;
-  background-color: color('primary');
-  box-shadow: 0 0 0.25rem rgb(0 0 0 / 25%);
+  background-color: var(--primary);
   border-radius: 5px;
   cursor: pointer;
   z-index: 999;
@@ -124,7 +120,7 @@
     height: 1.75rem;
 
     path {
-      fill: color('white');
+      fill: var(--white);
     }
   }
 
@@ -138,7 +134,7 @@
   right: 1rem;
 
   &:hover {
-    background-color: color('link-hover');
+    background-color: var(--link-hover);
   }
 }
 

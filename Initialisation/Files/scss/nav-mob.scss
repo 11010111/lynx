@@ -70,13 +70,13 @@ nav.mobile {
         &::before {
           transform-origin: right;
           transform: rotate(-45deg);
-          background-color: color('error');
+          background-color: var(--error);
         }
 
         &::after {
           transform-origin: right;
           transform: rotate(45deg);
-          background-color: color('error');
+          background-color: var(--error);
         }
       }
 
@@ -92,7 +92,7 @@ nav.mobile {
     right: 0;
     width: 2rem;
     height: 3px;
-    background-color: color('anthrazit');
+    background-color: var(--black);
     z-index: 1005;
 
     &::before {
@@ -103,8 +103,8 @@ nav.mobile {
       width: 2rem;
       height: 3px;
       margin-bottom: 0.5rem;
-      background-color: color('anthrazit');
-      transition: 0.5s;
+      background-color: var(--black);
+      transition: background-color 0.25s;
     }
 
     &::after {
@@ -115,8 +115,8 @@ nav.mobile {
       width: 2rem;
       height: 3px;
       margin-bottom: 0.5rem;
-      background-color: color('anthrazit');
-      transition: 0.5s;
+      background-color: var(--black);
+      transition: background-color 0.25s;
     }
   }
 
@@ -127,16 +127,16 @@ nav.mobile {
     width: 100%;
     height: 100%;
     max-width: 40rem;
-    background-color: color('white');
+    background-color: var(--white);
     margin: 0;
     z-index: 1001;
-    transition: 0.5s;
+    transition: color 0.25s;
 
     .active {
-      color: color('primary') !important;
+      color: var(--primary) !important;
 
       &:hover {
-        color: color('primary') !important;
+        color: var(--primary) !important;
       }
     }
 
@@ -160,7 +160,7 @@ nav.mobile {
         font-weight: bold;
 
         a {
-          color: color('anthrazit');
+          color: var(--primary);
           text-decoration: none;
         }
 
@@ -232,7 +232,7 @@ nav.mobile {
 
       .active {
         a {
-          color: color('primary');
+          color: var(--primary);
         }
       }
     }
@@ -240,6 +240,6 @@ nav.mobile {
 }
 
 nav.mobile-fixed {
-  background-color: color('white');
+  background-color: var(--white);
   box-shadow: 0 0 0.5rem rgb(0 0 0 / 10%);
 }

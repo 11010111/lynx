@@ -60,6 +60,9 @@
 .social-privacy-container .privacy-links .privacy-link a {
   text-decoration: none;
 }
+.social-privacy-container .privacy-links .privacy-link a:hover {
+  color: var(--link-hover);
+}
 .social-privacy-container .privacy-links .privacy-link:last-child {
   margin-right: 0;
 }

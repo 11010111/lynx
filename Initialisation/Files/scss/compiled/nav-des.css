@@ -5,7 +5,7 @@
 }
 nav.desktop .content-logo {
   margin-top: 2.77rem;
-  transition: margin-top 0.5s;
+  transition: margin-top 0.25s;
 }
 nav.desktop .content-logo .logo {
   display: flex;
@@ -31,7 +31,7 @@ nav.desktop .desktop-container {
 }
 nav.desktop .desktop-container .wrap-menu-lang {
   margin: 1.44rem 0 0;
-  transition: margin-top 0.5s;
+  transition: margin-top 0.25s;
 }
 nav.desktop .desktop-container .buy-now {
   margin: 0 0 0 2.77rem;
@@ -55,10 +55,10 @@ nav.desktop .desktop-container .desktop-menu .parent {
 nav.desktop .desktop-container .desktop-menu .parent a {
   font-size: 1.11em;
   text-decoration: none;
-  color: #354f5d;
+  color: var(--link);
 }
 nav.desktop .desktop-container .desktop-menu .parent a:hover {
-  color: #0630d1;
+  color: var(--link-hover);
 }
 nav.desktop .desktop-container .desktop-menu .parent .desktop-dropdown {
   display: none;
@@ -66,7 +66,7 @@ nav.desktop .desktop-container .desktop-menu .parent .desktop-dropdown {
   top: 3rem;
   right: -1rem;
   min-width: 5rem;
-  background-color: #fff;
+  background-color: var(--white);
   text-align: right;
   border-top: 0;
   padding: 0.5rem 0;
@@ -87,7 +87,7 @@ nav.desktop .desktop-container .desktop-menu .has-children::after {
   top: 50%;
   right: -0.5rem;
   transform: translateY(-40%);
-  transition: 0.5s;
+  transition: 0.25s;
 }
 nav.desktop .desktop-container .desktop-menu .child {
   font-size: 0.9em;
@@ -110,10 +110,10 @@ nav.desktop .language-menu ul {
 nav.desktop .language-menu a {
   font-size: 1.11em;
   text-decoration: none;
-  color: #354f5d;
+  color: var(--link);
 }
 nav.desktop .language-menu a:hover {
-  color: #0630d1;
+  color: var(--link-hover);
 }
 nav.desktop .language-menu::after {
   content: url("../../icons/dropdown.svg");
@@ -121,7 +121,7 @@ nav.desktop .language-menu::after {
   top: 50%;
   right: -0.5rem;
   transform: translateY(-40%);
-  transition: 0.5s;
+  transition: 0.25s;
 }
 nav.desktop .language-menu:hover .language {
   display: block;
@@ -135,7 +135,7 @@ nav.desktop .language-menu .language {
   top: 3rem;
   right: -1rem;
   min-width: 5rem;
-  background-color: #fff;
+  background-color: var(--white);
   text-align: right;
   border-top: 0;
   padding: 0.5rem 0;
@@ -148,7 +148,7 @@ nav.desktop .language-menu .language li {
 }
 
 .desktop-fixed .desktop-container {
-  background-color: #fff;
+  background-color: var(--white);
 }
 .desktop-fixed .desktop-container .content-logo {
   margin-top: 0.77rem;

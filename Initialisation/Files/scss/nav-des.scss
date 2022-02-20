@@ -1,5 +1,4 @@
 // Imports
-@import 'variables';
 @import 'functions';
 
 // Desktop Navigation code here...
@@ -10,7 +9,7 @@ nav.desktop {
 
   .content-logo {
     margin-top: 2.77rem;
-    transition: margin-top 0.5s;
+    transition: margin-top 0.25s;
 
     .logo {
       display: flex;
@@ -48,7 +47,7 @@ nav.desktop {
 
     .wrap-menu-lang {
       margin: 1.44rem 0 0;
-      transition: margin-top 0.5s;
+      transition: margin-top 0.25s;
     }
 
     .buy-now {
@@ -75,10 +74,10 @@ nav.desktop {
         a {
           font-size: 1.11em;
           text-decoration: none;
-          color: color('anthrazit');
+          color: var(--link);
 
           &:hover {
-            color: color('link-hover');
+            color: var(--link-hover);
           }
         }
 
@@ -88,7 +87,7 @@ nav.desktop {
           top: 3rem;
           right: -1rem;
           min-width: 5rem;
-          background-color: color('white');
+          background-color: var(--white);
           text-align: right;
           border-top: 0;
           padding: 0.5rem 0;
@@ -121,7 +120,7 @@ nav.desktop {
           top: 50%;
           right: -0.5rem;
           transform: translateY(-40%);
-          transition: 0.5s;
+          transition: 0.25s;
         }
       }
 
@@ -150,10 +149,10 @@ nav.desktop {
     a {
       font-size: 1.11em;
       text-decoration: none;
-      color: color('anthrazit');
+      color: var(--link);
 
       &:hover {
-        color: color('link-hover');
+        color: var(--link-hover);
       }
     }
 
@@ -163,7 +162,7 @@ nav.desktop {
       top: 50%;
       right: -0.5rem;
       transform: translateY(-40%);
-      transition: 0.5s;
+      transition: 0.25s;
     }
 
     &:hover {
@@ -186,7 +185,7 @@ nav.desktop {
       top: 3rem;
       right: -1rem;
       min-width: 5rem;
-      background-color: color('white');
+      background-color: var(--white);
       text-align: right;
       border-top: 0;
       padding: 0.5rem 0;
@@ -203,7 +202,7 @@ nav.desktop {
 
 .desktop-fixed {
   .desktop-container {
-    background-color: color('white');
+    background-color: var(--white);
 
     .content-logo {
       margin-top: 0.77rem;
