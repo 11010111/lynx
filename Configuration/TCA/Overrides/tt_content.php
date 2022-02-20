@@ -212,24 +212,10 @@ call_user_func(
                         'type' => 'select',
                         'renderType' => 'selectSingle',
                         'items' => [
-                            ['Content', 'content'],
-                            ['Full Width', 'full']
-                        ]
-                    ],
-                    'displayCond' => [
-                        'OR' => [
-                            'FIELD:CType:=:slider',
-                            'FIELD:CType:=:accordion',
-                            'FIELD:CType:=:100',
-                            'FIELD:CType:=:50-50',
-                            'FIELD:CType:=:25-75',
-                            'FIELD:CType:=:75-25',
-                            'FIELD:CType:=:33-66',
-                            'FIELD:CType:=:66-33',
-                            'FIELD:CType:=:33-33-33',
-                            'FIELD:CType:=:25-25-25-25',
-                            'FIELD:CType:=:20-80',
-                            'FIELD:CType:=:80-20'
+                            ['Excess Width', ''],
+                            ['Content Width', 'content'],
+                            ['Full Width', 'full'],
+                            ['Full Width (padding)', 'full-padding']
                         ]
                     ]
                 ],
@@ -240,19 +226,6 @@ call_user_func(
                     'config' => [
                         'type' => 'select',
                         'renderType' => 'selectSingle'
-                    ],
-                    'displayCond' => [
-                        'OR' => [
-                            'FIELD:CType:=:50-50',
-                            'FIELD:CType:=:25-75',
-                            'FIELD:CType:=:75-25',
-                            'FIELD:CType:=:33-66',
-                            'FIELD:CType:=:66-33',
-                            'FIELD:CType:=:33-33-33',
-                            'FIELD:CType:=:25-25-25-25',
-                            'FIELD:CType:=:20-80',
-                            'FIELD:CType:=:80-20'
-                        ]
                     ]
                 ],
                 'alignment' => [
@@ -271,21 +244,7 @@ call_user_func(
                     ],
                     'displayCond' => [
                         'AND' => [
-                            'FIELD:container:=:content',
-                            'OR' => [
-                                'FIELD:CType:=:slider',
-                                'FIELD:CType:=:accordion',
-                                'FIELD:CType:=:100',
-                                'FIELD:CType:=:50-50',
-                                'FIELD:CType:=:25-75',
-                                'FIELD:CType:=:75-25',
-                                'FIELD:CType:=:33-66',
-                                'FIELD:CType:=:66-33',
-                                'FIELD:CType:=:33-33-33',
-                                'FIELD:CType:=:25-25-25-25',
-                                'FIELD:CType:=:20-80',
-                                'FIELD:CType:=:80-20'
-                            ]
+                            'FIELD:container:=:content'
                         ]
                     ]
                 ],
@@ -324,7 +283,10 @@ call_user_func(
                     ],
                     'displayCond' => [
                         'AND' => [
-                            'FIELD:container:=:full'
+                            'FIELD:container:=:full',
+                            'OR' => [
+                                'FIELD:container:=:full-padding'
+                            ]
                         ]
                     ]
                 ],
@@ -339,7 +301,10 @@ call_user_func(
                     ],
                     'displayCond' => [
                         'AND' => [
-                            'FIELD:container:=:full'
+                            'FIELD:container:=:full',
+                            'OR' => [
+                                'FIELD:container:=:full-padding'
+                            ]
                         ]
                     ]
                 ]
