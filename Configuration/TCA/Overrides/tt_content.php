@@ -283,8 +283,8 @@ call_user_func(
                     ],
                     'displayCond' => [
                         'AND' => [
-                            'FIELD:container:=:full',
                             'OR' => [
+                                'FIELD:container:=:full',
                                 'FIELD:container:=:full-padding'
                             ]
                         ]
