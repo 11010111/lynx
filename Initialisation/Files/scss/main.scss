@@ -29,7 +29,8 @@
   margin-top: 4.44rem;
 
   &:hover {
-    color: var(--white);
+    color: var(--primary);
+    background-color: var(--white);
   }
 }
 
@@ -43,7 +44,8 @@
   background-color: var(--white);
 
   &:hover {
-    color: var(--primary);
+    color: var(--white);
+    background-color: var(--primary);
   }
 }
 

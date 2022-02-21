@@ -37,8 +37,8 @@
   --black: #000;
   --white: #fff;
   --lightgrey: #eee;
-  --link: #3c55ff;
-  --link-hover: #0630d1;
+  --link: #0630d1;
+  --link-hover: #3c55ff;
   --primary: #0630d1;
   --secondary: #14161b;
   --font-family: "Basier Circle";
@@ -55,6 +55,11 @@
   :root {
     --container-margin: 2rem;
     --flex-between: 1rem;
+  }
+}
+@media screen and (min-width: 67.5em) {
+  :root {
+    --container-margin: 4rem;
   }
 }
 

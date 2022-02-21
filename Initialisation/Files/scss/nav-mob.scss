@@ -104,7 +104,7 @@ nav.mobile {
       height: 3px;
       margin-bottom: 0.5rem;
       background-color: var(--black);
-      transition: background-color 0.25s;
+      transition: 0.25s;
     }
 
     &::after {
@@ -116,7 +116,7 @@ nav.mobile {
       height: 3px;
       margin-bottom: 0.5rem;
       background-color: var(--black);
-      transition: background-color 0.25s;
+      transition: 0.25s;
     }
   }
 
@@ -130,7 +130,7 @@ nav.mobile {
     background-color: var(--white);
     margin: 0;
     z-index: 1001;
-    transition: color 0.25s;
+    transition: right 0.25s;
 
     .active {
       color: var(--primary) !important;
@@ -165,7 +165,7 @@ nav.mobile {
         }
 
         .parent-link {
-          font-size: 1.94em;
+          font-size: 1.38rem;
         }
 
         .mobile-dropdown {
@@ -199,7 +199,7 @@ nav.mobile {
 
       .child {
         .child-link {
-          font-size: 1.38em;
+          font-size: 1rem;
           font-weight: normal;
         }
       }

@@ -84,7 +84,7 @@ nav.mobile .menu-label::before {
   height: 3px;
   margin-bottom: 0.5rem;
   background-color: var(--black);
-  transition: background-color 0.25s;
+  transition: 0.25s;
 }
 nav.mobile .menu-label::after {
   content: "";
@@ -95,7 +95,7 @@ nav.mobile .menu-label::after {
   height: 3px;
   margin-bottom: 0.5rem;
   background-color: var(--black);
-  transition: background-color 0.25s;
+  transition: 0.25s;
 }
 nav.mobile .mobile-container {
   position: fixed;
@@ -107,7 +107,7 @@ nav.mobile .mobile-container {
   background-color: var(--white);
   margin: 0;
   z-index: 1001;
-  transition: color 0.25s;
+  transition: right 0.25s;
 }
 nav.mobile .mobile-container .active {
   color: var(--primary) !important;
@@ -138,7 +138,7 @@ nav.mobile .mobile-container .mobile-menu .parent a {
   text-decoration: none;
 }
 nav.mobile .mobile-container .mobile-menu .parent .parent-link {
-  font-size: 1.94em;
+  font-size: 1.38rem;
 }
 nav.mobile .mobile-container .mobile-menu .parent .mobile-dropdown {
   height: 0;
@@ -161,7 +161,7 @@ nav.mobile .mobile-container .mobile-menu .parent-open .mobile-dropdown {
   margin: 1rem 0 0;
 }
 nav.mobile .mobile-container .mobile-menu .child .child-link {
-  font-size: 1.38em;
+  font-size: 1rem;
   font-weight: normal;
 }
 nav.mobile .language-container {
