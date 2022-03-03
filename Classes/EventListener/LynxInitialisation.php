@@ -16,20 +16,8 @@ use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
  *
  * @package Swe\Lynx\EventListener
  */
-class LynxInitialisation extends ResourceFactory
+class LynxInitialisation
 {
-    /** @var ResourceFactory */
-    protected ResourceFactory $resourceFactory;
-
-    /**
-     * @param ResourceFactory $resourceFactory
-     * @return void
-     */
-    public function injectResourceFactory(ResourceFactory $resourceFactory)
-    {
-        $this->resourceFactory = $resourceFactory;
-    }
-
     /**
      * @param AfterExtensionFilesHaveBeenImportedEvent $event
      * @throws ExistingTargetFolderException
@@ -39,7 +27,9 @@ class LynxInitialisation extends ResourceFactory
     public function __invoke(AfterExtensionFilesHaveBeenImportedEvent $event)
     {
         if ($event->getPackageKey() === 'lynx') {
-            $storage = $this->resourceFactory->getStorageObject(1);
+            /** @var ResourceFactory $resourceFactory */
+            $resourceFactory = GeneralUtility::makeInstance(ResourceFactory::class);
+            $storage = $resourceFactory->getStorageObject(1);
 
             if (!$storage->hasFolder('/Redakteur/')) {
                 $storage->createFolder('/Redakteur/');

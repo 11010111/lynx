@@ -12,7 +12,9 @@
 			<TYPO3_version></TYPO3_version>
 			<created>2021</created>
 		</meta>
-		<static_tables index="relStaticTables" type="array"></static_tables>
+		<static_tables index="relStaticTables" type="array">
+			<tablename index="0">sys_file_storage</tablename>
+		</static_tables>
 		<excludeMap type="array"></excludeMap>
 		<softrefCfg type="array"></softrefCfg>
 		<extensionDependencies type="array">
@@ -44,6 +46,7 @@
 					<uid>1</uid>
 					<pid>0</pid>
 					<title>Lynx</title>
+					<relationLevel>1</relationLevel>
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array">
 						<softref_element index="tsconfig_includes:ext_fileref:2" type="array">
@@ -133,6 +136,15 @@
 							<table>be_groups</table>
 						</element>
 					</relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+			</table>
+			<table index="sys_file_storage" type="array">
+				<rec index="1" type="array">
+					<uid>1</uid>
+					<pid>0</pid>
+					<title>fileadmin</title>
+					<relations index="rels" type="array"></relations>
 					<softrefs type="array"></softrefs>
 				</rec>
 			</table>
@@ -249,8 +261,10 @@
 					<item index="2">1</item>
 					<item index="1">1</item>
 				</table>
+				<table index="sys_file_storage" type="array">
+					<item index="1">1</item>
+				</table>
 				<table index="sys_filemounts" type="array">
-					<item index="2">1</item>
 					<item index="1">1</item>
 				</table>
 			</page_contents>
