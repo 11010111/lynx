@@ -1,6 +1,16 @@
 services:
-  Swe\Lynx\EventListener\LynxInitialisation:
-    tags:
-      - name: event.listener
-        identifier: 'lynxInitialisationListener'
-        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Swe\Lynx\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Domain/Model/*'
+
+  #Swe\Lynx\EventListener\LynxInitialisation:
+  #  public: true
+  #  tags:
+  #    - name: event.listener
+  #      identifier: 'lynxInitialisationListener'
+  #      event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent

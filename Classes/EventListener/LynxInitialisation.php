@@ -16,8 +16,20 @@ use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
  *
  * @package Swe\Lynx\EventListener
  */
-class LynxInitialisation
+class LynxInitialisation extends ResourceFactory
 {
+    /** @var ResourceFactory */
+    protected ResourceFactory $resourceFactory;
+
+    /**
+     * @param ResourceFactory $resourceFactory
+     * @return void
+     */
+    public function injectResourceFactory(ResourceFactory $resourceFactory)
+    {
+        $this->resourceFactory = $resourceFactory;
+    }
+
     /**
      * @param AfterExtensionFilesHaveBeenImportedEvent $event
      * @throws ExistingTargetFolderException
@@ -27,18 +39,11 @@ class LynxInitialisation
     public function __invoke(AfterExtensionFilesHaveBeenImportedEvent $event)
     {
         if ($event->getPackageKey() === 'lynx') {
-            /** @var ResourceFactory $resourceFactory */
-            $resourceFactory = GeneralUtility::makeInstance(ResourceFactory::class);
-            $storage = $resourceFactory->getStorageObject(1);
+            $storage = $this->resourceFactory->getStorageObject(1);
 
-            if (!$storage->hasFolder('/Redakteur/Dokumente/')) {
-                $storage->createFolder('/Redakteur/Dokumente/');
-                $this->writeFileMount('Dokumente', '/Redakteur/Dokumente/');
-            }
-
-            if (!$storage->hasFolder('/Redakteur/Bilder/')) {
-                $storage->createFolder('/Redakteur/Bilder/');
-                $this->writeFileMount('Bilder', '/Redakteur/Bilder/');
+            if (!$storage->hasFolder('/Redakteur/')) {
+                $storage->createFolder('/Redakteur/');
+                $this->writeFileMount('Redakteur', '/Redakteur/');
             }
         }
     }

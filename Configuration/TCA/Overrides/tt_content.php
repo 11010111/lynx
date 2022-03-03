@@ -9,7 +9,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
-                '100',
+                'c100',
                 '100%',
                 '1 Column Container',
                 [
@@ -23,7 +23,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
-                '50-50',
+                'c50-50',
                 '50% - 50%',
                 '2 Columns Container',
                 [
@@ -38,7 +38,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
-                '25-75',
+                'c25-75',
                 '25% - 75%',
                 '2 Columns Container',
                 [
@@ -53,7 +53,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
-                '75-25',
+                'c75-25',
                 '75% - 25%',
                 '2 Columns Container',
                 [
@@ -68,7 +68,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
-                '33-66',
+                'c33-66',
                 '33% - 66%',
                 '2 Columns Container',
                 [
@@ -83,7 +83,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
-                '66-33',
+                'c66-33',
                 '66% - 33%',
                 '2 Columns Container',
                 [
@@ -98,7 +98,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
-                '33-33-33',
+                'c33-33-33',
                 '33% - 33% - 33%',
                 '3 Columns Container',
                 [
@@ -114,7 +114,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
-                '25-25-25-25',
+                'c25-25-25-25',
                 '25% - 25% - 25% -25%',
                 '4 Columns Container',
                 [
@@ -131,7 +131,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
-                '20-80',
+                'c20-80',
                 '20% - 80%',
                 '2 Columns Container',
                 [
@@ -146,7 +146,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
-                '80-20',
+                'c80-20',
                 '80% - 20%',
                 '2 Columns Container',
                 [
@@ -280,14 +280,6 @@ call_user_func(
                         'type' => 'input',
                         'renderType' => 'colorpicker',
                         'size' => 10,
-                    ],
-                    'displayCond' => [
-                        'AND' => [
-                            'OR' => [
-                                'FIELD:container:=:full',
-                                'FIELD:container:=:full-padding'
-                            ]
-                        ]
                     ]
                 ],
                 'foreground_color' => [
@@ -298,14 +290,6 @@ call_user_func(
                         'type' => 'input',
                         'renderType' => 'colorpicker',
                         'size' => 10,
-                    ],
-                    'displayCond' => [
-                        'AND' => [
-                            'OR' => [
-                                'FIELD:container:=:full',
-                                'FIELD:container:=:full-padding'
-                            ]
-                        ]
                     ]
                 ]
             ]
