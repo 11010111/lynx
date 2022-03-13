@@ -72,6 +72,11 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
 }
+@media screen and (min-width: 1921px) {
+  html {
+    font-size: calc(1vw - 1.0666666667px);
+  }
+}
 
 body {
   width: 100%;
@@ -99,7 +104,12 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem;
   line-height: 1.25;
+}
+
+p {
+  margin: 0 0 1rem;
 }
 
 h1 {
@@ -116,6 +126,7 @@ h1 {
 h2 {
   font-size: 1.77em;
   line-height: 2.77rem;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 48em) {
   h2 {
@@ -126,6 +137,7 @@ h2 {
 h3 {
   font-size: 1.38em;
   line-height: 1.94rem;
+  margin-bottom: 1.66rem;
 }
 @media screen and (min-width: 48em) {
   h3 {

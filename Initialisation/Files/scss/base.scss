@@ -42,6 +42,11 @@ html {
 
   scroll-behavior: smooth;
   scrollbar-width: thin; // Scrollbar: Firefox
+
+  // 1920px (width) / 18 (font-size) / 100%
+  @media screen and (min-width: 1921px) {
+    font-size: calc(1vw - 1.0666666666666667px);
+  }
 }
 
 body {
@@ -72,7 +77,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem;
   line-height: 1.25;
+}
+
+p {
+  margin: 0 0 1rem;
 }
 
 h1 {
@@ -88,6 +98,7 @@ h1 {
 h2 {
   font-size: 1.77em;
   line-height: 2.77rem;
+  margin-bottom: 2rem;
 
   @media screen and (min-width: breakpoint('md')) {
     font-size: 2.77em;
@@ -97,6 +108,7 @@ h2 {
 h3 {
   font-size: 1.38em;
   line-height: 1.94rem;
+  margin-bottom: 1.66rem;
 
   @media screen and (min-width: breakpoint('md')) {
     font-size: 1.94em;
