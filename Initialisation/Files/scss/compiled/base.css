@@ -78,7 +78,7 @@ html {
 }
 @media screen and (min-width: 1921px) {
   html {
-    font-size: calc(1vw - 1.0666666667px);
+      font-size: calc(1vw - 1.0666666666666667px);
   }
 }
 
