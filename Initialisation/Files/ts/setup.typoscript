@@ -26,7 +26,7 @@ page {
           linkNonClickable = TEXT
           #linkNonClickable.value = 1
         }
-      
+
         dataProcessing {
             # Greater then 40
             #50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
@@ -61,15 +61,15 @@ page {
 
   	# CSS
     includeCSS {
-        container = fileadmin/lynx/scss/compiled/container.css
-        gap = fileadmin/lynx/scss/compiled/gap.css
-        flex = fileadmin/lynx/scss/compiled/flex.css
-        desktop = fileadmin/lynx/scss/compiled/nav-des.css
-        mobile = fileadmin/lynx/scss/compiled/nav-mob.css
-        footer = fileadmin/lynx/scss/compiled/footer.css
-        rte = fileadmin/lynx/scss/compiled/rte.css
-        base = fileadmin/lynx/scss/compiled/base.css
-        main = fileadmin/lynx/scss/compiled/main.css
+        container = /fileadmin/lynx/scss/compiled/container.css
+        gap = /fileadmin/lynx/scss/compiled/gap.css
+        flex = /fileadmin/lynx/scss/compiled/flex.css
+        desktop = /fileadmin/lynx/scss/compiled/nav-des.css
+        mobile = /fileadmin/lynx/scss/compiled/nav-mob.css
+        footer = /fileadmin/lynx/scss/compiled/footer.css
+        rte = /fileadmin/lynx/scss/compiled/rte.css
+        base = /fileadmin/lynx/scss/compiled/base.css
+        main = /fileadmin/lynx/scss/compiled/main.css
     }
 
   	# Header JS for Libraries / Frameworks
@@ -79,13 +79,13 @@ page {
 
   	# Footer JS
     includeJSFooter {
-        fixed_navigation = fileadmin/lynx/js/fixed-navigation.js
-        mobile_menu = fileadmin/lynx/js/mobile-menu.js
-        alignment = fileadmin/lynx/js/alignment.js
-        scroll_top = fileadmin/lynx/js/scroll-top.js
-        equal_height = fileadmin/lynx/js/equal-height.js
-        container_colors = fileadmin/lynx/js/container-colors.js
-        main_js = fileadmin/lynx/js/main.js
+        fixed_navigation = /fileadmin/lynx/js/fixed-navigation.js
+        mobile_menu = /fileadmin/lynx/js/mobile-menu.js
+        alignment = /fileadmin/lynx/js/alignment.js
+        scroll_top = /fileadmin/lynx/js/scroll-top.js
+        equal_height = /fileadmin/lynx/js/equal-height.js
+        container_colors = /fileadmin/lynx/js/container-colors.js
+        main_js = /fileadmin/lynx/js/main.js
     }
 
     meta {
