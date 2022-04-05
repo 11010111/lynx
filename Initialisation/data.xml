@@ -1143,7 +1143,7 @@
 				<field index="workspace_perms" type="integer">1</field>
 				<field index="lockToDomain"></field>
 				<field index="disableIPlock" type="integer">0</field>
-				<field index="TSconfig"></field>
+				<field index="TSconfig">options.pageTree.showPageIdWithTitle = 1</field>
 				<field index="lastlogin" type="integer">0</field>
 				<field index="createdByAction" type="integer">0</field>
 				<field index="usergroup_cached_list" type="NULL"></field>
