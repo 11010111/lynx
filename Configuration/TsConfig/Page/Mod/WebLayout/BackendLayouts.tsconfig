@@ -2,3 +2,4 @@
 # BACKENDLAYOUTS
 #
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:lynx/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts" extensions="tsconfig">
+<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/lynx/tsconfig/BackendLayouts" extensions="tsconfig">
