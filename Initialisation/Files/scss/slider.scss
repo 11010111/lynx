@@ -3,6 +3,10 @@
 
 
 // Slider Container
+:root {
+  --swiper-theme-color: #0630d1;
+}
+
 .slider-content {
   position: relative;
   width: 100%;
@@ -17,8 +21,4 @@
       max-width: 100%;
     }
   }
-}
-
-:root {
-  --swiper-theme-color: #0630d1;
 }
