@@ -1,25 +1,28 @@
 // Imports
 @import 'functions';
 
-// Gaps - TOP / BOTTOM
-@each $gap, $options in $gaps {
-  @media screen and (min-width: breakpoint($gap)) {
-    @each $size, $value in $options {
-      .frame-space-before-#{$size} {
-        margin-top: $value;
-      }
+// Gaps variables
+:root {
+  @each $size in $gaps {
+    --gap-#{$size}: calc((#{$size} / 18) * 1rem);
+  }
+}
 
-      .frame-space-after-#{$size} {
-        margin-bottom: $value;
-      }
+// Gaps Generator
+@each $size in $gaps {
+  .frame-space-before-#{$size} {
+    margin-top: var(--gap-#{$size});
+  }
 
-      .frame-space-inline-before-#{$size} {
-        padding-top: $value;
-      }
+  .frame-space-after-#{$size} {
+    margin-bottom: var(--gap-#{$size});
+  }
 
-      .frame-space-inline-after-#{$size} {
-        padding-bottom: $value;
-      }
-    }
+  .frame-space-inline-before-#{$size} {
+    padding-top: var(--gap-#{$size});
+  }
+
+  .frame-space-inline-after-#{$size} {
+    padding-bottom: var(--gap-#{$size});
   }
 }
