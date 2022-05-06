@@ -22,7 +22,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/f100.xml',
+            'FILE:fileadmin/lynx/flexform/f100.xml',
             'c100'
         );
 
@@ -50,7 +50,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/f50-50.xml',
+            'FILE:fileadmin/lynx/flexform/f50-50.xml',
             'c50-50'
         );
 
@@ -78,7 +78,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/f25-75.xml',
+            'FILE:fileadmin/lynx/flexform/f25-75.xml',
             'c25-75'
         );
 
@@ -106,7 +106,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/f75-25.xml',
+            'FILE:fileadmin/lynx/flexform/f75-25.xml',
             'c75-25'
         );
 
@@ -134,7 +134,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/f33-66.xml',
+            'FILE:fileadmin/lynx/flexform/f33-66.xml',
             'c33-66'
         );
 
@@ -162,7 +162,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/f66-33.xml',
+            'FILE:fileadmin/lynx/flexform/f66-33.xml',
             'c66-33'
         );
 
@@ -191,7 +191,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/f33-33-33.xml',
+            'FILE:fileadmin/lynx/flexform/f33-33-33.xml',
             'c33-33-33'
         );
 
@@ -221,7 +221,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/f25-25-25-25.xml',
+            'FILE:fileadmin/lynx/flexform/f25-25-25-25.xml',
             'c25-25-25-25'
         );
 
@@ -249,7 +249,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/f20-80.xml',
+            'FILE:fileadmin/lynx/flexform/f20-80.xml',
             'c20-80'
         );
 
@@ -277,7 +277,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/f80-20.xml',
+            'FILE:fileadmin/lynx/flexform/f80-20.xml',
             'c80-20'
         );
 
@@ -304,7 +304,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/accordion.xml',
+            'FILE:fileadmin/lynx/flexform/accordion.xml',
             'accordion'
         );
 
@@ -331,7 +331,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/slider.xml',
+            'FILE:fileadmin/lynx/flexform/slider.xml',
             'slider'
         );
 
@@ -358,7 +358,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
             '*',
-            'FILE:fileadmin/lynx/flexforms/slider-cell.xml',
+            'FILE:fileadmin/lynx/flexform/slider-cell.xml',
             'slider-cell'
         );
 
