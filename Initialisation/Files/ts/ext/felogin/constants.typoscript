@@ -1,0 +1,3 @@
+styles.content.loginform.emailFrom = no-reply@example.com
+styles.content.loginform.emailFromName = Website Login
+styles.content.loginform.replyToEmail = no-reply@example.com

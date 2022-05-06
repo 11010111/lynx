@@ -6,6 +6,7 @@
 ############################
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/news/setup.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/search/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:fileadmin/lynx/ts/ext/felogin/setup.typoscript">
 
 ##############
 #### PAGE ####
@@ -119,19 +120,31 @@ config {
     cache_period = 86400
     sendCacheHeaders = 1
     intTarget =
-    extTarget =
+    extTarget = _blank
     disablePrefixComment = 1
     index_enable = 1
     index_externals = 1
     index_metatags = 1
     headerComment = build by Smart Web Elements
+    typolinkLinkAccessRestrictedPages = 1
+    typolinkLinkAccessRestrictedPages_addParams = &redirect_url=###RETURN_URL###
 
-    // Disable Image Upscaling
+    ## Disable Image Upscaling
     noScaleUp = 1
 
-    // Compression and Concatenation of CSS and JS Files
+    ## Compression and Concatenation of CSS and JS Files
     compressJs = 0
     compressCss = 0
     concatenateJs = 0
     concatenateCss = 0
+
+    ## Header Policy
+    additionalHeaders {
+        10.header = Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none';
+        20.header = strict-transport-security: max-age=31536000
+        30.header = X-Frame-Options: SAMEORIGIN
+        40.header = X-Xss-Protection: 1; mode=block
+        50.header = X-Content-Type-Options: nosniff
+        60.header = Referrer-Policy: strict-origin
+    }
 }

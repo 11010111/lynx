@@ -16,11 +16,8 @@ errorHandling:
     errorFluidPartialsRootPath: ''
   -
     errorCode: 403
-    errorHandler: Fluid
-    errorFluidTemplate: 'fileadmin/lynx/ext/lynx/Templates/Sites/Error403.html'
-    errorFluidTemplatesRootPath: ''
-    errorFluidLayoutsRootPath: ''
-    errorFluidPartialsRootPath: ''
+    errorHandler: PHP
+    errorPhpClassFQCN: Swe\Lynx\ErrorHandling\ErrorHandling
   -
     errorCode: 503
     errorHandler: Fluid

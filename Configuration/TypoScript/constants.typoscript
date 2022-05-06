@@ -3,6 +3,12 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
 
+#######################
+#### LYNX SETTINGS ####
+#######################
+# cat=plugin/a; type=int+; label=Login Page UID:You can override the Login Page UID setting here
+pageLoginUid = 1
+
 
 ##############################
 #### FLUID STYLED CONTENT ####

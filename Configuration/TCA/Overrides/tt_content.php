@@ -20,6 +20,19 @@ call_user_func(
             )
         );
 
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/f100.xml',
+            'c100'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'c100',
+            'after:header'
+        );
+
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
@@ -33,6 +46,19 @@ call_user_func(
                     ]
                 ]
             )
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/f50-50.xml',
+            'c50-50'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'c50-50',
+            'after:header'
         );
 
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
@@ -50,6 +76,19 @@ call_user_func(
             )
         );
 
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/f25-75.xml',
+            'c25-75'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'c25-75',
+            'after:header'
+        );
+
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
@@ -63,6 +102,19 @@ call_user_func(
                     ]
                 ]
             )
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/f75-25.xml',
+            'c75-25'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'c75-25',
+            'after:header'
         );
 
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
@@ -80,6 +132,19 @@ call_user_func(
             )
         );
 
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/f33-66.xml',
+            'c33-66'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'c33-66',
+            'after:header'
+        );
+
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
@@ -93,6 +158,19 @@ call_user_func(
                     ]
                 ]
             )
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/f66-33.xml',
+            'c66-33'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'c66-33',
+            'after:header'
         );
 
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
@@ -109,6 +187,19 @@ call_user_func(
                     ]
                 ]
             )
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/f33-33-33.xml',
+            'c33-33-33'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'c33-33-33',
+            'after:header'
         );
 
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
@@ -128,6 +219,19 @@ call_user_func(
             )
         );
 
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/f25-25-25-25.xml',
+            'c25-25-25-25'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'c25-25-25-25',
+            'after:header'
+        );
+
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
@@ -141,6 +245,19 @@ call_user_func(
                     ]
                 ]
             )
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/f20-80.xml',
+            'c20-80'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'c20-80',
+            'after:header'
         );
 
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
@@ -158,6 +275,19 @@ call_user_func(
             )
         );
 
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/f80-20.xml',
+            'c80-20'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'c80-20',
+            'after:header'
+        );
+
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
@@ -170,6 +300,19 @@ call_user_func(
                     ]
                 ]
             )
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/accordion.xml',
+            'accordion'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'accordion',
+            'after:header'
         );
 
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
@@ -186,6 +329,19 @@ call_user_func(
             )
         );
 
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/slider.xml',
+            'slider'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'slider',
+            'after:header'
+        );
+
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \B13\Container\Tca\Registry::class)->configureContainer(
             new \B13\Container\Tca\ContainerConfiguration(
@@ -198,6 +354,19 @@ call_user_func(
                     ]
                 ]
             )
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:fileadmin/lynx/flexforms/slider-cell.xml',
+            'slider-cell'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'pi_flexform',
+            'slider-cell',
+            'after:header'
         );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
