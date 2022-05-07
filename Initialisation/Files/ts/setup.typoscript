@@ -16,8 +16,9 @@ page {
     shortcutIcon = fileadmin/lynx/icons/favicon.ico
 
     headerData {
-      110 = TEXT
-      110.wrap = <link rel="preload" href="/fileadmin/lynx/fonts/BasierCircle/basiercircle-regular-webfont.woff2" as="font" crossorigin>
+      # Preload Font
+      #110 = TEXT
+      #110.wrap = <link rel="preload" href="/fileadmin/lynx/fonts/BasierCircle/basiercircle-regular-webfont.woff2" as="font" crossorigin>
     }
 
     # FLUIDTEMPLATE
@@ -29,7 +30,7 @@ page {
         }
 
         dataProcessing {
-            # Greater then 40
+            # Greater then 50
             #50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             #50 {
             #    collections = 1
@@ -48,7 +49,7 @@ page {
             field = uid
             if.isInList.field = uid
             if.value = 1
-            wrap = <body id="site_95|" class="home">
+            wrap = <body id="site_|" class="home">
         }
         20 = TEXT
         20 {
@@ -56,12 +57,13 @@ page {
             if.isInList.field = uid
             if.value = 1
             if.negate = 1
-            wrap = <body id="site_95|" class="sequel">
+            wrap = <body id="site_|" class="sequel">
         }
     }
 
   	# CSS
     includeCSS {
+        normalize = /fileadmin/lynx/scss/compiled/normalize.css
         container = /fileadmin/lynx/scss/compiled/container.css
         gap = /fileadmin/lynx/scss/compiled/gap.css
         flex = /fileadmin/lynx/scss/compiled/flex.css
