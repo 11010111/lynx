@@ -10,13 +10,6 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/Helper/DynamicContent.typoscript">
 
 
-#######################
-#### LYNX SETTINGS ####
-#######################
-# cat=plugin/a; type=int+; label=Login Page UID:You can override the Login Page UID setting here
-pageLoginUid = {$plugin.tx_lynx.settings.pageLoginUid}
-
-
 ##############
 #### PAGE ####
 ##############
