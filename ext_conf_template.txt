@@ -1,9 +1,5 @@
 #######################
 #### LYNX SETTINGS ####
 #######################
-plugin.tx_lynx {
-	settings {
-		 # cat=plugin/a; type=int+; label=Login Page UID:You can override the Login Page UID setting here
-		pageLoginUid = 1
-	}
-}
+# cat=plugin/a; type=int+; label=Login Page UID:You can override the Login Page UID setting here
+pageLoginUid = 1
