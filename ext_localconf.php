@@ -16,6 +16,11 @@ call_user_func(
             $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx_preset'] = 'fileadmin/lynx/rte/Default.yaml';
         }
 
+        /*****************************
+         * Add global lynx namespace *
+         *****************************/
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['lynx'] = ['Swe\\Lynx\\ViewHelpers'];
+
         /**************************
          * Add Mask configuration *
          **************************/

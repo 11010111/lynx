@@ -7,20 +7,20 @@ use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
- * Class ReplaceViewHelper
+ * Class SubstringViewHelper
  *
  * @package Swe\Lynx\ViewHelpers
  */
-class ReplaceViewHelper extends AbstractViewHelper
+class SubstringViewHelper extends AbstractViewHelper
 {
     /**
      * @inheritDoc
      */
     public function initializeArguments()
     {
-        $this->registerArgument('search', 'string', 'The search string', true);
-        $this->registerArgument('replace', 'string', 'The replace string', true);
-        $this->registerArgument('subject', 'string', 'The object string', true);
+        $this->registerArgument('string', 'string', 'The enter string', true);
+        $this->registerArgument('offset', 'int', 'The offset', true);
+        $this->registerArgument('length', 'int', 'The length', true);
     }
 
     /**
@@ -32,6 +32,6 @@ class ReplaceViewHelper extends AbstractViewHelper
         RenderingContextInterface $renderingContext
     )
     {
-        return str_replace($arguments['search'], $arguments['replace'], $arguments['object']);
+        return substr($arguments['string'], $arguments['offset'], $arguments['length']);
     }
 }
