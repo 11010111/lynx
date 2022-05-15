@@ -1,4 +1,38 @@
 ##########################################################################################################
+// LYNX ViewHelpers
+// Example
+##########################################################################################################
+
+# REPLACE STRING -> PHP str_replace()
+<lynx:replace search="test" replace="ist" subject="Das test ok." />
+{lynx:replace(search:'test', replace:'ist', subject:'Das test ok.')}
+OUTPUT: Das ist ok.
+
+# SUBSTRING -> PHP substr()
+<lynx:substring string="Hallo Welt!..." offset="0" length="-1" />
+{lynx:substring(string:'Hallo Welt!...', offset:'0', length:'-1')}
+OUTPUT: Hallo Welt!..
+
+# SPLIT STRING -> PHP explode()
+<lynx:split string="Dies ist ein Test." separator=" " />
+{lynx:split(separator:' ', string:'Dies ist ein Test.')}
+
+# EXAMPLE INLINE NOTATION
+<f:for each="{lynx:split(separator:' ', string:'Dies ist ein Test.')}" as="item">
+    <f:if condition="{item}">
+        <p>{item}</p>
+    </f:if>
+</f:for>
+
+OUTPUT: Array
+array(4 items)
+   0 => 'Dies'
+   1 => 'ist'
+   2 => 'ein'
+   3 => 'Test.'
+
+##########################################################################################################
+##########################################################################################################
 // Image to SVG
 // Example to render svg inline
 ##########################################################################################################

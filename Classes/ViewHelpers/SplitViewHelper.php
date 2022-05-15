@@ -7,20 +7,20 @@ use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
- * Class SubstringViewHelper
+ * Class SplitViewHelper
  *
  * @package Swe\Lynx\ViewHelpers
  */
-class SubstringViewHelper extends AbstractViewHelper
+class SplitViewHelper extends AbstractViewHelper
 {
     /**
      * @inheritDoc
      */
     public function initializeArguments()
     {
-        $this->registerArgument('string', 'string', 'The enter string', true);
-        $this->registerArgument('offset', 'int', 'The offset', true);
-        $this->registerArgument('length', 'int', 'The length');
+        $this->registerArgument('separator', 'string', 'The separator', true);
+        $this->registerArgument('string', 'string', 'The string', true);
+        $this->registerArgument('limit', 'int', 'The limit');
     }
 
     /**
@@ -32,10 +32,10 @@ class SubstringViewHelper extends AbstractViewHelper
         RenderingContextInterface $renderingContext
     )
     {
-        if (empty($arguments['length'])) {
-            return substr($arguments['string'], $arguments['offset']);
+        if (empty($arguments['limit'])) {
+            return explode($arguments['separator'], $arguments['string']);
         } else {
-            return substr($arguments['string'], $arguments['offset'], $arguments['length']);
+            return explode($arguments['separator'], $arguments['string'], $arguments['limit']);
         }
     }
 }
