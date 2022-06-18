@@ -3,6 +3,11 @@
 // Example
 ##########################################################################################################
 
+# Optional parameters
+<lynx:container as="section" containerData="{data}" class="my-class">
+  Hello World!
+</lynx:container>
+
 # REPLACE STRING -> PHP str_replace()
 <lynx:replace search="test" replace="ist" subject="Das test ok." />
 {lynx:replace(search:'test', replace:'ist', subject:'Das test ok.')}
