@@ -33,6 +33,13 @@ TCEFORM {
             }
         }
 
+        html_tag {
+            addItems {
+                section = Section
+                article = Article
+            }
+        }
+
         breakpoint {
             addItems {
                 xs = XS

@@ -52,6 +52,10 @@
                 <source>Space Inline After</source>
                 <target state="translated">Abstand danach - Innen</target>
             </trans-unit>
+            <trans-unit id="html_tag">
+                <source>HTML Tag</source>
+                <target state="translated">HTML Tag</target>
+            </trans-unit>
 
         </body>
     </file>

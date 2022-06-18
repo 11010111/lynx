@@ -42,6 +42,9 @@
             <trans-unit id="padding_bottom">
                 <source>Space Inline After</source>
             </trans-unit>
+            <trans-unit id="html_tag">
+                <source>HTML Tag</source>
+            </trans-unit>
 
         </body>
     </file>

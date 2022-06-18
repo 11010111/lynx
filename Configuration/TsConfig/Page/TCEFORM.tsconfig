@@ -7,13 +7,6 @@ TCEFORM {
             removeItems = ruler-before,ruler-after,indent,indent-left,indent-right
         }
 
-        html_tag {
-            addItems {
-                section = Section
-                article = Article
-            }
-        }
-
         space_before_class {
             removeItems = extra-small,small,medium,large,extra-large
         }
