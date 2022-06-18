@@ -1,7 +1,7 @@
 /**
  * Base Initialisation for Container Slider
  */
-import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
+import Swiper from './plugins/swiper-bundle.esm.browser.min.js'
 
 const swiperContainer = new Swiper('.slider-content', {
     // Optional parameters

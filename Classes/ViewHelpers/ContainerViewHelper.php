@@ -2,7 +2,6 @@
 
 namespace Swe\Lynx\ViewHelpers;
 
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 
 /**
@@ -17,9 +16,6 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
      */
     protected $tagName = 'div';
 
-    /**
-     * @return void
-     */
     public function initializeArguments()
     {
         parent::initializeArguments();
@@ -28,15 +24,8 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
         $this->registerArgument('containerData', 'array', 'Container data');
     }
 
-    /**
-     * @return string
-     */
     public function render()
     {
-        if ($this->hasArgument('as')) {
-            $this->tagName = $this->arguments['as'];
-        }
-
         if ($this->hasArgument('containerData')) {
             if ($this->arguments['containerData']['container']) {
                 if ($this->tag->getAttribute('class')) {
@@ -98,9 +87,17 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 $this->tag->addAttribute('data-foreground', $this->arguments['containerData']['foreground_color']);
             }
 
+            if ($this->arguments['containerData']['html_tag']) {
+                $this->tagName = $this->arguments['containerData']['html_tag'];
+            }
+
             if ($this->arguments['containerData']['uid'] && !$this->tag->getAttribute('id')) {
                 $this->tag->addAttribute('id',  'c' . $this->arguments['containerData']['uid']);
             }
+        }
+
+        if ($this->hasArgument('as')) {
+            $this->tagName = $this->arguments['as'];
         }
 
         $this->tag->setTagName($this->tagName);

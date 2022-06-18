@@ -460,13 +460,25 @@ call_user_func(
                         'renderType' => 'colorpicker',
                         'size' => 10,
                     ]
+                ],
+                'html_tag' => [
+                    'exclude' => 1,
+                    'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:html_tag',
+                    'description' => '',
+                    'config' => [
+                        'type' => 'select',
+                        'renderType' => 'selectSingle',
+                        'items' => [
+                            ['Div', '']
+                        ]
+                    ]
                 ]
             ]
         );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
             'tt_content',
-            'container, breakpoint, alignment, padding_top, padding_bottom, background_color, foreground_color',
+            'container, breakpoint, alignment, padding_top, padding_bottom, background_color, foreground_color, html_tag',
             'appearance',
             'after:space_after_class'
         );
@@ -474,7 +486,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
             'tt_content',
             'frames',
-            'container, --linebreak--, breakpoint, alignment, --linebreak--, padding_top, padding_bottom, --linebreak--, background_color, foreground_color'
+            'container, --linebreak--, breakpoint, alignment, --linebreak--, padding_top, padding_bottom, --linebreak--, background_color, foreground_color, --linebreak--, html_tag'
         );
 
         $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['assets'] = [

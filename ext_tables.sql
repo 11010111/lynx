@@ -4,6 +4,7 @@
 CREATE TABLE tt_content
 (
     container        VARCHAR(30) DEFAULT '' NOT NULL,
+    html_tag         VARCHAR(30) DEFAULT '' NOT NULL,
     breakpoint       VARCHAR(30) DEFAULT '' NOT NULL,
     alignment        VARCHAR(30) DEFAULT '' NOT NULL,
     padding_top      VARCHAR(30) DEFAULT '' NOT NULL,
