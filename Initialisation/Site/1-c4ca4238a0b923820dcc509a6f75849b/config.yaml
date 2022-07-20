@@ -1,4 +1,8 @@
 base: '/'
+baseVariants:
+  -
+    base: 'http://localhost/'
+    condition: 'getenv("IS_DOCKER") == "Docker"'
 errorHandling:
   -
     errorCode: 404
