@@ -21,21 +21,6 @@ call_user_func(
          *****************************/
         $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['lynx'] = ['Swe\\Lynx\\ViewHelpers'];
 
-        /**************************
-         * Add Mask configuration *
-         **************************/
-        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['mask'] = [
-            'backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Templates/',
-            'backendlayout_pids' => '0,1',
-            'content' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Templates/',
-            'json' => 'fileadmin/lynx/mask_project/Configuration/mask.json',
-            'layouts' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Layouts/',
-            'layouts_backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Layouts/',
-            'partials' => 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Partials/',
-            'partials_backend' => 'fileadmin/lynx/mask_project/Resources/Private/Backend/Partials/',
-            'preview' => 'fileadmin/lynx/mask_project/Resources/Public/'
-        ];
-
         /***********************************************
          * register svg icons: identifier and filename *
          ***********************************************/
