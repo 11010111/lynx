@@ -51,6 +51,15 @@ TCEFORM {
             }
         }
 
+        # Hide Mask Fields Example
+        #tx_mask_my_select_box {
+        #    types {
+        #        mask_element {
+        #            keepItems = 1,2
+        #        }
+        #    }
+        #}
+
         space_before_class {
           	addItems {
                 10 = 10

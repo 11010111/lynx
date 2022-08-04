@@ -1,7 +1,6 @@
 <f:asset.css identifier="icon-text" href="fileadmin/lynx/scss/compiled/icon-text.css" />
 
-<div class="icon-text-container{f:if(condition:'{data.space_before_class}',then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}',then:' frame-space-after-{data.space_after_class}')}{f:if(condition:'{data.padding_top}',then:' frame-space-inline-before-{data.padding_top}')}{f:if(condition:'{data.padding_bottom}',then:' frame-space-inline-after-{data.padding_bottom}')}">
-
+<lynx:container containerData="{data}" class="icon-text-container">
   <f:if condition="{data.tx_mask_icon_text_repeater}">
     <f:for each="{data.tx_mask_icon_text_repeater}" as="data_item">
       <div class="element">
@@ -21,5 +20,4 @@
       </div>
     </f:for>
   </f:if>
-
-</div>
+</lynx:container>

@@ -1,7 +1,6 @@
 <f:asset.css identifier="text-image-overlay" href="fileadmin/lynx/scss/compiled/text-image-overlay.css" />
 
-<div class="text-image-overlay-container{f:if(condition:'{data.space_before_class}',then:' frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_after_class}',then:' frame-space-after-{data.space_after_class}')}{f:if(condition:'{data.padding_top}',then:' frame-space-inline-before-{data.padding_top}')}{f:if(condition:'{data.padding_bottom}',then:' frame-space-inline-after-{data.padding_bottom}')}">
-
+<lynx:container containerData="{data}" class="text-image-overlay-container">
   <div class="text">
     <f:if condition="{data.tx_mask_text_image_overlay_text}">
       {data.tx_mask_text_image_overlay_text -> f:format.html()}
@@ -15,5 +14,4 @@
       </f:for>
     </f:if>
   </div>
-
-</div>
+</lynx:container>

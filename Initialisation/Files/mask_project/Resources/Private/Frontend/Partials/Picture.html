@@ -1,20 +1,26 @@
 <figure class="{f:if(condition:'{class}',then:'figure-picture {class}',else:'figure-picture')}">
-  <picture>
-    <source media="(min-width: 1250px)" srcset="{f:uri.image(image: file, maxWidth: 1920, cropVariant: 'default', treatIdAsReference: true, fileExtension: 'webp')}" type="image/webp" />
-    <source media="(min-width: 768px)" srcset="{f:uri.image(image: file, maxWidth: 1250, cropVariant: 'tablet', treatIdAsReference: true, fileExtension: 'webp')}" type="image/webp" />
-    <source srcset="{f:uri.image(image: file, maxWidth: 768, cropVariant: 'mobile', treatIdAsReference: true, fileExtension: 'webp')}" type="image/webp" />
+  <f:if condition="{file.link}">
+    <f:then>
+      <f:link.typolink parameter="{file.link}">
+        <picture>
+          <source media="(min-width: 1250px)" srcset="{f:uri.image(image: file, maxWidth: 1920, cropVariant: 'default', treatIdAsReference: true, fileExtension: 'webp')}" type="image/webp" />
+          <source media="(min-width: 768px)" srcset="{f:uri.image(image: file, maxWidth: 1250, cropVariant: 'tablet', treatIdAsReference: true, fileExtension: 'webp')}" type="image/webp" />
+          <source srcset="{f:uri.image(image: file, maxWidth: 768, cropVariant: 'mobile', treatIdAsReference: true, fileExtension: 'webp')}" type="image/webp" />
 
-    <f:if condition="{file.link}">
-      <f:then>
-        <f:link.typolink parameter="{file.link}">
           <f:image image="{file}" title="{file.title}" alt="{file.alternative}" maxWidth="768" maxHeight="432" loading="{f:if(condition:'{loading}',then:'{loading}',else:'eager')}" width="auto" height="auto" />
-        </f:link.typolink>
-      </f:then>
-      <f:else>
+        </picture>
+      </f:link.typolink>
+    </f:then>
+    <f:else>
+      <picture>
+        <source media="(min-width: 1250px)" srcset="{f:uri.image(image: file, maxWidth: 1920, cropVariant: 'default', treatIdAsReference: true, fileExtension: 'webp')}" type="image/webp" />
+        <source media="(min-width: 768px)" srcset="{f:uri.image(image: file, maxWidth: 1250, cropVariant: 'tablet', treatIdAsReference: true, fileExtension: 'webp')}" type="image/webp" />
+        <source srcset="{f:uri.image(image: file, maxWidth: 768, cropVariant: 'mobile', treatIdAsReference: true, fileExtension: 'webp')}" type="image/webp" />
+
         <f:image image="{file}" title="{file.title}" alt="{file.alternative}" maxWidth="768" maxHeight="432" loading="{f:if(condition:'{loading}',then:'{loading}',else:'eager')}" width="auto" height="auto" />
-      </f:else>
-    </f:if>
-  </picture>
+      </picture>
+    </f:else>
+  </f:if>
 
   <f:if condition="{file.description}">
     <figcaption>{file.description}</figcaption>
