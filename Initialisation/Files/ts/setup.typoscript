@@ -108,6 +108,8 @@ config {
     no_cache = 0
     uniqueLinkVars = 1
     pageTitleFirst = 1
+    #pageTitleSeparator = -
+    #pageTitleSeparator.noTrimWrap = | | |
     linkVars = L
     prefixLocalAnchors = all
     renderCharset = utf-8
@@ -123,6 +125,7 @@ config {
     sendCacheHeaders = 1
     intTarget =
     extTarget = _blank
+    fileTarget = _blank
     disablePrefixComment = 1
     index_enable = 1
     index_externals = 1
