@@ -2,6 +2,7 @@
 
 namespace Swe\Lynx\EventListener;
 
+use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Resource\Exception\ExistingTargetFolderException;
@@ -34,6 +35,27 @@ class LynxInitialisation
             if (!$storage->hasFolder('/Redakteur/')) {
                 $storage->createFolder('/Redakteur/');
                 $this->writeFileMount('Redakteur', '/Redakteur/');
+            }
+
+
+            $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
+            $maskConfiguration = $extensionConfiguration->get('mask');
+
+            if (!isset($maskConfiguration)) {
+                $maskConfiguration['json'] = "fileadmin/lynx/mask_project/Configuration/Mask/mask.json";
+                $maskConfiguration['loader_identifier'] = "json";
+                $maskConfiguration['content_elements_folder'] = "";
+                $maskConfiguration['backend_layouts_folder'] = "";
+                $maskConfiguration['backendlayout_pids'] = "0";
+                $maskConfiguration['backend'] = "fileadmin/lynx/mask_project/Resources/Private/Mask/Backend/Templates";
+                $maskConfiguration['layouts_backend'] = "fileadmin/lynx/mask_project/Resources/Private/Mask/Backend/Layouts";
+                $maskConfiguration['partials_backend'] = "fileadmin/lynx/mask_project/Resources/Private/Mask/Backend/Partials";
+                $maskConfiguration['content'] = "fileadmin/lynx/mask_project/Resources/Private/Mask/Frontend/Templates";
+                $maskConfiguration['layouts'] = "fileadmin/lynx/mask_project/Resources/Private/Mask/Frontend/Layouts";
+                $maskConfiguration['partials'] = "fileadmin/lynx/mask_project/Resources/Private/Mask/Frontend/Partials";
+                $maskConfiguration['preview'] = "fileadmin/lynx/mask_project/Resources/Public/Mask/";
+
+                $extensionConfiguration->set('mask', $maskConfiguration);
             }
         }
     }
