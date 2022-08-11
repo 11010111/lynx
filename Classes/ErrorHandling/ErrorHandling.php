@@ -6,6 +6,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Error\PageErrorHandler\PageErrorHandlerInterface;
+use TYPO3\CMS\Core\Exception;
 use TYPO3\CMS\Core\Exception\SiteNotFoundException;
 use TYPO3\CMS\Core\Http\RedirectResponse;
 use TYPO3\CMS\Core\Http\Uri;
@@ -52,7 +53,14 @@ class ErrorHandling implements PageErrorHandlerInterface
     {
         /** @var Site $site */
         $siteFinder = GeneralUtility::makeInstance(SiteFinder::class);
-        $pageLoginUid = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('lynx', 'pageLoginUid');
+        $pageLoginUid = 1;
+
+        try {
+            $pageLoginUid = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('lynx', 'pageLoginUid');
+        } catch (Exception $exception) {
+            // Error
+        }
+
         $site = $siteFinder->getSiteByPageId($pageLoginUid);
         /** @var Uri $uri */
         $uri = $site->getRouter()->generateUri(
