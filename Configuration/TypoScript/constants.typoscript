@@ -30,15 +30,6 @@ lib.contentElement {
     layoutRootPaths.20 = fileadmin/lynx/ext/lynx/Layout/ContentElements
 }
 
-#############################
-#### MASK TEMPLATE PATHS ####
-#############################
-lib.maskContentElement {
-  layoutRootPaths.20 = /fileadmin/lynx/mask_project/Resources/Private/Frontend/Layouts/
-  partialRootPaths.20 = /fileadmin/lynx/mask_project/Resources/Private/Frontend/Partials/
-  templateRootPaths.20 = /fileadmin/lynx/mask_project/Resources/Private/Frontend/Templates/
-}
-
 ############
 ### PAGE ###
 ############
