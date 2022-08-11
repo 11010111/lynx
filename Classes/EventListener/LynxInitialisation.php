@@ -2,6 +2,8 @@
 
 namespace Swe\Lynx\EventListener;
 
+use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException;
+use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
@@ -37,11 +39,10 @@ class LynxInitialisation
                 $this->writeFileMount('Redakteur', '/Redakteur/');
             }
 
-
             $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
-            $maskConfiguration = $extensionConfiguration->get('mask');
 
-            if (!isset($maskConfiguration)) {
+            try {
+                $maskConfiguration = $extensionConfiguration->get('mask');
                 $maskConfiguration['json'] = "fileadmin/lynx/mask_project/Configuration/Mask/mask.json";
                 $maskConfiguration['loader_identifier'] = "json";
                 $maskConfiguration['content_elements_folder'] = "";
@@ -54,8 +55,9 @@ class LynxInitialisation
                 $maskConfiguration['layouts'] = "fileadmin/lynx/mask_project/Resources/Private/Mask/Frontend/Layouts";
                 $maskConfiguration['partials'] = "fileadmin/lynx/mask_project/Resources/Private/Mask/Frontend/Partials";
                 $maskConfiguration['preview'] = "fileadmin/lynx/mask_project/Resources/Public/Mask/";
-
                 $extensionConfiguration->set('mask', $maskConfiguration);
+            } catch (ExtensionConfigurationExtensionNotConfiguredException | ExtensionConfigurationPathDoesNotExistException $e) {
+                // Error
             }
         }
     }
