@@ -50,5 +50,24 @@ languages:
     direction: ltr
     flag: de
     languageId: 0
+routeEnhancers:
+  NewsPlugin:
+    type: Extbase
+    extension: News
+    plugin: Pi1
+    limitToPages:
+      - 5
+    routes:
+      -
+        routePath: '/{news_title}'
+        _controller: 'News::detail'
+        _arguments:
+          news_title: news
+    defaultController: 'News::detail'
+    aspects:
+      news_title:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_news
+        routeFieldName: path_segment
 rootPageId: 1
 websiteTitle: 'Lynx'
