@@ -30,10 +30,6 @@ page {
         }
 
         dataProcessing {
-            # Disable language for News if not translated
-            #31 = GeorgRinger\News\DataProcessing\DisableLanguageMenuProcessor
-            #31.menus = languageNavigation
-
             # Greater then 50
             #50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             #50 {

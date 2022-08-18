@@ -22,9 +22,14 @@ temp.newsTitle {
   conf.tx_news_domain_model_news.field = title
 }
 
-[globalVar = GP:tx_news_pi1|news > 0]
-  page.headerData.1 >
-  page.headerData.1 = COA
-  page.headerData.1 < temp.newsTitle
-  page.headerData.1.wrap = <title>|&nbsp;- Lynx, der kleine Kickstarter.</title>
-[global]
+[traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
+  #page.headerData.1 >
+  #page.headerData.1 = COA
+  #page.headerData.1 < temp.newsTitle
+  #page.headerData.1.wrap = <title>|&nbsp;- Lynx</title>
+
+  page.10.dataProcessing {
+      31 = GeorgRinger\News\DataProcessing\DisableLanguageMenuProcessor
+      31.menus = languageNavigation
+  }
+[end]
