@@ -75,6 +75,7 @@ page {
             30 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
             30 {
                 as = languageNavigation
+                addQueryString = 1
             }
 
             40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
