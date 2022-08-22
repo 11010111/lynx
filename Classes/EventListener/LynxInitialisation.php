@@ -12,6 +12,7 @@ use TYPO3\CMS\Core\Resource\Exception\InsufficientFolderAccessPermissionsExcepti
 use TYPO3\CMS\Core\Resource\Exception\InsufficientFolderWritePermissionsException;
 use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\VersionNumberUtility;
 use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
 
 /**
@@ -39,8 +40,9 @@ class LynxInitialisation
                 $this->writeFileMount('Redakteur', '/Redakteur/');
             }
 
-            // Set Mask configuration
             $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
+            $typo3VersionArray = VersionNumberUtility::convertVersionStringToArray(VersionNumberUtility::getCurrentTypo3Version());
+            $typo3VersionMain = $typo3VersionArray['version_main'];
 
             try {
                 $maskConfiguration = $extensionConfiguration->get('mask');
@@ -56,7 +58,12 @@ class LynxInitialisation
                 $maskConfiguration['layouts'] = 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Layouts/';
                 $maskConfiguration['partials'] = 'fileadmin/lynx/mask_project/Resources/Private/Frontend/Partials/';
                 $maskConfiguration['preview'] = 'fileadmin/lynx/mask_project/Resources/Public/';
-                $extensionConfiguration->set('mask', $maskConfiguration);
+
+                if ($typo3VersionMain > 10) {
+                    $extensionConfiguration->set('mask', $maskConfiguration);
+                } else {
+                    $extensionConfiguration->set('mask', '', $maskConfiguration);
+                }
             } catch (ExtensionConfigurationExtensionNotConfiguredException | ExtensionConfigurationPathDoesNotExistException $e) {
                 // Error
             }
