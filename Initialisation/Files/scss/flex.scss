@@ -348,6 +348,11 @@
   width: 100%;
 }
 
+.flex--gaps, .grid--gaps {
+  column-gap: var(--column-gap);
+  row-gap: var(--row-gap);
+}
+
 @each $name, $breakpoint in $breakpoints {
   @include break(#{$name});
   @include flex-size(#{$name});
