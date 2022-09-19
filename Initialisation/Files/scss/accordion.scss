@@ -47,21 +47,21 @@
     }
   }
 
-  .accordion-content {
+  &-content {
     overflow: hidden;
     transition: height 0.5s;
   }
-}
 
-.accordion-close {
-  header {
-    &::after {
-      content: '+';
-      transform: rotate(90deg);
+  &-close {
+    header {
+      &::after {
+        content: '+';
+        transform: rotate(90deg);
+      }
     }
-  }
 
-  .accordion-content {
-    height: 0 !important;
+    .accordion-content {
+      height: 0 !important;
+    }
   }
 }
