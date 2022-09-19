@@ -16,8 +16,7 @@ const BrowserDetection = (function () {
      */
     function _searchString (data) {
       for (let i = 0; i < data.length; i += 1) {
-        let dataString = data[i].string,
-          dataProp = data[i].prop
+        let dataString = data[i].string, dataProp = data[i].prop
 
         _versionSearchString = data[i].versionSearch || data[i].identity
 
@@ -48,106 +47,45 @@ const BrowserDetection = (function () {
       return parseFloat(dataString.substring(index + _versionSearchString.length + 1))
     }
 
-    let _dataBrowser = [
-      {
-        string: navigator.userAgent,
-        subString: 'Chrome',
-        identity: 'Chrome'
-      },
-      {
-        string: navigator.userAgent,
-        subString: 'OmniWeb',
-        versionSearch: 'OmniWeb/',
-        identity: 'OmniWeb'
-      },
-      {
-        string: navigator.vendor,
-        subString: 'Apple',
-        identity: 'Safari',
-        versionSearch: 'Version'
-      },
-      {
-        prop: window.opera,
-        identity: 'Opera',
-        versionSearch: 'Version'
-      },
-      {
-        string: navigator.vendor,
-        subString: 'iCab',
-        identity: 'iCab'
-      },
-      {
-        string: navigator.vendor,
-        subString: 'KDE',
-        identity: 'Konqueror'
-      },
-      {
-        string: navigator.userAgent,
-        subString: 'Firefox',
-        identity: 'Firefox'
-      },
-      {
-        string: navigator.vendor,
-        subString: 'Camino',
-        identity: 'Camino'
-      },
-      { // for newer Netscapes (6+)
-        string: navigator.userAgent,
-        subString: 'Netscape',
-        identity: 'Netscape'
-      },
-      {
-        string: navigator.userAgent,
-        subString: 'MSIE',
-        identity: 'Explorer',
-        versionSearch: 'MSIE'
-      },
-      {
-        string: navigator.userAgent,
-        subString: 'Trident',
-        identity: 'Explorer',
-        versionSearch: 'rv'
-      },
-      {
-        string: navigator.userAgent,
-        subString: 'Edge',
-        identity: 'Edge'
-      },
-      {
-        string: navigator.userAgent,
-        subString: 'Gecko',
-        identity: 'Mozilla',
-        versionSearch: 'rv'
-      },
-      { // for older Netscapes (4-)
-        string: navigator.userAgent,
-        subString: 'Mozilla',
-        identity: 'Netscape',
-        versionSearch: 'Mozilla'
-      }]
+    let _dataBrowser = [{
+      string: navigator.userAgent, subString: 'Chrome', identity: 'Chrome'
+    }, {
+      string: navigator.userAgent, subString: 'OmniWeb', versionSearch: 'OmniWeb/', identity: 'OmniWeb'
+    }, {
+      string: navigator.vendor, subString: 'Apple', identity: 'Safari', versionSearch: 'Version'
+    }, {
+      prop: window.opera, identity: 'Opera', versionSearch: 'Version'
+    }, {
+      string: navigator.vendor, subString: 'iCab', identity: 'iCab'
+    }, {
+      string: navigator.vendor, subString: 'KDE', identity: 'Konqueror'
+    }, {
+      string: navigator.userAgent, subString: 'Firefox', identity: 'Firefox'
+    }, {
+      string: navigator.vendor, subString: 'Camino', identity: 'Camino'
+    }, { // for newer Netscapes (6+)
+      string: navigator.userAgent, subString: 'Netscape', identity: 'Netscape'
+    }, {
+      string: navigator.userAgent, subString: 'MSIE', identity: 'Explorer', versionSearch: 'MSIE'
+    }, {
+      string: navigator.userAgent, subString: 'Trident', identity: 'Explorer', versionSearch: 'rv'
+    }, {
+      string: navigator.userAgent, subString: 'Edge', identity: 'Edge'
+    }, {
+      string: navigator.userAgent, subString: 'Gecko', identity: 'Mozilla', versionSearch: 'rv'
+    }, { // for older Netscapes (4-)
+      string: navigator.userAgent, subString: 'Mozilla', identity: 'Netscape', versionSearch: 'Mozilla'
+    }]
 
-    let _dataOS = [
-      {
-        string: navigator.platform,
-        subString: 'Win',
-        identity: 'Windows'
-      },
-      {
-        string: navigator.platform,
-        subString: 'Mac',
-        identity: 'Mac'
-      },
-      {
-        string: navigator.userAgent,
-        subString: 'iPhone',
-        identity: 'iPhone/iPod'
-      },
-      {
-        string: navigator.platform,
-        subString: 'Linux',
-        identity: 'Linux'
-      }
-    ]
+    let _dataOS = [{
+      string: navigator.platform, subString: 'Win', identity: 'Windows'
+    }, {
+      string: navigator.platform, subString: 'Mac', identity: 'Mac'
+    }, {
+      string: navigator.userAgent, subString: 'iPhone', identity: 'iPhone/iPod'
+    }, {
+      string: navigator.platform, subString: 'Linux', identity: 'Linux'
+    }]
 
     /**
      * Get the current used browser.
@@ -178,7 +116,7 @@ const BrowserDetection = (function () {
   }
 
   return new BrowserDetect(navigator.userAgent, navigator.appVersion)
-})();
+})()
 
 const MobileDetection = (function () {
   /**
@@ -254,4 +192,4 @@ const MobileDetection = (function () {
   }
 
   return new MobileDetect()
-})();
+})()
