@@ -67,16 +67,18 @@ nav.mobile {
       & ~ .menu-label {
         background-color: transparent;
 
-        &::before {
+        &::before,
+        &::after {
           transform-origin: right;
-          transform: rotate(-45deg);
           background-color: var(--error);
         }
 
+        &::before {
+          transform: rotate(-45deg);
+        }
+
         &::after {
-          transform-origin: right;
           transform: rotate(45deg);
-          background-color: var(--error);
         }
       }
 
@@ -220,14 +222,14 @@ nav.mobile {
 
       li {
         padding: 0 1rem;
-      }
 
-      li:first-child {
-        padding-left: 0;
-      }
+        &:first-child {
+          padding-left: 0;
+        }
 
-      li:last-child {
-        padding-right: 0;
+        &:last-child {
+          padding-right: 0;
+        }
       }
 
       .active {

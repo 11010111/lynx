@@ -37,14 +37,6 @@ nav.desktop {
     z-index: 1001;
     transition: background-color 0.25s;
 
-    //.active {
-    //  color: color('primary');
-    //
-    //  &:hover {
-    //    color: color('primary');
-    //  }
-    //}
-
     .wrap-menu-lang {
       margin: 1.44rem 0 0;
       transition: margin-top 0.25s;
@@ -104,10 +96,6 @@ nav.desktop {
       .parent:first-child {
         padding-left: 0;
       }
-
-      //.parent:last-child {
-      //    padding-right: 0;
-      //}
 
       .has-children {
         &::after {
@@ -170,10 +158,6 @@ nav.desktop {
         animation: fadeInOut 2s infinite;
       }
     }
-
-    //.active {
-    //
-    //}
 
     .language {
       display: none;

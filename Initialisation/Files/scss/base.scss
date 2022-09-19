@@ -58,20 +58,20 @@ html {
 body {
   width: 100%;
   padding: 0 var(--container-margin);
-}
 
-// Scrollbar: Chrome + Safari
-body::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
+  // Scrollbar: Chrome + Safari
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
 
-body::-webkit-scrollbar-thumb {
-  background-color: var(--secondary);
-  border-radius: 10px;
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 10px;
 
-  &:hover {
-    background-color: var(--link-hover);
+    &:hover {
+      background-color: var(--link-hover);
+    }
   }
 }
 
@@ -196,13 +196,9 @@ table {
   }
 }
 
-//input::-webkit-calendar-picker-indicator {
-//  filter: invert(1);
-//}
-
-button, select, textarea, input[type="text"], input[type="password"], input[type="email"], input[type="button"],
-input[type="submit"], input[type="search"], input[type="hidden"], input[type="tel"], input[type="url"],
-input[type="number"], input[type="date"] {
+button, select, textarea, input[type='text'], input[type='password'], input[type='email'], input[type='button'],
+input[type='submit'], input[type='search'], input[type='hidden'], input[type='tel'], input[type='url'],
+input[type='number'], input[type='date'] {
   padding: 0.25rem;
   appearance: none;
   -webkit-appearance: none;
@@ -211,7 +207,7 @@ input[type="number"], input[type="date"] {
   background-color: transparent;
 }
 
-button, input[type="button"], input[type="submit"] {
+button, input[type='button'], input[type='submit'] {
   padding: 0.25rem;
   color: var(--primary-text);
   background-color: var(--primary);
@@ -224,18 +220,16 @@ button, input[type="button"], input[type="submit"] {
 }
 
 select {
-  background: transparent url('/fileadmin/lynx/icons/dropdown.svg');
-  background-repeat: no-repeat;
-  background-position: right 0.25rem top 50%;
+  background: transparent url('/fileadmin/lynx/icons/dropdown.svg') no-repeat right 0.25rem top 50%;
   background-size: 1.33rem auto;
   padding: 0.25rem 2rem 0.25rem 0.25rem;
 }
 
-select, button, input[type="button"], input[type="submit"] {
+select, button, input[type='button'], input[type='submit'] {
   cursor: pointer;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type='checkbox'], input[type='radio'] {
   width: 1.25rem;
   height: 1.25rem;
 }
