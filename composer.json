@@ -1,6 +1,6 @@
 {
   "name": "swe/lynx",
-  "description": "",
+  "description": "13.0.0",
   "minimum-stability": "stable",
   "license": "proprietary",
   "type": "typo3-cms-extension",
@@ -22,11 +22,9 @@
   ],
   "require": {
     "php": "^7.4 || ^8.0 || ^8.1",
-    "typo3/cms-core": "^10.4 || ^11.5",
-    "typo3/cms-rte-ckeditor": "^10.4 || ^11.5",
-    "typo3/cms-fluid-styled-content": "^10.4 || ^11.5",
-    "typo3/cms-impexp": "^10.4 || ^11.5",
-    "b13/container": "^1.0 || ^2.0"
+    "typo3/cms-core": "^11.5 || ^12.0",
+    "typo3/cms-rte-ckeditor": "^11.5 || ^12.0",
+    "typo3/cms-fluid-styled-content": "^11.5 || ^12.0"
   },
   "autoload": {
     "psr-4": {

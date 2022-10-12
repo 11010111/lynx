@@ -39,13 +39,6 @@ call_user_func(
             '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/All.tsconfig">'
         );
 
-        ExtensionManagementUtility::addPageTSConfig(
-            'mod.wizards.newContentElement.wizardItems.common.elements.textmedia {
-                title = Media
-                description = Text, Image, Video, Audio
-            }'
-        );
-
         /*************************
          * FluidMail - Overrides *
          *************************/

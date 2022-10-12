@@ -37,7 +37,7 @@ class LynxInitialisation
 
             if (!$storage->hasFolder('/Redakteur/')) {
                 $storage->createFolder('/Redakteur/');
-                $this->writeFileMount('Redakteur', '/Redakteur/');
+                //$this->writeFileMount('Redakteur', '/Redakteur/');
             }
 
             $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
