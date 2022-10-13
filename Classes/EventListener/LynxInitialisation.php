@@ -88,7 +88,7 @@ class LynxInitialisation
             ->where(
                 $queryBuilder->expr()->eq('title', $queryBuilder->createNamedParameter($title))
             )
-            ->execute()
+            ->executeQuery()
             ->fetchColumn(0);
 
         if ($statement > 0) {
@@ -104,7 +104,7 @@ class LynxInitialisation
                     'read_only' => 0,
                 ]
             )
-            ->execute();
+            ->executeQuery();
     }
 
 }
