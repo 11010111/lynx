@@ -1,11 +1,11 @@
 <?php
 
+defined('TYPO3') or die('Access denied.');
+
 use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
 use TYPO3\CMS\Core\Imaging\IconRegistry;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-
-defined('TYPO3_MODE') || die();
 
 call_user_func(
     function () {

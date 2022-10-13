@@ -8,9 +8,9 @@ services:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
 
-  Swe\Lynx\EventListener\LynxInitialisation:
-    public: true
-    tags:
-      - name: event.listener
-        identifier: 'lynxInitialisationListener'
-        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent
+  #Swe\Lynx\EventListener\LynxInitialisation:
+  #  public: true
+  #  tags:
+  #    - name: event.listener
+  #      identifier: 'lynxInitialisationListener'
+  #      event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent

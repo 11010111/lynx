@@ -1,85 +1,125 @@
+# Load default processing options
 imports:
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+    - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Processing.yaml' }
+    - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml' }
+    - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml' }
 
+# Add configuration for the editor
+# For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
 editor:
     config:
-        contentsCss: ["/fileadmin/lynx/scss/compiled/rte.css"]
+        contentsCss: '/fileadmin/lynx/scss/compiled/rte.css'
 
-        stylesSet:
-            - { name: "Big", element: "span", attributes: { 'class': 'big' } }
-            - { name: "Small", element: "span", attributes: { 'class': 'small' } }
-            - { name: "Schriftgröße 25", element: "span", attributes: { 'class': 'font-size-25' } }
-            - { name: "Content 70%", element: "span", attributes: { 'class': 'smaller-content-70' } }
+        style:
+            definitions:
+                - { name: 'Title H1', element: 'h1', classes: [], styles: {  } }
+                - { name: 'Title H2', element: 'h2', classes: [], styles: {  } }
+                - { name: 'Title H3', element: 'h3', classes: [], styles: {  } }
+                - { name: 'Title H4', element: 'h4', classes: [], styles: {  } }
+                - { name: 'Quote / Citation', element: 'blockquote', classes: [], styles: {  } }
+                - { name: 'Code block', element: 'code', classes: [], styles: {  } }
+                - { name: 'Yellow marker', element: 'span', classes: ['yellow'], styles: { background: 'yellow' } }
 
-        toolbarGroups:
-            - { name: styles, groups: [ format, styles ] }
-            - { name: paragraph, groups: [ list, indent, blocks ] }
-            - "/"
-            - { name: basicstyles, groups: [ basicstyles, align ] }
-            - { name: links, groups: [ links ] }
-            - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
-            - { name: editing, groups: [ spellchecker ] }
-            - { name: insert, groups: [ insert ] }
-            - { name: tools, groups: [ table, specialchar ] }
-            - { name: document, groups: [ mode ] }
+        heading:
+            options:
+                - { model: 'paragraph', title: 'Paragraph' }
+                - { model: 'heading1', view: 'h1', title: 'Heading 1' }
+                - { model: 'heading2', view: 'h2', title: 'Heading 2' }
+                - { model: 'heading3', view: 'h3', title: 'Heading 3' }
+                - { model: 'heading4', view: 'h4', title: 'Heading 4' }
+                - { model: 'heading5', view: 'h5', title: 'Heading 5' }
+                - { model: 'heading6', view: 'h6', title: 'Heading 6' }
+                - { model: 'formatted', view: 'pre', title: 'Pre-Formatted Text' }
 
-        format_tags: "p;h1;h2;h3;h4;h5;pre"
+        toolbar:
+            items:
+                - heading
+                - style
+                - '|'
+                - undo
+                - redo
+                - '|'
+                - horizontalLine
+                - bold
+                - italic
+                - underline
+                - strikethrough
+                - subscript
+                - superscript
+                - alignment
+                - removeFormat
+                - Typo3Link
+                - Typo3Unlink
+                - '|'
+                - bulletedList
+                - numberedList
+                - blockQuote
+                - indent
+                - outdent
+                - '|'
+                - findAndReplace
+                - selectAll
+                - clipboard
+                - softHyphen
+                - specialCharacters
+                - '|'
+                - sourceEditing
+                #break - '-'
+                #separator - '|'
+                #- insertTable
+                #- tableColumn
+                #- tableRow
+                #- mergeTableCells
 
-        justifyClasses:
-            - text-left
-            - text-center
-            - text-right
-            #- text-justify
+        alignment:
+            options:
+                - { name: 'left', className: 'text-left' }
+                - { name: 'center', className: 'text-center' }
+                - { name: 'right', className: 'text-right' }
+                - { name: 'justify', className: 'text-justify' }
 
-        extraPlugins:
-            - justify
-            - showblocks
-
-        removePlugins:
-            - image
-
-        removeButtons:
-            - Anchor
-            - Underline
-            - Strike
-            - Table
-
+# Allow s and u tag
 processing:
     allowTags:
-        - button
+        - s
+        - u
+
+    ## Tags that are allowed outside of paragraphs
+    allowTagsOutside: [address, article, aside, blockquote, figure, footer, header, hr, nav, section, div]
+
+    ## allowed default attributes
+    allowAttributes: [class, id, title, dir, lang, xml:lang, itemscope, itemtype, itemprop]
 
 # Button config and defaults
 buttons:
     link:
-        relAttribute.:
+        relAttribute:
             enabled: false
         properties:
             class:
                 allowedClasses: 'link,btn-primary,btn-next,btn-prev,btn-border,link-download,link-folder,link-external,link-external-blank,link-mail,link-tel'
         page:
-            properties.:
-                class.:
+            properties:
+                class:
                     default: 'link'
         file:
-            properties.:
+            properties:
                 class:
                     default: 'link-download'
         folder:
-            properties.:
+            properties:
                 class:
                     default: 'link-folder'
         url:
-            properties.:
+            properties:
                 class:
-                    default: 'link'
-        mail:
-            properties.:
+                    default: 'link-external'
+        email:
+            properties:
                 class:
                     default: 'link-mail'
         telephone:
-            properties.:
+            properties:
                 class:
                     default: 'link-tel'
 
@@ -120,7 +160,7 @@ classesAnchor:
         target: '_blank'
     linkMail:
         class: 'link-mail'
-        type: 'mail'
+        type: 'email'
     linkTel:
         class: 'link-tel'
         type: 'telephone'
