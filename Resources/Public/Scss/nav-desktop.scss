@@ -1,0 +1,195 @@
+// Imports
+@import 'functions';
+
+// Desktop Navigation code here...
+nav.desktop {
+  @media screen and (max-width: breakpoint('lg')) {
+    display: none;
+  }
+
+  .content-logo {
+    margin-top: 2.77rem;
+    transition: margin-top 0.25s;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      z-index: 1000;
+
+      img {
+        width: auto;
+        height: auto;
+      }
+
+      svg {
+        width: auto;
+        height: 3.88rem;
+      }
+    }
+  }
+
+  .desktop-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    transition: background-color 0.25s;
+
+    .wrap-menu-lang {
+      margin: 1.44rem 0 0;
+      transition: margin-top 0.25s;
+    }
+
+    .buy-now {
+      margin: 0 0 0 2.77rem;
+    }
+
+    .desktop-menu {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+
+      ul {
+        list-style: none;
+      }
+
+      .parent {
+        position: relative;
+        top: 0;
+        right: 0;
+        font-weight: 400;
+        padding: 1rem;
+        margin-right: 1rem;
+
+        a {
+          font-size: 1.11em;
+          text-decoration: none;
+          color: var(--link);
+
+          &:hover {
+            color: var(--link-hover);
+          }
+        }
+
+        .desktop-dropdown {
+          display: none;
+          position: absolute;
+          top: 3rem;
+          right: -1rem;
+          min-width: 5rem;
+          background-color: var(--white);
+          text-align: right;
+          border-top: 0;
+          padding: 0.5rem 0;
+          box-shadow: 0 0 2rem rgb(0 0 0 / 5%);
+        }
+
+        &:hover {
+          .desktop-dropdown {
+            display: block;
+          }
+        }
+      }
+
+      .parent:first-child {
+        padding-left: 0;
+      }
+
+      .has-children {
+        &::after {
+          content: url('../Icons/dropdown.svg');
+          position: absolute;
+          top: 50%;
+          right: -0.5rem;
+          transform: translateY(-40%);
+          transition: 0.25s;
+        }
+      }
+
+      .child {
+        font-size: 0.9em;
+        font-weight: normal;
+        padding: 0.5rem 2rem;
+      }
+    }
+  }
+
+  .language-menu {
+    position: relative;
+    top: 0;
+    right: 0;
+    list-style: none;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 0 1rem 0 0;
+    cursor: pointer;
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      font-size: 1.11em;
+      text-decoration: none;
+      color: var(--link);
+
+      &:hover {
+        color: var(--link-hover);
+      }
+    }
+
+    &::after {
+      content: url('../Icons/dropdown.svg');
+      position: absolute;
+      top: 50%;
+      right: -0.5rem;
+      transform: translateY(-40%);
+      transition: 0.25s;
+    }
+
+    &:hover {
+      .language {
+        display: block;
+      }
+
+      &::after {
+        animation: fadeInOut 2s infinite;
+      }
+    }
+
+    .language {
+      display: none;
+      position: absolute;
+      top: 3rem;
+      right: -1rem;
+      min-width: 5rem;
+      background-color: var(--white);
+      text-align: right;
+      border-top: 0;
+      padding: 0.5rem 0;
+
+      li {
+        font-size: 0.9em;
+        font-weight: normal;
+        padding: 0.5rem 2rem;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.desktop-fixed {
+  .desktop-container {
+    background-color: var(--white);
+
+    .content-logo {
+      margin-top: 0.77rem;
+    }
+
+    .wrap-menu-lang {
+      margin: 0 !important;
+    }
+  }
+}

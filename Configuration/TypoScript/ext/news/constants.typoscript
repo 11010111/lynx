@@ -1,0 +1,12 @@
+##############
+#### NEWS ####
+##############
+plugin.tx_news {
+    view {
+        layoutRootPath = EXT:lynx/Resources/Private/Layouts/news/
+        partialRootPath = EXT:lynx/Resources/Private/Partials/news/
+        templateRootPath = EXT:lynx/Resources/Private/Templates/news/
+    }
+}
+
+plugin.tx_news.settings.cssFile =

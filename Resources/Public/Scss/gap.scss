@@ -1,0 +1,28 @@
+// Imports
+@import 'functions';
+
+// Gaps variables
+:root {
+  @each $size in $gaps {
+    --gap-#{$size}: calc((#{$size} / 18) * 1rem);
+  }
+}
+
+// Gaps Generator
+@each $size in $gaps {
+  .frame-space-before-#{$size} {
+    margin-top: var(--gap-#{$size});
+  }
+
+  .frame-space-after-#{$size} {
+    margin-bottom: var(--gap-#{$size});
+  }
+
+  .frame-space-inline-before-#{$size} {
+    padding-top: var(--gap-#{$size});
+  }
+
+  .frame-space-inline-after-#{$size} {
+    padding-bottom: var(--gap-#{$size});
+  }
+}

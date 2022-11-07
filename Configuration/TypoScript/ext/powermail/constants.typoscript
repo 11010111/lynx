@@ -1,0 +1,10 @@
+###################
+#### POWERMAIL ####
+###################
+plugin.tx_powermail {
+    view {
+        layoutRootPath = EXT:lynx/Resources/Private/Layouts/powermail/
+        partialRootPath = EXT:lynx/Resources/Private/Partials/powermail/
+        templateRootPath = EXT:lynx/Resources/Private/Templates/powermail/
+    }
+}

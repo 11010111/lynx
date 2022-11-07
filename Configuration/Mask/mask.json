@@ -1,0 +1,56 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "c1000": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "tx_mask_rte"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-file-text-o",
+                    "iconOverlay": "",
+                    "key": "c1000",
+                    "label": "C\/1000",
+                    "labels": [
+                        "",
+                        "Text"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                }
+            },
+            "sql": {
+                "tx_mask_rte": {
+                    "tt_content": {
+                        "tx_mask_rte": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "header": {
+                    "coreField": 1,
+                    "fullKey": "header",
+                    "key": "header",
+                    "type": "string"
+                },
+                "tx_mask_rte": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_rte",
+                    "key": "rte",
+                    "type": "richtext"
+                }
+            }
+        }
+    }
+}

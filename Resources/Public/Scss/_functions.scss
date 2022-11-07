@@ -1,0 +1,20 @@
+// Imports
+@import 'variables';
+
+// Function.scss
+@function breakpoint($key) {
+  @if map-has-key($breakpoints, $key) {
+    @return map-get($breakpoints, $key);
+  }
+
+  @warn 'Unknown `#{$key}` in $breakpoints.';
+  @return null;
+}
+
+@function gap($object, $style) {
+  @if map-has-key($gaps, $object) {
+    @return map-get(map-get($gaps, $object), $style);
+  }
+  @warn 'The key `#{$object}` is not available in the map.';
+  @return null;
+}

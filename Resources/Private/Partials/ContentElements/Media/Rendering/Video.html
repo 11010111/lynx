@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:lynx="http://typo3.org/ns/Swe/Lynx/ViewHelpers" data-namespace-typo3-fluid="true">
+
+  <f:if condition="{file.extension} == 'youtube' || {file.extension} == 'vimeo'">
+    <f:then>
+      <f:if condition="{file.extension} == 'youtube'">
+        <iframe class="iframe-embed-item" loading="{settings.media.lazyLoading}" data-consent="{lynx:replace(subject='{file.publicUrl}',search='https://www.youtube.com/watch?v=',replace='https://www.youtube-nocookie.com/embed/')}?autoplay={file.properties.autoplay}{f:if(condition:'{file.properties.autoplay}',then:'&muted=1')}" width="640" height="360" title="{file.title}" frameborder="0" allow="accelerometer; {f:if(condition:'{file.properties.autoplay}',then:'autoplay')}; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </f:if>
+
+      <f:if condition="{file.extension} == 'vimeo'">
+        <iframe class="iframe-embed-item" loading="{settings.media.lazyLoading}" data-consent="{lynx:replace(subject='{file.publicUrl}',search='https://vimeo.com/',replace='https://player.vimeo.com/video/')}?autoplay={file.properties.autoplay}{f:if(condition:'{file.properties.autoplay}',then:'&muted=1')}" width="640" height="360" title="{file.title}" frameborder="0" allow="accelerometer;{f:if(condition:'{file.properties.autoplay}',then:' autoplay;')} clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </f:if>
+    </f:then>
+    <f:else>
+      <f:media class="video-embed-item" file="{file}" alt="{file.alternative}" title="{file.title}" additionalConfig="{settings.media.additionalConfig}" additionalAttributes="{muted:'', loading:'{settings.media.lazyLoading}'}" />
+    </f:else>
+  </f:if>
+
+</html>
