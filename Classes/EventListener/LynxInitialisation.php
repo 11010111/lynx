@@ -10,7 +10,7 @@ use TYPO3\CMS\Core\Resource\Exception\InsufficientFolderAccessPermissionsExcepti
 use TYPO3\CMS\Core\Resource\Exception\InsufficientFolderWritePermissionsException;
 use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
+use TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent;
 
 /**
  * Class LynxInitialisation
@@ -20,12 +20,12 @@ use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
 class LynxInitialisation
 {
     /**
-     * @param AfterExtensionFilesHaveBeenImportedEvent $event
+     * @param AfterPackageActivationEvent $event
      * @throws ExistingTargetFolderException
      * @throws InsufficientFolderAccessPermissionsException
      * @throws InsufficientFolderWritePermissionsException
      */
-    public function __invoke(AfterExtensionFilesHaveBeenImportedEvent $event)
+    public function __invoke(AfterPackageActivationEvent $event)
     {
         if ($event->getPackageKey() === 'lynx') {
             /** @var ResourceFactory $resourceFactory */
