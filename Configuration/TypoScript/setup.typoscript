@@ -4,10 +4,20 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
 
 
+##########################
+#### EXTENSION SETUPS ####
+##########################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/ext/felogin/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/ext/news/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/ext/search/setup.typoscript">
+
+
 ################
 #### HELPER ####
 ################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/Helper/config.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/Helper/container.typoscript">
 
 
 ##############
@@ -16,10 +26,22 @@
 page = PAGE
 page {
     typeNum = 0
-    shortcutIcon = fileadmin/lynx/icons/favicon.ico
+    shortcutIcon = EXT:lynx/Resources/Public/Icons/favicon.ico
+
+    headerData {
+        # Preload Font
+        #110 = TEXT
+        #110.wrap = <link rel="preload" href="/fileadmin/lynx/fonts/BasierCircle/basiercircle-regular-webfont.woff2" as="font" crossorigin>
+    }
 
     10 = FLUIDTEMPLATE
     10 {
+        variables {
+            # Mobile Menu Dropdown Parent - Non-Clickable
+            linkNonClickable = TEXT
+            #linkNonClickable.value = 1
+        }
+
         # Template names will be generated automatically by converting the applied
         # backend_layout, there is no explicit mapping necessary anymore.
         #
@@ -47,18 +69,22 @@ page {
             }
             ifEmpty = Default
         }
+
         templateRootPaths {
             0 = EXT:lynx/Resources/Private/Templates/Page/
-            10 = {$page.fluidtemplate.templateRootPath}
+            1 = {$page.fluidtemplate.templateRootPath}
         }
+
         partialRootPaths {
             0 = EXT:lynx/Resources/Private/Partials/Page/
-            10 = {$page.fluidtemplate.partialRootPath}
+            1 = {$page.fluidtemplate.partialRootPath}
         }
+
         layoutRootPaths {
             0 = EXT:lynx/Resources/Private/Layouts/Page/
-            10 = {$page.fluidtemplate.layoutRootPath}
+            1 = {$page.fluidtemplate.layoutRootPath}
         }
+
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {
@@ -85,5 +111,121 @@ page {
                as = rootline
             }
         }
+    }
+
+    meta {
+        viewport = width=device-width, initial-scale=1
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        keywords.field = keywords
+        keywords.ifTrue = keywords
+    }
+
+    includeCSSLibs {
+
+    }
+
+    includeCSS {
+        normalize = EXT:lynx/Resources/Public/Css/normalize.css
+        container = EXT:lynx/Resources/Public/Css/container.css
+        gap = EXT:lynx/Resources/Public/Css/gap.css
+        flex = EXT:lynx/Resources/Public/Css/flex.css
+        desktop = EXT:lynx/Resources/Public/Css/nav-desktop.css
+        mobile = EXT:lynx/Resources/Public/Css/nav-mobile.css
+        footer = EXT:lynx/Resources/Public/Css/footer.css
+        rte = EXT:lynx/Resources/Public/Css/rte.css
+        base = EXT:lynx/Resources/Public/Css/base.css
+        main = EXT:lynx/Resources/Public/Css/main.css
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    # Header JS
+    includeJS {
+
+    }
+
+    # Footer JS
+    includeJSFooter {
+        fixed_navigation = EXT:lynx/Resources/Public/JavaScript/Src/fixed-navigation.js
+        mobile_menu = EXT:lynx/Resources/Public/JavaScript/Src/mobile-menu.js
+        alignment = EXT:lynx/Resources/Public/JavaScript/Src/alignment.js
+        scroll_top = EXT:lynx/Resources/Public/JavaScript/Src/scroll-top.js
+        equal_height = EXT:lynx/Resources/Public/JavaScript/Src/equal-height.js
+        container_colors = EXT:lynx/Resources/Public/JavaScript/Src/container-colors.js
+        main_js = EXT:lynx/Resources/Public/JavaScript/Src/main.js
+    }
+}
+
+
+####################
+#### BODY CLASS ####
+####################
+[traverse(page, "uid") in [1]]
+page.bodyTagAdd = class="home"
+[end]
+
+[traverse(page, "uid") not in [1]]
+page.bodyTagAdd = class="sequel"
+[end]
+
+
+################
+#### CONFIG ####
+################
+config {
+    absRefPrefix = auto
+    no_cache = 0
+    uniqueLinkVars = 1
+    pageTitleFirst = 1
+    #pageTitleSeparator = -
+    #pageTitleSeparator.noTrimWrap = | | |
+    linkVars = L
+    prefixLocalAnchors = all
+    renderCharset = utf-8
+    metaCharset = utf-8
+    doctype = html5
+  	removePageCss = 1
+    removeDefaultJS = 0
+    inlineStyle2TempFile = 1
+    admPanel = 1
+    debug = 1
+    contentObjectExceptionHandler = 0
+    cache_period = 86400
+    sendCacheHeaders = 1
+    intTarget =
+    extTarget = _blank
+    fileTarget = _blank
+    disablePrefixComment = 1
+    index_enable = 1
+    index_externals = 1
+    index_metatags = 1
+    headerComment = build by Smart Web Elements
+    typolinkLinkAccessRestrictedPages = 1
+    typolinkLinkAccessRestrictedPages_addParams = &redirect_url=###RETURN_URL###
+
+    ## Disable Image Upscaling
+    noScaleUp = 1
+
+    ## Compression and Concatenation of CSS and JS Files
+    compressJs = 0
+    compressCss = 0
+    concatenateJs = 0
+    concatenateCss = 0
+
+    ## Header Policy
+    additionalHeaders {
+        10.header = Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; script-src-elem 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; frame-src 'self';
+        20.header = strict-transport-security: max-age=31536000
+        30.header = X-Frame-Options: sameorigin
+        40.header = X-Xss-Protection: 1; mode=block
+        50.header = X-Content-Type-Options: nosniff
+        60.header = Referrer-Policy: strict-origin
     }
 }

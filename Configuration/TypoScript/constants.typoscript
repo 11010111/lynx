@@ -3,6 +3,13 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
 
+#############################
+#### EXTENSION CONSTANTS ####
+#############################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/ext/news/constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/ext/search/constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/ext/powermail/constants.typoscript">
+
 
 ##############################
 #### FLUID STYLED CONTENT ####
@@ -15,28 +22,37 @@ styles {
     }
 
     templates {
-        layoutRootPath = fileadmin/lynx/ext/lynx/Layouts/ContentElements/
-        partialRootPath = fileadmin/lynx/ext/lynx/Partials/ContentElements/
-        templateRootPath = fileadmin/lynx/ext/lynx/Templates/ContentElements/
+        layoutRootPath = EXT:lynx/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:lynx/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:lynx/Resources/Private/Templates/ContentElements/
     }
 }
+
 
 ##############################
 ### CONTENT TEMPLATE PATHS ###
 ##############################
 lib.contentElement {
-    templateRootPaths.20 = fileadmin/lynx/ext/lynx/Templates/ContentElements
-    partialRootPaths.20 = fileadmin/lynx/ext/lynx/Partials/ContentElements
-    layoutRootPaths.20 = fileadmin/lynx/ext/lynx/Layout/ContentElements
+    layoutRootPaths.20 = EXT:lynx/Resources/Private/Layouts/ContentElements/
+    partialRootPaths.20 = EXT:lynx/Resources/Private/Partials/ContentElements/
+    templateRootPaths.20 = EXT:lynx/Resources/Private/Templates/ContentElements/
 }
+
 
 ############
 ### PAGE ###
 ############
 page {
      fluidtemplate {
-        layoutRootPath = fileadmin/lynx/ext/lynx/Layouts/Page/
-        partialRootPath = fileadmin/lynx/ext/lynx/Partials/Page/
-        templateRootPath = fileadmin/lynx/ext/lynx/Templates/Page/
+        layoutRootPath = EXT:lynx/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:lynx/Resources/Private/Partials/Page/
+        templateRootPath = EXT:lynx/Resources/Private/Templates/Page/
+    }
+
+    tracking {
+        google {
+            trackingID =
+            anonymizeIp = 1
+        }
     }
 }

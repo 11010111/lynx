@@ -15,7 +15,7 @@
 #  2  = right
 #  3  = border
 #
-#################################################
+#################
 lib.dynamicContent = COA
 lib.dynamicContent {
     5 = LOAD_REGISTER

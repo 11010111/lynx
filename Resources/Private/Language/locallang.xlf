@@ -1,49 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2020-11-14UTC00:10:570">
+    <file source-language="en" datatype="plaintext" original="messages" date="2022-11-07UTC08:10:220">
         <header>
             <authorName>Konstantin Schneider</authorName>
             <authorEmail>k.schneider@s-w-e.com</authorEmail>
         </header>
         <body>
-
-            <trans-unit id="top">
-                <source>To Top</source>
-            </trans-unit>
-
-            <!-- PageLayoutView -->
-            <trans-unit id="extra_small">
-                <source>Extra Small</source>
-            </trans-unit>
-            <trans-unit id="small">
-                <source>Small</source>
-            </trans-unit>
-            <trans-unit id="medium">
-                <source>Medium</source>
-            </trans-unit>
-            <trans-unit id="large">
-                <source>Large</source>
-            </trans-unit>
-            <trans-unit id="extra_large">
-                <source>Extra Large</source>
-            </trans-unit>
-
-            <trans-unit id="full_width">
-                <source>Full Width</source>
-            </trans-unit>
-            <trans-unit id="frame_class">
-                <source>Frame Class</source>
-            </trans-unit>
-            <trans-unit id="frame_class_extra">
-                <source>Frame Class Extra</source>
-            </trans-unit>
-            <trans-unit id="space_right">
-                <source>Space Right</source>
-            </trans-unit>
-            <trans-unit id="space_left">
-                <source>Space Left</source>
-            </trans-unit>
-
         </body>
     </file>
 </xliff>

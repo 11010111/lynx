@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2020-11-14UTC00:10:570">
+    <file source-language="en" datatype="plaintext" original="messages" date="2022-11-07UTC08:10:220">
         <header>
             <authorName>Konstantin Schneider</authorName>
             <authorEmail>k.schneider@s-w-e.com</authorEmail>
         </header>
         <body>
-
-            <!-- Backend Module -->
-            <trans-unit id="extension.title">
-                <source>Lynx</source>
-                <target state="translated">Lynx</target>
-            </trans-unit>
-
             <!-- Backend Layout -->
             <trans-unit id="backend_layout.default">
                 <source>Default</source>
                 <target state="translated">Standard</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.blank">
+                <source>Blank</source>
+                <target state="translated">Leer</target>
             </trans-unit>
             <trans-unit id="backend_layout.column.normal">
                 <source>Normal</source>
@@ -56,7 +53,6 @@
                 <source>HTML Tag</source>
                 <target state="translated">HTML Tag</target>
             </trans-unit>
-
         </body>
     </file>
 </xliff>

@@ -1,23 +1,19 @@
 <?php
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+defined('TYPO3') or die('Access denied.');
 
-defined('TYPO3_MODE') || die();
+call_user_func(function() {
+    /**
+     * Temporary variables
+     */
+    $extensionKey = 'lynx';
 
-call_user_func(
-    function () {
-        /**
-         * Temporary variables
-         */
-        $extensionKey = 'lynx';
-
-        /**
-         * Default TypoScript for Lynx
-         */
-        ExtensionManagementUtility::addStaticFile(
-            $extensionKey,
-            'Configuration/TypoScript',
-            'Lynx'
-        );
-    }
-);
+    /**
+     * Default TypoScript for Lynx
+     */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $extensionKey,
+        'Configuration/TypoScript',
+        'Lynx'
+    );
+});

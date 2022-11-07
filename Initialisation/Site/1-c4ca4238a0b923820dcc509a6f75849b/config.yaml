@@ -7,14 +7,14 @@ errorHandling:
   -
     errorCode: 404
     errorHandler: Fluid
-    errorFluidTemplate: 'fileadmin/lynx/ext/lynx/Templates/Sites/Error404.html'
+    errorFluidTemplate: 'EXT:lynx/Resources/Private/Templates/Sites/Error404.html'
     errorFluidTemplatesRootPath: ''
     errorFluidLayoutsRootPath: ''
     errorFluidPartialsRootPath: ''
   -
     errorCode: 500
     errorHandler: Fluid
-    errorFluidTemplate: 'fileadmin/lynx/ext/lynx/Templates/Sites/Error500.html'
+    errorFluidTemplate: 'EXT:lynx/Resources/Private/Templates/Sites/Error500.html'
     errorFluidTemplatesRootPath: ''
     errorFluidLayoutsRootPath: ''
     errorFluidPartialsRootPath: ''
@@ -25,14 +25,14 @@ errorHandling:
   -
     errorCode: 503
     errorHandler: Fluid
-    errorFluidTemplate: 'fileadmin/lynx/ext/lynx/Templates/Sites/Error503.html'
+    errorFluidTemplate: 'EXT:lynx/Resources/Private/Templates/Sites/Error503.html'
     errorFluidTemplatesRootPath: ''
     errorFluidLayoutsRootPath: ''
     errorFluidPartialsRootPath: ''
   -
     errorCode: 0
     errorHandler: Fluid
-    errorFluidTemplate: 'fileadmin/lynx/ext/lynx/Templates/Sites/AnyError.html'
+    errorFluidTemplate: 'EXT:lynx/Resources/Private/Templates/Sites/AnyError.html'
     errorFluidTemplatesRootPath: ''
     errorFluidLayoutsRootPath: ''
     errorFluidPartialsRootPath: ''

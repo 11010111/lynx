@@ -1,4 +1,4 @@
-Site Package for the project "Lynx"
+Sitepackage for the project "Lynx"
 ==============================================================
 
 Add some explanation here.

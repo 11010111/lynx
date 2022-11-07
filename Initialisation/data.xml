@@ -1641,8 +1641,8 @@ NyI6MSwiMTQyNDg1NTYiOjF9LCI0MTUyIjp7IjEwMzgxMjIwMSI6MX19Ijt9fQ==
 				<field index="root" type="integer">1</field>
 				<field index="clear" type="integer">3</field>
 				<field index="include_static_file">EXT:fluid_styled_content/Configuration/TypoScript/,EXT:fluid_styled_content/Configuration/TypoScript/Styling/,EXT:form/Configuration/TypoScript/,EXT:lynx/Configuration/TypoScript,EXT:mask/Configuration/TypoScript,EXT:mgcookies/Configuration/TypoScript,EXT:news/Configuration/TypoScript</field>
-				<field index="constants">&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/lynx/ts/constants.typoscript&quot;&gt;</field>
-				<field index="config">&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/lynx/ts/setup.typoscript&quot;&gt;</field>
+				<field index="constants"></field>
+				<field index="config"></field>
 				<field index="basedOn"></field>
 				<field index="includeStaticAfterBasedOn" type="integer">0</field>
 				<field index="static_file_mode" type="integer">0</field>

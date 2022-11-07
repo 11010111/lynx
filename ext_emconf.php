@@ -5,14 +5,13 @@
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Lynx',
-    'description' => 'Base website template',
+    'description' => 'Distribution Template',
     'category' => 'templates',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.4.0-11.9.99',
-            'fluid_styled_content' => '10.4.0-11.9.99',
-            'rte_ckeditor' => '10.4.0-11.9.99',
-            'container' => '1.0.0-2.9.99',
+            'typo3' => '11.5.0-12.9.99',
+            'fluid_styled_content' => '11.5.0-12.9.99',
+            'rte_ckeditor' => '11.5.0-12.9.99',
         ],
         'conflicts' => [
         ],
@@ -23,11 +22,11 @@ $EM_CONF[$_EXTKEY] = [
         ],
     ],
     'state' => 'stable',
-    'uploadfolder' => false,
+    'uploadfolder' => 0,
     'createDirs' => '',
-    'clearCacheOnLoad' => true,
+    'clearCacheOnLoad' => 1,
     'author' => 'Konstantin Schneider',
     'author_email' => 'k.schneider@s-w-e.com',
     'author_company' => 'Smart Web Elements',
-    'version' => '12.0.48',
+    'version' => '1.0.0',
 ];

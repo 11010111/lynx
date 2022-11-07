@@ -6,7 +6,6 @@ mod {
         BackendLayouts {
             default {
                 title = LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:backend_layout.default
-                icon = EXT:lynx/Resources/Public/Images/BackendLayouts/default.png
                 config {
                     backend_layout {
                         colCount = 1
@@ -23,6 +22,7 @@ mod {
                         }
                     }
                 }
+                icon = EXT:lynx/Resources/Public/Images/BackendLayouts/default.png
             }
         }
     }

@@ -1,9 +1,0 @@
-#
-# News Template Config
-#
-tx_news {
-    templateLayouts {
-        1 = My News
-        # 99 = LLL:fileadmin/lynx/language/locallang.xml:someTranslation
-    }
-}
