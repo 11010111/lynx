@@ -13,4 +13,4 @@ services:
     tags:
       - name: event.listener
         identifier: 'lynxInitialisationListener'
-        event: TYPO3\CMS\Extensionmanager\Event\AfterPackageActivationEvent
+        event: TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent
