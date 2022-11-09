@@ -1,0 +1,7 @@
+<f:asset.css identifier="c0001" href="EXT:lynx/Resources/Public/Css/c0001.css" />
+
+<lynx:container containerData="{data}" class="c0001{f:if(condition:'{data.tx_mask_selectbox}',then:' c0001-{data.tx_mask_selectbox}')}">
+    <f:if condition="{data.tx_mask_rte}">
+        <div class="rte-content">{data.tx_mask_rte -> f:format.html()}</div>
+    </f:if>
+</lynx:container>

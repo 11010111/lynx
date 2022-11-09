@@ -39,14 +39,29 @@ TCEFORM {
             }
         }
 
-        # Hide Mask Fields Example
-        #tx_mask_my_select_box {
-        #    types {
-        #        mask_element {
-        #            keepItems = 1,2
-        #        }
-        #    }
-        #}
+        # Add Mask Field Options
+        tx_mask_selectbox {
+            types {
+                mask_c0001 {
+                    addItems {
+                        left = Left
+                        right = Right
+                    }
+                }
+            }
+        }
+
+        tx_mask_selectbox {
+            types {
+                mask_c0002 {
+                    addItems {
+                        left = Left
+                        stretch = Stretch
+                        right = Right
+                    }
+                }
+            }
+        }
 
         space_before_class {
             removeItems = extra-small,small,medium,large,extra-large

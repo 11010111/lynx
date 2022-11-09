@@ -1,0 +1,40 @@
+// Imports
+@import "functions";
+
+// C/0002
+.c0002 {
+    display: flex;
+    column-gap: var(--column-gap);
+    row-gap: var(--row-gap);
+
+    figure {
+        picture {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}
+
+.c0002-stretch {
+    figure {
+        width: 100%;
+        
+        picture {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+.c0002-right {
+    justify-content: flex-end;
+}

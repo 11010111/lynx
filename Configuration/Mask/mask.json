@@ -3,34 +3,68 @@
     "tables": {
         "tt_content": {
             "elements": {
-                "c1000": {
-                    "color": "#000000",
-                    "colorOverlay": "#000000",
+                "c0001": {
+                    "color": "#0575ff",
+                    "colorOverlay": "#0575ff",
                     "columns": [
                         "header",
-                        "tx_mask_rte"
+                        "tx_mask_rte",
+                        "tx_mask_selectbox"
                     ],
                     "description": "",
                     "descriptions": [
+                        "",
                         "",
                         ""
                     ],
                     "icon": "fa-file-text-o",
                     "iconOverlay": "",
-                    "key": "c1000",
-                    "label": "C\/1000",
+                    "key": "c0001",
+                    "label": "C\/0001",
                     "labels": [
-                        "",
-                        "Text"
+                        "Backend Title",
+                        "Text",
+                        "Style"
                     ],
                     "shortLabel": "",
-                    "sorting": 0
+                    "sorting": 1
+                },
+                "c0002": {
+                    "color": "#0575ff",
+                    "colorOverlay": "#0575ff",
+                    "columns": [
+                        "header",
+                        "image",
+                        "tx_mask_selectbox"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-file-image-o",
+                    "iconOverlay": "",
+                    "key": "c0002",
+                    "label": "C\/0002",
+                    "labels": [
+                        "Backend Title",
+                        "Images",
+                        "Style"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 2
                 }
             },
             "sql": {
                 "tx_mask_rte": {
                     "tt_content": {
                         "tx_mask_rte": "mediumtext"
+                    }
+                },
+                "tx_mask_selectbox": {
+                    "tt_content": {
+                        "tx_mask_selectbox": "varchar(255) DEFAULT '' NOT NULL"
                     }
                 }
             },
@@ -41,6 +75,13 @@
                     "key": "header",
                     "type": "string"
                 },
+                "image": {
+                    "coreField": 1,
+                    "fullKey": "image",
+                    "imageoverlayPalette": 1,
+                    "key": "image",
+                    "type": "file"
+                },
                 "tx_mask_rte": {
                     "config": {
                         "enableRichtext": 1,
@@ -49,6 +90,21 @@
                     "fullKey": "tx_mask_rte",
                     "key": "rte",
                     "type": "richtext"
+                },
+                "tx_mask_selectbox": {
+                    "config": {
+                        "fieldWizard": {
+                            "selectIcons": {
+                                "disabled": 1
+                            }
+                        },
+                        "items": [],
+                        "renderType": "selectSingle",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_selectbox",
+                    "key": "selectbox",
+                    "type": "select"
                 }
             }
         }

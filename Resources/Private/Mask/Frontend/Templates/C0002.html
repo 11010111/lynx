@@ -1,0 +1,8 @@
+<f:asset.css identifier="c0002" href="EXT:lynx/Resources/Public/Css/c0002.css" />
+
+<lynx:container containerData="{data}"
+    class="c0002{f:if(condition:'{data.tx_mask_selectbox}',then:' c0002-{data.tx_mask_selectbox}')}">
+    <f:for each="{data.image}" as="file">
+        <f:render partial="Picture" arguments="{file: file, loading: 'lazy'}" />
+    </f:for>
+</lynx:container>

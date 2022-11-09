@@ -1,0 +1,15 @@
+// Imports
+@import "functions";
+
+// C/0001
+.c0001 {
+  .rte-content {
+    width: 100%;
+    max-width: 35rem;
+  }
+}
+
+.c0001-right {
+  display: flex;
+  justify-content: flex-end;
+}
