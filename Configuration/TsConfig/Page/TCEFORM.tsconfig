@@ -45,6 +45,7 @@ TCEFORM {
                 mask_c0001 {
                     addItems {
                         left = Left
+                        center = Center
                         right = Right
                     }
                 }
