@@ -43,4 +43,5 @@ export function equalHeight () {
 
   resize()
   window.addEventListener('resize', resize)
+  window.equalHeight.resize = equalHeight.resize
 }
