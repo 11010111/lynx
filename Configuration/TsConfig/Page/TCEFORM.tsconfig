@@ -63,6 +63,18 @@ TCEFORM {
             }
         }
 
+        tx_mask_selectbox {
+            types {
+                mask_c0003 {
+                    addItems {
+                        left = Left Image
+                        stretch = Stretch Image
+                        right = Right Image
+                    }
+                }
+            }
+        }
+
         space_before_class {
             removeItems = extra-small,small,medium,large,extra-large
 

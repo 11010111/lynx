@@ -54,9 +54,40 @@
                     ],
                     "shortLabel": "",
                     "sorting": 2
+                },
+                "c0003": {
+                    "color": "#0575ff",
+                    "colorOverlay": "#0575ff",
+                    "columns": [
+                        "header",
+                        "tx_mask_media",
+                        "tx_mask_selectbox"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-file-video-o",
+                    "iconOverlay": "",
+                    "key": "c0003",
+                    "label": "C\/0003",
+                    "labels": [
+                        "Backend Title",
+                        "Media",
+                        "Style"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
                 }
             },
             "sql": {
+                "tx_mask_media": {
+                    "tt_content": {
+                        "tx_mask_media": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
                 "tx_mask_rte": {
                     "tt_content": {
                         "tx_mask_rte": "mediumtext"
@@ -81,6 +112,31 @@
                     "imageoverlayPalette": 1,
                     "key": "image",
                     "type": "file"
+                },
+                "tx_mask_media": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileByUrlAllowed": 1,
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        }
+                    },
+                    "fullKey": "tx_mask_media",
+                    "key": "media",
+                    "onlineMedia": [
+                        "youtube",
+                        "vimeo"
+                    ],
+                    "type": "media"
                 },
                 "tx_mask_rte": {
                     "config": {
