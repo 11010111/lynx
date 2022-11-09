@@ -1,13 +1,10 @@
 /**
  * Mobile Menu Click Events
  */
-;(function MobileMenu () {
-
+export function mobileMenu () {
   let mobileMenu = document.querySelector('.mobile-menu')
 
-  if (!mobileMenu) {
-    return
-  }
+  if (!mobileMenu) return
 
   let parent = mobileMenu.querySelectorAll('.has-children')
 
@@ -28,5 +25,4 @@
       }
     })
   })
-
-})()
+}

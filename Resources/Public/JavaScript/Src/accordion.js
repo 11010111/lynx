@@ -1,7 +1,7 @@
 /**
  * Accordion
  */
-;(function Accordion () {
+(function Accordion () {
   let accordions = document.querySelectorAll('.accordion')
 
   if (!accordions) {
@@ -25,4 +25,4 @@
       })
     })
   })
-})()
+})();

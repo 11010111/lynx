@@ -1,8 +1,8 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<f:asset.css identifier="swiper_bundle" href="fileadmin/lynx/css/swiper-bundle.min.css" />
-<f:asset.css identifier="slider" href="fileadmin/lynx/scss/compiled/slider.css" />
-<f:asset.script identifier="slider" type="module" src="fileadmin/lynx/js/slider.js" />
+<f:asset.css identifier="swiper_bundle" href="{f:uri.resource(path:'Frameworks/swiper-bundle.min.css', extensionName: 'lynx')}" />
+<f:asset.css identifier="slider" href="{f:uri.resource(path:'Css/slider.css', extensionName: 'lynx')}" />
+<f:asset.script identifier="slider" type="module" src="{f:uri.resource(path:'JavaScript/Src/slider.js', extensionName: 'lynx')}" />
 
 <lynx:container containerData="{data}">
     <div class="flex flex--gaps break--{data.breakpoint}">

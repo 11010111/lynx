@@ -1,7 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<f:asset.css identifier="accordion" href="fileadmin/lynx/scss/compiled/accordion.css" />
-<f:asset.script identifier="accordion" type="module" src="fileadmin/lynx/js/accordion.js" />
+<f:asset.css identifier="accordion" href="{f:uri.resource(path:'Css/accordion.css', extensionName: 'lynx')}" />
+<f:asset.script identifier="accordion" type="module" src="{f:uri.resource(path:'Javascript/Src/accordion.js', extensionName: 'lynx')}" />
 
 <lynx:container class="accordion" containerData="{data}">
     <f:if condition="{data.header}">

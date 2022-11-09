@@ -153,13 +153,8 @@ page {
 
     # Footer JS
     includeJSFooter {
-        fixed_navigation = EXT:lynx/Resources/Public/JavaScript/Src/fixed-navigation.js
-        mobile_menu = EXT:lynx/Resources/Public/JavaScript/Src/mobile-menu.js
-        alignment = EXT:lynx/Resources/Public/JavaScript/Src/alignment.js
-        scroll_top = EXT:lynx/Resources/Public/JavaScript/Src/scroll-top.js
-        equal_height = EXT:lynx/Resources/Public/JavaScript/Src/equal-height.js
-        container_colors = EXT:lynx/Resources/Public/JavaScript/Src/container-colors.js
         main_js = EXT:lynx/Resources/Public/JavaScript/Src/main.js
+        main_js.type = module
     }
 }
 

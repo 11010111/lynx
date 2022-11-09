@@ -1,7 +1,7 @@
 /**
  * Equal Height
  */
-;(function EqualHeight (self) {
+export function equalHeight () {
   let elements = document.querySelectorAll('[data-equal-height]')
 
   if (!elements) return
@@ -31,7 +31,7 @@
     }
   }
 
-  self.resize = function () {
+  let resize = function () {
     reset()
 
     for (const groupsKey in groups) {
@@ -41,6 +41,6 @@
     }
   }
 
-  self.resize()
-  window.addEventListener('resize', self.resize)
-})(window.equalHeight = self)
+  resize()
+  window.addEventListener('resize', resize)
+}

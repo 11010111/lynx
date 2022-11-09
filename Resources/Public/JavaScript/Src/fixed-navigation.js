@@ -2,7 +2,7 @@
  * Desktop
  * Set Fixed Navigation On Scroll
  */
-;(function FixedNavigationOnScrollDesktop () {
+export function fixedNavigationOnScrollDesktop () {
   let desktop = document.querySelector('.desktop')
 
   if (!desktop) return
@@ -23,13 +23,13 @@
 
   scroll()
   window.addEventListener('scroll', scroll)
-})()
+}
 
 /**
  * Mobile
  * Set Fixed Navigation On Scroll
  */
-;(function FixedNavigationOnScrollMobile () {
+export function fixedNavigationOnScrollMobile () {
   let mobile = document.querySelector('.mobile')
 
   if (!mobile) return
@@ -46,4 +46,4 @@
 
   scroll()
   window.addEventListener('scroll', scroll)
-})()
+}

@@ -1,12 +1,10 @@
 /**
  * SCROLL TO TOP
  */
-;(function ScrollToTop () {
+export function scrollToTop () {
   let footer = document.querySelector('footer')
 
-  if (!footer) {
-    return
-  }
+  if (!footer) return
 
   let toTop = document.createElement('div')
   toTop.className = 'scroll-top'
@@ -25,5 +23,4 @@
       toTop.classList.remove('scroll-top-active')
     }
   })
-
-})()
+}

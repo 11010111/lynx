@@ -1,7 +1,7 @@
 /**
  * Container Alignment
  */
-;(function Alignment () {
+export function alignment () {
   let alignment = document.querySelectorAll('[data-alignment]')
 
   if (!alignment) {
@@ -58,4 +58,4 @@
 
   resize()
   window.addEventListener('resize', resize)
-})()
+}
