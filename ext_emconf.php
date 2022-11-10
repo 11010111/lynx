@@ -5,7 +5,7 @@
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Lynx',
-    'description' => 'Base website template',
+    'description' => 'Base Distribution Template',
     'category' => 'templates',
     'constraints' => [
         'depends' => [
@@ -28,5 +28,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Konstantin Schneider',
     'author_email' => 'k.schneider@s-w-e.com',
     'author_company' => 'Smart Web Elements',
-    'version' => '13.0.0',
+    'version' => '13.0.1',
 ];

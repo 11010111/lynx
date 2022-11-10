@@ -1,6 +1,6 @@
 {
   "name": "swe/lynx",
-  "description": "13.0.0",
+  "description": "LYNX Distribution Template",
   "minimum-stability": "stable",
   "license": "proprietary",
   "type": "typo3-cms-extension",
@@ -24,7 +24,8 @@
     "php": "^7.4 || ^8.0 || ^8.1",
     "typo3/cms-core": "^11.5 || ^12.0",
     "typo3/cms-rte-ckeditor": "^11.5 || ^12.0",
-    "typo3/cms-fluid-styled-content": "^11.5 || ^12.0"
+    "typo3/cms-fluid-styled-content": "^11.5 || ^12.0",
+    "b13/container": "^1 || ^2"
   },
   "autoload": {
     "psr-4": {
