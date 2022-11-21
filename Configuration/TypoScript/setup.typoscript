@@ -159,6 +159,12 @@ page {
 }
 
 
+################################
+#### BACKEND TEMPLATE PATHS ####
+################################
+module.tx_backend.view.partialRootPaths.100 = EXT:lynx/Resources/Private/Backend/Partials/
+
+
 ####################
 #### BODY CLASS ####
 ####################
