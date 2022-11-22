@@ -25,7 +25,8 @@
     "typo3/cms-core": "^11.5 || ^12.0",
     "typo3/cms-rte-ckeditor": "^11.5 || ^12.0",
     "typo3/cms-fluid-styled-content": "^11.5 || ^12.0",
-    "b13/container": "^1 || ^2"
+    "b13/container": "^1 || ^2",
+    "swe/swe-edi": "^11 || ^12"
   },
   "autoload": {
     "psr-4": {
