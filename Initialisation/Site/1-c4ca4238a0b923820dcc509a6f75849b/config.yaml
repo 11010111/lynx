@@ -54,6 +54,15 @@ languages:
     flag: de
     languageId: 0
 routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: /
+    suffix: /
+    index: ''
+    map:
+      /: 0
+      yoast-snippetpreview.json: 1480321830
+      sitemap.xml: 1533906435
   NewsPlugin:
     type: Extbase
     extension: News
