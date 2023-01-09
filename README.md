@@ -1,7 +1,28 @@
 Sitepackage for the project "Lynx"
 ==============================================================
 
-# LYNX ViewHelpers Example
+# LYNX EXAMPLES
+
+## REM CALC
+
+```scss
+@import "functions";
+@import "mixins";
+
+// Variables
+::root {
+    @include rem-var(--test-variable, 40);
+
+    // or
+
+    --test-variable: #{rem(40)};
+}
+
+// Classes
+div {
+    margin: rem(40) 0;
+}
+```
 
 ## LYNX CONTAINER
 With Optional parameters
