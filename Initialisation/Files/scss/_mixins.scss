@@ -29,3 +29,7 @@
     }
   }
 }
+
+@mixin rem-var($variable, $px, $base: $rem-base) {
+  #{$variable}: rem($px, $base);
+}
