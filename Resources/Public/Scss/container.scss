@@ -13,7 +13,13 @@
 }
 
 .container--xl {
-  --max-width: #{rem( 1800)};
+  margin-left: max(var(--margin-x-min), var(--margin-x-max-xl));
+  margin-right: max(var(--margin-x-min), var(--margin-x-max-xl));
+
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 // Container Alignment

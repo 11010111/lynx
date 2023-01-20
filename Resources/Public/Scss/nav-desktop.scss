@@ -36,6 +36,7 @@ nav.desktop {
     right: 0;
     z-index: 1001;
     transition: background-color 0.25s;
+    padding: 0 var(--margin-x-min);
 
     .wrap-menu-lang {
       margin: 1.44rem 0 0;

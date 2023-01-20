@@ -24,11 +24,10 @@
   --warning: #e3ad40;
   --success: #88c433;
 
+  // Container
   --max-width: #{rem(1380)};
   --margin-x-min: #{rem(18)};
   --margin-x-max: calc((100vw - var(--max-width)) / 2);
-  --column-gap: #{rem(36)};
-  --row-gap: #{rem(36)};
 
   @media screen and (min-width: breakpoint(md)) {
     --margin-x-min: #{rem(36)};
@@ -37,6 +36,14 @@
   @media screen and (min-width: breakpoint(lg)) {
     --margin-x-min: #{rem(72)};
   }
+
+  // Container XL
+  --max-width-xl: #{rem( 1800)};
+  --margin-x-max: calc((100vw - var(--max-width-xl)) / 2);
+
+  // Gaps
+  --column-gap: #{rem(36)};
+  --row-gap: #{rem(36)};
 }
 
 html {
