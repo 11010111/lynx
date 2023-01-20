@@ -39,7 +39,7 @@
 
   // Container XL
   --max-width-xl: #{rem( 1800)};
-  --margin-x-max: calc((100vw - var(--max-width-xl)) / 2);
+  --margin-x-max-xl: calc((100vw - var(--max-width-xl)) / 2);
 
   // Gaps
   --column-gap: #{rem(36)};
