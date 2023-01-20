@@ -3,22 +3,24 @@
     <f:then>
 
         <lynx:container containerData="{data}" class="frame-type-{data.CType} frame-layout-{data.layout}">
-            <f:if condition="{data._LOCALIZED_UID}">
-                <a id="c{data._LOCALIZED_UID}"></a>
-            </f:if>
-            <f:render section="Before" optional="true">
-                <f:render partial="DropIn/Before/All" arguments="{_all}" />
-            </f:render>
-            <f:render section="Header" optional="true">
-                <f:render partial="Header/All" arguments="{_all}" />
-            </f:render>
-            <f:render section="Main" optional="true" />
-            <f:render section="Footer" optional="true">
-                <f:render partial="Footer/All" arguments="{_all}" />
-            </f:render>
-            <f:render section="After" optional="true">
-                <f:render partial="DropIn/After/All" arguments="{_all}" />
-            </f:render>
+            <div class="{f:if(condition:'{data.container}',then:'{data.container}',else:'default')}{f:if(condition:'{data.alignment}',then:' {data.alignment}')}">
+                <f:if condition="{data._LOCALIZED_UID}">
+                    <a id="c{data._LOCALIZED_UID}"></a>
+                </f:if>
+                <f:render section="Before" optional="true">
+                    <f:render partial="DropIn/Before/All" arguments="{_all}" />
+                </f:render>
+                <f:render section="Header" optional="true">
+                    <f:render partial="Header/All" arguments="{_all}" />
+                </f:render>
+                <f:render section="Main" optional="true" />
+                <f:render section="Footer" optional="true">
+                    <f:render partial="Footer/All" arguments="{_all}" />
+                </f:render>
+                <f:render section="After" optional="true">
+                    <f:render partial="DropIn/After/All" arguments="{_all}" />
+                </f:render>
+            </div>
         </lynx:container>
 
     </f:then>
@@ -47,7 +49,7 @@
         <f:if condition="{data.space_after_class} || {data.padding_bottom}">
             <div class="{f:if(condition:'{data.space_after_class}',then:'frame-space-after-{data.space_after_class}')}{f:if(condition:'{data.space_after_class} && {data.padding_bottom}',then:' ')}{f:if(condition:'{data.padding_bottom}',then:'frame-space-inline-after-{data.padding_bottom}')}"></div>
         </f:if>
-
+        
     </f:else>
 </f:if>
 </html>

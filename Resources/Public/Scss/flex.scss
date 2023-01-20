@@ -1,5 +1,6 @@
 // Imports
-@import 'mixins';
+@use 'mixins';
+@use 'variables';
 
 // Flex
 .flex {
@@ -353,7 +354,7 @@
   row-gap: var(--row-gap);
 }
 
-@each $name, $breakpoint in $breakpoints {
-  @include break(#{$name});
-  @include flex-size(#{$name});
+@each $name, $breakpoint in variables.$breakpoints {
+  @include mixins.break(#{$name});
+  @include mixins.flex-size(#{$name});
 }

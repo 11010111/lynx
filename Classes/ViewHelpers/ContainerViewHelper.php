@@ -27,14 +27,6 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
     public function render()
     {
         if ($this->hasArgument('containerData')) {
-            if ($this->arguments['containerData']['container']) {
-                if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $this->arguments['containerData']['container']);
-                } else {
-                    $this->tag->addAttribute('class',  $this->arguments['containerData']['container']);
-                }
-            }
-
             if ($this->arguments['containerData']['frame_class']) {
                 if ($this->tag->getAttribute('class')) {
                     $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $this->arguments['containerData']['frame_class']);
@@ -73,10 +65,6 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 } else {
                     $this->tag->addAttribute('class', 'frame-space-inline-after-' . $this->arguments['containerData']['padding_bottom']);
                 }
-            }
-
-            if ($this->arguments['containerData']['alignment']) {
-                $this->tag->addAttribute('data-alignment', $this->arguments['containerData']['alignment']);
             }
 
             if ($this->arguments['containerData']['background_color']) {

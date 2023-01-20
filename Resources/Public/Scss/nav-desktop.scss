@@ -3,7 +3,7 @@
 
 // Desktop Navigation code here...
 nav.desktop {
-  @media screen and (max-width: breakpoint('lg')) {
+  @media screen and (max-width: breakpoint(lg)) {
     display: none;
   }
 

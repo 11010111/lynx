@@ -1,16 +1,15 @@
 import {mobileMenu} from "./mobile-menu.js";
-import {alignment} from "./alignment.js";
 import {scrollToTop} from "./scroll-top.js";
 import {fixedNavigationOnScrollDesktop, fixedNavigationOnScrollMobile} from "./fixed-navigation.js";
 import {containerColors} from "./container-colors.js";
-import {equalHeight} from "./equal-height.js";
+import {equalHeight, equalHeightMobile} from "./equal-height.js";
 
 fixedNavigationOnScrollDesktop()
 fixedNavigationOnScrollMobile()
 mobileMenu()
 containerColors()
-alignment()
 equalHeight()
+equalHeightMobile()
 scrollToTop()
 
 // Detect Browser Dark Scheme

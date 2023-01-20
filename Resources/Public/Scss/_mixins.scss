@@ -1,6 +1,6 @@
 // Imports
-@import 'functions';
-@import 'variables';
+@use 'functions';
+@use 'variables';
 
 
 // _mixins.scss
@@ -17,7 +17,7 @@
 
 // flex--size
 @mixin flex-size($var: null) {
-  @each $name, $value in $flex-percentages {
+  @each $name, $value in variables.$flex-percentages {
     .flex--#{$var}-#{$name} {
       width: 100%;
 
@@ -30,6 +30,6 @@
   }
 }
 
-@mixin rem-var($variable, $px, $base: $rem-base) {
-  #{$variable}: rem($px, $base);
+@mixin rem-var($variable, $px, $base: variables.$rem-base) {
+  #{$variable}: functions.rem($px, $base);
 }

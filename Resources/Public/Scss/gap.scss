@@ -1,15 +1,16 @@
 // Imports
-@import 'functions';
+@use 'functions';
+@use 'variables';
 
 // Gaps variables
 :root {
-  @each $size in $gaps {
+  @each $size in variables.$gaps {
     --gap-#{$size}: calc((#{$size} / 18) * 1rem);
   }
 }
 
 // Gaps Generator
-@each $size in $gaps {
+@each $size in variables.$gaps {
   .frame-space-before-#{$size} {
     margin-top: var(--gap-#{$size});
   }

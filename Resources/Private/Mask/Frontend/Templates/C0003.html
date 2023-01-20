@@ -1,44 +1,55 @@
 <f:asset.css identifier="c0003" href="EXT:lynx/Resources/Public/Css/c0003.css" />
 
 <lynx:container containerData="{data}" class="c0003{f:if(condition:'{data.tx_mask_selectbox}',then:' c0003-{data.tx_mask_selectbox}')}">
-    <f:for each="{data.tx_mask_media}" as="file">
-        <f:if condition="{file.extension} == youtube || {file.extension} == vimeo">
-            <f:then>
-                <div class="frame-source">
-                    <f:media file="{file}" width="560" height="315" />
-                    <f:if condition="{file.description}">
-                        <figcaption>
-                            {file.description}
-                        </figcaption>
+    <div class="{f:if(condition:'{data.container}',then:'{data.container}',else:'default')}{f:if(condition:'{data.alignment}',then:' {data.alignment}')}">
+        <f:for each="{data.tx_mask_media}" as="file">
+            <f:if condition="{file.extension} == youtube || {file.extension} == vimeo">
+                <f:then>
+                    <div class="frame-source">
+                        <f:media id="f{file.uid}" file="{file}" width="560" height="315" additionalAttributes="{allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen: ''}" />
+                        <f:if condition="{file.description}">
+                            <figcaption>
+                                {file.description}
+                            </figcaption>
+                        </f:if>
+
+                        <script>
+                            const iframe = document.querySelector('#' + 'f{file.uid}')
+                            
+                            if (iframe) {
+                                iframe.setAttribute('data-src', iframe.src)
+                                iframe.src = ''
+                            }
+                        </script>
+                    </div>
+                </f:then>
+                <f:else>
+                    <f:if condition="{file.extension} == webm || {file.extension} == opus || {file.extension} == flac || {file.extension} == ogg || {file.extension} == mp4 || {file.extension} == wav || {file.extension} == mp3 || {file.extension} == al">
+                        <f:then>
+                            <div class="media-source">
+                                <f:media file="{file}" width="560" height="315" />
+                                <f:if condition="{file.description}">
+                                    <figcaption>
+                                        {file.description}
+                                    </figcaption>
+                                </f:if>
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <figure>
+                                <picture>
+                                    <f:media file="{file}" alt="{file.alternative}" title="{file.title}" additionalAttributes="{srcset: '{f:uri.image(image: file, maxWidth: 768)} 768w,{f:uri.image(image: file, maxWidth: 1024)} 1024w,{f:uri.image(image: file, maxWidth: 1250)} 1250w,{f:uri.image(image: file, maxWidth: 1450)} 1450w,{f:uri.image(image: file, maxWidth: 1920)} 1920w',sizes: '(min-width: 1250px) 100vw, 100vw'}" />
+                                </picture>
+                                <f:if condition="{file.description}">
+                                    <figcaption>
+                                        {file.description}
+                                    </figcaption>
+                                </f:if>
+                            </figure>
+                        </f:else>
                     </f:if>
-                </div>
-            </f:then>
-            <f:else>
-                <f:if condition="{file.extension} == webm || {file.extension} == opus || {file.extension} == flac || {file.extension} == ogg || {file.extension} == mp4 || {file.extension} == wav || {file.extension} == mp3 || {file.extension} == al">
-                    <f:then>
-                        <div class="media-source">
-                            <f:media file="{file}" width="560" height="315" />
-                            <f:if condition="{file.description}">
-                                <figcaption>
-                                    {file.description}
-                                </figcaption>
-                            </f:if>
-                        </div>
-                    </f:then>
-                    <f:else>
-                        <figure>
-                            <picture>
-                                <f:media file="{file}" alt="{file.alternative}" title="{file.title}" additionalAttributes="{srcset: '{f:uri.image(image: file, maxWidth: 768)} 768w,{f:uri.image(image: file, maxWidth: 1024)} 1024w,{f:uri.image(image: file, maxWidth: 1250)} 1250w,{f:uri.image(image: file, maxWidth: 1450)} 1450w,{f:uri.image(image: file, maxWidth: 1920)} 1920w',sizes: '(min-width: 1250px) 100vw, 100vw'}" />
-                            </picture>
-                            <f:if condition="{file.description}">
-                                <figcaption>
-                                    {file.description}
-                                </figcaption>
-                            </f:if>
-                        </figure>
-                    </f:else>
-                </f:if>
-            </f:else>
-        </f:if>
-    </f:for>
+                </f:else>
+            </f:if>
+        </f:for>
+    </div>
 </lynx:container>

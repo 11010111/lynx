@@ -2,54 +2,25 @@
 @import 'functions';
 
 // Container
-.content {
-  width: 100%;
-  max-width: var(--content-max-width);
-  margin-left: auto;
-  margin-right: auto;
+.container {
+  margin-left: max(var(--margin-x-min), var(--margin-x-max));
+  margin-right: max(var(--margin-x-min), var(--margin-x-max));
 
-  .full, .full-padding {
-    width: 100%;
-    max-width: 100%;
+  .container {
     margin-left: 0;
     margin-right: 0;
   }
 }
 
-.full {
-  width: calc(100% + var(--container-margin) * 2);
-  max-width: calc(100% + var(--container-margin) * 2);
-  margin-left: calc(0% - var(--container-margin));
-  margin-right: calc(0% - var(--container-margin));
-
-  .full, .full-padding {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
+.container--xl {
+  --max-width: #{rem( 1800)};
 }
 
-.full-padding {
-  width: calc(100% + var(--container-margin) * 2);
-  max-width: calc(100% + var(--container-margin) * 2);
-  margin-left: calc(0% - var(--container-margin));
-  margin-right: calc(0% - var(--container-margin));
-  padding-left: var(--container-margin);
-  padding-right: var(--container-margin);
-
-  .full, .full-padding {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
+// Container Alignment
+.margin-left {
+  margin-left: 0;
 }
 
-.content--xl {
-  max-width: 98rem;
-
-  @media screen and (max-width: 114em) {
-    padding: 0 var(--container-margin);
-  }
+.margin-right {
+  margin-right: 0;
 }

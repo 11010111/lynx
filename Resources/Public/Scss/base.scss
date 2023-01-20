@@ -23,19 +23,19 @@
   --error: #d42525;
   --warning: #e3ad40;
   --success: #88c433;
-  --container-margin: 1rem;
-  --column-gap: 1rem;
-  --row-gap: 1rem;
-  --content-max-width: 76.66rem;
 
-  @media screen and (min-width: breakpoint('md')) {
-    --container-margin: 2rem;
-    --column-gap: 2rem;
-    --row-gap: 2rem;
+  --max-width: #{rem(1380)};
+  --margin-x-min: #{rem(18)};
+  --margin-x-max: calc((100vw - var(--max-width)) / 2);
+  --column-gap: #{rem(36)};
+  --row-gap: #{rem(36)};
+
+  @media screen and (min-width: breakpoint(md)) {
+    --margin-x-min: #{rem(36)};
   }
 
-  @media screen and (min-width: breakpoint('lg')) {
-    --container-margin: 4rem;
+  @media screen and (min-width: breakpoint(lg)) {
+    --margin-x-min: #{rem(72)};
   }
 }
 
@@ -57,7 +57,8 @@ html {
 
 body {
   width: 100%;
-  padding: 0 var(--container-margin);
+  padding: 0;
+  margin: 0;
 
   // Scrollbar: Chrome + Safari
   &::-webkit-scrollbar {
@@ -99,7 +100,7 @@ h1 {
   line-height: 3.88rem;
   margin-bottom: 2.33rem;
 
-  @media screen and (min-width: breakpoint('md')) {
+  @media screen and (min-width: breakpoint(md)) {
     font-size: 3.88rem;
   }
 }
@@ -109,7 +110,7 @@ h2 {
   line-height: 2.77rem;
   margin-bottom: 2rem;
 
-  @media screen and (min-width: breakpoint('md')) {
+  @media screen and (min-width: breakpoint(md)) {
     font-size: 2.77rem;
   }
 }
@@ -119,7 +120,7 @@ h3 {
   line-height: 1.94rem;
   margin-bottom: 1.66rem;
 
-  @media screen and (min-width: breakpoint('md')) {
+  @media screen and (min-width: breakpoint(md)) {
     font-size: 1.94rem;
   }
 }

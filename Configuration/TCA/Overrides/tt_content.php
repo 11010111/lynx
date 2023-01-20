@@ -370,17 +370,14 @@ defined('TYPO3') or die('Access denied.');
     [
         'container' => [
             'exclude' => 1,
-            'onChange' => 'reload',
             'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:container',
             'description' => '',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['Excess Width', ''],
-                    ['Content Width', 'content'],
-                    ['Full Width', 'full'],
-                    ['Full Width (padding)', 'full-padding']
+                    ['Default', ''],
+                    ['Container', 'container']
                 ]
             ]
         ],
@@ -395,7 +392,6 @@ defined('TYPO3') or die('Access denied.');
         ],
         'alignment' => [
             'exclude' => 1,
-            'onChange' => 'reload',
             'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:alignment',
             'description' => '',
             'config' => [
@@ -405,11 +401,6 @@ defined('TYPO3') or die('Access denied.');
                     ['Default', ''],
                     ['Left', 'left'],
                     ['Right', 'right']
-                ]
-            ],
-            'displayCond' => [
-                'AND' => [
-                    'FIELD:container:=:content'
                 ]
             ]
         ],

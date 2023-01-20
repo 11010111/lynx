@@ -1,23 +1,25 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<f:asset.css identifier="accordion" href="{f:uri.resource(path:'Css/accordion.css', extensionName: 'lynx')}" />
-<f:asset.script identifier="accordion" type="module" src="{f:uri.resource(path:'Javascript/Src/accordion.js', extensionName: 'lynx')}" />
+<f:asset.css identifier="accordion-css" href="{f:uri.resource(path:'Css/accordion.css', extensionName: 'lynx')}" />
+<f:asset.script identifier="accordion-js" type="module" src="{f:uri.resource(path:'Javascript/Src/accordion.js', extensionName: 'lynx')}" />
 
 <lynx:container class="accordion" containerData="{data}">
-    <f:if condition="{data.header}">
-        <header>
-            <h2>{data.header}</h2>
-        </header>
-    </f:if>
-
-    <div class="flex flex--gaps break--{data.breakpoint}">
-
-        <div class="flex--100 accordion-content">
-            <f:for each="{children_201}" as="element">
-                {element.renderedContent -> f:format.raw()}
-            </f:for>
+    <div class="{f:if(condition:'{data.container}',then:'{data.container}',else:'default')}{f:if(condition:'{data.alignment}',then:' {data.alignment}')}">
+        <f:if condition="{data.header}">
+            <header>
+                <h2>{data.header}</h2>
+            </header>
+        </f:if>
+    
+        <div class="flex flex--gaps break--{data.breakpoint}">
+    
+            <div class="flex--100 accordion-content">
+                <f:for each="{children_201}" as="element">
+                    {element.renderedContent -> f:format.raw()}
+                </f:for>
+            </div>
+    
         </div>
-
     </div>
 </lynx:container>
 
