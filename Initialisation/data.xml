@@ -1465,7 +1465,7 @@
 				<field index="selected_categories">0</field>
 				<field index="tx_impexp_origuid" type="integer">1</field>
 				<field index="tx_container_parent" type="integer">0</field>
-				<field index="container">full-padding</field>
+				<field index="container">container</field>
 				<field index="html_tag"></field>
 				<field index="breakpoint">md</field>
 				<field index="alignment"></field>
