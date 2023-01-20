@@ -38,8 +38,17 @@
   }
 
   // Container XL
-  --max-width-xl: #{rem( 1800)};
+  --max-width-xl: #{rem(1760)};
+  --margin-x-min-xl: #{rem(9)};
   --margin-x-max-xl: calc((100vw - var(--max-width-xl)) / 2);
+
+  @media screen and (min-width: breakpoint(md)) {
+    --margin-x-min-xl: #{rem(18)};
+  }
+
+  @media screen and (min-width: breakpoint(lg)) {
+    --margin-x-min-xl: #{rem(36)};
+  }
 
   // Gaps
   --column-gap: #{rem(36)};
@@ -90,12 +99,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 1rem;
+  margin: 0 0 rem(18);
   line-height: 1.25;
 }
 
 p {
-  margin: 0 0 1rem;
+  margin: 0 0 rem(18);
 }
 
 p:last-of-type {

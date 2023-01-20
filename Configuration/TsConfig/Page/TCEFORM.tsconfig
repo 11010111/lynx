@@ -9,7 +9,7 @@ TCEFORM {
 
         container {
             addItems {
-                #class = Name
+                container-xl = Container XL
             }
         }
 

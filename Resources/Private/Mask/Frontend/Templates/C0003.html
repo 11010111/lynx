@@ -1,7 +1,7 @@
 <f:asset.css identifier="c0003" href="EXT:lynx/Resources/Public/Css/c0003.css" />
 
 <lynx:container containerData="{data}" class="c0003{f:if(condition:'{data.tx_mask_selectbox}',then:' c0003-{data.tx_mask_selectbox}')}">
-    <div class="{f:if(condition:'{data.container}',then:'{data.container}',else:'default')}{f:if(condition:'{data.alignment}',then:' {data.alignment}')}">
+    <div class="{f:if(condition:'{data.container}',then:'{data.container}',else:'default')}{f:if(condition:'{data.alignment}',then:' container-{data.alignment}')}">
         <f:for each="{data.tx_mask_media}" as="file">
             <f:if condition="{file.extension} == youtube || {file.extension} == vimeo">
                 <f:then>

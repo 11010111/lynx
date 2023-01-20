@@ -5,7 +5,7 @@
 <f:asset.script identifier="slider-js" type="module" src="{f:uri.resource(path:'JavaScript/Src/slider.js', extensionName: 'lynx')}" />
 
 <lynx:container containerData="{data}">
-    <div class="flex flex--gaps break--{data.breakpoint}{f:if(condition:'{data.container}',then:' {data.container}')}{f:if(condition:'{data.alignment}',then:' {data.alignment}')}">
+    <div class="flex flex--gaps break--{data.breakpoint}{f:if(condition:'{data.container}',then:' {data.container}')}{f:if(condition:'{data.alignment}',then:' container-{data.alignment}')}">
 
         <div class="flex--100 slider-content">
             <div class="swiper-wrapper">
