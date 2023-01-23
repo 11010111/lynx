@@ -16,7 +16,7 @@
             </f:else>
           </f:if>
 
-          <f:image image="{file}" title="{file.title}" alt="{file.alternative}" maxWidth="768" maxHeight="432" loading="{f:if(condition:'{loading}',then:'{loading}',else:'eager')}" width="auto" height="auto" />
+          <f:image image="{file}" title="{file.title}" alt="{file.alternative}" maxWidth="{f:if(condition:'{maxWidth}',then:'{maxWidth}',else:'768')}" maxHeight="{f:if(condition:'{maxHeight}',then:'{maxHeight}',else:'432')}" loading="{f:if(condition:'{loading}',then:'{loading}',else:'eager')}" width="auto" height="auto" />
         </picture>
       </f:link.typolink>
     </f:then>
@@ -35,7 +35,7 @@
           </f:else>
         </f:if>
 
-        <f:image image="{file}" title="{file.title}" alt="{file.alternative}" maxWidth="768" maxHeight="432" loading="{f:if(condition:'{loading}',then:'{loading}',else:'eager')}" width="auto" height="auto" />
+        <f:image image="{file}" title="{file.title}" alt="{file.alternative}" maxWidth="{f:if(condition:'{maxWidth}',then:'{maxWidth}',else:'768')}" maxHeight="{f:if(condition:'{maxHeight}',then:'{maxHeight}',else:'432')}" loading="{f:if(condition:'{loading}',then:'{loading}',else:'eager')}" width="auto" height="auto" />
       </picture>
     </f:else>
   </f:if>
