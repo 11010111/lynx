@@ -3,9 +3,11 @@
 
 // C/0002
 .c0002 {
-    display: flex;
-    column-gap: var(--column-gap);
-    row-gap: var(--row-gap);
+    div:first-of-type {
+        display: flex;
+        column-gap: var(--column-gap);
+        row-gap: var(--row-gap);
+    }
 
     figure {
         picture {
@@ -36,5 +38,7 @@
 }
 
 .c0002-right {
-    justify-content: flex-end;
+    div:first-of-type {
+        justify-content: flex-end;
+    }
 }

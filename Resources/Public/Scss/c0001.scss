@@ -17,9 +17,11 @@
 }
 
 .c0001-center {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  div:first-of-type {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 
   .rte-content {
     display: flex;
@@ -29,6 +31,8 @@
 }
 
 .c0001-right {
-  display: flex;
-  justify-content: flex-end;
+  div:first-of-type {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
