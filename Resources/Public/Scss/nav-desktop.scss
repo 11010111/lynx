@@ -34,11 +34,6 @@ nav.desktop {
     z-index: 1001;
     padding: 0 var(--margin-x-min);
 
-    .wrap-menu-lang {
-      margin: 1.44rem 0 0;
-      transition: margin-top 0.25s;
-    }
-
     .buy-now {
       margin: 0 0 0 2.77rem;
 
@@ -83,7 +78,8 @@ nav.desktop {
           top: 5.25rem;
           right: -1rem;
           min-width: 5rem;
-          background: var(--white);
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(5px) saturate(0.5);
           text-align: right;
           border-top: 0;
           padding: 0.5rem 0;
