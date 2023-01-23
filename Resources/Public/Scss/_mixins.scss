@@ -9,7 +9,7 @@
   .break--#{$var} {
     flex-direction: column;
 
-    @media screen and (min-width: breakpoint(#{$var})) {
+    @media screen and (min-width: functions.breakpoint(#{$var})) {
       flex-direction: row;
     }
   }
@@ -23,7 +23,7 @@
 
       $percent: '%';
 
-      @media screen and (min-width: breakpoint(#{$var})) {
+      @media screen and (min-width: functions.breakpoint(#{$var})) {
         width: #{$value}#{$percent};
       }
     }
