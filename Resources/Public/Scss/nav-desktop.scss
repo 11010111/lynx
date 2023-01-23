@@ -8,9 +8,6 @@ nav.desktop {
   }
 
   .content-logo {
-    margin-top: 2.77rem;
-    transition: margin-top 0.25s;
-
     .logo {
       display: flex;
       align-items: center;
@@ -35,7 +32,6 @@ nav.desktop {
     left: 0;
     right: 0;
     z-index: 1001;
-    transition: backdrop-filter 0.25s, box-shadow 0.25s;
     padding: 0 var(--margin-x-min);
 
     .wrap-menu-lang {
@@ -45,12 +41,20 @@ nav.desktop {
 
     .buy-now {
       margin: 0 0 0 2.77rem;
+
+      a:not(:hover) {
+        background: transparent;
+      }
     }
 
     .desktop-menu {
       display: flex;
       flex-direction: row;
+      column-gap: 1rem;
+      row-gap: 1rem;
       list-style: none;
+      padding: 0;
+      margin: 0;
 
       ul {
         list-style: none;
@@ -61,13 +65,12 @@ nav.desktop {
         top: 0;
         right: 0;
         font-weight: 400;
-        padding: 1rem;
-        margin-right: 1rem;
+        padding: 2rem 1rem;
 
         a {
-          font-size: 1.11em;
+          font-size: 1.11rem;
           text-decoration: none;
-          color: var(--link);
+          color: var(--text);
 
           &:hover {
             color: var(--link-hover);
@@ -77,10 +80,10 @@ nav.desktop {
         .desktop-dropdown {
           display: none;
           position: absolute;
-          top: 3rem;
+          top: 5.25rem;
           right: -1rem;
           min-width: 5rem;
-          background-color: var(--white);
+          background: var(--white);
           text-align: right;
           border-top: 0;
           padding: 0.5rem 0;
@@ -95,23 +98,19 @@ nav.desktop {
         }
       }
 
-      .parent:first-child {
-        padding-left: 0;
-      }
-
       .has-children {
         &::after {
           content: url('../Icons/dropdown.svg');
           position: absolute;
           top: 50%;
-          right: -0.5rem;
+          right: -0.25rem;
           transform: translateY(-40%);
           transition: 0.25s;
         }
       }
 
       .child {
-        font-size: 0.9em;
+        font-size: 1rem;
         font-weight: normal;
         padding: 0.5rem 2rem;
       }
@@ -187,13 +186,5 @@ nav.desktop {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(5px) saturate(0.5);
     box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
-
-    .content-logo {
-      margin-top: 0.77rem;
-    }
-
-    .wrap-menu-lang {
-      margin: 0 !important;
-    }
   }
 }
