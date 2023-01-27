@@ -3,7 +3,7 @@
 
 // C/0003
 .c0003 {
-    div:first-of-type {
+    > div {
         display: flex;
         column-gap: var(--column-gap);
         row-gap: var(--row-gap);
@@ -42,7 +42,7 @@
 }
 
 .c0003-right {
-    div:first-of-type {
+    > div {
         justify-content: flex-end;
     }
 }

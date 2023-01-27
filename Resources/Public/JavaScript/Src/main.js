@@ -1,11 +1,10 @@
-import {mobileMenu} from "./mobile-menu.js";
-import {scrollToTop} from "./scroll-top.js";
-import {fixedNavigationOnScrollDesktop, fixedNavigationOnScrollMobile} from "./fixed-navigation.js";
-import {containerColors} from "./container-colors.js";
-import {equalHeight, equalHeightMobile} from "./equal-height.js";
+import { mobileMenu } from "./mobile-menu.js";
+import { scrollToTop } from "./scroll-top.js";
+import { PageScroll } from "./navigation.js";
+import { containerColors } from "./container-colors.js";
+import { equalHeight, equalHeightMobile } from "./equal-height.js";
 
-fixedNavigationOnScrollDesktop()
-fixedNavigationOnScrollMobile()
+PageScroll()
 mobileMenu()
 containerColors()
 equalHeight()

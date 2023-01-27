@@ -3,64 +3,40 @@
 
 // Desktop Navigation code here...
 nav.desktop {
-  @media screen and (max-width: breakpoint(lg)) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--margin-x-min);
+  
+  @media not screen and (min-width: breakpoint(lg)) {
     display: none;
   }
 
-  .content-logo {
-    .logo {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      z-index: 1000;
-
-      img {
-        width: auto;
-        height: auto;
-      }
-
-      svg {
-        width: auto;
-        height: 3.88rem;
-      }
-    }
+  .desktop-logo {
+    display: flex;
+    align-items: center;
   }
 
-  .desktop-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1001;
-    padding: 0 var(--margin-x-min);
+  .desktop-menu-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: rem(36);
+    row-gap: rem(18);
 
-    .buy-now {
-      margin: 0 0 0 2.77rem;
-
-      a:not(:hover) {
-        background: transparent;
-      }
-    }
-
-    .desktop-menu {
+    .desktop-link-wrapper {
       display: flex;
-      flex-direction: row;
-      column-gap: 1rem;
-      row-gap: 1rem;
+      column-gap: rem(18);
+      row-gap: rem(18);
       list-style: none;
       padding: 0;
       margin: 0;
 
-      ul {
-        list-style: none;
-      }
-
-      .parent {
+      .level1 {
         position: relative;
         top: 0;
         right: 0;
         font-weight: 400;
-        padding: 2rem 1rem;
+        padding: rem(36) rem(18);
 
         a {
           font-size: 1.11rem;
@@ -75,16 +51,22 @@ nav.desktop {
         .desktop-dropdown {
           display: none;
           position: absolute;
-          top: 5.25rem;
-          right: -1rem;
-          min-width: 5rem;
-          background: rgba(255, 255, 255, 0.95);
-          backdrop-filter: blur(5px) saturate(0.5);
-          text-align: right;
-          border-top: 0;
-          padding: 0.5rem 0;
-          box-shadow: 0 0.25rem 0.25rem rgb(0 0 0 / 5%);
+          top: rem(72);
+          right: rem(-18);
           width: max-content;
+          text-align: right;
+          background: var(--white);
+          padding: rem(9) 0;
+          box-shadow: 0 rem(5) rem(5) rgb(0 0 0 / 5%);
+
+          .level2 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: rem(18);
+            font-weight: normal;
+            padding: rem(9) rem(36);
+          }
         }
 
         &:hover {
@@ -99,19 +81,19 @@ nav.desktop {
           content: url('../Icons/dropdown.svg');
           position: absolute;
           top: 50%;
-          right: -0.25rem;
+          right: rem(-6);
           transform: translateY(-40%);
-          transition: 0.25s;
         }
       }
+    }
 
-      .child {
-        font-size: 1rem;
-        font-weight: normal;
-        padding: 0.5rem 2rem;
+    .desktop-btn-wrapper {
+      a:not(:hover) {
+        background: transparent;
       }
     }
   }
+
 
   .language-menu {
     position: relative;
@@ -174,13 +156,5 @@ nav.desktop {
         white-space: nowrap;
       }
     }
-  }
-}
-
-.desktop-fixed {
-  .desktop-container {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px) saturate(0.5);
-    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
   }
 }

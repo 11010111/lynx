@@ -1,9 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <nav class="mobile">
-  <div class="content-logo">
-    <div class="logo">
-      <f:cObject typoscriptObjectPath="lib.logo" />
-    </div>
+  <div class="mobile-logo">
+    <f:cObject typoscriptObjectPath="lib.logo" />
   </div>
 
   <div class="button-wrapper">
@@ -11,7 +9,7 @@
     <label for="menu-button" class="menu-label"></label>
 
     <div class="mobile-container">
-      <div class="container">
+      <div class="container mobile-content">
         <ul class="mobile-menu">
           <f:for each="{navigation}" as="navigationItem">
             <li class="parent{f:if(condition: navigationItem.children, then:' has-children')}">
@@ -37,6 +35,12 @@
                     </li>
                   </f:for>
                 </ul>
+              </f:if>
+
+              <f:if condition="{navigationItem.children}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M8.18005 10L12.1801 14L16.1801 10" stroke="#0575ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
               </f:if>
             </li>
           </f:for>

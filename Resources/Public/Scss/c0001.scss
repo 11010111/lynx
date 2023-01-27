@@ -17,7 +17,7 @@
 }
 
 .c0001-center {
-  div:first-of-type {
+  > div {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -31,7 +31,7 @@
 }
 
 .c0001-right {
-  div:first-of-type {
+  > div {
     display: flex;
     justify-content: flex-end;
   }
