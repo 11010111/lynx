@@ -1,6 +1,6 @@
 import { mobileMenu } from "./mobile-menu.js";
 import { scrollToTop } from "./scroll-top.js";
-import { PageScroll } from "./navigation.js";
+import { PageScroll, ScrollPaddingTop } from "./navigation.js";
 import { containerColors } from "./container-colors.js";
 import { equalHeight, equalHeightMobile } from "./equal-height.js";
 
