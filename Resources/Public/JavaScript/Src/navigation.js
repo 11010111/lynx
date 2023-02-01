@@ -18,7 +18,7 @@ export function PageScroll() {
  * Scroll Padding Top Variable
  */
 export function ScrollPaddingTop() {
-  const root = document.documentElement
+  const root = document.querySelector(':root')
   const pageNavigation = document.querySelector('.page-navigation')
 
   if (!pageNavigation) return
