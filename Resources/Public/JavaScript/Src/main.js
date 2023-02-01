@@ -5,6 +5,7 @@ import { containerColors } from "./container-colors.js";
 import { equalHeight, equalHeightMobile } from "./equal-height.js";
 
 PageScroll()
+ScrollPaddingTop()
 mobileMenu()
 containerColors()
 equalHeight()

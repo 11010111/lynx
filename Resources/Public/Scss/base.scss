@@ -23,6 +23,7 @@
   --error: #d42525;
   --warning: #e3ad40;
   --success: #88c433;
+  --scroll-padding-top: #{rem(100)};
 
   // Gaps
   --column-gap: #{rem(36)};
@@ -63,6 +64,7 @@ html {
   font-weight: normal;
 
   scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding-top);
   overflow-y: overlay;
 
   // 1920px (width) / 18 (font-size) / 100%

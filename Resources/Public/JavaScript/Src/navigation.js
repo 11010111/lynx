@@ -9,6 +9,24 @@ export function PageScroll() {
       document.body.classList.remove('page-scroll')
     }
   }
+
   scroll()
   window.addEventListener('scroll', scroll)
+}
+
+/**
+ * Scroll Padding Top Variable
+ */
+export function ScrollPaddingTop() {
+  const root = document.documentElement
+  const pageNavigation = document.querySelector('.page-navigation')
+
+  if (!pageNavigation) return
+  
+  const resize = () => {
+    root.style.setProperty('--scroll-padding-top', Math.floor(pageNavigation.clientHeight) + 'px')
+  }
+
+  resize()
+  window.addEventListener('resize', resize)
 }
