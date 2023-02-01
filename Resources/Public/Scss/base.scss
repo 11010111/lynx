@@ -24,6 +24,10 @@
   --warning: #e3ad40;
   --success: #88c433;
 
+  // Gaps
+  --column-gap: #{rem(36)};
+  --row-gap: #{rem(36)};
+
   // Container
   --max-width: #{rem(1380)};
   --margin-x-min: #{rem(18)};
@@ -49,10 +53,6 @@
   @media screen and (min-width: breakpoint(lg)) {
     --margin-x-min-xl: #{rem(36)};
   }
-
-  // Gaps
-  --column-gap: #{rem(36)};
-  --row-gap: #{rem(36)};
 }
 
 html {
@@ -63,7 +63,6 @@ html {
   font-weight: normal;
 
   scroll-behavior: smooth;
-  scrollbar-width: thin; // Scrollbar: Firefox
 
   // 1920px (width) / 18 (font-size) / 100%
   @media screen and (min-width: 1921px) {
@@ -76,21 +75,6 @@ body {
   padding: 0;
   margin: 0;
   hyphens: auto;
-
-  // Scrollbar: Chrome + Safari
-  &::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--secondary);
-    border-radius: 10px;
-
-    &:hover {
-      background-color: var(--link-hover);
-    }
-  }
 }
 
 * {
