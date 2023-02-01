@@ -28,5 +28,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Konstantin Schneider',
     'author_email' => 'k.schneider@s-w-e.com',
     'author_company' => 'Smart Web Elements',
-    'version' => '1.0.31',
+    'version' => '1.0.32',
 ];

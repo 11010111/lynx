@@ -63,6 +63,7 @@ html {
   font-weight: normal;
 
   scroll-behavior: smooth;
+  overflow-y: overlay;
 
   // 1920px (width) / 18 (font-size) / 100%
   @media screen and (min-width: 1921px) {
@@ -75,6 +76,23 @@ body {
   padding: 0;
   margin: 0;
   hyphens: auto;
+
+  &::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.5);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 }
 
 * {
