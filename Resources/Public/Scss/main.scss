@@ -6,7 +6,15 @@
   position: sticky;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 1000;
+}
+
+// document.body.classList.add('page-navigation-fixed');
+.page-navigation-fixed {
+  .page-navigation {
+    position: fixed;
+  }
 }
 
 .page-scroll {

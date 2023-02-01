@@ -16,4 +16,9 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
   document.body.classList.add('dark-scheme')
 }
 
+window.navigationFixed = () => {
+  document.body.classList.add('page-navigation-fixed')
+  document.body.scrollIntoView();
+}
+
 console.log('WE LOVE TYPO3')
