@@ -2,14 +2,14 @@
  * Set Container Background Color and Font Color
  */
 export function containerColors () {
-  let backgrounds = document.querySelectorAll('[data-background]')
-  let foregrounds = document.querySelectorAll('[data-foreground]')
+  const backgrounds = document.querySelectorAll('[data-background]')
+  const foregrounds = document.querySelectorAll('[data-foreground]')
 
-  backgrounds.forEach(function (bg) {
+  backgrounds.forEach((bg) => {
     bg.style.backgroundColor = bg.getAttribute('data-background')
   })
 
-  foregrounds.forEach(function (fg) {
+  foregrounds.forEach((fg) => {
     fg.style.color = fg.getAttribute('data-foreground')
   })
 }

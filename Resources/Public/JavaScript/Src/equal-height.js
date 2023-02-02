@@ -2,13 +2,13 @@
  * Equal Height
  */
 export function equalHeight () {
-  let elements = document.querySelectorAll('[data-equal-height]')
+  const elements = document.querySelectorAll('[data-equal-height]')
 
   if (!elements) return
 
   let groups = []
 
-  elements.forEach(function (el) {
+  elements.forEach((el) => {
     let groupName = el.getAttribute('data-equal-height')
 
     if (!groups[groupName]) {
@@ -18,10 +18,10 @@ export function equalHeight () {
     }
   })
 
-  let reset = function () {
+  const reset = () => {
     for (const groupsKey in groups) {
       groups[groupsKey]['height'] = 0
-      groups[groupsKey]['elements'].forEach(function (el) {
+      groups[groupsKey]['elements'].forEach((el) => {
         el.style.height = 'auto'
 
         if (el.clientHeight > groups[groupsKey]['height']) {
@@ -31,11 +31,11 @@ export function equalHeight () {
     }
   }
 
-  let resize = function () {
+  const resize = () => {
     reset()
 
     for (const groupsKey in groups) {
-      groups[groupsKey]['elements'].forEach(function (el) {
+      groups[groupsKey]['elements'].forEach((el) => {
         el.style.height = `${groups[groupsKey]['height']}px`
       })
     }
@@ -50,13 +50,13 @@ export function equalHeight () {
  * Equal Height Mobile
  */
 export function equalHeightMobile () {
-  let elements = document.querySelectorAll('[data-equal-height-mobile]')
+  const elements = document.querySelectorAll('[data-equal-height-mobile]')
 
   if (!elements) return
 
   let groups = []
 
-  elements.forEach(function (el) {
+  elements.forEach((el) => {
     let groupName = el.getAttribute('data-equal-height-mobile')
 
     if (!groups[groupName]) {
@@ -66,10 +66,10 @@ export function equalHeightMobile () {
     }
   })
 
-  let reset = function () {
+  const reset = () => {
     for (const groupsKey in groups) {
       groups[groupsKey]['height'] = 0
-      groups[groupsKey]['elements'].forEach(function (el) {
+      groups[groupsKey]['elements'].forEach((el) => {
         el.style.height = 'auto'
 
         if (el.clientHeight > groups[groupsKey]['height']) {
@@ -79,18 +79,18 @@ export function equalHeightMobile () {
     }
   }
 
-  let resize = function () {
+  const resize = () => {
     reset()
 
     if (window.innerWidth < 768) {
       for (const groupsKey in groups) {
-        groups[groupsKey]['elements'].forEach(function (el) {
+        groups[groupsKey]['elements'].forEach((el) => {
           el.style.height = 'auto'
         })
       }
     } else {
       for (const groupsKey in groups) {
-        groups[groupsKey]['elements'].forEach(function (el) {
+        groups[groupsKey]['elements'].forEach((el) => {
           el.style.height = `${groups[groupsKey]['height']}px`
         })
       }

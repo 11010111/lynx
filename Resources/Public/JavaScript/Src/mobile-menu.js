@@ -2,20 +2,20 @@
  * Mobile Menu Click Events
  */
 export function mobileMenu () {
-  let mobileMenu = document.querySelector('.mobile-menu')
+  const mobileMenu = document.querySelector('.mobile-menu')
 
   if (!mobileMenu) return
 
-  let parent = mobileMenu.querySelectorAll('.has-children')
+  const parent = mobileMenu.querySelectorAll('.has-children')
 
-  parent.forEach(function (par) {
+  parent.forEach((par) => {
     if (par.firstElementChild.classList.contains('active')) {
       par.classList.add('parent-open')
     }
 
-    par.addEventListener('click', function () {
+    par.addEventListener('click', () => {
       if (!par.classList.contains('parent-open')) {
-        parent.forEach(function (p) {
+        parent.forEach((p) => {
           p.classList.remove('parent-open')
         })
 
