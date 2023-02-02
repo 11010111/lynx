@@ -376,7 +376,7 @@ defined('TYPO3') or die('Access denied.');
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['Default', ''],
+                    ['None', ''],
                     ['Container', 'container']
                 ]
             ]

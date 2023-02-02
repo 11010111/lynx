@@ -9,7 +9,6 @@
 
 .slider-content {
   position: relative;
-  width: 100%;
   overflow: hidden;
 
   .swiper-wrapper {
@@ -18,7 +17,6 @@
 
     .slider-cell {
       width: 100%;
-      max-width: 100%;
     }
   }
 }

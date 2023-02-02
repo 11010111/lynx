@@ -3,7 +3,7 @@
 <lynx:wrapper render="{data}" class="c0002{f:if(condition:'{data.tx_mask_selectbox}',then:' c0002-{data.tx_mask_selectbox}')}">
     <lynx:container render="{data}">
         <f:for each="{data.image}" as="file">
-            <f:render partial="Picture" arguments="{file: file, loading: 'lazy'}" />
+            <f:render partial="Picture" arguments="{file: file}" />
         </f:for>
     </lynx:container>
 </lynx:wrapper>

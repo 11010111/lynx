@@ -1,7 +1,7 @@
 /**
  * Accordion
  */
-(function Accordion () {
+(function Accordion() {
   let accordions = document.querySelectorAll('.accordion')
 
   if (!accordions) {
@@ -9,8 +9,8 @@
   }
 
   setTimeout(function () {
-    accordions.forEach(function (acc) {
-      let header = acc.querySelector('header')
+    accordions.forEach(acc => {
+      let header = acc.querySelector('.accordion-header')
       let content = acc.querySelector('.accordion-content')
 
       if (!header) {

@@ -1,21 +1,23 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<f:asset.css identifier="accordion-css" href="{f:uri.resource(path:'Css/accordion.css', extensionName: 'lynx')}" />
-<f:asset.script identifier="accordion-js" type="module" src="{f:uri.resource(path:'Javascript/Src/accordion.js', extensionName: 'lynx')}" />
+<f:asset.css identifier="accordion-css" href="EXT:lynx/Resources/Public/Css/accordion.css" />
+<f:asset.script identifier="accordion-js" type="module" src="EXT:lynx/Resources/Public/JavaScript/Src/accordion.js" />
 
 <lynx:wrapper render="{data}" class="accordion">
-    <lynx:container render="{data}">
+    <lynx:container render="{data}" class="accordion-header">
         <f:if condition="{data.header}">
-            <header>
-                <h2>{data.header}</h2>
-            </header>
+            <h2>{data.header}</h2>
         </f:if>
+    </lynx:container>
 
-        <div class="accordion-content">
-            <f:for each="{children_201}" as="element">
-                {element.renderedContent -> f:format.raw()}
-            </f:for>
-        </div>
+    <div class="accordion-content">
+        <f:for each="{children_201}" as="element">
+            {element.renderedContent -> f:format.raw()}
+        </f:for>
+    </div>
+
+    <lynx:container render="{data}">
+        <div class="accordion-bottom"></div>
     </lynx:container>
 </lynx:wrapper>
 

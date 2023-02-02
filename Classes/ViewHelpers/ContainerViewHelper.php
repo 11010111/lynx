@@ -108,6 +108,10 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
         $this->tag->setTagName($this->tagName);
         $this->tag->setContent($this->renderChildren());
 
+        if (!$this->arguments['render']['container'] && !$this->arguments['render']['alignment'] && !$this->tag->getAttribute('class')) {
+            return $this->renderChildren();
+        }
+
         return $this->tag->render();
     }
 }
