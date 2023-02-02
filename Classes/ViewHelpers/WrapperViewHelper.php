@@ -5,11 +5,11 @@ namespace Swe\Lynx\ViewHelpers;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 
 /**
- * Class ContainerViewHelper
+ * Class WrapperViewHelper
  *
  * @package Swe\Lynx\ViewHelpers
  */
-class ContainerViewHelper extends AbstractTagBasedViewHelper
+class WrapperViewHelper extends AbstractTagBasedViewHelper
 {
     /**
      * @var string
@@ -22,29 +22,12 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
         $this->registerUniversalTagAttributes();
         $this->registerArgument('as', 'string', 'Type');
         $this->registerArgument('render', 'array', 'Data');
-        $this->registerArgument('wrap', 'string', 'Wrap Data');
     }
 
     public function render()
     {
         if ($this->hasArgument('render')) {
-            if ($this->arguments['render']['container']) {
-                if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $this->arguments['render']['container']);
-                } else {
-                    $this->tag->addAttribute('class',  $this->arguments['render']['container']);
-                }
-            }
-
-            if ($this->arguments['render']['alignment']) {
-                if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' container-' . $this->arguments['render']['alignment']);
-                } else {
-                    $this->tag->addAttribute('class',  'container-' . $this->arguments['render']['alignment']);
-                }
-            }
-
-            if ($this->arguments['render']['frame_class'] && $this->arguments['wrap'] == 'true') {
+            if ($this->arguments['render']['frame_class']) {
                 if ($this->tag->getAttribute('class')) {
                     $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $this->arguments['render']['frame_class']);
                 } else {
@@ -52,7 +35,7 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['space_before_class'] && $this->arguments['wrap'] == 'true') {
+            if ($this->arguments['render']['space_before_class']) {
                 if ($this->tag->getAttribute('class')) {
                     $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'frame-space-before-' . $this->arguments['render']['space_before_class']);
                 } else {
@@ -60,7 +43,7 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['space_after_class'] && $this->arguments['wrap'] == 'true') {
+            if ($this->arguments['render']['space_after_class']) {
                 if ($this->tag->getAttribute('class')) {
                     $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'frame-space-after-' . $this->arguments['render']['space_after_class']);
                 } else {
@@ -68,7 +51,7 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['padding_top'] && $this->arguments['wrap'] == 'true') {
+            if ($this->arguments['render']['padding_top']) {
                 if ($this->tag->getAttribute('class')) {
                     $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'frame-space-inline-before-' . $this->arguments['render']['padding_top']);
                 } else {
@@ -76,7 +59,7 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['padding_bottom'] && $this->arguments['wrap'] == 'true') {
+            if ($this->arguments['render']['padding_bottom']) {
                 if ($this->tag->getAttribute('class')) {
                     $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'frame-space-inline-after-' . $this->arguments['render']['padding_bottom']);
                 } else {
@@ -84,20 +67,20 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['background_color'] && $this->arguments['wrap'] == 'true') {
+            if ($this->arguments['render']['background_color']) {
                 $this->tag->addAttribute('data-background', $this->arguments['render']['background_color']);
             }
 
-            if ($this->arguments['render']['foreground_color'] && $this->arguments['wrap'] == 'true') {
+            if ($this->arguments['render']['foreground_color']) {
                 $this->tag->addAttribute('data-foreground', $this->arguments['render']['foreground_color']);
             }
 
-            if ($this->arguments['render']['html_tag'] && $this->arguments['wrap'] == 'true') {
+            if ($this->arguments['render']['html_tag']) {
                 $this->tagName = $this->arguments['render']['html_tag'];
             }
 
-            if ($this->arguments['render']['uid'] && !$this->tag->getAttribute('id') && $this->arguments['wrap'] == 'true') {
-                $this->tag->addAttribute('id',  'c' . $this->arguments['render']['uid'] . 'ai');
+            if ($this->arguments['render']['uid'] && !$this->tag->getAttribute('id')) {
+                $this->tag->addAttribute('id',  'c' . $this->arguments['render']['uid']);
             }
         }
 

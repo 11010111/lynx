@@ -3,24 +3,20 @@
 <f:asset.css identifier="accordion-css" href="{f:uri.resource(path:'Css/accordion.css', extensionName: 'lynx')}" />
 <f:asset.script identifier="accordion-js" type="module" src="{f:uri.resource(path:'Javascript/Src/accordion.js', extensionName: 'lynx')}" />
 
-<lynx:container class="accordion" containerData="{data}">
-    <div class="{f:if(condition:'{data.container}',then:'{data.container}',else:'default')}{f:if(condition:'{data.alignment}',then:' container-{data.alignment}')}">
+<lynx:wrapper render="{data}" class="accordion">
+    <lynx:container render="{data}">
         <f:if condition="{data.header}">
             <header>
                 <h2>{data.header}</h2>
             </header>
         </f:if>
-    
-        <div class="flex flex--gaps break--{data.breakpoint}">
-    
-            <div class="flex--100 accordion-content">
-                <f:for each="{children_201}" as="element">
-                    {element.renderedContent -> f:format.raw()}
-                </f:for>
-            </div>
-    
+
+        <div class="accordion-content">
+            <f:for each="{children_201}" as="element">
+                {element.renderedContent -> f:format.raw()}
+            </f:for>
         </div>
-    </div>
-</lynx:container>
+    </lynx:container>
+</lynx:wrapper>
 
 </html>

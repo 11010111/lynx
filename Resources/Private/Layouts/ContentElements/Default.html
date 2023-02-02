@@ -2,8 +2,8 @@
 <f:if condition="{data.frame_class} != none">
     <f:then>
 
-        <lynx:container containerData="{data}" class="frame-type-{data.CType} frame-layout-{data.layout}">
-            <div class="{f:if(condition:'{data.container}',then:'{data.container}',else:'default')}{f:if(condition:'{data.alignment}',then:' container-{data.alignment}')}">
+        <lynx:wrapper render="{data}" class="frame-type-{data.CType} frame-layout-{data.layout}">
+            <lynx:container render="{data}">
                 <f:if condition="{data._LOCALIZED_UID}">
                     <a id="c{data._LOCALIZED_UID}"></a>
                 </f:if>
@@ -20,8 +20,8 @@
                 <f:render section="After" optional="true">
                     <f:render partial="DropIn/After/All" arguments="{_all}" />
                 </f:render>
-            </div>
-        </lynx:container>
+            </lynx:container>
+        </lynx:wrapper>
 
     </f:then>
     <f:else>

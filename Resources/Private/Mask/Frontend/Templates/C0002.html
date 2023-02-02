@@ -1,9 +1,9 @@
 <f:asset.css identifier="c0002" href="EXT:lynx/Resources/Public/Css/c0002.css" />
 
-<lynx:container containerData="{data}" class="c0002{f:if(condition:'{data.tx_mask_selectbox}',then:' c0002-{data.tx_mask_selectbox}')}">
-    <div class="{f:if(condition:'{data.container}',then:'{data.container}',else:'default')}{f:if(condition:'{data.alignment}',then:' container-{data.alignment}')}">
+<lynx:wrapper render="{data}" class="c0002{f:if(condition:'{data.tx_mask_selectbox}',then:' c0002-{data.tx_mask_selectbox}')}">
+    <lynx:container render="{data}">
         <f:for each="{data.image}" as="file">
             <f:render partial="Picture" arguments="{file: file, loading: 'lazy'}" />
         </f:for>
-    </div>
-</lynx:container>
+    </lynx:container>
+</lynx:wrapper>

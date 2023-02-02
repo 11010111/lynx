@@ -1,26 +1,22 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<f:asset.css identifier="swiper-bundle" href="{f:uri.resource(path:'Frameworks/swiper-bundle.min.css', extensionName: 'lynx')}" />
+<f:asset.css identifier="swiper-bundle-css" href="{f:uri.resource(path:'Frameworks/swiper-bundle.min.css', extensionName: 'lynx')}" />
 <f:asset.css identifier="slider-css" href="{f:uri.resource(path:'Css/slider.css', extensionName: 'lynx')}" />
 <f:asset.script identifier="slider-js" type="module" src="{f:uri.resource(path:'JavaScript/Src/slider.js', extensionName: 'lynx')}" />
 
-<lynx:container containerData="{data}">
-    <div class="flex flex--gaps break--{data.breakpoint}{f:if(condition:'{data.container}',then:' {data.container}')}{f:if(condition:'{data.alignment}',then:' container-{data.alignment}')}">
-
-        <div class="flex--100 slider-content">
-            <div class="swiper-wrapper">
-                <f:for each="{children_201}" as="element">
-                    {element.renderedContent -> f:format.raw()}
-                </f:for>
-            </div>
-
-            <div class="swiper-pagination"></div>
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+<lynx:wrapper render="{data}">
+    <lynx:container render="{data}" class="flex flex--gaps break--{data.breakpoint} slider-content">
+        <div class="swiper-wrapper">
+            <f:for each="{children_201}" as="element">
+                {element.renderedContent -> f:format.raw()}
+            </f:for>
         </div>
-
-    </div>
-</lynx:container>
+    
+        <div class="swiper-pagination"></div>
+    
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </lynx:container>
+</lynx:wrapper>
 
 </html>
