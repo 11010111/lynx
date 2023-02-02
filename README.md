@@ -23,12 +23,29 @@ div {
     margin: rem(40) 0;
 }
 ```
-
-## LYNX CONTAINER
-With Optional parameters
+## LYNX WRAPPER
+Render container wrapper for margins and padding with optional parameters
+- as = tag name
+- render = data array
+- class = own class-name
 
 ```html
-<lynx:container as="section" containerData="{data}" class="my-class">
+<lynx:wrapper as="section" render="{data}" class="my-class">
+    <lynx:container render="{data}">
+        Hello World!
+    </lynx:container>
+</lynx:wrapper>
+```
+
+## LYNX CONTAINER
+Render container with optional parameters
+- as = tag name
+- render = data array
+- class = own class-name
+- wrap = render wrapper data on <lynx:container>
+
+```html
+<lynx:container as="section" render="{data}" class="my-class" wrap="true">
     Hello World!
 </lynx:container>
 ```
