@@ -143,6 +143,38 @@ nav.mobile {
     }
   }
 
+  .menu-label {
+    position: absolute;
+    top: rem(18);
+    left: 0;
+    width: rem(27);
+    height: rem(2);
+    background: var(--black);
+    z-index: 5;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: rem(-12);
+      left: 0;
+      width: rem(36);
+      height: rem(2);
+      background: var(--black);
+      transition: transform 0.25s;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: rem(12);
+      left: 0;
+      width: rem(36);
+      height: rem(2);
+      background: var(--black);
+      transition: transform 0.25s;
+    }
+  }
+
   .menu-button {
     position: relative;
     top: 0;
@@ -160,38 +192,6 @@ nav.mobile {
       &::before {
         top: 0;
         right: 0;
-      }
-    }
-
-    .menu-label {
-      position: absolute;
-      top: rem(18);
-      left: 0;
-      width: rem(27);
-      height: rem(2);
-      background: var(--black);
-      z-index: 5;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: rem(-12);
-        left: 0;
-        width: rem(36);
-        height: rem(2);
-        background: var(--black);
-        transition: transform 0.25s;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: rem(12);
-        left: 0;
-        width: rem(36);
-        height: rem(2);
-        background: var(--black);
-        transition: transform 0.25s;
       }
     }
 
