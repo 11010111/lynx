@@ -10,7 +10,7 @@ $mobile-max-gap: 50;
     @if $size > $mobile-max-gap {
       --gap-#{$size}: calc((#{$mobile-max-gap} / 18) * 1rem);
 
-      @media screen and (min-width: breakpoint(md)) {
+      @media screen and (min-width: functions.breakpoint(md)) {
         --gap-#{$size}: calc((#{$size} / 18) * 1rem);
       }
     } @else {
