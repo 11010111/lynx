@@ -2,10 +2,20 @@
 @use 'functions';
 @use 'variables';
 
+$mobile-max-gap: 50;
+
 // Gaps variables
 :root {
   @each $size in variables.$gaps {
-    --gap-#{$size}: calc((#{$size} / 18) * 1rem);
+    @if $size > $mobile-max-gap {
+      --gap-#{$size}: calc((#{$mobile-max-gap} / 18) * 1rem);
+
+      @media screen and (min-width: breakpoint(md)) {
+        --gap-#{$size}: calc((#{$size} / 18) * 1rem);
+      }
+    } @else {
+      --gap-#{$size}: calc((#{$size} / 18) * 1rem);
+    }
   }
 }
 

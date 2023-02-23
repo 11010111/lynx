@@ -1,26 +1,7 @@
 // Imports
 @import 'functions';
 
-// Container
-.container {
-  margin-left: max(var(--margin-x-min), var(--margin-x-max));
-  margin-right: max(var(--margin-x-min), var(--margin-x-max));
-
-  .container {
-    width: initial;
-    max-width: initial;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .container-xl {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
+/* stylelint-disable */
 // Container XL
 .container-xl {
   margin-left: max(var(--margin-x-min-xl), var(--margin-x-max-xl));
@@ -41,6 +22,26 @@
   }
 }
 
+// Container
+.container {
+  margin-left: max(var(--margin-x-min), var(--margin-x-max));
+  margin-right: max(var(--margin-x-min), var(--margin-x-max));
+
+  .container {
+    width: initial;
+    max-width: initial;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .container-xl {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 // Container Alignment
 .container-left {
   margin-left: 0;
@@ -49,3 +50,5 @@
 .container-right {
   margin-right: 0;
 }
+
+/* stylelint-enable */

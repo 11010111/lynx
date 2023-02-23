@@ -7,7 +7,7 @@ nav.desktop {
   justify-content: space-between;
   align-items: center;
   padding: 0 var(--margin-x-min);
-  
+
   @media not screen and (min-width: breakpoint(lg)) {
     display: none;
   }
@@ -16,84 +16,6 @@ nav.desktop {
     display: flex;
     align-items: center;
   }
-
-  .desktop-menu-wrapper {
-    display: flex;
-    align-items: center;
-    column-gap: rem(36);
-    row-gap: rem(18);
-
-    .desktop-link-wrapper {
-      display: flex;
-      column-gap: rem(18);
-      row-gap: rem(18);
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      .level1 {
-        position: relative;
-        top: 0;
-        right: 0;
-        font-weight: 400;
-        padding: rem(36) rem(18);
-
-        a {
-          font-size: 1.11rem;
-          text-decoration: none;
-          color: var(--text);
-
-          &:hover {
-            color: var(--link-hover);
-          }
-        }
-
-        .desktop-dropdown {
-          display: none;
-          position: absolute;
-          top: rem(72);
-          right: rem(-18);
-          width: max-content;
-          text-align: right;
-          background: var(--white);
-          padding: rem(9) 0;
-          box-shadow: 0 rem(5) rem(5) rgb(0 0 0 / 5%);
-
-          .level2 {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            font-size: rem(18);
-            font-weight: normal;
-            padding: rem(9) rem(36);
-          }
-        }
-
-        &:hover {
-          .desktop-dropdown {
-            display: block;
-          }
-        }
-      }
-
-      .has-children {
-        &::after {
-          content: url('../Icons/dropdown.svg');
-          position: absolute;
-          top: 50%;
-          right: rem(-6);
-          transform: translateY(-40%);
-        }
-      }
-    }
-
-    .desktop-btn-wrapper {
-      a:not(:hover) {
-        background: transparent;
-      }
-    }
-  }
-
 
   .language-menu {
     position: relative;
@@ -128,16 +50,6 @@ nav.desktop {
       transition: 0.25s;
     }
 
-    &:hover {
-      .language {
-        display: block;
-      }
-
-      &::after {
-        animation: fadeInOut 2s infinite;
-      }
-    }
-
     .language {
       display: none;
       position: absolute;
@@ -154,6 +66,92 @@ nav.desktop {
         font-weight: normal;
         padding: 0.5rem 2rem;
         white-space: nowrap;
+      }
+    }
+
+    &:hover {
+      .language {
+        display: block;
+      }
+
+      &::after {
+        animation: fadeInOut 2s infinite;
+      }
+    }
+  }
+
+  .desktop-menu-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: rem(36);
+    row-gap: rem(18);
+
+    .desktop-link-wrapper {
+      display: flex;
+      column-gap: rem(18);
+      row-gap: rem(18);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .level1 {
+        position: relative;
+        top: 0;
+        right: 0;
+        font-weight: 400;
+        padding: rem(36) rem(18);
+
+        .desktop-dropdown {
+          display: none;
+          position: absolute;
+          top: rem(72);
+          right: rem(-18);
+          width: max-content;
+          text-align: right;
+          background: var(--white);
+          padding: rem(9) 0;
+          box-shadow: 0 rem(5) rem(5) rgb(0 0 0 / 5%);
+
+          .level2 {
+            list-style: none;
+            margin: 0;
+            font-size: rem(18);
+            font-weight: normal;
+            padding: rem(9) rem(36);
+          }
+        }
+
+        &:hover {
+          .desktop-dropdown {
+            display: block;
+          }
+        }
+
+        &:first-child {
+          font-size: 1.11rem;
+          text-decoration: none;
+          color: var(--text);
+
+          &:hover {
+            color: var(--link-hover);
+          }
+        }
+      }
+
+      .has-children {
+        &::after {
+          content: url('../Icons/dropdown.svg');
+          position: absolute;
+          top: 50%;
+          right: rem(-6);
+          transform: translateY(-40%);
+        }
+      }
+    }
+
+    .desktop-btn-wrapper {
+      a:not(:hover) {
+        background: transparent;
       }
     }
   }

@@ -52,7 +52,7 @@
           <f:if condition="{languageNavigation}">
             <ul id="language_menu" class="language-menu">
               <f:for each="{languageNavigation}" as="item">
-                <li class="{f:if(condition: item.active, then: 'active')} {f:if(condition: item.available, else: 'text-muted')}">
+                <li class="{f:if(condition: item.active, then: 'lang-active')} {f:if(condition: item.available, else: 'text-muted')}">
                   <f:if condition="{item.available}">
                     <f:then>
                       <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">

@@ -15,6 +15,7 @@
   @if map-has-key($gaps, $object) {
     @return map-get(map-get($gaps, $object), $style);
   }
+
   @warn 'The key `#{$object}` is not available in the map.';
   @return null;
 }
