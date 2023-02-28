@@ -44,12 +44,12 @@
 .btn-primary, .btn-cancel {
   display: inline-block;
   color: var(--white);
-  font-size: 1.11em;
-  padding: 0.88rem 1.94rem;
-  border: 1px solid var(--primary);
-  border-radius: 5px;
+  font-size: rem(20);
+  padding: rem(16) rem(35);
+  border: rem(1) solid var(--primary);
+  border-radius: rem(5);
   background-color: var(--primary);
-  margin-top: 4.44rem;
+  margin-top: rem(80);
 
   &:hover {
     color: var(--primary);
@@ -60,10 +60,10 @@
 .btn-secondary {
   display: inline-block;
   color: var(--primary);
-  font-size: 1.11em;
-  padding: 0.88rem 1.94rem;
-  border: 1px solid var(--primary);
-  border-radius: 5px;
+  font-size: rem(20);
+  padding: rem(16) rem(35);
+  border: rem(1) solid var(--primary);
+  border-radius: rem(5);
   background-color: var(--white);
 
   &:hover {
@@ -118,7 +118,7 @@
 // CE END
 
 .grey-box, .frame-grey-box {
-  padding: 0.25rem;
+  padding: rem(5);
   background-color: var(--lightgrey);
 }
 
@@ -128,11 +128,11 @@
   align-items: center;
   position: fixed;
   right: -100%;
-  bottom: 4rem;
-  width: 2.2rem;
-  height: 2.2rem;
+  bottom: rem(72);
+  width: rem(40);
+  height: rem(40);
   background-color: var(--primary);
-  border-radius: 5px;
+  border-radius: rem(5);
   cursor: pointer;
   z-index: 999;
 
@@ -141,8 +141,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1.75rem;
-    height: 1.75rem;
+    width: rem(32);
+    height: rem(32);
 
     path {
       fill: var(--white);
@@ -151,7 +151,7 @@
 }
 
 .scroll-top-active {
-  right: 1rem;
+  right: rem(18);
 
   &:hover {
     background-color: var(--link-hover);
@@ -166,8 +166,8 @@
   height: 100%;
 
   .site-error-num {
-    font-size: 3em;
-    margin-right: 1rem;
+    font-size: rem(54);
+    margin-right: rem(18);
   }
 }
 
@@ -177,20 +177,6 @@
 
 @keyframes fade-in {
   0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in-out {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
     opacity: 0;
   }
 

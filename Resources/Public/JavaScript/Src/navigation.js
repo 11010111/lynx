@@ -1,7 +1,7 @@
 /**
  * Set Navigation Background on scroll
  */
-export function PageScroll() {
+export function pageScroll() {
   const scroll = () => {
     if (window.scrollY > 0) {
       document.body.classList.add('page-scroll')
@@ -17,12 +17,12 @@ export function PageScroll() {
 /**
  * Scroll Padding Top Variable
  */
-export function ScrollPaddingTop() {
+export function scrollPaddingTop() {
   const root = document.querySelector(':root')
   const pageNavigation = document.querySelector('.page-navigation')
 
   if (!pageNavigation) return
-  
+
   const resize = () => {
     root.style.setProperty('--scroll-padding-top', Math.floor(pageNavigation.clientHeight) + 'px')
   }
