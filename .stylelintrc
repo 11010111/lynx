@@ -3,9 +3,12 @@
     "stylelint-scss"
   ],
   "extends": [
-  	"stylelint-config-standard",
-  	"stylelint-config-standard-scss"
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss"
   ],
+  "rules": {
+    "property-no-vendor-prefix": null
+  },
   "overrides": [
     {
       "files": [
