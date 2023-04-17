@@ -1,15 +1,11 @@
 {
   "scripts": {
-    "watch": "sass --watch ./Resources/Public/Scss:./Resources/Public/Css --no-source-map --style=compressed",
-    "lint-fix": "stylelint '**/*.scss' --fix",
-    "lint": "stylelint '**/*.scss'"
+    "sass": "sass --watch ./Resources/Public/Scss:./Resources/Public/Css --no-source-map --style=compressed",
+    "tailwind": "npx tailwindcss -i ./Resources/Public/Css/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --watch",
+    "start": "npm run sass & npm run tailwind"
   },
   "devDependencies": {
-    "postcss-scss": "^4.0.6",
     "sass": "^1.58.3",
-    "stylelint": "^15.2.0",
-    "stylelint-config-standard": "^30.0.1",
-    "stylelint-config-standard-scss": "^7.0.1",
-    "stylelint-scss": "^4.4.0"
+    "tailwindcss": "^3.3.1"
   }
 }

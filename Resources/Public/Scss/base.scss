@@ -16,18 +16,7 @@
   --secondary: #14161b;
   --secondary-text: #fff;
 
-  // Base definitions
-  --font-family: 'Inter';
-  --font-size: 1.125em;
-  --paragraph-line-height: 1.5;
-  --error: #d42525;
-  --warning: #e3ad40;
-  --success: #88c433;
   --scroll-padding-top: #{rem(100)};
-
-  // Gaps
-  --column-gap: #{rem(36)};
-  --row-gap: #{rem(36)};
 
   // Container
   --max-width: #{rem(1380)};
@@ -43,7 +32,7 @@
   }
 
   // Container XL
-  --max-width-xl: #{rem(1560)};
+  --max-width-xl: #{rem(1536)};
   --margin-x-min-xl: #{rem(9)};
   --margin-x-max-xl: calc((100vw - var(--max-width-xl)) / 2);
 
@@ -57,26 +46,17 @@
 }
 
 html {
-  font-family: var(--font-family), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  font-size: var(--font-size);
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
   scroll-behavior: smooth;
   scroll-padding-top: var(--scroll-padding-top);
   overflow-y: overlay;
 
-  // 1920px (width) / 18 (font-size) / 100%
+  // 1920px (width) / 16 (font-size) / 100%
   @media screen and (min-width: 1921px) {
-    font-size: calc(1vw - 1.0667px);
+    font-size: calc(1vw - 1.2px);
   }
 }
 
 body {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-
   &::-webkit-scrollbar {
     width: 12px;
     height: 12px;
@@ -93,177 +73,4 @@ body {
   &::-webkit-scrollbar-track {
     background: transparent;
   }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 rem(18);
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-}
-
-p {
-  margin: 0 0 rem(18);
-  line-height: var(--paragraph-line-height);
-}
-
-p:last-of-type {
-  margin: 0;
-}
-
-h1 {
-  font-size: rem(52);
-  line-height: rem(70);
-  margin-bottom: rem(42);
-
-  @media screen and (min-width: breakpoint(md)) {
-    font-size: rem(70);
-  }
-}
-
-h2 {
-  font-size: rem(32);
-  line-height: rem(50);
-  margin-bottom: rem(36);
-
-  @media screen and (min-width: breakpoint(md)) {
-    font-size: rem(50);
-  }
-}
-
-h3 {
-  font-size: rem(25);
-  line-height: rem(35);
-  margin-bottom: rem(30);
-
-  @media screen and (min-width: breakpoint(md)) {
-    font-size: rem(35);
-  }
-}
-
-h4 {
-  @media screen and (min-width: breakpoint(md)) {
-    font-size: rem(25);
-  }
-}
-
-h5 {
-  @media screen and (min-width: breakpoint(md)) {
-    font-size: rem(22);
-  }
-}
-
-h6 {
-  @media screen and (min-width: breakpoint(md)) {
-    font-size: rem(20);
-  }
-}
-
-a {
-  color: var(--link);
-  text-decoration: none;
-  font-weight: 600;
-
-  &:hover {
-    color: var(--link-hover);
-  }
-}
-
-figure {
-  margin: 0;
-}
-
-figcaption {
-  font-size: rem(15);
-  margin: rem(5) 0 0;
-  background: var(--lightgrey);
-  padding: rem(5) rem(9);
-}
-
-picture {
-  max-width: 100%;
-}
-
-img {
-  max-width: 100%;
-}
-
-iframe {
-  display: block;
-  width: 100%;
-  height: auto;
-  background-color: var(--black);
-  border: 0;
-  aspect-ratio: 16 / 9;
-}
-
-video {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  margin: 0;
-  object-fit: cover;
-}
-
-table {
-  width: 100%;
-  border-spacing: 0;
-
-  tr:nth-child(2n) {
-    background-color: var(--lightgrey);
-  }
-
-  th, td {
-    text-align: left;
-    vertical-align: top;
-    padding: rem(9);
-  }
-
-  th {
-    background-color: var(--lightgrey);
-  }
-}
-
-button, select, textarea, input[type='text'], input[type='password'], input[type='email'], input[type='button'],
-input[type='submit'], input[type='search'], input[type='hidden'], input[type='tel'], input[type='url'],
-input[type='number'], input[type='date'] {
-  padding: rem(5);
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: rem(3);
-  border: rem(1) solid;
-  background-color: transparent;
-}
-
-select, button, input[type='button'], input[type='submit'] {
-  cursor: pointer;
-}
-
-button, input[type='button'], input[type='submit'] {
-  padding: rem(5);
-  color: var(--primary-text);
-  background-color: var(--primary);
-  border-color: var(--primary);
-
-  &:hover {
-    background-color: var(--link-hover);
-    border-color: var(--link-hover);
-  }
-}
-
-select {
-  background: transparent url('../Icons/dropdown.svg') no-repeat right rem(5) top 50%;
-  background-size: rem(24) auto;
-  padding: rem(5) rem(36) rem(5) rem(5);
-}
-
-input[type='checkbox'], input[type='radio'] {
-  width: rem(22);
-  height: rem(22);
 }

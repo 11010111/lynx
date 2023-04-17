@@ -25,137 +25,135 @@
 ##############
 page = PAGE
 page {
-    typeNum = 0
-    shortcutIcon = EXT:lynx/Resources/Public/Icons/favicon.ico
+  typeNum = 0
+  shortcutIcon = EXT:lynx/Resources/Public/Icons/favicon.ico
 
-    headerData {
-        # Preload Font
-        #110 = TEXT
-        #110.wrap = <link rel="preload" href="/fileadmin/lynx/fonts/BasierCircle/basiercircle-regular-webfont.woff2" as="font" crossorigin>
+  headerData {
+    # Preload Font
+    #110 = TEXT
+    #110.wrap = <link rel="preload" href="/fileadmin/lynx/fonts/BasierCircle/basiercircle-regular-webfont.woff2" as="font" crossorigin>
+  }
+
+  10 = FLUIDTEMPLATE
+  10 {
+    variables {
+      # Mobile Menu Dropdown Parent - Non-Clickable
+      linkNonClickable = TEXT
+      #linkNonClickable.value = 1
     }
 
-    10 = FLUIDTEMPLATE
-    10 {
-        variables {
-            # Mobile Menu Dropdown Parent - Non-Clickable
-            linkNonClickable = TEXT
-            #linkNonClickable.value = 1
+    # Template names will be generated automatically by converting the applied
+    # backend_layout, there is no explicit mapping necessary anymore.
+    #
+    # BackendLayout Key
+    # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+    #
+    # Backend Record
+    # uid: 1 -> 1.html
+    #
+    # Database Entry
+    # value: -1 -> None.html
+    # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+    templateName = TEXT
+    templateName {
+      cObject = TEXT
+      cObject {
+        data = pagelayout
+        required = 1
+        case = uppercamelcase
+        split {
+          token = pagets__
+          cObjNum = 1
+          1.current = 1
         }
-
-        # Template names will be generated automatically by converting the applied
-        # backend_layout, there is no explicit mapping necessary anymore.
-        #
-        # BackendLayout Key
-        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
-        #
-        # Backend Record
-        # uid: 1 -> 1.html
-        #
-        # Database Entry
-        # value: -1 -> None.html
-        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
-        templateName = TEXT
-        templateName {
-            cObject = TEXT
-            cObject {
-                data = pagelayout
-                required = 1
-                case = uppercamelcase
-                split {
-                    token = pagets__
-                    cObjNum = 1
-                    1.current = 1
-                }
-            }
-            ifEmpty = Default
-        }
-
-        templateRootPaths {
-            0 = EXT:lynx/Resources/Private/Templates/Page/
-            1 = {$page.fluidtemplate.templateRootPath}
-        }
-
-        partialRootPaths {
-            0 = EXT:lynx/Resources/Private/Partials/Page/
-            1 = {$page.fluidtemplate.partialRootPath}
-        }
-
-        layoutRootPaths {
-            0 = EXT:lynx/Resources/Private/Layouts/Page/
-            1 = {$page.fluidtemplate.layoutRootPath}
-        }
-
-        dataProcessing {
-            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-            10 {
-                references.fieldName = media
-            }
-
-            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            20 {
-                levels = 10
-                includeSpacer = 1
-                as = navigation
-            }
-
-            30 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
-            30 {
-                as = languageNavigation
-                addQueryString = 1
-            }
-
-            40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            40 {
-               special = rootline
-               special.range = 0|-1
-               as = rootline
-            }
-        }
+      }
+      ifEmpty = Default
     }
 
-    meta {
-        viewport = width=device-width, initial-scale=1
-        robots = index,follow
-        apple-mobile-web-app-capable = no
-        keywords.field = keywords
-        keywords.ifTrue = keywords
+    templateRootPaths {
+      0 = EXT:lynx/Resources/Private/Templates/Page/
+      1 = {$page.fluidtemplate.templateRootPath}
     }
 
-    includeCSSLibs {
-
+    partialRootPaths {
+      0 = EXT:lynx/Resources/Private/Partials/Page/
+      1 = {$page.fluidtemplate.partialRootPath}
     }
 
-    includeCSS {
-        normalize = EXT:lynx/Resources/Public/Css/normalize.css
-        container = EXT:lynx/Resources/Public/Css/container.css
-        gap = EXT:lynx/Resources/Public/Css/gap.css
-        flex = EXT:lynx/Resources/Public/Css/flex.css
-        desktop = EXT:lynx/Resources/Public/Css/nav-desktop.css
-        mobile = EXT:lynx/Resources/Public/Css/nav-mobile.css
-        footer = EXT:lynx/Resources/Public/Css/footer.css
-        rte = EXT:lynx/Resources/Public/Css/rte.css
-        base = EXT:lynx/Resources/Public/Css/base.css
-        main = EXT:lynx/Resources/Public/Css/main.css
+    layoutRootPaths {
+      0 = EXT:lynx/Resources/Private/Layouts/Page/
+      1 = {$page.fluidtemplate.layoutRootPath}
     }
 
-    includeJSLibs {
+    dataProcessing {
+      10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+      10 {
+        references.fieldName = media
+      }
 
+      20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      20 {
+        levels = 10
+        includeSpacer = 1
+        as = navigation
+      }
+
+      30 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+      30 {
+        as = languageNavigation
+        addQueryString = 1
+      }
+
+      40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      40 {
+        special = rootline
+        special.range = 0|-1
+        as = rootline
+      }
     }
+  }
 
-    includeJSFooterlibs {
+  meta {
+    viewport = width=device-width, initial-scale=1
+    robots = index,follow
+    apple-mobile-web-app-capable = no
+    keywords.field = keywords
+    keywords.ifTrue = keywords
+  }
 
-    }
+  includeCSSLibs {
 
-    # Header JS
-    includeJS {
+  }
 
-    }
+  includeCSS {
+    tailwind = EXT:lynx/Resources/Public/Css/tailwind-bundle.css
+    container = EXT:lynx/Resources/Public/Css/container.css
+    desktop = EXT:lynx/Resources/Public/Css/nav-desktop.css
+    mobile = EXT:lynx/Resources/Public/Css/nav-mobile.css
+    footer = EXT:lynx/Resources/Public/Css/footer.css
+    rte = EXT:lynx/Resources/Public/Css/rte.css
+    base = EXT:lynx/Resources/Public/Css/base.css
+    main = EXT:lynx/Resources/Public/Css/main.css
+  }
 
-    # Footer JS
-    includeJSFooter {
-        main_js = EXT:lynx/Resources/Public/JavaScript/Src/main.js
-        main_js.type = module
-    }
+  includeJSLibs {
+
+  }
+
+  includeJSFooterlibs {
+
+  }
+
+  # Header JS
+  includeJS {
+
+  }
+
+  # Footer JS
+  includeJSFooter {
+    main_js = EXT:lynx/Resources/Public/JavaScript/Src/main.js
+    main_js.type = module
+  }
 }
 
 
@@ -181,52 +179,52 @@ page.bodyTagAdd = class="sequel"
 #### CONFIG ####
 ################
 config {
-    absRefPrefix = auto
-    no_cache = 0
-    uniqueLinkVars = 1
-    pageTitleFirst = 1
-    #pageTitleSeparator = -
-    #pageTitleSeparator.noTrimWrap = | | |
-    linkVars = L
-    prefixLocalAnchors = all
-    renderCharset = utf-8
-    metaCharset = utf-8
-    doctype = html5
-  	removePageCss = 1
-    removeDefaultJS = 0
-    inlineStyle2TempFile = 1
-    admPanel = 1
-    debug = 1
-    contentObjectExceptionHandler = 0
-    cache_period = 86400
-    sendCacheHeaders = 1
-    intTarget =
-    extTarget = _blank
-    fileTarget = _blank
-    disablePrefixComment = 1
-    index_enable = 1
-    index_externals = 1
-    index_metatags = 1
-    headerComment = build by Smart Web Elements
-    typolinkLinkAccessRestrictedPages = 1
-    typolinkLinkAccessRestrictedPages_addParams = &redirect_url=###RETURN_URL###
+  absRefPrefix = auto
+  no_cache = 0
+  uniqueLinkVars = 1
+  pageTitleFirst = 1
+  #pageTitleSeparator = -
+  #pageTitleSeparator.noTrimWrap = | | |
+  linkVars = L
+  prefixLocalAnchors = all
+  renderCharset = utf-8
+  metaCharset = utf-8
+  doctype = html5
+  removePageCss = 1
+  removeDefaultJS = 0
+  inlineStyle2TempFile = 1
+  admPanel = 1
+  debug = 1
+  contentObjectExceptionHandler = 0
+  cache_period = 86400
+  sendCacheHeaders = 1
+  intTarget =
+  extTarget = _blank
+  fileTarget = _blank
+  disablePrefixComment = 1
+  index_enable = 1
+  index_externals = 1
+  index_metatags = 1
+  headerComment = build by Smart Web Elements
+  typolinkLinkAccessRestrictedPages = 1
+  typolinkLinkAccessRestrictedPages_addParams = &redirect_url=###RETURN_URL###
 
-    ## Disable Image Upscaling
-    noScaleUp = 1
+  ## Disable Image Upscaling
+  noScaleUp = 1
 
-    ## Compression and Concatenation of CSS and JS Files
-    compressJs = 0
-    compressCss = 0
-    concatenateJs = 0
-    concatenateCss = 0
+  ## Compression and Concatenation of CSS and JS Files
+  compressJs = 0
+  compressCss = 0
+  concatenateJs = 0
+  concatenateCss = 0
 
-    ## Header Policy
-    additionalHeaders {
-        10.header = Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; script-src-elem 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; frame-src 'self';
-        20.header = strict-transport-security: max-age=31536000
-        30.header = X-Frame-Options: sameorigin
-        40.header = X-Xss-Protection: 1; mode=block
-        50.header = X-Content-Type-Options: nosniff
-        60.header = Referrer-Policy: strict-origin
-    }
+  ## Header Policy
+  additionalHeaders {
+    10.header = Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; script-src-elem 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; frame-src 'self';
+    20.header = strict-transport-security: max-age=31536000
+    30.header = X-Frame-Options: sameorigin
+    40.header = X-Xss-Protection: 1; mode=block
+    50.header = X-Content-Type-Options: nosniff
+    60.header = Referrer-Policy: strict-origin
+  }
 }

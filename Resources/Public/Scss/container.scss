@@ -1,7 +1,6 @@
 // Imports
 @import 'functions';
 
-/* stylelint-disable */
 // Container XL
 .container-xl {
   margin-left: max(var(--margin-x-min-xl), var(--margin-x-max-xl));
@@ -41,14 +40,3 @@
     margin-right: 0;
   }
 }
-
-// Container Alignment
-.container-left {
-  margin-left: 0;
-}
-
-.container-right {
-  margin-right: 0;
-}
-
-/* stylelint-enable */

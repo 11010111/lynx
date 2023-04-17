@@ -1,5 +1,5 @@
 // Base px for rem
-$rem-base: 18;
+$rem-base: 16;
 
 // Flex Sizes
 $flex-sizes: (
@@ -7,61 +7,15 @@ $flex-sizes: (
   md,
   lg,
   xl,
-  xxl
+  2xl
 );
 
 // Breakpoints
 $breakpoints: (
-  // Ab 240px, based on 16px Browser's internal font-size
-  xs: 15em,
-  // Ab 540px, based on 16px Browser's internal font-size
-  sm: 33.75em,
-  // Ab 768px, based on 16px Browser's internal font-size
-  md: 48em,
-  // Ab 1080px, based on 16px Browser's internal font-size
-  lg: 67.5em,
-  // Ab 1366px, based on 16px Browser's internal font-size
-  xl: 85.375em,
-  // Ab 1650px, based on 16px Browser's internal font-size
-  xxl: 103.125em
-);
-
-// Flex Percentages
-$flex-percentages: (
-  20: '20',
-  25: '25',
-  30: '20',
-  33: '33.33',
-  40: '40',
-  50: '50',
-  60: '60',
-  66: '66.66',
-  70: '70',
-  75: '75',
-  80: '80'
-);
-
-// Gaps sizes
-$gaps: (
-  10,
-  20,
-  30,
-  40,
-  50,
-  60,
-  70,
-  80,
-  90,
-  100,
-  125,
-  150,
-  180,
-  200,
-  230,
-  250,
-  330,
-  370,
-  430,
-  470,
-  530
+  xs: 15em,    // Ab 240px, based on 16px Browser's internal font-size
+  sm: 40em,    // Ab 640px, based on 16px Browser's internal font-size
+  md: 48em,    // Ab 768px, based on 16px Browser's internal font-size
+  lg: 64em,    // Ab 1024px, based on 16px Browser's internal font-size
+  xl: 80em,    // Ab 1280px, based on 16px Browser's internal font-size
+  2xl: 96em    // Ab 1536px, based on 16px Browser's internal font-size
 );
