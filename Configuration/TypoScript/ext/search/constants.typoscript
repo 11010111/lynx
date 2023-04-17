@@ -2,9 +2,9 @@
 #### INDEXED SEARCH ####
 ########################
 plugin.tx_indexedsearch {
-    view {
-        layoutRootPath = EXT:lynx/Resources/Private/Layouts/search/
-        partialRootPath = EXT:lynx/Resources/Private/Partials/search/
-        templateRootPath = EXT:lynx/Resources/Private/Templates/search/
-    }
+  view {
+    layoutRootPath = EXT:lynx/Resources/Private/Layouts/search/
+    partialRootPath = EXT:lynx/Resources/Private/Partials/search/
+    templateRootPath = EXT:lynx/Resources/Private/Templates/search/
+  }
 }

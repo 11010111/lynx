@@ -15,17 +15,17 @@
 #### FLUID STYLED CONTENT ####
 ##############################
 styles {
-    content {
-        textmedia.linkWrap.lightboxEnabled = 1
-        textmedia.maxW = 1200
-        textmedia.maxWInText = 600
-    }
+  content {
+    textmedia.linkWrap.lightboxEnabled = 1
+    textmedia.maxW = 1200
+    textmedia.maxWInText = 600
+  }
 
-    templates {
-        layoutRootPath = EXT:lynx/Resources/Private/Layouts/ContentElements/
-        partialRootPath = EXT:lynx/Resources/Private/Partials/ContentElements/
-        templateRootPath = EXT:lynx/Resources/Private/Templates/ContentElements/
-    }
+  templates {
+    layoutRootPath = EXT:lynx/Resources/Private/Layouts/ContentElements/
+    partialRootPath = EXT:lynx/Resources/Private/Partials/ContentElements/
+    templateRootPath = EXT:lynx/Resources/Private/Templates/ContentElements/
+  }
 }
 
 
@@ -33,9 +33,9 @@ styles {
 ### CONTENT TEMPLATE PATHS ###
 ##############################
 lib.contentElement {
-    layoutRootPaths.20 = EXT:lynx/Resources/Private/Layouts/ContentElements/
-    partialRootPaths.20 = EXT:lynx/Resources/Private/Partials/ContentElements/
-    templateRootPaths.20 = EXT:lynx/Resources/Private/Templates/ContentElements/
+  layoutRootPaths.20 = EXT:lynx/Resources/Private/Layouts/ContentElements/
+  partialRootPaths.20 = EXT:lynx/Resources/Private/Partials/ContentElements/
+  templateRootPaths.20 = EXT:lynx/Resources/Private/Templates/ContentElements/
 }
 
 
@@ -43,16 +43,16 @@ lib.contentElement {
 ### PAGE ###
 ############
 page {
-     fluidtemplate {
-        layoutRootPath = EXT:lynx/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:lynx/Resources/Private/Partials/Page/
-        templateRootPath = EXT:lynx/Resources/Private/Templates/Page/
-    }
+  fluidtemplate {
+    layoutRootPath = EXT:lynx/Resources/Private/Layouts/Page/
+    partialRootPath = EXT:lynx/Resources/Private/Partials/Page/
+    templateRootPath = EXT:lynx/Resources/Private/Templates/Page/
+  }
 
-    tracking {
-        google {
-            trackingID =
-            anonymizeIp = 1
-        }
+  tracking {
+    google {
+      trackingID =
+      anonymizeIp = 1
     }
+  }
 }

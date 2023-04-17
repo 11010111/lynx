@@ -3,9 +3,9 @@
 #################
 lib.logo = IMAGE
 lib.logo {
-    file = EXT:lynx/Resources/Public/Images/logo.png
-    stdWrap.typolink.parameter = 1
-    stdWrap.typolink.title = Home
+  file = EXT:lynx/Resources/Public/Images/logo.png
+  stdWrap.typolink.parameter = 1
+  stdWrap.typolink.title = Home
 }
 
 ########################
@@ -13,10 +13,10 @@ lib.logo {
 ########################
 lib.logoSVG = SVG
 lib.logoSVG {
-    renderMode = inline
-    src.field = src
-    stdWrap.typolink.parameter = 1
-    stdWrap.typolink.title = Home
+  renderMode = inline
+  src.field = src
+  stdWrap.typolink.parameter = 1
+  stdWrap.typolink.title = Home
 }
 
 #########################
@@ -24,8 +24,8 @@ lib.logoSVG {
 #########################
 lib.svg = SVG
 lib.svg {
-    renderMode = inline
-    src.field = src
+  renderMode = inline
+  src.field = src
 }
 
 #################################

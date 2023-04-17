@@ -37,33 +37,33 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
 
             if ($this->arguments['render']['space_before_class']) {
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'frame-space-before-' . $this->arguments['render']['space_before_class']);
+                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'mt-' . $this->arguments['render']['space_before_class']);
                 } else {
-                    $this->tag->addAttribute('class', 'frame-space-before-' . $this->arguments['render']['space_before_class']);
+                    $this->tag->addAttribute('class', 'mt-' . $this->arguments['render']['space_before_class']);
                 }
             }
 
             if ($this->arguments['render']['space_after_class']) {
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'frame-space-after-' . $this->arguments['render']['space_after_class']);
+                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'mb-' . $this->arguments['render']['space_after_class']);
                 } else {
-                    $this->tag->addAttribute('class', 'frame-space-after-' . $this->arguments['render']['space_after_class']);
+                    $this->tag->addAttribute('class', 'mb-' . $this->arguments['render']['space_after_class']);
                 }
             }
 
             if ($this->arguments['render']['padding_top']) {
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'frame-space-inline-before-' . $this->arguments['render']['padding_top']);
+                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'pt-' . $this->arguments['render']['padding_top']);
                 } else {
-                    $this->tag->addAttribute('class', 'frame-space-inline-before-' . $this->arguments['render']['padding_top']);
+                    $this->tag->addAttribute('class', 'pt-' . $this->arguments['render']['padding_top']);
                 }
             }
 
             if ($this->arguments['render']['padding_bottom']) {
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'frame-space-inline-after-' . $this->arguments['render']['padding_bottom']);
+                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'pb-' . $this->arguments['render']['padding_bottom']);
                 } else {
-                    $this->tag->addAttribute('class', 'frame-space-inline-after-' . $this->arguments['render']['padding_bottom']);
+                    $this->tag->addAttribute('class', 'pb-' . $this->arguments['render']['padding_bottom']);
                 }
             }
 

@@ -31,7 +31,7 @@
             <a id="c{data._LOCALIZED_UID}"></a>
         </f:if>
         <f:if condition="{data.space_before_class} || {data.padding_top}">
-            <div class="{f:if(condition:'{data.space_before_class}',then:'frame-space-before-{data.space_before_class}')}{f:if(condition:'{data.space_before_class} && {data.padding_top}',then:' ')}{f:if(condition:'{data.padding_top}',then:'frame-space-inline-before-{data.padding_top}')}"></div>
+            <div class="{f:if(condition:'{data.space_before_class}',then:'mt-{data.space_before_class}')}{f:if(condition:'{data.space_before_class} && {data.padding_top}',then:' ')}{f:if(condition:'{data.padding_top}',then:'pt-{data.padding_top}')}"></div>
         </f:if>
         <f:render section="Before" optional="true">
             <f:render partial="DropIn/Before/All" arguments="{_all}" />
@@ -47,9 +47,9 @@
             <f:render partial="DropIn/After/All" arguments="{_all}" />
         </f:render>
         <f:if condition="{data.space_after_class} || {data.padding_bottom}">
-            <div class="{f:if(condition:'{data.space_after_class}',then:'frame-space-after-{data.space_after_class}')}{f:if(condition:'{data.space_after_class} && {data.padding_bottom}',then:' ')}{f:if(condition:'{data.padding_bottom}',then:'frame-space-inline-after-{data.padding_bottom}')}"></div>
+            <div class="{f:if(condition:'{data.space_after_class}',then:'mb-{data.space_after_class}')}{f:if(condition:'{data.space_after_class} && {data.padding_bottom}',then:' ')}{f:if(condition:'{data.padding_bottom}',then:'pb-{data.padding_bottom}')}"></div>
         </f:if>
-        
+
     </f:else>
 </f:if>
 </html>

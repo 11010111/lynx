@@ -1,7 +1,10 @@
 {
   "scripts": {
     "sass": "sass --watch ./Resources/Public/Scss:./Resources/Public/Css --no-source-map --style=compressed",
+    "sass-build": "sass ./Resources/Public/Scss:./Resources/Public/Css --no-source-map --style=compressed",
     "tailwind": "npx tailwindcss -i ./Resources/Public/Css/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --watch",
+    "tailwind-build": "npx tailwindcss -i ./Resources/Public/Css/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --minify",
+    "build": "npm run sass-build & npm run tailwind-build",
     "start": "npm run sass & npm run tailwind"
   },
   "devDependencies": {

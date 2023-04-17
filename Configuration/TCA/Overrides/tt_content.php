@@ -399,8 +399,8 @@ defined('TYPO3') or die('Access denied.');
                 'renderType' => 'selectSingle',
                 'items' => [
                     ['Default', ''],
-                    ['Left', 'left'],
-                    ['Right', 'right']
+                    ['Left', 'ml-0'],
+                    ['Right', 'mr-0']
                 ]
             ]
         ],
@@ -475,9 +475,3 @@ defined('TYPO3') or die('Access denied.');
     'frames',
     'container, --linebreak--, breakpoint, alignment, --linebreak--, padding_top, padding_bottom, --linebreak--, background_color, foreground_color, --linebreak--, html_tag'
 );
-
-$GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['assets'] = [
-    'config' => [
-        'maxitems' => 1,
-    ],
-];

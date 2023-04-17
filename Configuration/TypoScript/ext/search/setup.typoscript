@@ -6,76 +6,76 @@ page.config.index_enable = 1
 page.config.index_externals = 0
 
 plugin.tx_indexedsearch {
-    search.rootPidList = 1
-    # erweiterte Suche abschalten
-    show.advancedSearchLink = 0
+  search.rootPidList = 1
+  # erweiterte Suche abschalten
+  show.advancedSearchLink = 0
 
-    # standardmässig mit 'Wortteil' suchen statt mit ganzem Wort
-    _DEFAULT_PI_VARS.type = 1
+  # standardmässig mit 'Wortteil' suchen statt mit ganzem Wort
+  _DEFAULT_PI_VARS.type = 1
 
-    # standardmäßig mit erweiterter Suche starten
-    _DEFAULT_PI_VARS.ext = 0
+  # standardmäßig mit erweiterter Suche starten
+  _DEFAULT_PI_VARS.ext = 0
+
+  # Ergebnisse (Anzahl der Treffer pro Seite)
+  _DEFAULT_PI_VARS.results = 10
+
+  templateFile = EXT:lynx/Resources/Private/Templates/search/template_css.tmpl
+
+  # Anzeige regeln, ein- (1) bzw. ausgeblendet (0)
+  show {
+    # Suchregeln
+    rules = 0
+
+    # Erstellungsinformationen des Hashes
+    #parsetimes=1
+
+    # Zweite ebene im Bereichs-dropdown anzeigen
+    #L2sections=1
+
+    # Erste ebene im Bereichs-dropdown anzeigen
+    #L1sections=1
+
+    # Alle "nicht im menü" oder "im menü verstecken"
+    # (aber nicht "versteckte" seiten) mit anzeigen in section?
+    #LxALLtypes=0
+
+    # leeren des Suchfeldes nach suche
+    #clearSearchBox = 0
+
+    # Aktuelles suchwort zu den bisherigen suchwörtern hinzufügen
+    #clearSearchBox.enableSubSearchCheckBox=0
+  }
+
+  # die Auswahlfelder für die Suchparameter werden ein- (0) bzw. ausgeblendet (1)
+  blind {
+    # Suchtyp (Ganzes, Wort, Wortteil, ..)
+    type = 1
+
+    # default option (Und, Oder)
+    defOp = 1
+
+    # Bereich(e) der website
+    sections = 1
+
+    # Suche in Medientypen
+    media = 1
+
+    # Sortierung
+    order = 1
+
+    # Ansicht (Sektionshierachie / Liste)
+    group = 1
+
+    # Sprachwahlbox
+    lang = < config.sys_language_uid
+
+    # Auswahl Sortierung
+    desc = 1
 
     # Ergebnisse (Anzahl der Treffer pro Seite)
-    _DEFAULT_PI_VARS.results = 10
+    results = 1
 
-    templateFile = EXT:lynx/Resources/Private/Templates/search/template_css.tmpl
-
-    # Anzeige regeln, ein- (1) bzw. ausgeblendet (0)
-    show {
-        # Suchregeln
-        rules = 0
-
-        # Erstellungsinformationen des Hashes
-        #parsetimes=1
-
-        # Zweite ebene im Bereichs-dropdown anzeigen
-        #L2sections=1
-
-        # Erste ebene im Bereichs-dropdown anzeigen
-        #L1sections=1
-
-        # Alle "nicht im menü" oder "im menü verstecken"
-        # (aber nicht "versteckte" seiten) mit anzeigen in section?
-        #LxALLtypes=0
-
-        # leeren des Suchfeldes nach suche
-        #clearSearchBox = 0
-
-        # Aktuelles suchwort zu den bisherigen suchwörtern hinzufügen
-        #clearSearchBox.enableSubSearchCheckBox=0
-    }
-
-    # die Auswahlfelder für die Suchparameter werden ein- (0) bzw. ausgeblendet (1)
-    blind {
-        # Suchtyp (Ganzes, Wort, Wortteil, ..)
-        type = 1
-
-        # default option (Und, Oder)
-        defOp = 1
-
-        # Bereich(e) der website
-        sections = 1
-
-        # Suche in Medientypen
-        media = 1
-
-        # Sortierung
-        order = 1
-
-        # Ansicht (Sektionshierachie / Liste)
-        group = 1
-
-        # Sprachwahlbox
-        lang = < config.sys_language_uid
-
-        # Auswahl Sortierung
-        desc = 1
-
-        # Ergebnisse (Anzahl der Treffer pro Seite)
-        results = 1
-
-        # Ansicht: Erweiterte Vorschau
-        extResume = 1
-    }
+    # Ansicht: Erweiterte Vorschau
+    extResume = 1
+  }
 }

@@ -1,14 +1,14 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <lynx:wrapper render="{data}">
-    <lynx:container render="{data}" class="flex flex--gaps break--{data.breakpoint}">
-        <div class="flex--{data.breakpoint}-25">
+    <lynx:container render="{data}" class="flex flex-col {data.breakpoint}:flex-row gap-5">
+        <div class="{data.breakpoint}:w-1/4">
             <f:for each="{children_201}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>
         </div>
-    
-        <div class="flex--{data.breakpoint}-75">
+
+        <div class="{data.breakpoint}:w-3/4">
             <f:for each="{children_202}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>

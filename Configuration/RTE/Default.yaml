@@ -1,135 +1,135 @@
 imports:
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
 
 editor:
-    config:
-        contentsCss: "EXT:lynx/Resources/Public/Css/rte.css"
+  config:
+    contentsCss: "EXT:lynx/Resources/Public/Css/rte.css"
 
-        stylesSet:
-            - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
+    stylesSet:
+      - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
 
-        toolbarGroups:
-            - { name: styles, groups: [ format, styles ] }
-            - { name: paragraph, groups: [ list, indent, blocks ] }
-            - "/"
-            - { name: basicstyles, groups: [ basicstyles, align ] }
-            - { name: links, groups: [ links ] }
-            - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
-            - { name: editing, groups: [ spellchecker ] }
-            - { name: insert, groups: [ insert ] }
-            - { name: tools, groups: [ table, specialchar ] }
-            - { name: document, groups: [ mode ] }
+    toolbarGroups:
+      - { name: styles, groups: [ format, styles ] }
+      - { name: paragraph, groups: [ list, indent, blocks ] }
+      - "/"
+      - { name: basicstyles, groups: [ basicstyles, align ] }
+      - { name: links, groups: [ links ] }
+      - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+      - { name: editing, groups: [ spellchecker ] }
+      - { name: insert, groups: [ insert ] }
+      - { name: tools, groups: [ table, specialchar ] }
+      - { name: document, groups: [ mode ] }
 
-        format_tags: "p;h1;h2;h3;h4;h5;pre"
+    format_tags: "p;h1;h2;h3;h4;h5;pre"
 
-        justifyClasses:
-            - text-left
-            - text-center
-            - text-right
-            #- text-justify
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      #- text-justify
 
-        extraPlugins:
-            - justify
-            - showblocks
+    extraPlugins:
+      - justify
+      - showblocks
 
-        removePlugins:
-            - image
+    removePlugins:
+      - image
 
-        removeButtons:
-            - Anchor
-            - Underline
-            - Strike
-            - Table
+    removeButtons:
+      - Anchor
+      - Underline
+      - Strike
+      - Table
 
 processing:
-    allowTags:
-        - button
+  allowTags:
+    - button
 
 # Button config and defaults
 buttons:
-    link:
-        relAttribute:
-            enabled: false
-        properties:
-            class:
-                allowedClasses: 'link,btn-primary,btn-next,btn-prev,btn-border,link-download,link-folder,link-external,link-external-blank,link-mail,link-tel'
-        page:
-            properties:
-                class:
-                    default: 'link'
-        file:
-            properties:
-                class:
-                    default: 'link-download'
-        folder:
-            properties:
-                class:
-                    default: 'link-folder'
-        url:
-            properties:
-                class:
-                    default: 'link'
-        mail:
-            properties:
-                class:
-                    default: 'link-mail'
-        telephone:
-            properties:
-                class:
-                    default: 'link-tel'
+  link:
+    relAttribute:
+      enabled: false
+    properties:
+      class:
+        allowedClasses: 'link,btn-primary,btn-next,btn-prev,btn-border,link-download,link-folder,link-external,link-external-blank,link-mail,link-tel'
+    page:
+      properties:
+        class:
+          default: 'link'
+    file:
+      properties:
+        class:
+          default: 'link-download'
+    folder:
+      properties:
+        class:
+          default: 'link-folder'
+    url:
+      properties:
+          class:
+            default: 'link'
+    mail:
+      properties:
+        class:
+          default: 'link-mail'
+    telephone:
+      properties:
+        class:
+          default: 'link-tel'
 
 # Classes config
 classesAnchor:
-    link:
-        class: 'link'
-        type: 'page'
-        titleText: 'Normal'
-    btn-primary:
-        class: 'btn-primary'
-        type: 'page'
-        titleText: 'Button (Primär)'
-    btn-next:
-        class: 'btn-next'
-        type: 'page'
-        titleText: 'Button (Mehr)'
-    btn-prev:
-        class: 'btn-prev'
-        type: 'page'
-        titleText: 'Button (Zurück)'
-    btn-border:
-        class: 'btn-border'
-        type: 'page'
-        titleText: 'Button (Rahmen)'
-    linkDownload:
-        class: 'link-download'
-        type: 'file'
-    linkFolder:
-        class: 'link-folder'
-        type: 'folder'
-    linkExternal:
-        class: 'link-external'
-        type: 'url'
-    linkExternalBlank:
-        class: 'link-external-blank'
-        type: 'url'
-        target: '_blank'
-    linkMail:
-        class: 'link-mail'
-        type: 'mail'
-    linkTel:
-        class: 'link-tel'
-        type: 'telephone'
+  link:
+    class: 'link'
+    type: 'page'
+    titleText: 'Normal'
+  btn-primary:
+    class: 'btn-primary'
+    type: 'page'
+    titleText: 'Button (Primär)'
+  btn-next:
+    class: 'btn-next'
+    type: 'page'
+    titleText: 'Button (Mehr)'
+  btn-prev:
+    class: 'btn-prev'
+    type: 'page'
+    titleText: 'Button (Zurück)'
+  btn-border:
+    class: 'btn-border'
+    type: 'page'
+    titleText: 'Button (Rahmen)'
+  linkDownload:
+    class: 'link-download'
+    type: 'file'
+  linkFolder:
+    class: 'link-folder'
+    type: 'folder'
+  linkExternal:
+    class: 'link-external'
+    type: 'url'
+  linkExternalBlank:
+    class: 'link-external-blank'
+    type: 'url'
+    target: '_blank'
+  linkMail:
+    class: 'link-mail'
+    type: 'mail'
+  linkTel:
+    class: 'link-tel'
+    type: 'telephone'
 
 classes:
-    link:
-        name: 'Normal'
-    btn-primary:
-        name: 'Button (Primär)'
-    btn-next:
-        name: 'Button (Mehr)'
-    btn-prev:
-        name: 'Button (Zurück)'
-    btn-border:
-        name: 'Button (Rahmen)'
+  link:
+    name: 'Normal'
+  btn-primary:
+    name: 'Button (Primär)'
+  btn-next:
+    name: 'Button (Mehr)'
+  btn-prev:
+    name: 'Button (Zurück)'
+  btn-border:
+    name: 'Button (Rahmen)'

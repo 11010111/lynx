@@ -2,356 +2,356 @@
 # TCEFORM
 #
 TCEFORM {
-    tt_content {
-        CType {
-            removeItems = image,textpic
-        }
+  tt_content {
+    CType {
+      removeItems = image,textpic
+    }
 
-        container {
-            addItems {
-                container-xl = Container XL
-            }
-        }
-
-        frame_class {
-            removeItems = ruler-before,ruler-after,indent,indent-left,indent-right
-
-            addItems {
-                grey-box = Grey Box
-            }
-        }
-
-        html_tag {
-            addItems {
-                section = Section
-                article = Article
-            }
-        }
-
-        breakpoint {
-            addItems {
-                sm = SM
-                md = MD
-                lg = LG
-                xl = XL
-                2xl = 2XL
-            }
-        }
-
-        # Add Mask Field Options
-        tx_mask_selectbox {
-            types {
-                mask_c0001 {
-                    addItems {
-                        left = Left
-                        center = Center
-                        right = Right
-                    }
-                }
-            }
-        }
-
-        tx_mask_selectbox {
-            types {
-                mask_c0002 {
-                    addItems {
-                        left = Left
-                        stretch = Stretch
-                        right = Right
-                    }
-                }
-            }
-        }
-
-        tx_mask_selectbox {
-            types {
-                mask_c0003 {
-                    addItems {
-                        left = Left Image
-                        stretch = Stretch Image
-                        right = Right Image
-                    }
-                }
-            }
-        }
-
-        space_before_class {
-            removeItems = extra-small,small,medium,large,extra-large
-
-          	addItems {
-                0\.5 = 0.5
-                1 = 1
-                1\.5 = 1.5
-                2 = 2
-                2\.5 = 2.5
-                3 = 3
-                3\.5 = 3.5
-                4 = 4
-                5 = 5
-                6 = 6
-                7 = 7
-                8 = 8
-                9 = 9
-                10 = 10
-                11 = 11
-                12 = 12
-                14 = 14
-                16 = 16
-                20 = 20
-                24 = 24
-                28 = 28
-                32 = 32
-                36 = 36
-                40 = 40
-                44 = 44
-                48 = 48
-                52 = 52
-                56 = 56
-                60 = 60
-                64 = 64
-                72 = 72
-                80 = 80
-                96 = 96
-            }
-        }
-
-        space_after_class {
-            removeItems = extra-small,small,medium,large,extra-large
-
-			      addItems {
-                0\.5 = 0.5
-                1 = 1
-                1\.5 = 1.5
-                2 = 2
-                2\.5 = 2.5
-                3 = 3
-                3\.5 = 3.5
-                4 = 4
-                5 = 5
-                6 = 6
-                7 = 7
-                8 = 8
-                9 = 9
-                10 = 10
-                11 = 11
-                12 = 12
-                14 = 14
-                16 = 16
-                20 = 20
-                24 = 24
-                28 = 28
-                32 = 32
-                36 = 36
-                40 = 40
-                44 = 44
-                48 = 48
-                52 = 52
-                56 = 56
-                60 = 60
-                64 = 64
-                72 = 72
-                80 = 80
-                96 = 96
-            }
-        }
-
-        padding_top {
-            addItems {
-                0\.5 = 0.5
-                1 = 1
-                1\.5 = 1.5
-                2 = 2
-                2\.5 = 2.5
-                3 = 3
-                3\.5 = 3.5
-                4 = 4
-                5 = 5
-                6 = 6
-                7 = 7
-                8 = 8
-                9 = 9
-                10 = 10
-                11 = 11
-                12 = 12
-                14 = 14
-                16 = 16
-                20 = 20
-                24 = 24
-                28 = 28
-                32 = 32
-                36 = 36
-                40 = 40
-                44 = 44
-                48 = 48
-                52 = 52
-                56 = 56
-                60 = 60
-                64 = 64
-                72 = 72
-                80 = 80
-                96 = 96
-            }
-        }
-
-        padding_bottom {
-            addItems {
-                0\.5 = 0.5
-                1 = 1
-                1\.5 = 1.5
-                2 = 2
-                2\.5 = 2.5
-                3 = 3
-                3\.5 = 3.5
-                4 = 4
-                5 = 5
-                6 = 6
-                7 = 7
-                8 = 8
-                9 = 9
-                10 = 10
-                11 = 11
-                12 = 12
-                14 = 14
-                16 = 16
-                20 = 20
-                24 = 24
-                28 = 28
-                32 = 32
-                36 = 36
-                40 = 40
-                44 = 44
-                48 = 48
-                52 = 52
-                56 = 56
-                60 = 60
-                64 = 64
-                72 = 72
-                80 = 80
-                96 = 96
-            }
-        }
-
-        layout {
-            disabled = 1
-        }
-
-        header_layout {
-            altLabels {
-                0 = Default
-            }
-
-            removeItems = 1,2,3,4,5
-        }
-
-        imagewidth {
-          disabled = 1
-        }
-
-        imageheight {
-          disabled = 1
-        }
-
-        imageorient {
-            removeItems = 8,9,10,17,18,25,26
-        }
-
-        imagecols {
-            disabled = 1
+    container {
+        addItems {
+          container-xl = Container XL
         }
     }
 
-    sys_file_reference.crop.config.cropVariants {
-        default {
-            title = Desktop
-            selectedRatio = NaN
-            allowedAspectRatios {
-                NaN {
-                    title = Frei
-                    value = 0.0
-                }
+    frame_class {
+      removeItems = ruler-before,ruler-after,indent,indent-left,indent-right
 
-                1:1 {
-                    title = 1:1
-                    value = 1
-                }
-
-                2:3 {
-                    title = 2:3
-                    value = 0.666666
-                }
-
-                4:3 {
-                    title = 4:3
-                    value = 1.333333
-                }
-
-                16:9 {
-                    title = 16:9
-                    value = 1.777777778
-                }
-            }
-        }
-
-        tablet {
-            title = Tablet
-            selectedRatio = NaN
-            allowedAspectRatios {
-                NaN {
-                    title = Frei
-                    value = 0.0
-                }
-
-                1:1 {
-                    title = 1:1
-                    value = 1
-                }
-
-                2:3 {
-                    title = 2:3
-                    value = 0.666666
-                }
-
-                4:3 {
-                    title = 4:3
-                    value = 1.333333
-                }
-
-                16:9 {
-                    title = 16:9
-                    value = 1.777777778
-                }
-            }
-        }
-
-        mobile {
-            title = Mobile
-            selectedRatio = NaN
-            allowedAspectRatios {
-                NaN {
-                    title = Frei
-                    value = 0.0
-                }
-
-                1:1 {
-                    title = 1:1
-                    value = 1
-                }
-
-                2:3 {
-                    title = 2:3
-                    value = 0.666666
-                }
-
-                4:3 {
-                    title = 4:3
-                    value = 1.333333
-                }
-
-                16:9 {
-                    title = 16:9
-                    value = 1.777777778
-                }
-            }
-        }
+      addItems {
+        grey-box = Grey Box
+      }
     }
+
+    html_tag {
+      addItems {
+        section = Section
+        article = Article
+      }
+    }
+
+    breakpoint {
+      addItems {
+        sm = SM
+        md = MD
+        lg = LG
+        xl = XL
+        2xl = 2XL
+      }
+    }
+
+    # Add Mask Field Options
+    tx_mask_selectbox {
+      types {
+        mask_c0001 {
+          addItems {
+            left = Left
+            center = Center
+            right = Right
+          }
+        }
+      }
+    }
+
+    tx_mask_selectbox {
+      types {
+        mask_c0002 {
+          addItems {
+            left = Left
+            stretch = Stretch
+            right = Right
+          }
+        }
+      }
+    }
+
+    tx_mask_selectbox {
+      types {
+        mask_c0003 {
+          addItems {
+            left = Left Image
+            stretch = Stretch Image
+            right = Right Image
+          }
+        }
+      }
+    }
+
+    space_before_class {
+      removeItems = extra-small,small,medium,large,extra-large
+
+      addItems {
+        0\.5 = 0.5
+        1 = 1
+        1\.5 = 1.5
+        2 = 2
+        2\.5 = 2.5
+        3 = 3
+        3\.5 = 3.5
+        4 = 4
+        5 = 5
+        6 = 6
+        7 = 7
+        8 = 8
+        9 = 9
+        10 = 10
+        11 = 11
+        12 = 12
+        14 = 14
+        16 = 16
+        20 = 20
+        24 = 24
+        28 = 28
+        32 = 32
+        36 = 36
+        40 = 40
+        44 = 44
+        48 = 48
+        52 = 52
+        56 = 56
+        60 = 60
+        64 = 64
+        72 = 72
+        80 = 80
+        96 = 96
+      }
+    }
+
+    space_after_class {
+      removeItems = extra-small,small,medium,large,extra-large
+
+      addItems {
+        0\.5 = 0.5
+        1 = 1
+        1\.5 = 1.5
+        2 = 2
+        2\.5 = 2.5
+        3 = 3
+        3\.5 = 3.5
+        4 = 4
+        5 = 5
+        6 = 6
+        7 = 7
+        8 = 8
+        9 = 9
+        10 = 10
+        11 = 11
+        12 = 12
+        14 = 14
+        16 = 16
+        20 = 20
+        24 = 24
+        28 = 28
+        32 = 32
+        36 = 36
+        40 = 40
+        44 = 44
+        48 = 48
+        52 = 52
+        56 = 56
+        60 = 60
+        64 = 64
+        72 = 72
+        80 = 80
+        96 = 96
+      }
+    }
+
+    padding_top {
+      addItems {
+        0\.5 = 0.5
+        1 = 1
+        1\.5 = 1.5
+        2 = 2
+        2\.5 = 2.5
+        3 = 3
+        3\.5 = 3.5
+        4 = 4
+        5 = 5
+        6 = 6
+        7 = 7
+        8 = 8
+        9 = 9
+        10 = 10
+        11 = 11
+        12 = 12
+        14 = 14
+        16 = 16
+        20 = 20
+        24 = 24
+        28 = 28
+        32 = 32
+        36 = 36
+        40 = 40
+        44 = 44
+        48 = 48
+        52 = 52
+        56 = 56
+        60 = 60
+        64 = 64
+        72 = 72
+        80 = 80
+        96 = 96
+      }
+    }
+
+    padding_bottom {
+      addItems {
+        0\.5 = 0.5
+        1 = 1
+        1\.5 = 1.5
+        2 = 2
+        2\.5 = 2.5
+        3 = 3
+        3\.5 = 3.5
+        4 = 4
+        5 = 5
+        6 = 6
+        7 = 7
+        8 = 8
+        9 = 9
+        10 = 10
+        11 = 11
+        12 = 12
+        14 = 14
+        16 = 16
+        20 = 20
+        24 = 24
+        28 = 28
+        32 = 32
+        36 = 36
+        40 = 40
+        44 = 44
+        48 = 48
+        52 = 52
+        56 = 56
+        60 = 60
+        64 = 64
+        72 = 72
+        80 = 80
+        96 = 96
+      }
+    }
+
+    layout {
+        disabled = 1
+    }
+
+    header_layout {
+      altLabels {
+        0 = Default
+      }
+
+      removeItems = 1,2,3,4,5
+    }
+
+    imagewidth {
+      disabled = 1
+    }
+
+    imageheight {
+      disabled = 1
+    }
+
+    imageorient {
+      removeItems = 8,9,10,17,18,25,26
+    }
+
+    imagecols {
+      disabled = 1
+    }
+  }
+
+  sys_file_reference.crop.config.cropVariants {
+    default {
+      title = Desktop
+      selectedRatio = NaN
+      allowedAspectRatios {
+        NaN {
+          title = Frei
+          value = 0.0
+        }
+
+        1:1 {
+          title = 1:1
+          value = 1
+        }
+
+        2:3 {
+          title = 2:3
+          value = 0.666666
+        }
+
+        4:3 {
+          title = 4:3
+          value = 1.333333
+        }
+
+        16:9 {
+          title = 16:9
+          value = 1.777777778
+        }
+      }
+    }
+
+    tablet {
+      title = Tablet
+      selectedRatio = NaN
+      allowedAspectRatios {
+        NaN {
+          title = Frei
+          value = 0.0
+        }
+
+        1:1 {
+          title = 1:1
+          value = 1
+        }
+
+        2:3 {
+          title = 2:3
+          value = 0.666666
+        }
+
+        4:3 {
+          title = 4:3
+          value = 1.333333
+        }
+
+        16:9 {
+          title = 16:9
+          value = 1.777777778
+        }
+      }
+    }
+
+    mobile {
+      title = Mobile
+      selectedRatio = NaN
+      allowedAspectRatios {
+        NaN {
+          title = Frei
+          value = 0.0
+        }
+
+        1:1 {
+          title = 1:1
+          value = 1
+        }
+
+        2:3 {
+          title = 2:3
+          value = 0.666666
+        }
+
+        4:3 {
+          title = 4:3
+          value = 1.333333
+        }
+
+        16:9 {
+          title = 16:9
+          value = 1.777777778
+        }
+      }
+    }
+  }
 }
