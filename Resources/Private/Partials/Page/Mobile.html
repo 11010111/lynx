@@ -1,35 +1,35 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<nav class="mobile">
-  <div class="mobile-logo">
+<nav class="mobile flex xl:hidden justify-between items-center py-3 md:py-4">
+  <div class="mobile-logo flex items-center z-10">
     <f:cObject typoscriptObjectPath="lib.logo" />
   </div>
 
-  <div class="button-wrapper">
+  <div class="flex items-center relative overflow-hidden">
     <input type="checkbox" class="menu-button" id="menu-button" aria-label="Menu Button">
     <label for="menu-button" class="menu-label"></label>
 
-    <div class="mobile-container">
+    <div class="mobile-container fixed top-0 -right-full w-full h-full max-w-xl bg-gray-200 m-0 pt-32 pb-5 overflow-y-auto transition-[right] duration-300">
       <div class="container mobile-content">
-        <ul class="mobile-menu">
+        <ul class="mobile-menu flex flex-col gap-y-5">
           <f:for each="{navigation}" as="navigationItem">
-            <li class="parent{f:if(condition: navigationItem.children, then:' has-children')}">
+            <li class="parent relative top-0 left-0 group{f:if(condition: navigationItem.children, then:' has-children')}{f:if(condition: navigationItem.active, then:' parent-active')}">
               <f:if condition="{navigationItem.children} && {linkNonClickable} == 1">
                 <f:then>
-                  <span class="parent-link{f:if(condition: navigationItem.active, then:' active')}" title="{navigationItem.title}">
+                  <span class="parent-link group-[.parent-active]:text-blue-500" title="{navigationItem.title}">
                     {navigationItem.title}
                   </span>
                 </f:then>
                 <f:else>
-                  <a class="parent-link{f:if(condition: navigationItem.active, then:' active')}" href="{navigationItem.link}" target="{navigationItem.target}" title="{navigationItem.title}">
+                  <a class="parent-link group-[.parent-active]:text-blue-500" href="{navigationItem.link}" target="{navigationItem.target}" title="{navigationItem.title}">
                     {navigationItem.title}
                   </a>
                 </f:else>
               </f:if>
               <f:if condition="{navigationItem.children}">
-                <ul class="mobile-dropdown">
+                <ul class="mobile-dropdown flex flex-col gap-y-4 h-0 pl-4 overflow-hidden group-[.parent-open]:h-full group-[.parent-open]:mt-6">
                   <f:for each="{navigationItem.children}" as="child">
-                    <li class="child">
-                      <a class="child-link{f:if(condition: child.active, then:' active')}" href="{child.link}" target="{child.target}" title="{child.title}">
+                    <li class="child group{f:if(condition: child.active, then:' child-active')}">
+                      <a class="child-link group-[.child-active]:text-blue-500" href="{child.link}" target="{child.target}" title="{child.title}">
                         {child.title}
                       </a>
                     </li>
@@ -38,8 +38,8 @@
               </f:if>
 
               <f:if condition="{navigationItem.children}">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                    <path d="M8.18005 10L12.1801 14L16.1801 10" stroke="#0575ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <svg class="group-[.parent-open]:rotate-90 group-[.has-children]:absolute group-[.has-children]:top-0 group-[.has-children]:right-0 transition-transform duration-300 w-[1.75rem] h-[1.75rem]" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path class="group-[.parent-active]:stroke-blue-500" d="M8.18005 10L12.1801 14L16.1801 10" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </f:if>
             </li>
@@ -48,19 +48,19 @@
       </div>
 
       <f:comment>
-        <div class="language-container">
+        <div class="language-container absolute bottom-0 left-0">
           <f:if condition="{languageNavigation}">
-            <ul id="language_menu" class="language-menu">
+            <ul id="language_menu" class="language-menu flex gap-4">
               <f:for each="{languageNavigation}" as="item">
-                <li class="{f:if(condition: item.active, then: 'lang-active')} {f:if(condition: item.available, else: 'text-muted')}">
+                <li class="{f:if(condition: item.active, then: 'group lang-active')} {f:if(condition: item.available, else: 'text-muted')}">
                   <f:if condition="{item.available}">
                     <f:then>
-                      <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
+                      <a class="group-[.lang-active]:text-blue-500" href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
                         <span>{item.navigationTitle}</span>
                       </a>
                     </f:then>
                     <f:else>
-                      <span>{item.navigationTitle}</span>
+                      <span class="group-[.lang-active]:text-blue-500">{item.navigationTitle}</span>
                     </f:else>
                   </f:if>
                 </li>

@@ -5,18 +5,12 @@ module.exports = {
     "./Resources/Public/JavaScript/**/*.js",
   ],
   theme: {
-    colors: {
-      'primary': "#321",
-    },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
     },
     extend: {
-      spacing: {
-        '128': '32rem',
-      },
-      borderRadius: {
-        '4xl': '2rem',
+      colors: {
+        'primary': '#000',
       }
     },
   },

@@ -1,24 +1,24 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<nav class="desktop">
-  <div class="desktop-logo">
+<nav class="desktop hidden xl:flex justify-between items-center py-4">
+  <div class="flex items-center">
     <f:cObject typoscriptObjectPath="lib.logo" />
   </div>
 
-  <div class="desktop-menu-wrapper">
-    <ul class="desktop-link-wrapper">
+  <div class="flex gap-8">
+    <ul class="flex flex-wrap gap-8">
       <f:for each="{navigation}" as="navigationItem">
-        <li class="level1{f:if(condition:'{navigationItem.children}',then:' has-children')}">
-          <a class="{f:if(condition: navigationItem.active, then:'active')}" href="{navigationItem.link}"
+        <li class="level1 relative group{f:if(condition:'{navigationItem.children}',then:' has-children')}">
+          <a class="font-semibold{f:if(condition: navigationItem.active, then:' active')}" href="{navigationItem.link}"
             target="{navigationItem.target}" title="{navigationItem.title}">
             {navigationItem.title}
           </a>
 
           <f:if condition="{navigationItem.children}">
-            <ul class="desktop-dropdown">
+            <ul class="hidden group-hover:flex flex-col gap-5 absolute py-8 px-6 bg-white shadow-sm -right-6 w-max">
               <f:for each="{navigationItem.children}" as="level2">
                 <li class="level2">
-                  <a class="{f:if(condition: level2.active, then:'active')}" href="{level2.link}" target="{level2.target}"
+                  <a class="{f:if(condition: level2.active, then:' active')}" href="{level2.link}" target="{level2.target}"
                     title="{level2.title}">
                     {level2.title}
                   </a>
@@ -30,8 +30,8 @@
       </f:for>
     </ul>
 
-    <div class="desktop-btn-wrapper">
-      <a class="btn-secondary" href="/">Buy now</a>
+    <div>
+      <a class="rounded-md bg-slate-800 text-white font-semibold py-3 px-6" href="/">Buy now</a>
     </div>
 
     <f:comment>
