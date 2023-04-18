@@ -3,42 +3,42 @@
 
 // C/0002
 .c0002 {
-    > div {
-        display: flex;
-        column-gap: var(--column-gap);
-        row-gap: var(--row-gap);
-    }
+  >div {
+    display: flex;
+    column-gap: var(--column-gap);
+    row-gap: var(--row-gap);
+  }
 
-    figure {
-        picture {
-            display: flex;
-            flex-direction: column;
+  figure {
+    picture {
+      display: flex;
+      flex-direction: column;
 
-            img {
-                width: auto;
-                height: auto;
-            }
-        }
+      img {
+        width: auto;
+        height: auto;
+      }
     }
+  }
 }
 
 .c0002-stretch {
-    figure {
-        width: 100%;
-        
-        picture {
-            width: 100%;
+  figure {
+    width: 100%;
 
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
+    picture {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
+  }
 }
 
 .c0002-right {
-    > div {
-        justify-content: flex-end;
-    }
+  >div {
+    justify-content: flex-end;
+  }
 }
