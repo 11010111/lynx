@@ -1,26 +1,36 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <nav class="mobile flex xl:hidden justify-between items-center py-3 md:py-4">
-  <div class="mobile-logo flex items-center z-10">
+  <div class="mobile-logo flex items-center z-10 [&>a>img]:w-auto [&>a>img]:h-6 [&>a>svg]:w-auto [&>a>svg]:h-6">
     <f:cObject typoscriptObjectPath="lib.logo" />
   </div>
 
   <div class="flex items-center relative overflow-hidden">
-    <input type="checkbox" class="menu-button" id="menu-button" aria-label="Menu Button">
-    <label for="menu-button" class="menu-label"></label>
+    <input type="checkbox" class="menu-button peer relative top-0 left-auto right-0 w-6 h-6 appearance-none opacity-0 cursor-pointer m-0 z-20" id="menu-button" aria-label="Menu Button">
+    <label for="menu-button" class="menu-label absolute top-0 left-0 right-0 bottom-0 z-10 [&>.menu-close]:hidden peer-checked:[&>.menu-close]:block peer-checked:[&>.menu-burger]:hidden">
+      <svg class="menu-burger w-full h-full" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.4978 12H18.5029" stroke="#1e293b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.4978 16.0017H18.5029" stroke="#1e293b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.49731 7.99833H18.5024" stroke="#1e293b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg class="menu-close w-full h-full" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 8L16 16" stroke="#1e293b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 8L8 16" stroke="#1e293b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </label>
 
-    <div class="mobile-container fixed top-0 -right-full w-full h-full max-w-xl bg-gray-200 m-0 pt-32 pb-5 overflow-y-auto transition-[right] duration-300">
+    <div class="mobile-container fixed top-0 -right-full w-full h-full max-w-xl bg-gray-200 m-0 pt-32 pb-5 overflow-y-auto transition-[right] duration-300 peer-checked:right-0">
       <div class="container mobile-content">
         <ul class="mobile-menu flex flex-col gap-y-5">
           <f:for each="{navigation}" as="navigationItem">
             <li class="parent relative top-0 left-0 group{f:if(condition: navigationItem.children, then:' has-children')}{f:if(condition: navigationItem.active, then:' parent-active')}">
               <f:if condition="{navigationItem.children} && {linkNonClickable} == 1">
                 <f:then>
-                  <span class="parent-link group-[.parent-active]:text-blue-500" title="{navigationItem.title}">
+                  <span class="parent-link text-lg font-semibold group-[.parent-active]:text-slate-500" title="{navigationItem.title}">
                     {navigationItem.title}
                   </span>
                 </f:then>
                 <f:else>
-                  <a class="parent-link group-[.parent-active]:text-blue-500" href="{navigationItem.link}" target="{navigationItem.target}" title="{navigationItem.title}">
+                  <a class="parent-link text-lg font-semibold group-[.parent-active]:text-slate-500" href="{navigationItem.link}" target="{navigationItem.target}" title="{navigationItem.title}">
                     {navigationItem.title}
                   </a>
                 </f:else>
@@ -29,7 +39,7 @@
                 <ul class="mobile-dropdown flex flex-col gap-y-4 h-0 pl-4 overflow-hidden group-[.parent-open]:h-full group-[.parent-open]:mt-6">
                   <f:for each="{navigationItem.children}" as="child">
                     <li class="child group{f:if(condition: child.active, then:' child-active')}">
-                      <a class="child-link group-[.child-active]:text-blue-500" href="{child.link}" target="{child.target}" title="{child.title}">
+                      <a class="child-link group-[.child-active]:text-slate-500" href="{child.link}" target="{child.target}" title="{child.title}">
                         {child.title}
                       </a>
                     </li>
@@ -39,7 +49,7 @@
 
               <f:if condition="{navigationItem.children}">
                 <svg class="group-[.parent-open]:rotate-90 group-[.has-children]:absolute group-[.has-children]:top-0 group-[.has-children]:right-0 transition-transform duration-300 w-[1.75rem] h-[1.75rem]" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                    <path class="group-[.parent-active]:stroke-blue-500" d="M8.18005 10L12.1801 14L16.1801 10" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path class="group-[.parent-active]:stroke-slate-500" d="M8.18005 10L12.1801 14L16.1801 10" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </f:if>
             </li>
@@ -55,12 +65,12 @@
                 <li class="{f:if(condition: item.active, then: 'group lang-active')} {f:if(condition: item.available, else: 'text-muted')}">
                   <f:if condition="{item.available}">
                     <f:then>
-                      <a class="group-[.lang-active]:text-blue-500" href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
+                      <a class="group-[.lang-active]:text-slate-500" href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
                         <span>{item.navigationTitle}</span>
                       </a>
                     </f:then>
                     <f:else>
-                      <span class="group-[.lang-active]:text-blue-500">{item.navigationTitle}</span>
+                      <span class="group-[.lang-active]:text-slate-500">{item.navigationTitle}</span>
                     </f:else>
                   </f:if>
                 </li>

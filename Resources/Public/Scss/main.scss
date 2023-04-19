@@ -1,6 +1,18 @@
 // Imports
 @import 'functions';
 
+// Desktop Navigation
+nav.desktop {
+  padding-left: var(--margin-x-min);
+  padding-right: var(--margin-x-min);
+}
+
+// Mobile Navigation
+nav.mobile {
+  padding-left: var(--margin-x-min);
+  padding-right: var(--margin-x-min);
+}
+
 // document.body.classList.add('page-navigation-fixed')
 .page-navigation-fixed {
   .page-navigation {
@@ -22,11 +34,13 @@
   }
 }
 
+// Frame Class
 .grey-box, .frame-grey-box {
   padding: rem(16);
   background-color: var(--lightgrey);
 }
 
+// Scroll to Top Button
 .scroll-top {
   display: flex;
   justify-content: center;
@@ -63,6 +77,7 @@
   }
 }
 
+// Error Pages
 .site-error {
   display: flex;
   justify-content: center;
@@ -76,6 +91,7 @@
   }
 }
 
+// Fade in Effect
 .fade-in {
   animation: fade-in 1.5s;
 }
