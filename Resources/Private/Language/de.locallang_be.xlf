@@ -26,6 +26,14 @@
                 <target state="translated">Container</target>
             </trans-unit>
             <trans-unit id="breakpoint">
+                <source>Container Breakpoint</source>
+                <target state="translated">Container Umbruch</target>
+            </trans-unit>
+            <trans-unit id="breakpoint_desktop">
+                <source>Breakpoint</source>
+                <target state="translated">Umbruch</target>
+            </trans-unit>
+            <trans-unit id="breakpoint_tablet">
                 <source>Breakpoint</source>
                 <target state="translated">Umbruch</target>
             </trans-unit>
@@ -37,10 +45,6 @@
                 <source>Background Color</source>
                 <target state="translated">Hintergrundfarbe</target>
             </trans-unit>
-            <trans-unit id="foreground_color">
-                <source>Foreground Color</source>
-                <target state="translated">Schriftfarbe</target>
-            </trans-unit>
             <trans-unit id="padding_top">
                 <source>Space Inline Before</source>
                 <target state="translated">Abstand davor - Innen</target>
@@ -48,6 +52,38 @@
             <trans-unit id="padding_bottom">
                 <source>Space Inline After</source>
                 <target state="translated">Abstand danach - Innen</target>
+            </trans-unit>
+            <trans-unit id="margin_top_tablet">
+                <source>Space Before Tablet</source>
+                <target state="translated">Tablet Abstand davor</target>
+            </trans-unit>
+            <trans-unit id="margin_bottom_tablet">
+                <source>Space After Tablet</source>
+                <target state="translated">Tablet Abstand danach</target>
+            </trans-unit>
+            <trans-unit id="padding_top_tablet">
+                <source>Space Inline Before Tablet</source>
+                <target state="translated">Tablet Abstand davor - Innen</target>
+            </trans-unit>
+            <trans-unit id="padding_bottom_tablet">
+                <source>Space Inline After Tablet</source>
+                <target state="translated">Tablet Abstand danach - Innen</target>
+            </trans-unit>
+            <trans-unit id="margin_top_mobile">
+                <source>Space Before Mobile</source>
+                <target state="translated">Mobile Abstand davor</target>
+            </trans-unit>
+            <trans-unit id="margin_bottom_mobile">
+                <source>Space After Mobile</source>
+                <target state="translated">Mobile Abstand danach</target>
+            </trans-unit>
+            <trans-unit id="padding_top_mobile">
+                <source>Space Inline Before Mobile</source>
+                <target state="translated">Mobile Abstand davor - Innen</target>
+            </trans-unit>
+            <trans-unit id="padding_bottom_mobile">
+                <source>Space Inline After Mobile</source>
+                <target state="translated">Mobile Abstand danach - Innen</target>
             </trans-unit>
             <trans-unit id="html_tag">
                 <source>HTML Tag</source>

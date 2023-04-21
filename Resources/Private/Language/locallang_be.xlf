@@ -22,6 +22,12 @@
                 <source>Container</source>
             </trans-unit>
             <trans-unit id="breakpoint">
+                <source>Container Breakpoint</source>
+            </trans-unit>
+            <trans-unit id="breakpoint_desktop">
+                <source>Breakpoint</source>
+            </trans-unit>
+            <trans-unit id="breakpoint_tablet">
                 <source>Breakpoint</source>
             </trans-unit>
             <trans-unit id="alignment">
@@ -30,14 +36,35 @@
             <trans-unit id="background_color">
                 <source>Background Color</source>
             </trans-unit>
-            <trans-unit id="foreground_color">
-                <source>Foreground Color</source>
-            </trans-unit>
             <trans-unit id="padding_top">
                 <source>Space Inline Before</source>
             </trans-unit>
             <trans-unit id="padding_bottom">
                 <source>Space Inline After</source>
+            </trans-unit>
+            <trans-unit id="margin_top_tablet">
+                <source>Space Before Tablet</source>
+            </trans-unit>
+            <trans-unit id="margin_bottom_tablet">
+                <source>Space After Tablet</source>
+            </trans-unit>
+            <trans-unit id="padding_top_tablet">
+                <source>Space Inline Before Tablet</source>
+            </trans-unit>
+            <trans-unit id="padding_bottom_tablet">
+                <source>Space Inline After Tablet</source>
+            </trans-unit>
+            <trans-unit id="margin_top_mobile">
+                <source>Space Before Mobile</source>
+            </trans-unit>
+            <trans-unit id="margin_bottom_mobile">
+                <source>Space After Mobile</source>
+            </trans-unit>
+            <trans-unit id="padding_top_mobile">
+                <source>Space Inline Before Mobile</source>
+            </trans-unit>
+            <trans-unit id="padding_bottom_mobile">
+                <source>Space Inline After Mobile</source>
             </trans-unit>
             <trans-unit id="html_tag">
                 <source>HTML Tag</source>

@@ -390,6 +390,24 @@ defined('TYPO3') or die('Access denied.');
                 'renderType' => 'selectSingle'
             ]
         ],
+        'breakpoint_desktop' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:breakpoint_desktop',
+            'description' => '',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle'
+            ]
+        ],
+        'breakpoint_tablet' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:breakpoint_tablet',
+            'description' => '',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle'
+            ]
+        ],
         'alignment' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:alignment',
@@ -401,6 +419,78 @@ defined('TYPO3') or die('Access denied.');
                     ['Default', ''],
                     ['Left', 'ml-0'],
                     ['Right', 'mr-0']
+                ]
+            ]
+        ],
+        'margin_top' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:margin_top',
+            'description' => '',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'margin_bottom' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:margin_bottom',
+            'description' => '',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'margin_top_tablet' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:margin_top_tablet',
+            'description' => '',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'margin_bottom_tablet' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:margin_bottom_tablet',
+            'description' => '',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'margin_top_mobile' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:margin_top_mobile',
+            'description' => '',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'margin_bottom_mobile' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:margin_bottom_mobile',
+            'description' => '',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
                 ]
             ]
         ],
@@ -428,19 +518,57 @@ defined('TYPO3') or die('Access denied.');
                 ]
             ]
         ],
+        'padding_top_tablet' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:padding_top_tablet',
+            'description' => '',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'padding_bottom_tablet' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:padding_bottom_tablet',
+            'description' => '',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'padding_top_mobile' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:padding_top_mobile',
+            'description' => '',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'padding_bottom_mobile' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:padding_bottom_mobile',
+            'description' => '',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
         'background_color' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:background_color',
-            'description' => '',
-            'config' => [
-                'type' => 'input',
-                'renderType' => 'colorpicker',
-                'size' => 10,
-            ]
-        ],
-        'foreground_color' => [
-            'exclude' => 1,
-            'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:foreground_color',
             'description' => '',
             'config' => [
                 'type' => 'input',
@@ -464,14 +592,74 @@ defined('TYPO3') or die('Access denied.');
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+  'tt_content',
+  '--palette--;Margin/Padding Mobile;mobile',
+  '',
+  'after:space_after_class'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+  'tt_content',
+  '--palette--;Margin/Padding Tablet;tablet',
+  '',
+  'after:space_after_class'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+  'tt_content',
+  '--palette--;Margin/Padding Desktop;desktop',
+  '',
+  'after:space_after_class'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',
-    'container, breakpoint, alignment, padding_top, padding_bottom, background_color, foreground_color, html_tag',
+    'container, breakpoint, alignment, padding_top, padding_bottom, margin_top_tablet, breakpoint_desktop, breakpoint_tablet, margin_bottom_tablet, padding_top_tablet, padding_bottom_tablet, margin_top_mobile, margin_bottom_mobile, padding_top_mobile, padding_bottom_mobile, background_color, html_tag',
     'appearance',
-    'after:space_after_class'
+    'after:frame_class'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+  'tt_content',
+  'container',
+  '',
+  'replace:space_before_class'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+  'tt_content',
+  'alignment',
+  '',
+  'replace:space_after_class'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
-    'tt_content',
-    'frames',
-    'container, --linebreak--, breakpoint, alignment, --linebreak--, padding_top, padding_bottom, --linebreak--, background_color, foreground_color, --linebreak--, html_tag'
+  'tt_content',
+  'frames',
+  'breakpoint',
+  'before:container'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+  'tt_content',
+  'desktop',
+  'space_before_class, space_after_class, padding_top, padding_bottom, --linebreak--, breakpoint_desktop'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+  'tt_content',
+  'tablet',
+  'margin_top_tablet, margin_bottom_tablet, padding_top_tablet, padding_bottom_tablet, --linebreak--, breakpoint_tablet'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+  'tt_content',
+  'mobile',
+  'margin_top_mobile, margin_bottom_mobile, padding_top_mobile, padding_bottom_mobile'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+  'tt_content',
+  'frames',
+  '--linebreak--, html_tag, background_color'
 );

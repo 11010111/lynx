@@ -126,8 +126,8 @@ page {
   }
 
   includeCSS {
-    tailwind = EXT:lynx/Resources/Public/Css/tailwind-bundle.css
     container = EXT:lynx/Resources/Public/Css/container.css
+    tailwind = EXT:lynx/Resources/Public/Css/tailwind-bundle.css
     rte = EXT:lynx/Resources/Public/Css/rte.css
     base = EXT:lynx/Resources/Public/Css/base.css
     main = EXT:lynx/Resources/Public/Css/main.css
