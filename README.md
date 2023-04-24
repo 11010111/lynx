@@ -303,3 +303,11 @@ const tobii = new Tobii({
   Open Wikipedia
 </button>
 ```
+## Inital install Tailwind & SASS packages
+`npm install`
+
+## Watch tailwind & SASS
+`npm start`
+
+## Production Build before deploy or push
+`npm run build`
