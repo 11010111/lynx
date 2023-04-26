@@ -1,0 +1,89 @@
+lib.appearance {
+  fields {
+    container = TEXT
+    container {
+      field = container
+    }
+
+    breakpoint = TEXT
+    breakpoint {
+      field = breakpoint
+    }
+
+    mp_breakpoint_desktop = TEXT
+    mp_breakpoint_desktop {
+      field = breakpoint_desktop
+    }
+
+    mp_breakpoint_tablet = TEXT
+    mp_breakpoint_tablet {
+      field = breakpoint_tablet
+    }
+
+    paddingTop = TEXT
+    paddingTop {
+        field = padding_top
+    }
+
+    paddingBottom = TEXT
+    paddingBottom {
+        field = padding_bottom
+    }
+
+    margin_top_tablet = TEXT
+    margin_top_tablet {
+        field = margin_top_tablet
+    }
+
+    margin_bottom_tablet = TEXT
+    margin_bottom_tablet {
+        field = margin_bottom_tablet
+    }
+
+    margin_top_mobile = TEXT
+    margin_top_mobile {
+        field = margin_top_mobile
+    }
+
+    margin_bottom_mobile = TEXT
+    margin_bottom_mobile {
+        field = margin_bottom_mobile
+    }
+
+
+    padding_top_tablet = TEXT
+    padding_top_tablet {
+        field = padding_top_tablet
+    }
+
+    padding_bottom_tablet = TEXT
+    padding_bottom_tablet {
+        field = padding_bottom_tablet
+    }
+
+    padding_top_mobile = TEXT
+    padding_top_mobile {
+        field = padding_top_mobile
+    }
+
+    padding_bottom_mobile = TEXT
+    padding_bottom_mobile {
+        field = padding_bottom_mobile
+    }
+
+    alignment = TEXT
+    alignment {
+      field = alignment
+    }
+
+    htmlTag = TEXT
+    htmlTag {
+      field = html_tag
+    }
+
+    background_color = TEXT
+    background_color {
+      field = background_color
+    }
+  }
+}

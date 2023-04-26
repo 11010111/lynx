@@ -1,0 +1,18 @@
+tt_content.mask_c0001 =< lib.contentElement
+tt_content.mask_c0001 {
+  fields {
+    content {
+      fields {
+        tx_mask_rte = TEXT
+        tx_mask_rte {
+          field = tx_mask_rte
+          parseFunc =< lib.parseFunc_links
+        }
+        tx_mask_selectbox = TEXT
+        tx_mask_selectbox {
+          field = tx_mask_selectbox
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+tt_content.mask_c0003 =< lib.contentElement
+tt_content.mask_c0003 {
+  fields {
+    content {
+      fields {
+        tx_mask_media = TEXT
+        tx_mask_media {
+          dataProcessing.10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+          dataProcessing.10 {
+            references.fieldName = tx_mask_media
+            as = files
+            processingConfiguration {
+              delayProcessing = 1
+            }
+          }
+        }
+        tx_mask_selectbox = TEXT
+        tx_mask_selectbox {
+          field = tx_mask_selectbox
+        }
+      }
+    }
+  }
+}

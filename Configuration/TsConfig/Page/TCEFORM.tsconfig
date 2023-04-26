@@ -83,6 +83,18 @@ TCEFORM {
       }
     }
 
+    tx_mask_selectbox {
+      types {
+        mask_c0003 {
+          addItems {
+            left = Left
+            stretch = Stretch
+            right = Right
+          }
+        }
+      }
+    }
+
     # Fieldname
     #padding_bottom_tablet {
     #  types {

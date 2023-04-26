@@ -1,0 +1,31 @@
+################
+#### HELPER ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/Helper/container.typoscript">
+
+
+#################
+#### CONTENT ####
+#################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:lynx/Configuration/TypoScript/Headless/ContentTypoScript/" extensions="typoscript">
+
+
+################################
+#### BACKEND TEMPLATE PATHS ####
+################################
+module.tx_backend.view.partialRootPaths.100 = EXT:lynx/Resources/Private/Backend/Partials/
+
+
+################
+#### CONFIG ####
+################
+config {
+  pageTitleFirst = 1
+  #pageTitleSeparator = -
+  #pageTitleSeparator.noTrimWrap = | | |
+  intTarget =
+  extTarget = _blank
+  fileTarget = _blank
+  typolinkLinkAccessRestrictedPages = 1
+  typolinkLinkAccessRestrictedPages_addParams = &redirect_url=###RETURN_URL###
+}
