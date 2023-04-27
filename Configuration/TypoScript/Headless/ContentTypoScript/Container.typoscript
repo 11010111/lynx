@@ -1,0 +1,139 @@
+tt_content.c100 =< lib.contentElement
+tt_content.c100 {
+  fields {
+    normal = TEXT
+    normal {
+      dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+        10 {
+          colPos = 201
+          as = normal
+        }
+      }
+    }
+  }
+}
+
+tt_content.c50-50 =< lib.contentElement
+tt_content.c50-50 {
+  fields {
+    left = TEXT
+    left {
+      dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+        10 {
+          colPos = 201
+          as = left
+        }
+      }
+    }
+
+    right = TEXT
+    right {
+      dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+        10 {
+          colPos = 202
+          as = right
+        }
+      }
+    }
+  }
+}
+
+tt_content.c25-75 =< tt_content.c50-50
+tt_content.c75-25 =< tt_content.c50-50
+tt_content.c33-66 =< tt_content.c50-50
+tt_content.c66-33 =< tt_content.c50-50
+tt_content.c20-80 =< tt_content.c50-50
+tt_content.c80-20 =< tt_content.c50-50
+tt_content.accordion =< tt_content.c100
+tt_content.slider =< tt_content.c100
+tt_content.slider-cell =< tt_content.c100
+
+tt_content.c33-33-33 =< lib.contentElement
+tt_content.c33-33-33 {
+  fields {
+    left = TEXT
+    left {
+      dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+        10 {
+          colPos = 201
+          as = left
+        }
+      }
+    }
+
+    center = TEXT
+    center {
+      dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+        10 {
+          colPos = 203
+          as = center
+        }
+      }
+    }
+
+    right = TEXT
+    right {
+      dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+        10 {
+          colPos = 203
+          as = right
+        }
+      }
+    }
+  }
+}
+
+tt_content.c25-25-25-25 =< lib.contentElement
+tt_content.c25-25-25-25 {
+  fields {
+    left = TEXT
+    left {
+      dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+        10 {
+          colPos = 201
+          as = left
+        }
+      }
+    }
+
+    center_l = TEXT
+    center_l {
+      dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+        10 {
+          colPos = 202
+          as = center_l
+        }
+      }
+    }
+
+    center_r = TEXT
+    center_r {
+      dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+        10 {
+          colPos = 203
+          as = center_r
+        }
+      }
+    }
+
+    right = TEXT
+    right {
+      dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+        10 {
+          colPos = 204
+          as = right
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:headless/Configuration/TypoScript/constants.typoscript">

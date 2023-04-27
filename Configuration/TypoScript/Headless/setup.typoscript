@@ -1,7 +1,7 @@
-################
-#### HELPER ####
-################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/Helper/container.typoscript">
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:headless/Configuration/TypoScript/setup.typoscript">
 
 
 #################
@@ -16,6 +16,19 @@
 module.tx_backend.view.partialRootPaths.100 = EXT:lynx/Resources/Private/Backend/Partials/
 
 
+#################
+#### Content ####
+#################
+lib.content = CONTENT_JSON
+lib.content {
+    table = tt_content
+    select {
+        orderBy = sorting
+        where = colPos NOT IN (201,202,203,204)
+    }
+}
+
+
 ################
 #### CONFIG ####
 ################
@@ -26,6 +39,4 @@ config {
   intTarget =
   extTarget = _blank
   fileTarget = _blank
-  typolinkLinkAccessRestrictedPages = 1
-  typolinkLinkAccessRestrictedPages_addParams = &redirect_url=###RETURN_URL###
 }
