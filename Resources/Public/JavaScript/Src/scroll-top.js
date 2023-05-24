@@ -1,7 +1,7 @@
 /**
  * SCROLL TO TOP
  */
-export function scrollToTop () {
+const scrollToTop = () => {
   const footer = document.querySelector('footer')
 
   if (!footer) return
@@ -24,3 +24,5 @@ export function scrollToTop () {
     }
   })
 }
+
+export { scrollToTop }

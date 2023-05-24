@@ -1,7 +1,7 @@
 /**
  * Equal Height
  */
-export function equalHeight () {
+const equalHeight = () => {
   const elements = document.querySelectorAll('[data-equal-height]')
 
   if (!elements) return
@@ -49,7 +49,7 @@ export function equalHeight () {
 /**
  * Equal Height Mobile
  */
-export function equalHeightMobile () {
+const equalHeightMobile = () => {
   const elements = document.querySelectorAll('[data-equal-height-mobile]')
 
   if (!elements) return
@@ -101,3 +101,5 @@ export function equalHeightMobile () {
   window.addEventListener('resize', resize)
   window.equalHeightMobile = { resize }
 }
+
+export { equalHeight, equalHeightMobile }

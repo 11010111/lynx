@@ -1,8 +1,8 @@
-import { mobileMenu } from "./mobile-menu.js";
-import { scrollToTop } from "./scroll-top.js";
-import { pageScroll, scrollPaddingTop } from "./navigation.js";
-import { containerColors } from "./container-colors.js";
-import { equalHeight, equalHeightMobile } from "./equal-height.js";
+import { mobileMenu } from "./mobile-menu"
+import { scrollToTop } from "./scroll-top"
+import { pageScroll, scrollPaddingTop } from "./navigation"
+import { containerColors } from "./container-colors"
+import { equalHeight, equalHeightMobile } from "./equal-height"
 
 pageScroll()
 scrollPaddingTop()
@@ -19,7 +19,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 
 window.navigationFixed = () => {
   document.body.classList.add('page-navigation-fixed')
-  document.body.scrollIntoView();
+  document.body.scrollIntoView()
 }
 
 console.log('WE LOVE TYPO3')

@@ -1,8 +1,8 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<f:asset.css identifier="swiper-bundle-css" href="EXT:lynx/Resources/Public/Frameworks/swiper-bundle.min.css" />
+<f:asset.css identifier="slider-bundle-css" href="EXT:lynx/Resources/Public/JavaScript/Dist/slider.css" />
 <f:asset.css identifier="slider-css" href="EXT:lynx/Resources/Public/Css/slider.css" />
-<f:asset.script identifier="slider-js" type="module" src="EXT:lynx/Resources/Public/JavaScript/Src/slider.js" />
+<f:asset.script identifier="slider-js" type="module" src="EXT:lynx/Resources/Public/JavaScript/Dist/slider.bundle.js" />
 
 <lynx:wrapper render="{data}" class="">
     <lynx:container render="{data}">
@@ -12,9 +12,9 @@
                     {element.renderedContent -> f:format.raw()}
                 </f:for>
             </div>
-        
+
             <div class="swiper-pagination"></div>
-        
+
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>

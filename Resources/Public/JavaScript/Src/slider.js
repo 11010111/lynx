@@ -1,28 +1,21 @@
-/**
- * Base Initialisation for Container Slider
- */
-import Swiper from '../../Frameworks/swiper-bundle.esm.browser.min.js'
+import Swiper, { Navigation, Pagination } from 'swiper'
 
-(function Slider() {
-  const swiperContainer = new Swiper('.slider-content', {
-    // Optional parameters
-    loop: true,
-    slideClass: 'slider-cell',
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  })
-})();
+const swiperContainer = new Swiper('.slider-content', {
+  modules: [Navigation, Pagination],
+  loop: true,
+  slideClass: 'slider-cell',
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  }
+})

@@ -1,7 +1,7 @@
 /**
  * Mobile Menu Click Events
  */
-export function mobileMenu () {
+const mobileMenu = () => {
   const mobileMenu = document.querySelector('.mobile-menu')
 
   if (!mobileMenu) return
@@ -26,3 +26,5 @@ export function mobileMenu () {
     })
   })
 }
+
+export { mobileMenu }
