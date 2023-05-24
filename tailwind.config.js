@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -14,7 +16,18 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents(
+        {
+          '.my-class': {
+            fontWeight: '600',
+            padding: '0.25rem 0.5rem'
+          }
+        }
+      )
+    })
+  ],
   corePlugins: {
     container: false,
   },

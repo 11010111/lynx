@@ -210,9 +210,9 @@ config {
   noScaleUp = 1
 
   ## Compression and Concatenation of CSS and JS Files
-  compressJs = 0
+  compressJs = 1
   compressCss = 0
-  concatenateJs = 0
+  concatenateJs = 1
   concatenateCss = 0
 
   ## Header Policy
