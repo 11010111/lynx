@@ -3,7 +3,7 @@ import { scrollToTop } from "./scroll-top"
 import { pageScroll, scrollPaddingTop } from "./navigation"
 import { containerColors } from "./container-colors"
 import { equalHeight, equalHeightMobile } from "./equal-height"
-import isTouch from "./istouch"
+import isTouch from "./touch"
 
 pageScroll()
 scrollPaddingTop()
@@ -19,9 +19,8 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 }
 
 // Detect Touch Devices
-if (isTouch) {
-  document.body.classList.add('touch')
-}
+isTouch()
+window.addEventListener('resize', isTouch)
 
 window.navigationFixed = () => {
   document.body.classList.add('page-navigation-fixed')
