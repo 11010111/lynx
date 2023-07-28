@@ -22,6 +22,7 @@
   --max-width: #{rem(1380)};
   --margin-x-min: #{rem(18)};
   --margin-x-max: calc((100vw - var(--max-width)) / 2);
+  --max-x: max(var(--margin-x-min), var(--margin-x-max));
 
   @media screen and (min-width: breakpoint(md)) {
     --margin-x-min: #{rem(36)};
@@ -35,6 +36,7 @@
   --max-width-xl: #{rem(1536)};
   --margin-x-min-xl: #{rem(9)};
   --margin-x-max-xl: calc((100vw - var(--max-width-xl)) / 2);
+  --max-x-xl: max(var(--margin-x-min-xl), var(--margin-x-max-xl));
 
   @media screen and (min-width: breakpoint(md)) {
     --margin-x-min-xl: #{rem(18)};

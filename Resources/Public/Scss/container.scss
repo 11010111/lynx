@@ -3,8 +3,8 @@
 
 // Container XL
 .container-xl {
-  margin-left: max(var(--margin-x-min-xl), var(--margin-x-max-xl));
-  margin-right: max(var(--margin-x-min-xl), var(--margin-x-max-xl));
+  margin-left: var(--max-x-xl);
+  margin-right: var(--max-x-xl);
 
   .container {
     width: 100%;
@@ -23,8 +23,8 @@
 
 // Container
 .container {
-  margin-left: max(var(--margin-x-min), var(--margin-x-max));
-  margin-right: max(var(--margin-x-min), var(--margin-x-max));
+  margin-left: var(--max-x);
+  margin-right: var(--max-x);
 
   .container {
     width: initial;

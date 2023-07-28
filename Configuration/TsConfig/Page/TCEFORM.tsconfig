@@ -108,6 +108,7 @@ TCEFORM {
       removeItems = extra-small,small,medium,large,extra-large
 
       addItems {
+        0 = 0
         0\.5 = 0.5
         1 = 1
         1\.5 = 1.5
@@ -148,6 +149,7 @@ TCEFORM {
       removeItems = extra-small,small,medium,large,extra-large
 
       addItems {
+        0 = 0
         0\.5 = 0.5
         1 = 1
         1\.5 = 1.5
@@ -186,6 +188,7 @@ TCEFORM {
 
     padding_top {
       addItems {
+        0 = 0
         0\.5 = 0.5
         1 = 1
         1\.5 = 1.5
@@ -224,6 +227,7 @@ TCEFORM {
 
     padding_bottom {
       addItems {
+        0 = 0
         0\.5 = 0.5
         1 = 1
         1\.5 = 1.5
@@ -262,6 +266,7 @@ TCEFORM {
 
     margin_top_tablet {
       addItems {
+        0 = 0
         0\.5 = 0.5
         1 = 1
         1\.5 = 1.5
@@ -300,6 +305,7 @@ TCEFORM {
 
     margin_bottom_tablet {
       addItems {
+        0 = 0
         0\.5 = 0.5
         1 = 1
         1\.5 = 1.5
@@ -338,6 +344,7 @@ TCEFORM {
 
     margin_top_mobile {
       addItems {
+        0 = 0
         0\.5 = 0.5
         1 = 1
         1\.5 = 1.5
@@ -376,6 +383,7 @@ TCEFORM {
 
     margin_bottom_mobile {
       addItems {
+        0 = 0
         0\.5 = 0.5
         1 = 1
         1\.5 = 1.5
@@ -414,6 +422,7 @@ TCEFORM {
 
     padding_top_tablet {
       addItems {
+        0 = 0
         0\.5 = 0.5
         1 = 1
         1\.5 = 1.5
@@ -452,6 +461,7 @@ TCEFORM {
 
     padding_bottom_tablet {
       addItems {
+        0 = 0
         0\.5 = 0.5
         1 = 1
         1\.5 = 1.5
@@ -490,6 +500,7 @@ TCEFORM {
 
     padding_top_mobile {
       addItems {
+        0 = 0
         0\.5 = 0.5
         1 = 1
         1\.5 = 1.5
@@ -528,6 +539,7 @@ TCEFORM {
 
     padding_bottom_mobile {
       addItems {
+        0 = 0
         0\.5 = 0.5
         1 = 1
         1\.5 = 1.5
