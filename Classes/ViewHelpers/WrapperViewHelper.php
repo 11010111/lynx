@@ -35,7 +35,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['margin_top_mobile']) {
+            if (isset($this->arguments['render']['margin_top_mobile'])) {
                 if ($this->tag->getAttribute('class')) {
                     $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'mt-' . $this->arguments['render']['margin_top_mobile']);
                 } else {
@@ -43,7 +43,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['margin_bottom_mobile']) {
+            if (isset($this->arguments['render']['margin_bottom_mobile'])) {
                 if ($this->tag->getAttribute('class')) {
                     $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'mb-' . $this->arguments['render']['margin_bottom_mobile']);
                 } else {
@@ -51,7 +51,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['padding_top_mobile']) {
+            if (isset($this->arguments['render']['padding_top_mobile'])) {
                 if ($this->tag->getAttribute('class')) {
                     $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'pt-' . $this->arguments['render']['padding_top_mobile']);
                 } else {
@@ -59,7 +59,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['padding_bottom_mobile']) {
+            if (isset($this->arguments['render']['padding_bottom_mobile'])) {
                 if ($this->tag->getAttribute('class')) {
                     $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'pb-' . $this->arguments['render']['padding_bottom_mobile']);
                 } else {
@@ -67,7 +67,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['margin_top_tablet']) {
+            if (isset($this->arguments['render']['margin_top_tablet'])) {
                 $breakpoint = '';
 
                 if ($this->arguments['render']['breakpoint_tablet']) {
@@ -81,7 +81,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['margin_bottom_tablet']) {
+            if (isset($this->arguments['render']['margin_bottom_tablet'])) {
                 $breakpoint = '';
 
                 if ($this->arguments['render']['breakpoint_tablet']) {
@@ -95,7 +95,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['padding_top_tablet']) {
+            if (isset($this->arguments['render']['padding_top_tablet'])) {
                 $breakpoint = '';
 
                 if ($this->arguments['render']['breakpoint_tablet']) {
@@ -109,7 +109,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['padding_bottom_tablet']) {
+            if (isset($this->arguments['render']['padding_bottom_tablet'])) {
                 $breakpoint = '';
 
                 if ($this->arguments['render']['breakpoint_tablet']) {
@@ -123,7 +123,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['space_before_class']) {
+            if (isset($this->arguments['render']['space_before_class'])) {
                 $breakpoint = '';
 
                 if ($this->arguments['render']['breakpoint_desktop']) {
@@ -137,7 +137,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['space_after_class']) {
+            if (isset($this->arguments['render']['space_after_class'])) {
                 $breakpoint = '';
 
                 if ($this->arguments['render']['breakpoint_desktop']) {
@@ -151,7 +151,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['padding_top']) {
+            if (isset($this->arguments['render']['padding_top'])) {
                 $breakpoint = '';
 
                 if ($this->arguments['render']['breakpoint_desktop']) {
@@ -165,7 +165,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
                 }
             }
 
-            if ($this->arguments['render']['padding_bottom']) {
+            if (isset($this->arguments['render']['padding_bottom'])) {
                 $breakpoint = '';
 
                 if ($this->arguments['render']['breakpoint_desktop']) {
