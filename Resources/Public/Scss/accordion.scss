@@ -19,8 +19,8 @@
       top: 50%;
       right: 0;
       transform: translateY(-50%);
-      width: rem(18);
-      height: rem(18);
+      width: to-rem(18);
+      height: to-rem(18);
       background-color: var(--primary);
       z-index: 0;
     }
@@ -34,8 +34,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: rem(18);
-      height: rem(18);
+      width: to-rem(18);
+      height: to-rem(18);
       color: var(--white);
       z-index: 1;
       transition: 0.5s;
@@ -61,8 +61,8 @@
   }
 
   .accordion-bottom {
-    height: rem(1);
+    height: to-rem(1);
     background-color: var(--primary);
-    margin-top: rem(9);
+    margin-top: to-rem(9);
   }
 }

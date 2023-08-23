@@ -16,34 +16,34 @@
   --secondary: #14161b;
   --secondary-text: #fff;
 
-  --scroll-padding-top: #{rem(100)};
+  --scroll-padding-top: #{to-rem(100)};
 
   // Container
-  --max-width: #{rem(1380)};
-  --margin-x-min: #{rem(18)};
+  --max-width: #{to-rem(1380)};
+  --margin-x-min: #{to-rem(18)};
   --margin-x-max: calc((100vw - var(--max-width)) / 2);
   --max-x: max(var(--margin-x-min), var(--margin-x-max));
 
   @media screen and (min-width: breakpoint(md)) {
-    --margin-x-min: #{rem(36)};
+    --margin-x-min: #{to-rem(36)};
   }
 
   @media screen and (min-width: breakpoint(lg)) {
-    --margin-x-min: #{rem(72)};
+    --margin-x-min: #{to-rem(72)};
   }
 
   // Container XL
-  --max-width-xl: #{rem(1536)};
-  --margin-x-min-xl: #{rem(9)};
+  --max-width-xl: #{to-rem(1536)};
+  --margin-x-min-xl: #{to-rem(9)};
   --margin-x-max-xl: calc((100vw - var(--max-width-xl)) / 2);
   --max-x-xl: max(var(--margin-x-min-xl), var(--margin-x-max-xl));
 
   @media screen and (min-width: breakpoint(md)) {
-    --margin-x-min-xl: #{rem(18)};
+    --margin-x-min-xl: #{to-rem(18)};
   }
 
   @media screen and (min-width: breakpoint(lg)) {
-    --margin-x-min-xl: #{rem(36)};
+    --margin-x-min-xl: #{to-rem(36)};
   }
 }
 

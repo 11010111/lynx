@@ -15,21 +15,7 @@
   }
 }
 
-// flex--size
-@mixin flex-size($var: null) {
-  @each $name, $value in variables.$flex-percentages {
-    .flex--#{$var}-#{$name} {
-      width: 100%;
-
-      $percent: '%';
-
-      @media screen and (min-width: functions.breakpoint(#{$var})) {
-        width: #{$value}#{$percent};
-      }
-    }
-  }
-}
 
 @mixin rem-var($variable, $px, $base: variables.$rem-base) {
-  #{$variable}: functions.rem($px, $base);
+  #{$variable}: functions.to-rem($px, $base);
 }

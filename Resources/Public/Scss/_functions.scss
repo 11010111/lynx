@@ -11,15 +11,6 @@
   @return null;
 }
 
-@function gap($object, $style) {
-  @if map-has-key($gaps, $object) {
-    @return map-get(map-get($gaps, $object), $style);
-  }
-
-  @warn 'The key `#{$object}` is not available in the map.';
-  @return null;
-}
-
-@function rem($px, $base: variables.$rem-base) {
+@function to-rem($px, $base: variables.$rem-base) {
   @return calc($px / $base) + rem;
 }

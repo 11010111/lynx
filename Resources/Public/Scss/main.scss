@@ -24,7 +24,7 @@ nav.mobile {
 .page-scroll {
   .page-navigation {
     background: var(--white);
-    box-shadow: 0 0 rem(5) rgb(0 0 0 / 25%);
+    box-shadow: 0 0 to-rem(5) rgb(0 0 0 / 25%);
   }
 }
 
@@ -36,7 +36,7 @@ nav.mobile {
 
 // Frame Class
 .grey-box, .frame-grey-box {
-  padding: rem(16);
+  padding: to-rem(16);
   background-color: var(--lightgrey);
 }
 
@@ -47,11 +47,11 @@ nav.mobile {
   align-items: center;
   position: fixed;
   right: -100%;
-  bottom: rem(72);
-  width: rem(40);
-  height: rem(40);
+  bottom: to-rem(72);
+  width: to-rem(40);
+  height: to-rem(40);
   background-color: var(--primary);
-  border-radius: rem(5);
+  border-radius: to-rem(5);
   cursor: pointer;
   z-index: 999;
 
@@ -60,8 +60,8 @@ nav.mobile {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: rem(32);
-    height: rem(32);
+    width: to-rem(32);
+    height: to-rem(32);
 
     path {
       fill: var(--white);
@@ -70,7 +70,7 @@ nav.mobile {
 }
 
 .scroll-top-active {
-  right: rem(18);
+  right: to-rem(18);
 
   &:hover {
     background-color: var(--link-hover);
@@ -86,8 +86,8 @@ nav.mobile {
   height: 100%;
 
   .site-error-num {
-    font-size: rem(54);
-    margin-right: rem(18);
+    font-size: to-rem(54);
+    margin-right: to-rem(18);
   }
 }
 
