@@ -25,8 +25,8 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 1,
-    'author' => 'Konstantin Schneider',
-    'author_email' => 'k.schneider@s-w-e.com',
+    'author' => 'Smart Web Elements',
+    'author_email' => 'info@s-w-e.com',
     'author_company' => 'Smart Web Elements',
     'version' => '2.0.21',
 ];

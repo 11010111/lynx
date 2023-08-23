@@ -15,12 +15,12 @@ Sitepackage for the project "Lynx"
 
     // or
 
-    --test-variable: #{rem(40)};
+    --test-variable: #{to-rem(40)};
 }
 
 // Classes
 div {
-    margin: rem(40) 0;
+    margin: to-rem(40) 0;
 }
 ```
 ## LYNX WRAPPER
