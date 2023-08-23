@@ -1,7 +1,7 @@
 /**
  * SCROLL TO TOP
  */
-const scrollToTop = () => {
+function scrollToTop () {
   const footer = document.querySelector('footer')
 
   if (!footer) return

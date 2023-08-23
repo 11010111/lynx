@@ -1,14 +1,14 @@
 /**
  * Mobile Menu Click Events
  */
-const mobileMenu = () => {
+function mobileMenu () {
   const mobileMenu = document.querySelector('.mobile-menu')
 
   if (!mobileMenu) return
 
   const parent = mobileMenu.querySelectorAll('.has-children')
 
-  parent.forEach((par) => {
+  parent.forEach(par => {
     if (par.firstElementChild.classList.contains('active')) {
       par.classList.add('parent-open')
     }
