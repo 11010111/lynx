@@ -1,10 +1,6 @@
-// Imports
 @use 'functions';
 @use 'variables';
 
-
-// _mixins.scss
-// break
 @mixin break($var: null) {
   .break--#{$var} {
     flex-direction: column;
@@ -14,7 +10,6 @@
     }
   }
 }
-
 
 @mixin rem-var($variable, $px, $base: variables.$rem-base) {
   #{$variable}: functions.to-rem($px, $base);

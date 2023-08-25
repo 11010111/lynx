@@ -12,10 +12,10 @@ $flex-sizes: (
 
 // Breakpoints
 $breakpoints: (
-  xs: 15em,    // Ab 240px, based on 16px Browser's internal font-size
-  sm: 40em,    // Ab 640px, based on 16px Browser's internal font-size
-  md: 48em,    // Ab 768px, based on 16px Browser's internal font-size
-  lg: 64em,    // Ab 1024px, based on 16px Browser's internal font-size
-  xl: 80em,    // Ab 1280px, based on 16px Browser's internal font-size
-  2xl: 96em    // Ab 1536px, based on 16px Browser's internal font-size
+  xs: 15em,    // From  240px, based on 16px browser's internal font-size
+  sm: 40em,    // From  640px, based on 16px browser's internal font-size
+  md: 48em,    // From  768px, based on 16px browser's internal font-size
+  lg: 64em,    // From 1024px, based on 16px browser's internal font-size
+  xl: 80em,    // From 1280px, based on 16px browser's internal font-size
+  2xl: 96em    // From 1536px, based on 16px browser's internal font-size
 );

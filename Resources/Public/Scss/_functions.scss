@@ -1,7 +1,5 @@
-// Imports
 @use 'variables';
 
-// Function.scss
 @function breakpoint($key) {
   @if map-has-key(variables.$breakpoints, $key) {
     @return map-get(variables.$breakpoints, $key);

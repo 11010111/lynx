@@ -50,7 +50,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--scroll-padding-top);
-  overflow-y: overlay;
+  overflow-y: auto;
 
   // 1920px (width) / 16 (font-size) / 100%
   @media screen and (min-width: 1921px) {
