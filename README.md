@@ -1,6 +1,8 @@
 Sitepackage for the project "Lynx"
 ==============================================================
 
+![Lynx v2.0.23](https://img.shields.io/badge/Lynx-v2.0.23-blue)
+
 # LYNX EXAMPLES
 
 ## REM CALC
