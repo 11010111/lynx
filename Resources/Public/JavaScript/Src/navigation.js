@@ -9,7 +9,7 @@ function pageScroll () {
 /**
  * Scroll Padding Top Variable
  */
-const scrollPaddingTop = () => {
+function scrollPaddingTop () {
   const root = document.querySelector(':root')
   const pageNavigation = document.querySelector('.page-navigation')
 

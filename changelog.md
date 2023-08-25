@@ -9,3 +9,4 @@
 - Added version badge in `README.md`
 - Added package name as description in `composer.json`
 - Made scss imports consistent
+- Updated JS and `README.md`

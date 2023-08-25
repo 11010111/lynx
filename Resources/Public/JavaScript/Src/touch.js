@@ -3,11 +3,11 @@ function isTouchDevice () {
 }
 
 function isTouch () {
-    if (isTouchDevice()) {
-        document.body.classList.add('touch')
-    } else {
-        document.body.classList.remove('touch')
-    }
+  if (isTouchDevice()) {
+    document.body.classList.add('touch')
+  } else {
+    document.body.classList.remove('touch')
+  }
 }
 
 export default isTouch

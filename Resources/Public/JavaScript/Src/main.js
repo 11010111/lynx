@@ -1,9 +1,9 @@
-import { mobileMenu } from "./mobile-menu"
-import { scrollToTop } from "./scroll-top"
-import { pageScroll, scrollPaddingTop } from "./navigation"
-import { containerColors } from "./container-colors"
-import { equalHeight, equalHeightMobile } from "./equal-height"
-import isTouch from "./touch"
+import { mobileMenu } from './mobile-menu'
+import { scrollToTop } from './scroll-top'
+import { pageScroll, scrollPaddingTop } from './navigation'
+import { containerColors } from './container-colors'
+import { equalHeight, equalHeightMobile } from './equal-height'
+import isTouch from './touch'
 
 pageScroll()
 scrollPaddingTop()

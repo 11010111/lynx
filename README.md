@@ -8,15 +8,14 @@ Sitepackage for the project "Lynx"
 ## REM CALC
 
 ```scss
-@import "functions";
-@import "mixins";
+@import 'functions';
+@import 'mixins';
 
 // Variables
-::root {
+:root {
     @include rem-var(--test-variable, 40);
 
     // or
-
     --test-variable: #{to-rem(40)};
 }
 
@@ -112,13 +111,13 @@ Options: https://swiperjs.com/swiper-api
 
 ```html
 <!-- Slider main container -->
-<div class="swiper">
+<div class="slider-content">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
+    <div class="slider-cell">Slide 1</div>
+    <div class="slider-cell">Slide 2</div>
+    <div class="slider-cell">Slide 3</div>
     ...
   </div>
   <!-- If we need pagination -->
@@ -133,29 +132,24 @@ Options: https://swiperjs.com/swiper-api
 </div>
 
 <script>
-    import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
+  import Swiper from 'swiper'
+  import { Navigation, Pagination } from 'swiper/modules'
 
-    const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        loop: true,
-        slideClass: '.swiper-slide',
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-    });
+  const swiperContainer = new Swiper('.slider-content', {
+    modules: [Navigation, Pagination],
+    loop: true,
+    slideClass: 'slider-cell',
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    }
+  })
 </script>
 ```
 
@@ -175,136 +169,6 @@ tx_mask_selectbox {
 }
 ```
 
-## client-detection.js
-Examples usage
-
-```javascript
-MobileDetection.isMobile()
-MobileDetection.isAndroid()
-MobileDetection.isBlackBerry()
-MobileDetection.isIOS()
-MobileDetection.isOpera()
-MobileDetection.isWindows()
-
-BrowserDetection.getBrowser()
-BrowserDetection.getOS()
-BrowserDetection.getVersion()
-```
-
-## countup.min.js
-CountUp.js is a dependency-free, lightweight JavaScript class that can be used to quickly create animations that display numerical data in a more interesting way. - Options - https://inorganik.github.io/countUp.js/
-
-```javascript
-let demo = new CountUp('myTargetElement', 6781);
-
-if (!demo.error) {
-    demo.start();
-} else {
-    console.error(demo.error);
-}
-```
-
-## emergency.min.js
-Lightweight, high-performance JS plugin for detecting and manipulating elements in the browser. Options - https://github.com/xtianmiller/emergence.js
-
-```html
-<div class="element" data-emergence="hidden"></div>
-
-<script>
-  let customContainer = document.querySelector('.wrapper');
-
-  emergence.init({
-    container: customContainer
-  });
-</script>
-
-<style>
-    .element[data-emergence=hidden] {
-      /* Hidden state */
-    }
-    .element[data-emergence=visible] {
-      /* Visible state */
-    }
-</style>
-```
-
-## flatpickr.js
-flatpickr is a lightweight and powerful datetime picker. Options: https://flatpickr.js.org/options/
-
-```html
-flatpickr("#myID", {
-    inline: true,
-    enableTime: true,
-    minTime: "09:00"
-});
-```
-
-## in-view.min.js
-Get notified when a DOM element enters or exits the viewport. Basic Usage: https://github.com/camwiegert/in-view
-
-```javascript
-inView.is(document.querySelector('.someSelector'));
-// => true
-
-inView('.someSelector').on('enter', doSomething);
-
-inView.offset(100);
-inView.offset(-50);
-```
-
-## jarallax.min.js
-Smooth parallax scrolling effect for background images, videos. Code in pure JavaScript with NO dependencies + jQuery supported. YouTube, Vimeo and Self-Hosted Videos parallax supported. Usage: https://github.com/nk-o/jarallax
-
-```javascript
-jarallax(document.querySelectorAll('.jarallax'), {
-    speed: 0.2
-});
-```
-
-## offside.min.js
-Offside.js is a minimal JavaScript kit without library dependencies to push things off-canvas using just class manipulation. It's goal is to provide a super-lightweight, efficient and customizable way of handling off-canvas menus/elements on modern website and web applications. Usage: https://github.com/toomuchdesign/offside
-
-```javascript
-let myOffside = offside( '#my-menu', {
-    slidingElementsSelector:'#my-content-container',
-    buttonsSelector: '#my-button, .another-button',
-});
-```
-
-## reframe.min.js
-Reframe.js is a javascript plugin that makes unresponsive elements responsive. Usage - https://dollarshaveclub.github.io/reframe.js/
-
-```html
-reframe('selector');
-```
-
-## tippy-bundle.umd.min.js & popper.min.js
-is the complete tooltip, popover, dropdown, and menu solution for the web, powered by Popper. Options: https://atomiks.github.io/tippyjs/v6/all-props/
-
-```javascript
-tippy('#myButton', {
-    content: "I'm a Tippy tooltip!",
-});
-```
-
-## tobii.min.js
-An accessible, open-source lightbox with no dependencies. Options: https://github.com/midzer/tobii
-
-```javascript
-const tobii = new Tobii({
-    captions: false
-});
-```
-
-```html
-<a href="#" data-type="youtube" data-id="KU2sSZ_90PY" class="lightbox">
-  Open YouTube video
-</a>
-
-<button type="button" data-type="iframe" data-target="https://www.wikipedia.org" class="lightbox">
-  Open Wikipedia
-</button>
-```
 ## Inital install Tailwind & SASS packages
 `npm install`
 
