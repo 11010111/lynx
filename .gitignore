@@ -111,4 +111,3 @@ dist
 *.scss.map
 Classes/UseCase/CreateArtikel/
 Classes/UseCase/TouchArtikel/
-package-lock.json
