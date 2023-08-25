@@ -1,5 +1,5 @@
 // Imports
-@import "functions";
+@import 'functions';
 
 // C/0001
 .c0001 {
@@ -25,7 +25,7 @@
 }
 
 .c0001-center {
-  >div {
+  > div {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -39,7 +39,7 @@
 }
 
 .c0001-right {
-  >div {
+  > div {
     display: flex;
     justify-content: flex-end;
   }
