@@ -4,25 +4,28 @@
 function mobileMenu () {
   const mobileMenu = document.querySelector('.mobile-menu')
 
-  if (!mobileMenu) return
+  if (!mobileMenu) {
+    return
+  }
 
-  const parent = mobileMenu.querySelectorAll('.has-children')
+  const parents = mobileMenu.querySelectorAll('.has-children')
 
-  parent.forEach(par => {
-    if (par.firstElementChild.classList.contains('active')) {
-      par.classList.add('parent-open')
+  parents.forEach(parent => {
+    if (parent.firstElementChild.classList.contains('active')) {
+      parent.classList.add('parent-open')
     }
 
-    par.addEventListener('click', () => {
-      if (!par.classList.contains('parent-open')) {
-        parent.forEach((p) => {
-          p.classList.remove('parent-open')
-        })
-
-        par.classList.add('parent-open')
-      } else {
-        par.classList.toggle('parent-open')
+    parent.addEventListener('click', () => {
+      if (parent.classList.contains('parent-open')) {
+        parent.classList.toggle('parent-open')
+        return
       }
+
+      parents.forEach(element => {
+        element.classList.remove('parent-open')
+      })
+
+      parent.classList.add('parent-open')
     })
   })
 }

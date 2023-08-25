@@ -1,29 +1,39 @@
-const accordions = document.querySelectorAll('.accordion')
+function initAccordions () {
+  document.querySelectorAll('.accordion')
+    .forEach(initAccordion)
+}
 
-accordions.forEach(acc => {
-  const header = acc.querySelector('.accordion-header')
-  const content = acc.querySelector('.accordion-content')
+function initAccordion (accordion) {
+  const header = accordion.querySelector('.accordion-header')
+  const content = accordion.querySelector('.accordion-content')
+
+  function toggleAccordion () {
+    accordion.classList.toggle('accordion-close')
+  }
+
+  function resizeAccordion () {
+    if (accordion.classList.contains('accordion-close')) {
+      accordion.classList.remove('accordion-close')
+      content.style.height = 'auto'
+      content.style.height = content.clientHeight + 'px'
+      accordion.classList.add('accordion-close')
+      return
+    }
+
+    content.style.height = 'auto'
+    content.style.height = content.clientHeight + 'px'
+  }
 
   if (!header || !content) {
     return
   }
 
   content.style.height = content.clientHeight + 'px'
-  acc.classList.toggle('accordion-close')
+  toggleAccordion()
 
-  header.addEventListener('click', () => {
-    acc.classList.toggle('accordion-close')
-  })
+  header.addEventListener('click', toggleAccordion)
 
-  window.addEventListener('resize', () => {
-    if (acc.classList.contains('accordion-close')) {
-      acc.classList.remove('accordion-close')
-      content.style.height = 'auto'
-      content.style.height = content.clientHeight + 'px'
-      acc.classList.add('accordion-close')
-    } else {
-      content.style.height = 'auto'
-      content.style.height = content.clientHeight + 'px'
-    }
-  })
-})
+  window.addEventListener('resize', resizeAccordion)
+}
+
+export default initAccordions

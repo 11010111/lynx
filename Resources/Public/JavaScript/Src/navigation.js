@@ -13,7 +13,9 @@ function scrollPaddingTop () {
   const root = document.querySelector(':root')
   const pageNavigation = document.querySelector('.page-navigation')
 
-  if (!pageNavigation) return
+  if (!pageNavigation) {
+    return
+  }
 
   function resize () {
     root.style.setProperty('--scroll-padding-top', Math.floor(pageNavigation.clientHeight) + 'px')
@@ -24,11 +26,7 @@ function scrollPaddingTop () {
 }
 
 function scroll () {
-  if (window.scrollY > 0) {
-    document.body.classList.add('page-scroll')
-  } else {
-    document.body.classList.remove('page-scroll')
-  }
+  window.scrollY > 0 ? document.body.classList.add('page-scroll') : document.body.classList.remove('page-scroll')
 }
 
 export { pageScroll, scrollPaddingTop }

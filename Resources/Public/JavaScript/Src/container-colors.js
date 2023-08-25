@@ -5,12 +5,12 @@ function containerColors () {
   const backgrounds = document.querySelectorAll('[data-background]')
   const foregrounds = document.querySelectorAll('[data-foreground]')
 
-  backgrounds.forEach(bg => {
-    bg.style.backgroundColor = bg.getAttribute('data-background')
+  backgrounds.forEach(element => {
+    element.style.backgroundColor = element.getAttribute('data-background')
   })
 
-  foregrounds.forEach(fg => {
-    fg.style.color = fg.getAttribute('data-foreground')
+  foregrounds.forEach(element => {
+    element.style.color = element.getAttribute('data-foreground')
   })
 }
 

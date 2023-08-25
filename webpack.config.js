@@ -11,7 +11,6 @@ const stylesHandler = isProduction
 
 const config = {
   entry: {
-    accordion: "./Resources/Public/JavaScript/Src/accordion.js",
     slider: "./Resources/Public/JavaScript/Src/slider.js",
     main: "./Resources/Public/JavaScript/Src/main.js",
   },

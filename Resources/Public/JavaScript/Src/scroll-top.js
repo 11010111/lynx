@@ -4,7 +4,9 @@
 function scrollToTop () {
   const footer = document.querySelector('footer')
 
-  if (!footer) return
+  if (!footer) {
+    return
+  }
 
   const toTop = document.createElement('div')
   toTop.className = 'scroll-top'
@@ -17,11 +19,7 @@ function scrollToTop () {
   footer.appendChild(toTop)
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 250) {
-      toTop.classList.add('scroll-top-active')
-    } else {
-      toTop.classList.remove('scroll-top-active')
-    }
+    window.scrollY > 250 ? toTop.classList.add('scroll-top-active') : toTop.classList.remove('scroll-top-active')
   })
 }
 
