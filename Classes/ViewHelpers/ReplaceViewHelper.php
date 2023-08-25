@@ -16,22 +16,21 @@ class ReplaceViewHelper extends AbstractViewHelper
     /**
      * @inheritDoc
      */
-    public function initializeArguments()
-    {
-        $this->registerArgument('search', 'string', 'The search string', true);
-        $this->registerArgument('replace', 'string', 'The replace string', true);
-        $this->registerArgument('subject', 'string', 'The subject string', true);
+    public static function renderStatic(
+        array $arguments,
+        Closure $renderChildrenClosure,
+        RenderingContextInterface $renderingContext
+    ) {
+        return str_replace($arguments['search'], $arguments['replace'], $arguments['object']);
     }
 
     /**
      * @inheritDoc
      */
-    public static function renderStatic(
-        array                     $arguments,
-        Closure                   $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    )
+    public function initializeArguments()
     {
-        return str_replace($arguments['search'], $arguments['replace'], $arguments['object']);
+        $this->registerArgument('search', 'string', 'The search string', true);
+        $this->registerArgument('replace', 'string', 'The replace string', true);
+        $this->registerArgument('subject', 'string', 'The subject string', true);
     }
 }

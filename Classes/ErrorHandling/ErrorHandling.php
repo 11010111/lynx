@@ -4,6 +4,8 @@ namespace Swe\Lynx\ErrorHandling;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException;
+use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Error\PageErrorHandler\PageErrorHandlerInterface;
 use TYPO3\CMS\Core\Exception;
@@ -34,20 +36,33 @@ class ErrorHandling implements PageErrorHandlerInterface
      * @param array $reasons
      * @return ResponseInterface
      * @throws SiteNotFoundException
-     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
-     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
+     * @throws ExtensionConfigurationExtensionNotConfiguredException
+     * @throws ExtensionConfigurationPathDoesNotExistException
      */
-    public function handlePageError(ServerRequestInterface $request, string $message, array $reasons = []): ResponseInterface
-    {
+    public function handlePageError(
+        ServerRequestInterface $request,
+        string $message,
+        array $reasons = []
+    ): ResponseInterface {
         $this->request = $request;
         return new RedirectResponse($this->getLoginUrl(), 302);
     }
 
     /**
+     * @return int
+     */
+    protected function getLanguageIdentifier(): int
+    {
+        /** @var SiteLanguage $language */
+        $language = $this->request->getAttribute('language');
+        return $language->getLanguageId();
+    }
+
+    /**
      * @return string
      * @throws SiteNotFoundException
-     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
-     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
+     * @throws ExtensionConfigurationExtensionNotConfiguredException
+     * @throws ExtensionConfigurationPathDoesNotExistException
      */
     protected function getLoginUrl(): string
     {
@@ -64,23 +79,12 @@ class ErrorHandling implements PageErrorHandlerInterface
         $site = $siteFinder->getSiteByPageId($pageLoginUid);
         /** @var Uri $uri */
         $uri = $site->getRouter()->generateUri(
-            $pageLoginUid,
-            [
+            $pageLoginUid, [
                 '_language' => $this->getLanguageIdentifier(),
-                'redirect_url' => $this->request->getUri()->__toString()
+                'redirect_url' => $this->request->getUri()->__toString(),
             ]
         );
         return $uri->__toString();
-    }
-
-    /**
-     * @return int
-     */
-    protected function getLanguageIdentifier(): int
-    {
-        /** @var SiteLanguage $language */
-        $language = $this->request->getAttribute('language');
-        return $language->getLanguageId();
     }
 
 }

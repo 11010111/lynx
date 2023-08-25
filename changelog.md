@@ -10,3 +10,4 @@
 - Added package name as description in `composer.json`
 - Made scss imports consistent
 - Updated JS and `README.md`
+- Updated .editorconfig and reformatted code

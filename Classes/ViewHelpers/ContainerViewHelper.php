@@ -30,31 +30,45 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
         if ($this->hasArgument('render')) {
             if ($this->arguments['render']['container']) {
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $this->arguments['render']['container']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute('class') . ' ' . $this->arguments['render']['container']
+                    );
                 } else {
-                    $this->tag->addAttribute('class',  $this->arguments['render']['container']);
+                    $this->tag->addAttribute('class', $this->arguments['render']['container']);
                 }
             }
 
             if ($this->arguments['render']['alignment']) {
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $this->arguments['render']['alignment']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute('class') . ' ' . $this->arguments['render']['alignment']
+                    );
                 } else {
-                    $this->tag->addAttribute('class',  $this->arguments['render']['alignment']);
+                    $this->tag->addAttribute('class', $this->arguments['render']['alignment']);
                 }
             }
 
             if ($this->arguments['render']['frame_class'] && $this->arguments['wrap'] == 'true') {
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $this->arguments['render']['frame_class']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute('class') . ' ' . $this->arguments['render']['frame_class']
+                    );
                 } else {
-                    $this->tag->addAttribute('class',  $this->arguments['render']['frame_class']);
+                    $this->tag->addAttribute('class', $this->arguments['render']['frame_class']);
                 }
             }
 
             if (strlen($this->arguments['render']['margin_top_mobile']) > 0 && $this->arguments['wrap'] == 'true') {
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'mt-' . $this->arguments['render']['margin_top_mobile']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute(
+                            'class'
+                        ) . ' ' . 'mt-' . $this->arguments['render']['margin_top_mobile']
+                    );
                 } else {
                     $this->tag->addAttribute('class', 'mt-' . $this->arguments['render']['margin_top_mobile']);
                 }
@@ -62,7 +76,12 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
 
             if (strlen($this->arguments['render']['margin_bottom_mobile']) > 0 && $this->arguments['wrap'] == 'true') {
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'mb-' . $this->arguments['render']['margin_bottom_mobile']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute(
+                            'class'
+                        ) . ' ' . 'mb-' . $this->arguments['render']['margin_bottom_mobile']
+                    );
                 } else {
                     $this->tag->addAttribute('class', 'mb-' . $this->arguments['render']['margin_bottom_mobile']);
                 }
@@ -70,7 +89,12 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
 
             if (strlen($this->arguments['render']['padding_top_mobile']) > 0 && $this->arguments['wrap'] == 'true') {
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'pt-' . $this->arguments['render']['padding_top_mobile']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute(
+                            'class'
+                        ) . ' ' . 'pt-' . $this->arguments['render']['padding_top_mobile']
+                    );
                 } else {
                     $this->tag->addAttribute('class', 'pt-' . $this->arguments['render']['padding_top_mobile']);
                 }
@@ -78,7 +102,12 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
 
             if (strlen($this->arguments['render']['padding_bottom_mobile']) > 0 && $this->arguments['wrap'] == 'true') {
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . 'pb-' . $this->arguments['render']['padding_bottom_mobile']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute(
+                            'class'
+                        ) . ' ' . 'pb-' . $this->arguments['render']['padding_bottom_mobile']
+                    );
                 } else {
                     $this->tag->addAttribute('class', 'pb-' . $this->arguments['render']['padding_bottom_mobile']);
                 }
@@ -92,9 +121,17 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
 
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $breakpoint . 'mt-' . $this->arguments['render']['margin_top_tablet']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute(
+                            'class'
+                        ) . ' ' . $breakpoint . 'mt-' . $this->arguments['render']['margin_top_tablet']
+                    );
                 } else {
-                    $this->tag->addAttribute('class', $breakpoint . 'mt-' . $this->arguments['render']['margin_top_tablet']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $breakpoint . 'mt-' . $this->arguments['render']['margin_top_tablet']
+                    );
                 }
             }
 
@@ -106,9 +143,17 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
 
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $breakpoint . 'mb-' . $this->arguments['render']['margin_bottom_tablet']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute(
+                            'class'
+                        ) . ' ' . $breakpoint . 'mb-' . $this->arguments['render']['margin_bottom_tablet']
+                    );
                 } else {
-                    $this->tag->addAttribute('class', $breakpoint . 'mb-' . $this->arguments['render']['margin_bottom_tablet']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $breakpoint . 'mb-' . $this->arguments['render']['margin_bottom_tablet']
+                    );
                 }
             }
 
@@ -120,9 +165,17 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
 
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $breakpoint . 'pt-' . $this->arguments['render']['padding_top_tablet']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute(
+                            'class'
+                        ) . ' ' . $breakpoint . 'pt-' . $this->arguments['render']['padding_top_tablet']
+                    );
                 } else {
-                    $this->tag->addAttribute('class', $breakpoint . 'pt-' . $this->arguments['render']['padding_top_tablet']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $breakpoint . 'pt-' . $this->arguments['render']['padding_top_tablet']
+                    );
                 }
             }
 
@@ -134,9 +187,17 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
 
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $breakpoint . 'pb-' . $this->arguments['render']['padding_bottom_tablet']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute(
+                            'class'
+                        ) . ' ' . $breakpoint . 'pb-' . $this->arguments['render']['padding_bottom_tablet']
+                    );
                 } else {
-                    $this->tag->addAttribute('class', $breakpoint . 'pb-' . $this->arguments['render']['padding_bottom_tablet']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $breakpoint . 'pb-' . $this->arguments['render']['padding_bottom_tablet']
+                    );
                 }
             }
 
@@ -148,9 +209,17 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
 
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $breakpoint . 'mt-' . $this->arguments['render']['space_before_class']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute(
+                            'class'
+                        ) . ' ' . $breakpoint . 'mt-' . $this->arguments['render']['space_before_class']
+                    );
                 } else {
-                    $this->tag->addAttribute('class', $breakpoint . 'mt-' . $this->arguments['render']['space_before_class']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $breakpoint . 'mt-' . $this->arguments['render']['space_before_class']
+                    );
                 }
             }
 
@@ -162,9 +231,17 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
 
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $breakpoint . 'mb-' . $this->arguments['render']['space_after_class']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute(
+                            'class'
+                        ) . ' ' . $breakpoint . 'mb-' . $this->arguments['render']['space_after_class']
+                    );
                 } else {
-                    $this->tag->addAttribute('class', $breakpoint . 'mb-' . $this->arguments['render']['space_after_class']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $breakpoint . 'mb-' . $this->arguments['render']['space_after_class']
+                    );
                 }
             }
 
@@ -176,7 +253,12 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
 
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $breakpoint . 'pt-' . $this->arguments['render']['padding_top']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute(
+                            'class'
+                        ) . ' ' . $breakpoint . 'pt-' . $this->arguments['render']['padding_top']
+                    );
                 } else {
                     $this->tag->addAttribute('class', $breakpoint . 'pt-' . $this->arguments['render']['padding_top']);
                 }
@@ -190,9 +272,17 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 }
 
                 if ($this->tag->getAttribute('class')) {
-                    $this->tag->addAttribute('class', $this->tag->getAttribute('class') . ' ' . $breakpoint . 'pb-' . $this->arguments['render']['padding_bottom']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $this->tag->getAttribute(
+                            'class'
+                        ) . ' ' . $breakpoint . 'pb-' . $this->arguments['render']['padding_bottom']
+                    );
                 } else {
-                    $this->tag->addAttribute('class', $breakpoint . 'pb-' . $this->arguments['render']['padding_bottom']);
+                    $this->tag->addAttribute(
+                        'class',
+                        $breakpoint . 'pb-' . $this->arguments['render']['padding_bottom']
+                    );
                 }
             }
 
@@ -204,8 +294,10 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
                 $this->tagName = $this->arguments['render']['html_tag'];
             }
 
-            if ($this->arguments['render']['uid'] && !$this->tag->getAttribute('id') && $this->arguments['wrap'] == 'true') {
-                $this->tag->addAttribute('id',  'c' . $this->arguments['render']['uid'] . 'ai');
+            if ($this->arguments['render']['uid'] && !$this->tag->getAttribute(
+                    'id'
+                ) && $this->arguments['wrap'] == 'true') {
+                $this->tag->addAttribute('id', 'c' . $this->arguments['render']['uid'] . 'ai');
             }
         }
 
@@ -216,7 +308,9 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper
         $this->tag->setTagName($this->tagName);
         $this->tag->setContent($this->renderChildren());
 
-        if (!$this->arguments['render']['container'] && !$this->arguments['render']['alignment'] && !$this->tag->getAttribute('class')) {
+        if (!$this->arguments['render']['container'] && !$this->arguments['render']['alignment'] && !$this->tag->getAttribute(
+                'class'
+            )) {
             return $this->renderChildren();
         }
 

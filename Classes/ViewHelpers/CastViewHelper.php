@@ -16,20 +16,19 @@ class CastViewHelper extends AbstractViewHelper
     /**
      * @inheritDoc
      */
-    public function initializeArguments()
-    {
-        $this->registerArgument('toInt', 'string', 'The string', true);
+    public static function renderStatic(
+        array $arguments,
+        Closure $renderChildrenClosure,
+        RenderingContextInterface $renderingContext
+    ) {
+        return (int)$arguments['toInt'];
     }
 
     /**
      * @inheritDoc
      */
-    public static function renderStatic(
-        array                     $arguments,
-        Closure                   $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    )
+    public function initializeArguments()
     {
-        return (int) $arguments['toInt'];
+        $this->registerArgument('toInt', 'string', 'The string', true);
     }
 }
