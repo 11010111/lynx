@@ -1,20 +1,22 @@
 <?php
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 defined('TYPO3') or die('Access denied.');
 
-/***************
- * Add default RTE configuration
- */
+/*********************************
+ * Add default RTE configuration *
+ *********************************/
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx'] = 'EXT:lynx/Configuration/RTE/Default.yaml';
 
-/***************
- * PageTS
- */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+/**********
+ * PageTS *
+ **********/
+ExtensionManagementUtility::addPageTSConfig(
     '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/All.tsconfig">'
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+ExtensionManagementUtility::addPageTSConfig(
     'mod.wizards.newContentElement.wizardItems.common.elements.textmedia {
         title = Media
         description = Text, Image, Video, Audio
