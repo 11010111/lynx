@@ -14,3 +14,4 @@ services:
       - name: event.listener
         identifier: 'lynxInitialisationListener'
         event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionDatabaseContentHasBeenImportedEvent
+#        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent

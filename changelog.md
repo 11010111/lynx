@@ -11,3 +11,4 @@
 - Made scss imports consistent
 - Updated JS and `README.md`
 - Updated .editorconfig and reformatted code
+- Updated composer dependencies
