@@ -1,5 +1,9 @@
 # Lynx Changelog
 
+## Lynx v2.0.24
+
+- Remove type hint from $tagName property
+
 ## Lynx v2.0.23
 
 - Removed legacy `ext_emconf.php`

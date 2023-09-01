@@ -14,7 +14,7 @@ class WrapperViewHelper extends AbstractTagBasedViewHelper
     /**
      * @var string
      */
-    protected string $tagName = 'div';
+    protected $tagName = 'div';
 
     public function initializeArguments()
     {
