@@ -1,10 +1,10 @@
-import { mobileMenu } from './mobile-menu.js'
-import { scrollToTop } from './scroll-top.js'
-import { pageScroll, scrollPaddingTop } from './navigation.js'
-import { containerColors } from './container-colors.js'
-import { equalHeight, equalHeightMobile } from './equal-height.js'
-import isTouch from './touch.js'
-import initAccordions from './accordion.js'
+import { mobileMenu } from './mobile-menu'
+import { scrollToTop } from './scroll-top'
+import { pageScroll, scrollPaddingTop } from './navigation'
+import { containerColors } from './container-colors'
+import { equalHeight, equalHeightMobile } from './equal-height'
+import isTouch from './touch'
+import initAccordions from './accordion'
 
 initAccordions()
 pageScroll()
@@ -24,7 +24,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 isTouch()
 window.addEventListener('resize', isTouch)
 
-window.navigationFixed = () => {
+function navigationFixed (): void {
   document.body.classList.add('page-navigation-fixed')
   document.body.scrollIntoView()
 }

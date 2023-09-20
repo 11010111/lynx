@@ -12,7 +12,7 @@ const stylesHandler = isProduction
 const config = {
   entry: {
     slider: "./Resources/Public/JavaScript/Src/slider.js",
-    main: "./Resources/Public/JavaScript/Src/main.js",
+    main: './Resources/Public/JavaScript/Src/main.ts',
   },
   output: {
     filename: '[name].bundle.js',
@@ -24,6 +24,10 @@ const config = {
   ],
   module: {
     rules: [
+      {
+        test: /\.(ts|tsx)$/i,
+        loader: 'ts-loader',
+      },
       {
         test: /\.(js|jsx)$/i,
         loader: "babel-loader",
@@ -45,6 +49,9 @@ const config = {
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
+  resolve: {
+    extensions: ['.ts', '.js']
+  }
 };
 
 module.exports = () => {

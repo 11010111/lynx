@@ -1,5 +1,9 @@
 # Lynx Changelog
 
+## Lynx v2.0.25
+
+- Changed source files in `Resources/Public/JavaScript` from JavaScript to TypeScript. JavaScript files also can be used!
+
 ## Lynx v2.0.24
 
 - Remove type hint from $tagName property

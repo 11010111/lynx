@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "outDir": "./Resources/Public/JavaScript/Dist",
+    "baseUrl": "./",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowJs": true
+  },
+  "include": [
+    "./Resources/Public/JavaScript/Src"
+  ]
+}

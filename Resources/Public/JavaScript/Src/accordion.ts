@@ -1,17 +1,21 @@
 function initAccordions () {
-  document.querySelectorAll('.accordion')
+  document.querySelectorAll<HTMLElement>('.accordion')
     .forEach(initAccordion)
 }
 
-function initAccordion (accordion) {
-  const header = accordion.querySelector('.accordion-header')
-  const content = accordion.querySelector('.accordion-content')
+function initAccordion (accordion: HTMLElement): void {
+  const header = accordion.querySelector<HTMLElement>('.accordion-header')
+  const content = accordion.querySelector<HTMLElement>('.accordion-content')
 
-  function toggleAccordion () {
+  function toggleAccordion (): void {
     accordion.classList.toggle('accordion-close')
   }
 
-  function resizeAccordion () {
+  function resizeAccordion (): void {
+    if (!content) {
+      return
+    }
+
     if (accordion.classList.contains('accordion-close')) {
       accordion.classList.remove('accordion-close')
       content.style.height = 'auto'

@@ -1,17 +1,17 @@
 /**
  * Mobile Menu Click Events
  */
-function mobileMenu () {
-  const mobileMenu = document.querySelector('.mobile-menu')
+function mobileMenu (): void {
+  const mobileMenu = document.querySelector<HTMLDivElement>('.mobile-menu')
 
   if (!mobileMenu) {
     return
   }
 
-  const parents = mobileMenu.querySelectorAll('.has-children')
+  const parents = mobileMenu.querySelectorAll<HTMLUListElement>('.has-children')
 
   parents.forEach(parent => {
-    if (parent.firstElementChild.classList.contains('active')) {
+    if (parent.firstElementChild?.classList.contains('active')) {
       parent.classList.add('parent-open')
     }
 
