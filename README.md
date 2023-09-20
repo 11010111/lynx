@@ -1,7 +1,7 @@
 Sitepackage for the project "Lynx"
 ==============================================================
 
-![Lynx v2.0.24](https://img.shields.io/badge/Lynx-v2.0.23-blue)
+![Lynx v2.0.25](https://img.shields.io/badge/Lynx-v2.0.25-blue)
 
 # LYNX EXAMPLES
 
@@ -82,12 +82,12 @@ PHP explode()
     </f:if>
 </f:for>
 ```
->OUTPUT: Array
-array(4 items)
-0 => 'Dies'
-1 => 'ist'
-2 => 'ein'
-3 => 'Test.'
+> OUTPUT: Array
+> array(4 items)
+> 0 => 'Dies'
+> 1 => 'ist'
+> 2 => 'ein'
+> 3 => 'Test.'
 
 ---
 
