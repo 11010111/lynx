@@ -3,6 +3,8 @@
 ## Lynx v2.0.25
 
 - Changed source files in `Resources/Public/JavaScript` from JavaScript to TypeScript. JavaScript files also can be used!
+- Added source-maps in development
+- Added script `npm run watch` to start watching in development mode
 
 ## Lynx v2.0.24
 
