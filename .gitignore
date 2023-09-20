@@ -109,5 +109,6 @@ dist
 *.css.map
 *.sass.map
 *.scss.map
+*.js.map
 Classes/UseCase/CreateArtikel/
 Classes/UseCase/TouchArtikel/
