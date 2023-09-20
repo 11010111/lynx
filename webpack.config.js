@@ -1,22 +1,21 @@
-// Generated using webpack-cli https://github.com/webpack/webpack-cli
+const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
-const isProduction = process.env.NODE_ENV == "production";
+const isProduction = process.env.NODE_ENV === 'production'
 
 const stylesHandler = isProduction
   ? MiniCssExtractPlugin.loader
-  : "style-loader";
+  : 'style-loader'
 
 const config = {
   entry: {
-    slider: "./Resources/Public/JavaScript/Src/slider.js",
+    slider: './Resources/Public/JavaScript/Src/slider.js',
     main: './Resources/Public/JavaScript/Src/main.ts',
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, "Resources/Public/JavaScript/Dist"),
+    path: path.resolve(__dirname, 'Resources/Public/JavaScript/Dist'),
+    clean: true,
   },
   plugins: [
     // Add your plugins here
@@ -30,19 +29,19 @@ const config = {
       },
       {
         test: /\.(js|jsx)$/i,
-        loader: "babel-loader",
+        loader: 'babel-loader',
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, "css-loader"],
+        use: [stylesHandler, 'css-loader'],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [stylesHandler, "css-loader", "sass-loader"],
+        use: [stylesHandler, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: "asset",
+        type: 'asset',
       },
 
       // Add your rules for custom modules here
@@ -52,15 +51,17 @@ const config = {
   resolve: {
     extensions: ['.ts', '.js']
   }
-};
+}
 
 module.exports = () => {
   if (isProduction) {
-    config.mode = "production";
+    config.mode = 'production'
 
-    config.plugins.push(new MiniCssExtractPlugin());
+    config.plugins.push(new MiniCssExtractPlugin())
   } else {
-    config.mode = "development";
+    config.mode = 'development'
+    config.devtool = 'source-map'
   }
-  return config;
-};
+
+  return config
+}

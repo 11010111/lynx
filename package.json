@@ -16,8 +16,10 @@
     "webpack:build:dev": "webpack --mode=development",
     "webpack:build:prod": "webpack --mode=production --node-env=production",
     "webpack:watch": "webpack --watch --mode=production --node-env=production",
+    "webpack:watch:dev": "webpack --watch --mode=development",
     "start": "npm run sass:watch & npm run tailwind:watch & npm run webpack:watch",
-    "build": "npm run sass:build & npm run tailwind:build & npm run webpack:build:prod"
+    "build": "npm run sass:build & npm run tailwind:build & npm run webpack:build:prod",
+    "watch": "npm run sass:watch & npm run tailwind:watch & npm run webpack:watch:dev"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",
