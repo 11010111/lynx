@@ -11,9 +11,7 @@ use TYPO3\CMS\Core\Error\PageErrorHandler\PageErrorHandlerInterface;
 use TYPO3\CMS\Core\Exception;
 use TYPO3\CMS\Core\Exception\SiteNotFoundException;
 use TYPO3\CMS\Core\Http\RedirectResponse;
-use TYPO3\CMS\Core\Http\Uri;
 use TYPO3\CMS\Core\Site\Entity\Site;
-use TYPO3\CMS\Core\Site\Entity\SiteLanguage;
 use TYPO3\CMS\Core\Site\SiteFinder;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -53,7 +51,6 @@ class ErrorHandling implements PageErrorHandlerInterface
      */
     protected function getLanguageIdentifier(): int
     {
-        /** @var SiteLanguage $language */
         $language = $this->request->getAttribute('language');
         return $language->getLanguageId();
     }
@@ -77,13 +74,13 @@ class ErrorHandling implements PageErrorHandlerInterface
         }
 
         $site = $siteFinder->getSiteByPageId($pageLoginUid);
-        /** @var Uri $uri */
         $uri = $site->getRouter()->generateUri(
             $pageLoginUid, [
                 '_language' => $this->getLanguageIdentifier(),
                 'redirect_url' => $this->request->getUri()->__toString(),
             ]
         );
+
         return $uri->__toString();
     }
 

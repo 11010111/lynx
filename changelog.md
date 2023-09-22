@@ -1,5 +1,10 @@
 # Lynx Changelog
 
+## Lynx v2.0.26
+
+- Added .phpstorm.meta.php
+- Refactor appearance configurations to a reused trait
+
 ## Lynx v2.0.25
 
 - Changed source files in `Resources/Public/JavaScript` from JavaScript to TypeScript. JavaScript files also can be used!

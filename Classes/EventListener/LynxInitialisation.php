@@ -25,10 +25,9 @@ class LynxInitialisation
      * @throws InsufficientFolderAccessPermissionsException
      * @throws InsufficientFolderWritePermissionsException
      */
-    public function __invoke(AfterExtensionFilesHaveBeenImportedEvent $event)
+    public function __invoke(AfterExtensionFilesHaveBeenImportedEvent $event): void
     {
         if ($event->getPackageKey() === 'lynx') {
-            /** @var ResourceFactory $resourceFactory */
             $resourceFactory = GeneralUtility::makeInstance(ResourceFactory::class);
             $storage = $resourceFactory->getStorageObject(1);
 
