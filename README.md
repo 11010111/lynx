@@ -1,7 +1,7 @@
 Sitepackage for the project "Lynx"
 ==============================================================
 
-![Lynx v2.0.26](https://img.shields.io/badge/Lynx-v2.0.25-blue)
+![Lynx v2.0.27](https://img.shields.io/badge/Lynx-v2.0.27-blue)
 
 # LYNX EXAMPLES
 

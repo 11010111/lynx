@@ -1,5 +1,9 @@
 # Lynx Changelog
 
+## Lynx v2.0.27
+
+- Added powermail template
+
 ## Lynx v2.0.26
 
 - Added .phpstorm.meta.php
