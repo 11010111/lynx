@@ -85,13 +85,13 @@ trait AppearanceTrait
         [
             'name' => 'padding_top',
             'wrap' => true,
-            'prefix' => 'mb-',
+            'prefix' => 'pt-',
             'breakpoint' => 'breakpoint_desktop',
         ],
         [
             'name' => 'padding_bottom',
             'wrap' => true,
-            'prefix' => 'mb-',
+            'prefix' => 'pb-',
             'breakpoint' => 'breakpoint_desktop',
         ],
     ];
