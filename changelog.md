@@ -1,5 +1,13 @@
 # Lynx Changelog
 
+## Lynx v2.0.29
+
+- Moved building into deployment
+
+## Lynx v2.0.28
+
+- Fixed issue with spaces
+
 ## Lynx v2.0.27
 
 - Added powermail template
