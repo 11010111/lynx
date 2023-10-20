@@ -112,3 +112,5 @@ dist
 *.js.map
 Classes/UseCase/CreateArtikel/
 Classes/UseCase/TouchArtikel/
+Resources/Public/Css
+Resources/Public/JavaScript/Dist

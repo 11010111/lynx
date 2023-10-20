@@ -9,10 +9,10 @@
   "author": "Smart Web Elements",
   "license": "MIT",
   "scripts": {
-    "sass:watch": "sass --watch ./Resources/Public/Scss:./Resources/Public/Css --no-source-map --style=compressed",
+    "sass:watch": "sass --watch ./Resources/Public/Scss:./Resources/Public/Css --style=compressed",
     "sass:build": "sass ./Resources/Public/Scss:./Resources/Public/Css --no-source-map --style=compressed",
-    "tailwind:watch": "npx tailwindcss -i ./Resources/Public/Css/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --watch --minify",
-    "tailwind:build": "npx tailwindcss -i ./Resources/Public/Css/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --minify",
+    "tailwind:watch": "npx tailwindcss -i ./Resources/Public/Scss/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --watch",
+    "tailwind:build": "npx tailwindcss -i ./Resources/Public/Scss/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --minify",
     "webpack:build:dev": "webpack --mode=development",
     "webpack:build:prod": "webpack --mode=production --node-env=production",
     "webpack:watch": "webpack --watch --mode=production --node-env=production",
