@@ -1,8 +1,11 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<f:asset.css identifier="slider-bundle-css" href="EXT:lynx/Resources/Public/JavaScript/Dist/slider.css" />
+<f:comment>
+    <!-- TODO: Hier muss noch geschaut werden, wie das native css des Sliders importiert wird. Passiert das über JS? -->
+    <f:asset.css identifier="slider-bundle-css" href="EXT:lynx/Resources/Public/JavaScript/Dist/slider.css" />
+</f:comment>
 <f:asset.css identifier="slider-css" href="EXT:lynx/Resources/Public/Css/slider.css" />
-<f:asset.script identifier="slider-js" type="module" src="EXT:lynx/Resources/Public/JavaScript/Dist/slider.bundle.js" />
+<f:asset.script identifier="slider-js" type="module" src="EXT:lynx/Resources/Public/JavaScript/Dist/slider.js" />
 
 <lynx:wrapper render="{data}" class="">
     <lynx:container render="{data}">
