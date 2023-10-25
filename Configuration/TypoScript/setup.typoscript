@@ -148,7 +148,7 @@ page {
 
   # Footer JS
   includeJSFooter {
-    main_js = EXT:lynx/Resources/Public/JavaScript/Dist/main.bundle.js
+    main_js = EXT:lynx/Resources/Public/JavaScript/Dist/main.js
     main_js.type = module
   }
 }
