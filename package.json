@@ -9,34 +9,21 @@
   "author": "Smart Web Elements",
   "license": "MIT",
   "scripts": {
-    "sass:watch": "sass --watch ./Resources/Public/Scss:./Resources/Public/Css --style=compressed",
-    "sass:build": "sass ./Resources/Public/Scss:./Resources/Public/Css --no-source-map --style=compressed",
-    "tailwind:watch": "npx tailwindcss -i ./Resources/Public/Scss/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --watch",
-    "tailwind:build": "npx tailwindcss -i ./Resources/Public/Scss/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --minify",
-    "webpack:build:dev": "webpack --mode=development",
-    "webpack:build:prod": "webpack --mode=production --node-env=production",
-    "webpack:watch": "webpack --watch --mode=production --node-env=production",
-    "webpack:watch:dev": "webpack --watch --mode=development",
-    "start": "npm run sass:watch & npm run tailwind:watch & npm run webpack:watch",
-    "build": "npm run sass:build & npm run tailwind:build & npm run webpack:build:prod",
-    "watch": "npm run sass:watch & npm run tailwind:watch & npm run webpack:watch:dev"
+    "dev:tailwind": "npx tailwindcss -i ./Resources/Public/Scss/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --watch",
+    "dev:esbuild": "node esbuild.config.mjs --watch",
+    "dev": "run-p dev:*",
+    "start": "npm run dev",
+    "watch": "npm run dev",
+    "build:tailwind": "npx tailwindcss -i ./Resources/Public/Scss/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --minify",
+    "build:esbuild": "node esbuild.config.mjs",
+    "build": "run-p build:*"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
-    "babel-loader": "^9.1.2",
-    "css-loader": "^6.7.3",
-    "mini-css-extract-plugin": "^2.7.5",
-    "postcss": "^8.4.23",
-    "prettier": "^3.0.0",
-    "sass": "^1.62.1",
-    "sass-loader": "^13.2.2",
-    "style-loader": "^3.3.2",
+    "esbuild": "^0.19.5",
+    "esbuild-plugin-sass": "^1.0.1",
+    "npm-run-all": "^4.1.5",
     "tailwindcss": "^3.3.1",
-    "ts-loader": "^9.4.4",
-    "typescript": "^5.2.2",
-    "webpack": "^5.83.1",
-    "webpack-cli": "^5.1.1"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "swiper": "^10.0.4"
