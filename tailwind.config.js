@@ -5,6 +5,7 @@ let tailwindConfig = {
   content: [
     "./Resources/Private/**/*.html",
     "./Resources/Public/JavaScript/**/*.js",
+    "./Resources/Public/JavaScript/**/*.ts",
   ],
   theme: {
     fontFamily: {
