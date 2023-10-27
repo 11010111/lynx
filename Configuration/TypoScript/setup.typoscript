@@ -150,6 +150,9 @@ page {
   includeJSFooter {
     main_js = EXT:lynx/Resources/Public/JavaScript/Dist/main.js
     main_js.type = module
+    main_js.defer = 1
+    main_js.excludeFromConcatenation = 1
+    main_js.disableCompression = 1
   }
 }
 

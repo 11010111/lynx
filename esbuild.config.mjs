@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs'
 import esbuild from 'esbuild'
-import sassPlugin from 'esbuild-plugin-sass'
+import { sassPlugin } from 'esbuild-sass-plugin'
 
 const watch = process.argv.includes('--watch')
 const outDir = 'Resources/Public'
