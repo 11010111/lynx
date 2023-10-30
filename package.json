@@ -9,14 +9,14 @@
   "author": "Smart Web Elements",
   "license": "MIT",
   "scripts": {
-    "dev:tailwind": "npx tailwindcss -i ./Resources/Public/Scss/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --watch",
     "dev:esbuild": "node esbuild.config.mjs --watch",
+    "dev:tailwind": "npx tailwindcss -i ./Resources/Public/Scss/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --watch",
     "dev": "run-p dev:*",
     "start": "npm run dev",
     "watch": "npm run dev",
-    "build:tailwind": "npx tailwindcss -i ./Resources/Public/Scss/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --minify",
     "build:esbuild": "node esbuild.config.mjs",
-    "build": "run-p build:*"
+    "build:tailwind": "npx tailwindcss -i ./Resources/Public/Scss/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --minify",
+    "build": "run-s build:*"
   },
   "devDependencies": {
     "esbuild": "^0.19.5",
@@ -26,6 +26,8 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "fs-extra": "^11.1.1",
+    "glob": "^10.3.10",
     "swiper": "^10.0.4"
   }
 }
