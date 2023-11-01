@@ -4,8 +4,8 @@
 let tailwindConfig = {
   content: [
     "./Resources/Private/**/*.html",
-    "./Resources/Public/JavaScript/**/*.js",
-    "./Resources/Public/JavaScript/**/*.ts",
+    "./Resources/Public/JavaScript/Src/**/*.js",
+    "./Resources/Public/JavaScript/Src/**/*.ts",
   ],
   theme: {
     fontFamily: {

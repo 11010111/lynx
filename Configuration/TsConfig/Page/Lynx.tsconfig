@@ -1,4 +1,4 @@
 #
 # PageTS for Lynx
 #
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/TCAdefaults.tsconfig">
+@import 'EXT:lynx/Configuration/TsConfig/Page/TCAdefaults.tsconfig'

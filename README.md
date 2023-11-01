@@ -1,7 +1,6 @@
-Sitepackage for the project "Lynx"
-==============================================================
+# Lynx
 
-![Lynx v2.0.29](https://img.shields.io/badge/Lynx-v2.0.29-blue)
+![Lynx v2.1.0](https://img.shields.io/badge/Lynx-v2.1.0-blue)
 
 # Development
 

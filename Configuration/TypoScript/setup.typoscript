@@ -1,23 +1,23 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
 
 
 ##########################
 #### EXTENSION SETUPS ####
 ##########################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/ext/felogin/setup.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/ext/news/setup.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/ext/search/setup.typoscript">
+@import 'EXT:lynx/Configuration/TypoScript/ext/felogin/setup.typoscript'
+@import 'EXT:lynx/Configuration/TypoScript/ext/news/setup.typoscript'
+@import 'EXT:lynx/Configuration/TypoScript/ext/search/setup.typoscript'
 
 
 ################
 #### HELPER ####
 ################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/Helper/DynamicContent.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/Helper/config.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TypoScript/Helper/container.typoscript">
+@import 'EXT:lynx/Configuration/TypoScript/Helper/DynamicContent.typoscript'
+@import 'EXT:lynx/Configuration/TypoScript/Helper/config.typoscript'
+@import 'EXT:lynx/Configuration/TypoScript/Helper/container.typoscript'
 
 
 ##############

@@ -13,7 +13,7 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['lynx'] = 'EXT:lynx/Configuration/
  * PageTS *
  **********/
 ExtensionManagementUtility::addPageTSConfig(
-    '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/All.tsconfig">'
+    '@import \'EXT:lynx/Configuration/TsConfig/Page/All.tsconfig\''
 );
 
 ExtensionManagementUtility::addPageTSConfig(
@@ -26,7 +26,9 @@ ExtensionManagementUtility::addPageTSConfig(
 /*****************************
  * Add global lynx namespace *
  *****************************/
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['lynx'] = ['Swe\\Lynx\\ViewHelpers'];
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['lynx'] = [
+    'Swe\\Lynx\\ViewHelpers',
+];
 
 /*************************
  * FluidMail - Overrides *
