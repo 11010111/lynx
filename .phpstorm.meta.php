@@ -4,6 +4,8 @@
 
 namespace PHPSTORM_META {
 
+    override(\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(0), type(0));
+
     expectedArguments(
         \TYPO3\CMS\Core\Context\Context::getAspect(),
         0,
