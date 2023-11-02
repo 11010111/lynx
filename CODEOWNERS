@@ -1,0 +1,16 @@
+# Each line represents a rule, followed by a list of members.
+# These members are the default owners for all files that match the specified pattern.
+# The pattern generally follows the same syntax used for .gitignore files.
+# The last matching rule always wins; those that appear lower in the file take precedence over rules that appear higher up.
+# Specify owners by their username, email, or role assignment in the project.
+
+/Classes Luca l.braun@s-w-e.com
+/Configuration "Development"
+/Resources "Development"
+/esbuild.config.mjs Luca l.braun@s-w-e.com
+/tailwind.config.js Luca l.braun@s-w-e.com
+/tsconfig.json Luca l.braun@s-w-e.com
+/package.json Luca l.braun@s-w-e.com
+
+# This file itself is owned by members who are assigned the Project Admin role in this project.
+CODEOWNERS "Project Admin"
