@@ -5,6 +5,7 @@
 # Specify owners by their username, email, or role assignment in the project.
 
 /Classes Luca l.braun@s-w-e.com
+/Classes/Backend Jörg j.kaeseberg@s-w-e.com
 /Configuration "Development"
 /Resources "Development"
 /esbuild.config.mjs Luca l.braun@s-w-e.com
