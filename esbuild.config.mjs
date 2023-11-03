@@ -56,9 +56,12 @@ const notificationPlugin = {
 const options = {
   entryPoints,
   outdir: outDir,
-  bundle: false,
+  bundle: true,
   minify: !watch,
   sourcemap: true,
+  splitting: true,
+  format: 'esm',
+  external: ['../Icons*', '../Font*'],
   plugins: [
     sassPlugin(),
     notificationPlugin,
