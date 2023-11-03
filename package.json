@@ -8,12 +8,14 @@
   "author": "Smart Web Elements",
   "license": "MIT",
   "scripts": {
+    "dev:sass": "sass --watch --color --no-source-map --style=expanded ./Resources/Public/Scss:./Resources/Public/Css",
     "dev:esbuild": "node esbuild.config.mjs --watch",
     "dev:tailwind": "npx tailwindcss -i ./Resources/Public/Scss/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --watch",
     "dev": "run-p dev:*",
     "start": "npm run dev",
     "watch": "npm run dev",
     "build:esbuild": "node esbuild.config.mjs",
+    "build:sass": "sass ./Resources/Public/Scss:./Resources/Public/Css --style=compressed",
     "build:tailwind": "npx tailwindcss -i ./Resources/Public/Scss/tailwind.css -o ./Resources/Public/Css/tailwind-bundle.css --minify",
     "build": "run-s build:*"
   },
