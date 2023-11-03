@@ -2,6 +2,10 @@
 
 defined('TYPO3') or die('Access denied.');
 
+// Use a different preview renderer for CType shortcut
+$GLOBALS['TCA']['tt_content']['types']['shortcut']['previewRenderer']
+    = \Swe\Lynx\Backend\ShortcutPreviewRenderer::class;
+
 \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
     \B13\Container\Tca\Registry::class)->configureContainer(
     new \B13\Container\Tca\ContainerConfiguration(
