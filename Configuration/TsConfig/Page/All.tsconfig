@@ -1,8 +1,8 @@
 #
 # PageTS for Lynx
 #
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/RTE.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/News.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/TCEFORM.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:lynx/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+@import 'EXT:lynx/Configuration/TsConfig/Page/RTE.tsconfig'
+@import 'EXT:lynx/Configuration/TsConfig/Page/News.tsconfig'
+@import 'EXT:lynx/Configuration/TsConfig/Page/TCEFORM.tsconfig'
+@import 'EXT:lynx/Configuration/TsConfig/Page/TCEMAIN.tsconfig'
+@import 'EXT:lynx/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig'

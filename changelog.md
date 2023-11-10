@@ -1,5 +1,10 @@
 # Lynx Changelog
 
+## Lynx v2.1.0
+
+- Implemented esbuild
+- Updated TypoScript imports
+
 ## Lynx v2.0.29
 
 - Moved building into deployment

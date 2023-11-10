@@ -1,11 +1,33 @@
-Sitepackage for the project "Lynx"
-==============================================================
+# Lynx
 
-![Lynx v2.0.29](https://img.shields.io/badge/Lynx-v2.0.27-blue)
+![Lynx v2.1.0](https://img.shields.io/badge/Lynx-v2.1.0-blue)
 
-# LYNX EXAMPLES
+# Development
 
-## REM CALC
+## Install npm packages
+`npm install`
+
+## Watch tailwindcss, SASS and TypeScript
+`npm run dev`
+
+OR
+
+`npm run watch`
+
+OR
+
+`npm start`
+
+# Documentations
+- [tailwindcss](https://tailwindcss.com/docs/editor-setup)
+- [SASS](https://sass-lang.com/documentation/)
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [TypeScript tutorials](https://www.totaltypescript.com/)
+- [TypeScript tutorials (YouTube)](https://www.youtube.com/@mattpocockuk)
+
+# Examples
+
+## SCSS
 
 ```scss
 @import 'functions';
@@ -13,18 +35,22 @@ Sitepackage for the project "Lynx"
 
 // Variables
 :root {
-    @include rem-var(--test-variable, 40);
+    // Use the mixin 
+    @include rem-var(--test-variable, 40); // The number should be in px.
 
-    // or
-    --test-variable: #{to-rem(40)};
+    // OR use the function
+    --test-variable: #{to-rem(40)}; // The number should be in px.
 }
 
 // Classes
 div {
-    margin: to-rem(40) 0;
+    margin: to-rem(40) 0; // The number should be in px.
 }
 ```
-## LYNX WRAPPER
+
+## ViewHelper
+
+### Lynx wrapper
 Render container wrapper for margins and padding with optional parameters
 - as = tag name
 - render = data array
@@ -38,7 +64,7 @@ Render container wrapper for margins and padding with optional parameters
 </lynx:wrapper>
 ```
 
-## LYNX CONTAINER
+### Lynx container
 Render container with optional parameters
 - as = tag name
 - render = data array
@@ -51,30 +77,38 @@ Render container with optional parameters
 </lynx:container>
 ```
 
-## REPLACE STRING
-PHP str_replace()
+### Replace a string
+PHP [str_replace()](https://www.php.net/manual/de/function.str-replace)
 ```html
 <lynx:replace search="test" replace="ist" subject="Das test ok." />
 {lynx:replace(search:'test', replace:'ist', subject:'Das test ok.')}
 ```
 > OUTPUT: Das ist ok.
 
-## SUBSTRING
-PHP substr()
+### Substring
+PHP [substr()](https://www.php.net/manual/de/function.substr.php)
 ```html
 <lynx:substring string="Hallo Welt!..." offset="0" length="-1" />
 {lynx:substring(string:'Hallo Welt!...', offset:'0', length:'-1')}
 ```
 > OUTPUT: Hallo Welt!..
 
-## SPLIT STRING
-PHP explode()
+### Split string
+PHP [explode()](https://www.php.net/manual/de/function.explode.php)
 ```html
 <lynx:split string="Dies ist ein Test." separator=" " />
 {lynx:split(separator:' ', string:'Dies ist ein Test.')}
 ```
+```json
+[
+  "Dies",
+  "ist",
+  "ein",
+  "Test."
+]
+```
 
-### INLINE NOTATION
+#### Inline notation
 ```html
 <f:for each="{lynx:split(separator:' ', string:'Dies ist ein Test.')}" as="item">
     <f:if condition="{item}">
@@ -82,12 +116,12 @@ PHP explode()
     </f:if>
 </f:for>
 ```
-> OUTPUT: Array
-> array(4 items)
-> 0 => 'Dies'
-> 1 => 'ist'
-> 2 => 'ein'
-> 3 => 'Test.'
+```html
+<p>Dies</p>
+<p>ist</p>
+<p>ein</p>
+<p>Test.</p>
+```
 
 ---
 
@@ -154,7 +188,7 @@ Options: https://swiperjs.com/swiper-api
 ```
 
 ## TCEFORM.tsconfig
-```html
+```typoscript
 # Add Mask Field Options
 tx_mask_selectbox {
     types {
@@ -168,12 +202,3 @@ tx_mask_selectbox {
     }
 }
 ```
-
-## Inital install Tailwind & SASS packages
-`npm install`
-
-## Watch tailwind & SASS
-`npm start`
-
-## Production Build before deploy or push
-`npm run build`
