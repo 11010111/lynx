@@ -154,6 +154,13 @@ namespace PHPSTORM_META {
     );
 
     override(
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(0),
+        map([
+            '' => '@',
+        ])
+    );
+
+    override(
         \Psr\EventDispatcher\EventDispatcherInterface::dispatch(0),
         map([
             '' => '@',
