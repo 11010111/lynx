@@ -1,4 +1,8 @@
-# Lynx
+# Warning
+
+Smart Web Elements does not have a license for this TYPO3 extension. They have stolen it so I have made the repository public. The use for Smart Web Elements and their customers (sales) is still prohibited.
+
+## LYNX
 
 ![Lynx v2.1.0](https://img.shields.io/badge/Lynx-v2.1.0-blue)
 
